@@ -52,6 +52,12 @@ test("clay review loads and repeat navigation/reset/reload remains stable", asyn
   await expect(page.locator("canvas")).toBeVisible();
   for (let i = 0; i < 3; i++) {
     await page.getByRole("button", { name: "Synthetic building" }).click();
+    await expect(
+      page.getByRole("button", { name: "Synthetic building" }),
+    ).toHaveAttribute("aria-pressed", "true");
+    await page.locator("#pan").click();
+    await expect(page.locator("#pan")).toHaveAttribute("aria-pressed", "true");
+    await page.locator("#pan").click();
     await page.locator("#top").click();
     await page.locator("#reset").click();
     await page.locator("#boundary").uncheck();

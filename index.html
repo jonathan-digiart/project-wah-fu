@@ -11,13 +11,15 @@
       <h1>Wah Fu — terrain & building massing</h1>
       <p id="status" role="status">Loading semantic reference parameters…</p>
       <div class="toolbar">
+        <button id="pan" aria-pressed="false">Pan mode</button>
         <button id="reset">Reset overview</button
         ><button id="top">Top view · north up</button
         ><label
           ><input id="boundary" type="checkbox" checked /> Accepted
           boundary</label
         ><span class="note"
-          >Drag: orbit · two fingers/right-drag: pan · pinch/wheel: zoom</span
+          >Drag: orbit · Pan mode: drag to pan · two fingers/right-drag: pan ·
+          pinch/wheel: zoom</span
         >
       </div>
     </header>
@@ -38,6 +40,9 @@
           Terrain accuracy and ground contacts remain under review.
         </p>
         <h2>Building focus</h2>
+        <p id="selection-note" class="note">
+          Select a building to inspect its highlighted mass.
+        </p>
         <ul id="buildings"></ul>
       </aside>
     </main>

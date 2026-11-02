@@ -129,3 +129,9 @@ footer {
     gap: 6px;
   }
 }
+
+button[aria-pressed="true"] {
+  background: #e5c699;
+  border-color: #77654c;
+  font-weight: 600;
+}

@@ -1,5 +1,20 @@
 import "./style.css";
-import { Box3, PerspectiveCamera, Vector3, WebGLRenderer } from "three";
+import {
+  fitCamera,
+  focusDirection,
+  uniqueSentences,
+  highlightSelection,
+} from "./view";
+import {
+  Box3,
+  Mesh,
+  MeshStandardMaterial,
+  MOUSE,
+  TOUCH,
+  PerspectiveCamera,
+  Vector3,
+  WebGLRenderer,
+} from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { parseSiteData } from "./model";
 import { createSiteScene } from "./scene";
@@ -30,7 +45,7 @@ async function start() {
     button.textContent = building.name;
     button.disabled = true;
     const detail = document.createElement("small");
-    detail.textContent = building.uncertainty;
+    detail.textContent = uniqueSentences(building.uncertainty);
     li.append(button, detail);
     list.append(li);
     buttons.set(building.id, button);
@@ -38,8 +53,10 @@ async function start() {
 
   const { scene, buildings, terrain, boundary, dispose } =
     createSiteScene(data);
-  const box = new Box3().setFromObject(terrain);
-  const centre = box.getCenter(new Vector3());
+  const box = new Box3()
+    .setFromObject(terrain)
+    .union(new Box3().setFromObject(buildings));
+
   const size = box.getSize(new Vector3());
   const span = Math.max(size.x, size.z);
   let renderer: WebGLRenderer;
@@ -61,30 +78,63 @@ async function start() {
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = false;
   controls.minDistance = 20;
-  controls.maxDistance = span * 3;
+  controls.maxDistance = span * 12;
+  controls.screenSpacePanning = true;
   controls.maxPolarAngle = Math.PI * 0.49;
   const render = () => renderer.render(scene, camera);
+  let currentBox = box;
+  let currentDirection = new Vector3(0.65, 0.8, 0.85);
+  const meshes = buildings.children.filter(
+    (node): node is Mesh => node instanceof Mesh,
+  );
+  const originals = new Map(meshes.map((mesh) => [mesh, mesh.material]));
+  const selectedMaterial = new MeshStandardMaterial({
+    color: "#e5c699",
+    roughness: 1,
+    metalness: 0,
+  });
+  const selectionNote =
+    document.querySelector<HTMLParagraphElement>("#selection-note")!;
+  const select = (id?: string) => {
+    highlightSelection(meshes, originals, selectedMaterial, id);
+    for (const [key, button] of buttons)
+      button.setAttribute("aria-pressed", String(key === id));
+    selectionNote.textContent = id
+      ? `Selected: ${data.buildings.find((item) => item.id === id)?.name ?? id}. Highlighted in lighter clay.`
+      : "Select a building to inspect its highlighted mass.";
+  };
+  const frame = () => {
+    controls.target.copy(fitCamera(camera, currentBox, currentDirection));
+    controls.update();
+    render();
+  };
   const resize = () => {
     const { width, height } = app.getBoundingClientRect();
+    if (width <= 0 || height <= 0) return;
     renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    render();
+    frame();
   };
   const overview = () => {
-    controls.target.copy(centre);
-    camera.position
-      .copy(centre)
-      .add(new Vector3(span * 0.65, span * 0.8, span * 0.85));
-    controls.update();
-    render();
+    select();
+    currentBox = box;
+    currentDirection = new Vector3(0.65, 0.8, 0.85);
+    frame();
   };
   reset.onclick = overview;
   top.onclick = () => {
-    controls.target.copy(centre);
-    camera.position.copy(centre).add(new Vector3(0, span * 1.4, 0.01));
-    controls.update();
-    render();
+    currentBox = box;
+    currentDirection = new Vector3(0, 1, 0.001);
+    frame();
+  };
+  const pan = document.querySelector<HTMLButtonElement>("#pan")!;
+  pan.onclick = () => {
+    const enabled = pan.getAttribute("aria-pressed") !== "true";
+    pan.setAttribute("aria-pressed", String(enabled));
+    pan.textContent = enabled ? "Pan mode on" : "Pan mode";
+    controls.mouseButtons.LEFT = enabled ? MOUSE.PAN : MOUSE.ROTATE;
+    controls.touches.ONE = enabled ? TOUCH.PAN : TOUCH.ROTATE;
   };
   controls.addEventListener("change", render);
   const observer = new ResizeObserver(resize);
@@ -97,11 +147,15 @@ async function start() {
         (item) => item.userData.id === building.id,
       );
       if (!mesh) return;
-      const target = new Box3().setFromObject(mesh).getCenter(new Vector3());
-      controls.target.copy(target);
-      camera.position.copy(target).add(new Vector3(100, 110, 130));
-      controls.update();
-      render();
+      select(building.id);
+      currentBox = new Box3().setFromObject(mesh);
+      currentDirection = focusDirection(
+        currentBox,
+        meshes
+          .filter((item) => item !== mesh)
+          .map((item) => new Box3().setFromObject(item)),
+      );
+      frame();
     };
   }
   const boundaryToggle = document.querySelector<HTMLInputElement>("#boundary")!;
@@ -117,6 +171,7 @@ async function start() {
   cleanup = () => {
     observer.disconnect();
     controls.dispose();
+    selectedMaterial.dispose();
     dispose();
     renderer.dispose();
     renderer.domElement.remove();
