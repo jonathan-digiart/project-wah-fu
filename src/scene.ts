@@ -13,6 +13,7 @@ import {
   MeshStandardMaterial,
   Scene,
   Shape,
+  Path,
   ShapeUtils,
   Vector2,
   Vector3,
@@ -72,6 +73,11 @@ export function createSiteScene(data: SiteData) {
   scene.add(sun);
   const clay = new MeshStandardMaterial({
     color: "#d4c8b4",
+    roughness: 1,
+    metalness: 0,
+  });
+  const contextClay = new MeshStandardMaterial({
+    color: "#bcb7ad",
     roughness: 1,
     metalness: 0,
   });
@@ -164,6 +170,8 @@ export function createSiteScene(data: SiteData) {
     const shape = new Shape(
       building.footprint.map((p) => new Vector2(p[0], -p[1])),
     );
+    for (const hole of building.holes ?? [])
+      shape.holes.push(new Path(hole.map((p) => new Vector2(p[0], -p[1]))));
     const geometry = new ExtrudeGeometry(shape, {
       depth: building.height,
       bevelEnabled: false,
@@ -171,9 +179,16 @@ export function createSiteScene(data: SiteData) {
     });
     geometry.rotateX(-Math.PI / 2);
     geometry.translate(0, building.base, 0);
-    const mesh = new Mesh(geometry, clay);
+    const mesh = new Mesh(
+      geometry,
+      building.category === "context" ? contextClay : clay,
+    );
     mesh.name = building.name;
-    mesh.userData = { id: building.id };
+    mesh.userData = {
+      id: building.id,
+      reviewId: building.sourceId ?? building.id,
+      category: building.category ?? "estate",
+    };
     buildings.add(mesh);
   }
   const points = [...data.boundary, data.boundary[0]!].map(
@@ -197,6 +212,7 @@ export function createSiteScene(data: SiteData) {
     shellGeometry.dispose();
     shellMaterial.dispose();
     clay.dispose();
+    contextClay.dispose();
     groundClay.dispose();
     boundary.geometry.dispose();
     boundary.material.dispose();

@@ -4,6 +4,7 @@ import {
   focusDirection,
   uniqueSentences,
   highlightSelection,
+  setContextVisible,
 } from "./view";
 import {
   Box3,
@@ -16,7 +17,7 @@ import {
   WebGLRenderer,
 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { parseSiteData } from "./model";
+import { parseSiteData, groupBuildingRecords } from "./model";
 import { createSiteScene } from "./scene";
 const app = document.querySelector<HTMLDivElement>("#app")!;
 const status = document.querySelector<HTMLParagraphElement>("#status")!;
@@ -38,16 +39,22 @@ async function start() {
     const r = data.review;
     note.textContent = `Provisional terrain: ${r.samples} independent height probes; mean error ${r.meanError.toFixed(1)} m, 95th percentile ${r.p95Error.toFixed(1)} m, maximum ${r.maxError.toFixed(1)} m. Ground-contact approval remains open.`;
   }
+  const records = groupBuildingRecords(data.buildings);
+  const contextList =
+    document.querySelector<HTMLUListElement>("#context-buildings")!;
+  document.querySelector("#context-count")!.textContent = String(
+    records.filter((record) => record.category === "context").length,
+  );
   const buttons = new Map<string, HTMLButtonElement>();
-  for (const building of data.buildings) {
+  for (const building of records) {
     const li = document.createElement("li");
     const button = document.createElement("button");
     button.textContent = building.name;
     button.disabled = true;
     const detail = document.createElement("small");
-    detail.textContent = uniqueSentences(building.uncertainty);
+    detail.textContent = uniqueSentences(building.parts[0]!.uncertainty);
     li.append(button, detail);
-    list.append(li);
+    (building.category === "context" ? contextList : list).append(li);
     buttons.set(building.id, button);
   }
 
@@ -100,7 +107,7 @@ async function start() {
     for (const [key, button] of buttons)
       button.setAttribute("aria-pressed", String(key === id));
     selectionNote.textContent = id
-      ? `Selected: ${data.buildings.find((item) => item.id === id)?.name ?? id}. Highlighted in lighter clay.`
+      ? `Selected: ${records.find((item) => item.id === id)?.name ?? id}. Highlighted in lighter clay.`
       : "Select a building to inspect its highlighted mass.";
   };
   const frame = () => {
@@ -139,20 +146,31 @@ async function start() {
   controls.addEventListener("change", render);
   const observer = new ResizeObserver(resize);
   observer.observe(app);
-  for (const building of data.buildings) {
+  const contextToggle = document.querySelector<HTMLInputElement>("#context")!;
+  contextToggle.onchange = () => {
+    setContextVisible(meshes, contextToggle.checked);
+    render();
+  };
+  for (const building of records) {
     const button = buttons.get(building.id)!;
     button.disabled = false;
     button.onclick = () => {
-      const mesh = buildings.children.find(
-        (item) => item.userData.id === building.id,
+      const selected = meshes.filter(
+        (mesh) => mesh.userData.reviewId === building.id,
       );
-      if (!mesh) return;
+      if (!selected.length) return;
+      if (building.category === "context") {
+        contextToggle.checked = true;
+        setContextVisible(meshes, true);
+      }
       select(building.id);
-      currentBox = new Box3().setFromObject(mesh);
+      currentBox = new Box3();
+      for (const mesh of selected)
+        currentBox.union(new Box3().setFromObject(mesh));
       currentDirection = focusDirection(
         currentBox,
         meshes
-          .filter((item) => item !== mesh)
+          .filter((item) => item.visible && !selected.includes(item))
           .map((item) => new Box3().setFromObject(item)),
       );
       frame();
@@ -163,7 +181,7 @@ async function start() {
     boundary.visible = boundaryToggle.checked;
     render();
   };
-  status.textContent = `${data.buildings.length} reference-derived clay masses · terrain approximation · owner review required`;
+  status.textContent = `${records.filter((record) => record.category === "estate").length} estate + ${records.filter((record) => record.category === "context").length} other legacy building objects · ${data.buildings.length} clay components · provisional terrain`;
   renderer.domElement.addEventListener("webglcontextlost", (event) => {
     event.preventDefault();
     status.textContent = "Graphics interrupted. Reload to restore the model.";

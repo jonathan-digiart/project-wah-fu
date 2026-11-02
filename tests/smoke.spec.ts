@@ -47,7 +47,7 @@ test("clay review loads and repeat navigation/reset/reload remains stable", asyn
   );
   await page.goto("/");
   await expect(page.locator("#status")).toContainText(
-    "1 reference-derived clay masses",
+    "1 estate + 0 other legacy building objects",
   );
   await expect(page.locator("canvas")).toBeVisible();
   for (let i = 0; i < 3; i++) {
@@ -65,7 +65,7 @@ test("clay review loads and repeat navigation/reset/reload remains stable", asyn
   }
   await page.reload();
   await expect(page.locator("#status")).toContainText(
-    "1 reference-derived clay masses",
+    "1 estate + 0 other legacy building objects",
   );
   expect(errors).toEqual([]);
 });
@@ -83,4 +83,41 @@ test("WebGL unavailable preserves readable reference list", async ({
   await expect(
     page.getByRole("button", { name: "Synthetic building" }),
   ).toBeDisabled();
+});
+
+test("context starts visible, multipart source has one focus entry and focusing restores hidden context", async ({
+  page,
+}) => {
+  const part = {
+    ...fixture.buildings[0]!,
+    category: "context",
+    sourceId: "campus",
+    group: "Synthetic campus",
+    boundaryRelation: "full",
+  };
+  await page.route("**/site-data.json", (route) =>
+    route.fulfill({
+      json: {
+        ...fixture,
+        buildings: [
+          fixture.buildings[0],
+          { ...part, id: "campus-a" },
+          { ...part, id: "campus-b" },
+        ],
+      },
+    }),
+  );
+  await page.goto("/");
+  await expect(page.locator("#status")).toContainText(
+    "1 estate + 1 other legacy building objects",
+  );
+  await expect(page.locator("#context")).toBeChecked();
+  await page.locator("#context").uncheck();
+  await page.locator("summary").click();
+  await expect(page.locator("#context-buildings button")).toHaveCount(1);
+  await page.getByRole("button", { name: "Synthetic campus · campus" }).click();
+  await expect(page.locator("#context")).toBeChecked();
+  await expect(
+    page.getByRole("button", { name: "Synthetic campus · campus" }),
+  ).toHaveAttribute("aria-pressed", "true");
 });

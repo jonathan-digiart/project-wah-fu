@@ -65,5 +65,16 @@ export function highlightSelection(
   id?: string,
 ): void {
   for (const mesh of meshes)
-    mesh.material = mesh.userData.id === id ? material : originals.get(mesh)!;
+    mesh.material =
+      (mesh.userData.reviewId ?? mesh.userData.id) === id
+        ? material
+        : originals.get(mesh)!;
+}
+
+export function setContextVisible(
+  meshes: readonly import("three").Mesh[],
+  visible: boolean,
+): void {
+  for (const mesh of meshes)
+    if (mesh.userData.category === "context") mesh.visible = visible;
 }

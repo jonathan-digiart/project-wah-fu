@@ -3,7 +3,7 @@ import { linearTerrainPositions } from "./terrain-mesh";
 import { existsSync, readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import { Box3, Mesh } from "three";
-import { area, hasCrossingEdges, inside, parseSiteData } from "./model";
+import { area, hasCrossingEdges, covers, parseSiteData } from "./model";
 import { createSiteScene } from "./scene";
 const path = new URL("../public/site-data.json", import.meta.url);
 test("regression: rounding must not introduce self-crossing footprints", () => {
@@ -25,7 +25,7 @@ test.skipIf(!existsSync(path))(
     const { scene, buildings, terrain, dispose } = createSiteScene(data);
     expect(buildings.children).toHaveLength(data.buildings.length);
     for (const b of data.buildings) {
-      expect(b.footprint.every((p) => inside(p, data.boundary))).toBe(true);
+      expect(b.footprint.every((p) => covers(p, data.boundary))).toBe(true);
     }
     scene.traverse((node) => {
       if (node instanceof Mesh) {
@@ -88,5 +88,32 @@ test.skipIf(!existsSync(path))(
       0,
     );
     expect(Math.abs(total - expected)).toBeLessThan(0.01);
+  },
+);
+
+test.skipIf(!existsSync(path))(
+  "private context inventory is complete and approved exclusions remain excluded",
+  () => {
+    const data = parseSiteData(
+      JSON.parse(readFileSync(path, "utf8")) as unknown,
+    );
+    const audit = data.provenance.contextMassing as
+      | {
+          expectedSourceIds: string[];
+          approvedExcludedSourceIds: string[];
+          expectedComponentCount: number;
+          retainedCourtyardCount: number;
+        }
+      | undefined;
+    if (!audit) return;
+    const parts = data.buildings.filter((b) => b.category === "context");
+    const actual = [...new Set(parts.map((b) => b.sourceId ?? b.id))].sort();
+    expect(actual).toEqual([...audit.expectedSourceIds].sort());
+    expect(parts).toHaveLength(audit.expectedComponentCount);
+    expect(parts.reduce((count, b) => count + (b.holes?.length ?? 0), 0)).toBe(
+      audit.retainedCourtyardCount,
+    );
+    for (const id of audit.approvedExcludedSourceIds)
+      expect(actual).not.toContain(id);
   },
 );

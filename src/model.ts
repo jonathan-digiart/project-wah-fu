@@ -5,6 +5,11 @@ export interface Building {
   id: string;
   name: string;
   footprint: Point[];
+  holes?: Point[][];
+  category?: "estate" | "context";
+  sourceId?: string;
+  group?: string;
+  boundaryRelation?: "full" | "partial";
   base: number;
   height: number;
   uncertainty: string;
@@ -69,6 +74,34 @@ export function inside(point: Point, polygon: readonly Point[]): boolean {
       result = !result;
   }
   return result;
+}
+export function covers(
+  point: Point,
+  polygon: readonly Point[],
+  epsilon = 1e-5,
+): boolean {
+  if (inside(point, polygon)) return true;
+  for (let i = 0; i < polygon.length; i++) {
+    const a = polygon[i]!,
+      b = polygon[(i + 1) % polygon.length]!;
+    const dx = b[0] - a[0],
+      dz = b[1] - a[1],
+      length = dx * dx + dz * dz;
+    const t = length
+      ? Math.max(
+          0,
+          Math.min(
+            1,
+            ((point[0] - a[0]) * dx + (point[1] - a[1]) * dz) / length,
+          ),
+        )
+      : 0;
+    if (
+      Math.hypot(point[0] - a[0] - t * dx, point[1] - a[1] - t * dz) <= epsilon
+    )
+      return true;
+  }
+  return false;
 }
 export function terrainHeight(
   x: number,
@@ -194,7 +227,54 @@ export function parseSiteData(value: unknown): SiteData {
       !b.uncertainty
     )
       throw new Error("Invalid, duplicated or unqualified building");
+    if (
+      b.holes !== undefined &&
+      (!Array.isArray(b.holes) || !b.holes.every(polygon))
+    )
+      throw new Error("Invalid courtyard rings");
+    if (
+      b.category !== undefined &&
+      b.category !== "estate" &&
+      b.category !== "context"
+    )
+      throw new Error("Unknown building category");
+    if (b.sourceId !== undefined && typeof b.sourceId !== "string")
+      throw new Error("Invalid source identity");
+    if (b.group !== undefined && typeof b.group !== "string")
+      throw new Error("Invalid group label");
+    if (
+      b.boundaryRelation !== undefined &&
+      b.boundaryRelation !== "full" &&
+      b.boundaryRelation !== "partial"
+    )
+      throw new Error("Invalid boundary relation");
+    if (
+      Array.isArray(b.holes) &&
+      !b.holes.every((hole) =>
+        hole.every((point) => covers(point, b.footprint as Point[])),
+      )
+    )
+      throw new Error("Courtyard outside building envelope");
     ids.add(b.id);
   }
   return value as unknown as SiteData;
+}
+
+export function groupBuildingRecords(buildings: readonly Building[]) {
+  const grouped = new Map<string, Building[]>();
+  for (const building of buildings) {
+    const id = building.sourceId ?? building.id;
+    const parts = grouped.get(id) ?? [];
+    parts.push(building);
+    grouped.set(id, parts);
+  }
+  return [...grouped].map(([id, parts]) => ({
+    id,
+    parts,
+    category: parts[0]!.category ?? "estate",
+    name:
+      parts[0]!.category === "context"
+        ? `${parts[0]!.group ?? "Context building"} · ${id}`
+        : parts[0]!.name,
+  }));
 }
