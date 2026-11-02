@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Wah Fu · Clay base review</title>
+  </head>
+  <body>
+    <header>
+      <div class="badge">Procedural rebuild · private review candidate</div>
+      <h1>Wah Fu — terrain & building massing</h1>
+      <p id="status" role="status">Loading semantic reference parameters…</p>
+      <div class="toolbar">
+        <button id="reset">Reset overview</button
+        ><button id="top">Top view · north up</button
+        ><label
+          ><input id="boundary" type="checkbox" checked /> Accepted
+          boundary</label
+        ><span class="note"
+          >Drag: orbit · two fingers/right-drag: pan · pinch/wheel: zoom</span
+        >
+      </div>
+    </header>
+    <main>
+      <div id="app"></div>
+      <aside>
+        <h2>Review the base model</h2>
+        <p class="note">
+          Plain clay only. No textures, façade fittings or imported meshes.
+          Buildings and terrain are simplified reference-derived approximations,
+          not a surveyed reconstruction.
+        </p>
+        <p class="note">
+          North is −Z; east is +X; Y is height. One unit = one metre. Ground
+          contacts, access routes and walkability are not yet verified.
+        </p>
+        <h2>Building focus</h2>
+        <ul id="buildings"></ul>
+      </aside>
+    </main>
+    <footer>
+      Approved boundary retained · Simplified terrain needs owner review · No
+      public release approval implied
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
