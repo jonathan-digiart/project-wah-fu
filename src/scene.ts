@@ -1,3 +1,4 @@
+import { linearTerrainPositions } from "./terrain-mesh";
 import {
   DoubleSide,
   AmbientLight,
@@ -17,9 +18,15 @@ import {
   Vector3,
   ExtrudeGeometry,
 } from "three";
-import { inside, terrainHeight, type Point, type SiteData } from "./model";
+import {
+  inside,
+  createHeightSampler,
+  type Point,
+  type SiteData,
+} from "./model";
 /** Uniform triangle subdivision retains the exact semantic boundary, without raster clipping. */
 export function terrainPositions(data: SiteData, depth = 4): number[] {
+  const heightAt = createHeightSampler(data);
   const positions: number[] = [];
   let flatHeight: number | undefined = undefined;
   const append = (a: Point, b: Point, c: Point, remaining: number): void => {
@@ -35,19 +42,18 @@ export function terrainPositions(data: SiteData, depth = 4): number[] {
     }
     // XZ polygon winding reversed to produce upward-facing +Y normals.
     for (const p of [a, c, b])
-      positions.push(
-        p[0],
-        flatHeight ?? terrainHeight(p[0], p[1], data.terrainControls),
-        p[1],
-      );
+      positions.push(p[0], flatHeight ?? heightAt(p[0], p[1]), p[1]);
   };
   if (!Number.isInteger(depth) || depth < 0 || depth > 6)
     throw new Error("Terrain subdivision outside safe budget");
-  for (const region of data.landRegions ?? [data.boundary]) {
-    const outline = region.map((p) => new Vector2(...p));
-    for (const face of ShapeUtils.triangulateShape(outline, []))
-      append(region[face[0]!]!, region[face[1]!]!, region[face[2]!]!, depth);
-  }
+  if (data.interpolation === "linear")
+    for (const value of linearTerrainPositions(data)) positions.push(value);
+  else
+    for (const region of data.landRegions ?? [data.boundary]) {
+      const outline = region.map((p) => new Vector2(...p));
+      for (const face of ShapeUtils.triangulateShape(outline, []))
+        append(region[face[0]!]!, region[face[1]!]!, region[face[2]!]!, depth);
+    }
   flatHeight = data.seaHeight;
   for (const region of data.seaRegions ?? []) {
     const outline = region.map((p) => new Vector2(...p));
@@ -57,6 +63,7 @@ export function terrainPositions(data: SiteData, depth = 4): number[] {
   return positions;
 }
 export function createSiteScene(data: SiteData) {
+  const heightAt = createHeightSampler(data);
   const scene = new Scene();
   scene.background = new Color("#e9e7e1");
   scene.add(new AmbientLight(0xffffff, 2));
@@ -102,12 +109,8 @@ export function createSiteScene(data: SiteData) {
           const z1 = a[1] + ((b[1] - a[1]) * j) / 16;
           const x2 = a[0] + ((b[0] - a[0]) * (j + 1)) / 16;
           const z2 = a[1] + ((b[1] - a[1]) * (j + 1)) / 16;
-          const h1 = sea
-            ? data.seaHeight!
-            : terrainHeight(x1, z1, data.terrainControls);
-          const h2 = sea
-            ? data.seaHeight!
-            : terrainHeight(x2, z2, data.terrainControls);
+          const h1 = sea ? data.seaHeight! : heightAt(x1, z1);
+          const h2 = sea ? data.seaHeight! : heightAt(x2, z2);
           shellPositions.push(
             x1,
             h1,
@@ -179,7 +182,7 @@ export function createSiteScene(data: SiteData) {
         p[0],
         ((data.seaRegions ?? []).some((region) => inside(p, region))
           ? data.seaHeight!
-          : terrainHeight(p[0], p[1], data.terrainControls)) + 0.8,
+          : heightAt(p[0], p[1])) + 0.8,
         p[1],
       ),
   );

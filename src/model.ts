@@ -1,3 +1,4 @@
+import { createLinearTerrain } from "./linear-terrain";
 /** Semantic, metre-based input. Never stores source mesh vertices or texture pixels. */
 export type Point = readonly [number, number];
 export interface Building {
@@ -15,6 +16,13 @@ export interface TerrainControl {
 }
 export interface SiteData {
   boundary: Point[];
+  interpolation?: "linear" | "idw";
+  review?: {
+    samples: number;
+    meanError: number;
+    p95Error: number;
+    maxError: number;
+  };
   landRegions?: Point[][];
   seaRegions?: Point[][];
   seaHeight?: number;
@@ -80,6 +88,15 @@ export function terrainHeight(
   }
   return weighted / total;
 }
+export function createHeightSampler(
+  data: SiteData,
+): (x: number, z: number) => number {
+  const fallback = (x: number, z: number) =>
+    terrainHeight(x, z, data.terrainControls);
+  return data.interpolation === "linear"
+    ? createLinearTerrain(data.terrainControls, fallback).heightAt
+    : fallback;
+}
 function object(value: unknown): value is Record<string, unknown> {
   return !!value && typeof value === "object";
 }
@@ -126,8 +143,8 @@ export function parseSiteData(value: unknown): SiteData {
     !object(value.provenance)
   )
     throw new Error("Invalid semantic site data");
-  if (!value.terrainControls.length || value.terrainControls.length > 100)
-    throw new Error("Expected 1–100 sparse terrain controls");
+  if (!value.terrainControls.length || value.terrainControls.length > 320)
+    throw new Error("Expected 1–320 semantic terrain controls");
   for (const c of value.terrainControls as unknown[])
     if (!object(c) || !finite(c.x) || !finite(c.z) || !finite(c.height))
       throw new Error("Invalid terrain control");
@@ -145,6 +162,23 @@ export function parseSiteData(value: unknown): SiteData {
     !finite(value.presentationBottom)
   )
     throw new Error("Invalid presentation bottom");
+  if (
+    value.interpolation !== undefined &&
+    value.interpolation !== "linear" &&
+    value.interpolation !== "idw"
+  )
+    throw new Error("Unknown interpolation");
+  if (value.review !== undefined) {
+    if (
+      !object(value.review) ||
+      !["samples", "meanError", "p95Error", "maxError"].every(
+        (key) =>
+          finite((value.review as Record<string, unknown>)[key]) &&
+          ((value.review as Record<string, number>)[key] ?? -1) >= 0,
+      )
+    )
+      throw new Error("Invalid review metrics");
+  }
   const ids = new Set<string>();
   for (const b of value.buildings as unknown[]) {
     if (

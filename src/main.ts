@@ -18,6 +18,11 @@ async function start() {
       "Private reference parameters not supplied. The public renderer contains no legacy assets.",
     );
   const data = parseSiteData(await response.json());
+  if (data.review) {
+    const note = document.querySelector<HTMLParagraphElement>("#terrain-note")!;
+    const r = data.review;
+    note.textContent = `Provisional terrain: ${r.samples} independent height probes; mean error ${r.meanError.toFixed(1)} m, 95th percentile ${r.p95Error.toFixed(1)} m, maximum ${r.maxError.toFixed(1)} m. Ground-contact approval remains open.`;
+  }
   const buttons = new Map<string, HTMLButtonElement>();
   for (const building of data.buildings) {
     const li = document.createElement("li");

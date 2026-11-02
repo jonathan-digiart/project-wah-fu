@@ -1,3 +1,5 @@
+import { createLinearTerrain } from "./linear-terrain";
+import { linearTerrainPositions } from "./terrain-mesh";
 import { existsSync, readFileSync } from "node:fs";
 import { expect, test } from "vitest";
 import { Box3, Mesh } from "three";
@@ -51,5 +53,40 @@ test.skipIf(!existsSync(path))(
       expect(Math.abs(sum - Math.abs(area(data.boundary)))).toBeLessThan(0.1);
     }
     dispose();
+  },
+);
+
+test.skipIf(!existsSync(path))(
+  "linear private terrain matches independently computed predictions and covers land",
+  () => {
+    const data = parseSiteData(
+      JSON.parse(readFileSync(path, "utf8")) as unknown,
+    );
+    if (data.interpolation !== "linear") return;
+    const linear = createLinearTerrain(data.terrainControls, () => Number.NaN);
+    const samples = data.provenance.independentSamples as
+      { x: number; z: number; contourHeight: number }[] | undefined;
+    expect(samples?.length).toBeGreaterThan(0);
+    for (const sample of samples ?? [])
+      expect(linear.heightAt(sample.x, sample.z)).toBeCloseTo(
+        sample.contourHeight,
+        4,
+      );
+    const vertices = linearTerrainPositions(data);
+    let total = 0;
+    for (let i = 0; i < vertices.length; i += 9) {
+      const ax = vertices[i]!,
+        az = vertices[i + 2]!,
+        bx = vertices[i + 3]!,
+        bz = vertices[i + 5]!,
+        cx = vertices[i + 6]!,
+        cz = vertices[i + 8]!;
+      total += Math.abs((bx - ax) * (cz - az) - (cx - ax) * (bz - az)) / 2;
+    }
+    const expected = (data.landRegions ?? [data.boundary]).reduce(
+      (sum, p) => sum + Math.abs(area(p)),
+      0,
+    );
+    expect(Math.abs(total - expected)).toBeLessThan(0.01);
   },
 );
