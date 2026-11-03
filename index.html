@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Wah Fu · Clay base review</title>
+  </head>
+  <body>
+    <header>
+      <div class="badge">Procedural rebuild · public clay prototype</div>
+      <h1>Wah Fu — terrain & building massing</h1>
+      <p id="status" role="status">Loading model…</p>
+      <div class="toolbar">
+        <button id="pan" aria-pressed="false">Pan mode</button>
+        <button id="reset">Reset overview</button
+        ><button id="top">Top view · north up</button
+        ><label
+          ><input id="context" type="checkbox" checked /> Other legacy
+          buildings</label
+        ><span class="note"
+          >Drag: orbit · Pan mode: drag to pan · two fingers/right-drag: pan ·
+          pinch/wheel: zoom · Solid camera boundary on</span
+        >
+      </div>
+    </header>
+    <main>
+      <div id="app"></div>
+      <aside>
+        <h2>About the base model</h2>
+        <p class="note">
+          Plain clay only. No textures, façade fittings or imported meshes.
+          Buildings and terrain are simplified reference-derived approximations,
+          not a surveyed reconstruction.
+        </p>
+        <p class="note">
+          North is −Z; east is +X; Y is height. One unit = one metre. Ground
+          contacts, access routes and walkability are not yet verified.
+        </p>
+        <p id="terrain-note" class="note">
+          Terrain accuracy and ground contacts remain under review.
+        </p>
+        <h2>Building focus</h2>
+        <p id="selection-note" class="note">
+          Select a building to inspect its highlighted mass.
+        </p>
+        <ul id="buildings"></ul>
+        <details>
+          <summary>
+            Other legacy buildings (<span id="context-count">0</span>)
+          </summary>
+          <ul id="context-buildings"></ul>
+        </details>
+      </aside>
+    </main>
+    <footer>
+      Provisional terrain and building forms · Not for survey or navigation
+      use.<br />
+      Source:
+      <a
+        href="https://portal.csdi.gov.hk/csdi-webpage/dataset/landsd_rcd_1742809441342_98380"
+        >Lands Department, HKSAR Government · CSDI Portal</a
+      >. Government and relevant organisations retain source-data rights.
+      <a href="./DATA-ATTRIBUTION.txt">Data attribution and terms</a> ·
+      <a href="./THREE-LICENSE.txt">Three.js licence</a> ·
+      <a href="./EARCUT-LICENSE.txt">Earcut licence</a>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
