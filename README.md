@@ -1,33 +1,83 @@
 # Project Wah Fu
 
-An independent procedural clay model of Wah Fu Estate and its surroundings. This approved visual baseline has 18 estate houses and 103 surrounding building objects, rendered as 124 components. It is an early reconstruction, not a survey or verified historical record.
+**An AI-assisted 3D reconstruction project to document the architecture, everyday scenery and community memories of Wah Fu Estate, Hong Kong.**
 
-The browser generates terrain and building geometry from semantic parameters. No mesh files, textures, photographs, external model services or authentication keys are needed at runtime. The static demo supports orbit, pan, zoom, building focus and a camera collision envelope.
+[繁體中文（香港）](README.zh-HK.md) · English
 
-## Development
+### Overview
 
-Node.js 24 and the committed npm lockfile are required.
+Project Wah Fu is an experimental digital preservation project focused on Wah Fu Estate in Hong Kong. It combines 3D modelling, browser-based interaction and reference research to explore how the estate's architecture and everyday environment can be documented as the community changes.
 
-- npm ci --ignore-scripts
-- npm run dev
-- npm run check:release
+The long-term aim is an explorable 3D environment that connects buildings and public spaces with photographs, writing, sound and stories, allowing users to learn about Wah Fu through specific places.
 
-Checks cover formatting, TypeScript, lint, unit/geometry/collision tests, production build and public-artifact safeguards. npm run test:e2e runs browser scenarios when approved Playwright browsers are available; browser tests are separate from the default checks. A passed build is not proof of mobile performance.
+**The project is in early development. A complete estate reconstruction is not yet available.**
 
-## Selected public releases
+### Background
 
-The GitHub Pages workflow runs only by manual dispatch. Select the full 40-character commit SHA of an approved version. It checks out that exact commit, runs release checks and deploys only the resulting dist artifact. Normal pushes and PRs do not deploy. GitHub Pages must be configured to use GitHub Actions.
+Wah Fu Estate was designed by Donald Liao Poon-huai, an architect with the former Hong Kong Housing Authority. Completed in phases from 1967 onwards, it comprises 18 residential blocks alongside shops, schools, terraces and communal spaces, and has been home to generations of residents.
 
-The relative Vite base supports the project Pages subdirectory. The private working preview remains a separate deployment.
+Phased redevelopment will gradually change its buildings, public spaces and everyday scenery, making their documentation increasingly time-sensitive. [Official redevelopment update, 2 November 2026](https://www.news.gov.hk/eng/2026/11/20261102/20261102_174753_450.html?type=ticker)
 
-## Accuracy and limitations
+Project Wah Fu grew from an exploration of generative AI as a tool for documenting communities, inspired by photographs and stories shared through Facebook pages such as 「[邨新富華](https://www.facebook.com/WahFuRelocation)」 and 「[華富一邨民](https://www.facebook.com/profile.php?id=100086308818605)」. Beyond its buildings, the project also aims to record the many details that make up everyday life on the estate.
 
-Footprints and heights are simplified source-derived envelopes. Terrain is provisional: the retained independent comparison summary is about 2.6 m mean absolute error and 7.5 m 95th-percentile error. Ground contacts, steps, access routes and walkability are not yet verified. Sea height and the presentation base are illustrative. Collision protects the rendered clay shapes, not surveyed real-world surfaces. One-metre camera clearance intentionally excludes gaps narrower than two metres.
+### Long-term goals
 
-## Data, attribution and licensing
+The intended scope covers Wah Fu I, Wah Fu II and the surrounding environment connected to life on the estate. The main goals are:
 
-Source: Lands Department, Government of the Hong Kong SAR, through the CSDI Portal, 3D Visualisation Map (Non-textured models). Government and relevant organisations retain source-data intellectual property rights.
+- **Spatial exploration:** present the estate, individual buildings and public spaces, including their relationships to one another.
+- **Place-based storytelling:** connect photographs, writing, sound, relevant reporting and community pages to specific locations.
+- **Records of different periods:** present historical appearances where sufficient evidence exists, with dates, sources and uncertainties identified.
+- **Browser usability:** balance visual detail with loading times and responsive navigation.
 
-See [data attribution and terms](public/DATA-ATTRIBUTION.txt). The source terms are distinct from project code. No blanket open-source licence is assigned to the project or third-party data by this release; code is publicly viewable, with no additional project licence grant.
+These are development goals and have not all been realised.
 
-Three.js is MIT-licensed; its incorporated Earcut triangulator is ISC-licensed. Their required notices are in public/ and included in each deployment. This project is not endorsed by the Government.
+### Current stage: a procedural model rebuild
+
+[Public preview](https://jonathan-digiart.github.io/project-wah-fu/) · [Release version](https://github.com/jonathan-digiart/project-wah-fu/commit/348b19d7166fbee2ef01b6fb6bf6b048b3bf5e4b)
+
+Earlier prototypes used government open geospatial and 3D data to establish a base model, with photographic references and AI assistance used to develop selected architectural details.
+
+The project uses **[Three.js](https://threejs.org), [TypeScript](https://www.typescriptlang.org) and [Vite](https://vite.dev)** to develop procedural models. Code and explicit parameters generate terrain and building forms. The immediate focus is on checking boundaries, scale, placement, orientation and building-to-ground connections before adding further detail.
+
+- The experimental procedural-model code scaffold has been merged into `main` through [PR #6](https://github.com/jonathan-digiart/project-wah-fu/pull/6). The first public preview is now available.
+- Terrain, building forms and ground connections still require reference-based refinement and review. Passing code tests does not establish an accurate reconstruction of Wah Fu.
+- Code and scene data are handled separately. Publishing the code does not automatically include source models, reference photographs or earlier assets. Public scenes should contain only material that has been checked and approved for release.
+- The public preview is a work-in-progress prototype. Known limitations and further work are tracked in [Issues](https://github.com/jonathan-digiart/project-wah-fu/issues).
+
+### Workflow and the role of AI
+
+The creator sets the direction, selects reference material and reviews the results. AI agents assist with research, coding, model preparation and testing. OpenAI Dots helps co-ordinate and carry out this work, continuing suitable tasks when tools are available and instructions are clear. Visual judgements, decisions about evidence and release approval remain with the project owner.
+
+Development and review follow these principles:
+
+- **Evidence:** distinguish content supported by photographs or measurements from inferences and unknowns.
+- **Correction:** do not treat AI-generated results as evidence of historical fact. Reassess and correct details when more reliable sources become available.
+- **Staged review:** establish spatial relationships and building forms before adding detail, with separate checks of code, rendered appearance and interaction.
+- **Sources and rights:** record sources, dates, attribution and usage conditions. Keep material with unresolved permissions out of public releases.
+
+### Development progress
+
+Tasks and unresolved questions are tracked in [Issues](https://github.com/jonathan-digiart/project-wah-fu/issues). Proposed code changes are submitted for review through [Pull requests](https://github.com/jonathan-digiart/project-wah-fu/pulls).
+
+Near-term work covers:
+
+1. Establishing coordinates, scale and the site boundary.
+2. Refining procedural terrain and building forms.
+3. Checking building-to-ground connections and improving navigation.
+4. Reviewing fidelity, performance and regression-test results.
+
+Architectural detail and storytelling are later development goals, dependent on these foundations and verification of the supporting material.
+
+### Licensing and materials
+
+> Proposed revision: the following split licensing scheme is under consideration and has not yet been applied.
+
+- **Code that the project has the right to license:** proposed licence: [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0).
+- **Original creative assets that the project has the right to license:** proposed licence: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- **Third-party software, data and assets:** their respective licences and usage conditions continue to apply. Inclusion or reference in this project does not place them under the licences above. Government open data, reference photographs and other externally sourced material will have their sources, attribution and usage restrictions recorded separately.
+
+Until the licence files and their scope have been confirmed and published, these are proposed choices rather than licences already in effect. The goal of free public access is separate from the licensing of code and assets for reuse.
+
+### Technical documentation
+
+See [Development and release](docs/development-and-release.md) for development commands, the release procedure, known limitations and data-source notices.
