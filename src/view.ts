@@ -1,4 +1,7 @@
-import { Box3, PerspectiveCamera, Ray, Vector3 } from "three";
+import type { BufferGeometry } from "three";
+import { Box3, Mesh, Object3D, PerspectiveCamera, Ray, Vector3 } from "three";
+export const OVERVIEW_DIRECTION = new Vector3(-0.4, 0.65, 1);
+
 /** Bounding-sphere fit respects whichever field of view is narrower, including portrait canvases. */
 export function fitCamera(
   camera: PerspectiveCamera,
@@ -77,4 +80,81 @@ export function setContextVisible(
 ): void {
   for (const mesh of meshes)
     if (mesh.userData.category === "context") mesh.visible = visible;
+}
+
+/** Collect generated surface vertices once, including the presentation base. */
+export function framingPoints(roots: readonly Object3D[]): Vector3[] {
+  const points: Vector3[] = [];
+  for (const root of roots) {
+    root.updateWorldMatrix(true, true);
+    root.traverse((node) => {
+      if (!(node instanceof Mesh)) return;
+      const positions = (node.geometry as BufferGeometry).getAttribute(
+        "position",
+      );
+      for (let i = 0; i < positions.count; i++)
+        points.push(
+          new Vector3()
+            .fromBufferAttribute(positions, i)
+            .applyMatrix4(node.matrixWorld),
+        );
+    });
+  }
+  return points;
+}
+
+/** Fit both projected silhouette edges, not just one edge around a world-space centre. */
+export function fitOverview(
+  camera: PerspectiveCamera,
+  points: readonly Vector3[],
+  direction: Vector3,
+  occupancy = 0.82,
+): Vector3 {
+  if (!points.length || !(occupancy > 0 && occupancy < 1))
+    throw new Error("Overview requires geometry and a visible margin");
+  const target = new Box3().setFromPoints([...points]).getCenter(new Vector3());
+  const back = direction.clone().normalize();
+  const right = new Vector3().crossVectors(camera.up, back).normalize();
+  const up = new Vector3().crossVectors(back, right).normalize();
+  const tanV = Math.tan((camera.fov * Math.PI) / 360) * occupancy;
+  const tanH = tanV * camera.aspect;
+  const coordinates = points.map((point) => {
+    const p = point.clone().sub(target);
+    return [p.dot(right), p.dot(up), p.dot(back)] as const;
+  });
+  const intervals = (distance: number) => {
+    let minX = -Infinity,
+      maxX = Infinity,
+      minY = -Infinity,
+      maxY = Infinity;
+    for (const [x, y, z] of coordinates) {
+      const depth = distance - z;
+      minX = Math.max(minX, x - tanH * depth);
+      maxX = Math.min(maxX, x + tanH * depth);
+      minY = Math.max(minY, y - tanV * depth);
+      maxY = Math.min(maxY, y + tanV * depth);
+    }
+    return { minX, maxX, minY, maxY };
+  };
+  let low = Math.max(...coordinates.map((p) => p[2])) + camera.near * 2;
+  let high = Math.max(low, 1);
+  const feasible = (distance: number) => {
+    const i = intervals(distance);
+    return i.minX <= i.maxX && i.minY <= i.maxY;
+  };
+  while (!feasible(high)) high *= 2;
+  for (let iteration = 0; iteration < 42; iteration++) {
+    const mid = (low + high) / 2;
+    if (feasible(mid)) high = mid;
+    else low = mid;
+  }
+  const i = intervals(high);
+  target
+    .addScaledVector(right, (i.minX + i.maxX) / 2)
+    .addScaledVector(up, (i.minY + i.maxY) / 2);
+  camera.position.copy(target).addScaledVector(back, high);
+  camera.far = Math.max(6000, high * 4);
+  camera.updateProjectionMatrix();
+  camera.lookAt(target);
+  return target;
 }

@@ -19,7 +19,8 @@
     "browsers:install": "PLAYWRIGHT_BROWSERS_PATH=.cache/ms-playwright playwright install chromium webkit",
     "test:e2e": "PLAYWRIGHT_BROWSERS_PATH=.cache/ms-playwright playwright test",
     "check": "npm run format:check && npm run typecheck && npm run lint && npm test && npm run build",
-    "check:all": "npm run check && npm run test:e2e"
+    "check:all": "npm run check && npm run test:e2e",
+    "check:release": "npm run check && node scripts/check-release.mjs"
   },
   "dependencies": {
     "three": "0.187.0"

@@ -7,8 +7,6 @@ import {
   DirectionalLight,
   Float32BufferAttribute,
   Group,
-  Line,
-  LineBasicMaterial,
   Mesh,
   MeshStandardMaterial,
   Scene,
@@ -16,15 +14,9 @@ import {
   Path,
   ShapeUtils,
   Vector2,
-  Vector3,
   ExtrudeGeometry,
 } from "three";
-import {
-  inside,
-  createHeightSampler,
-  type Point,
-  type SiteData,
-} from "./model";
+import { createHeightSampler, type Point, type SiteData } from "./model";
 /** Uniform triangle subdivision retains the exact semantic boundary, without raster clipping. */
 export function terrainPositions(data: SiteData, depth = 4): number[] {
   const heightAt = createHeightSampler(data);
@@ -191,22 +183,6 @@ export function createSiteScene(data: SiteData) {
     };
     buildings.add(mesh);
   }
-  const points = [...data.boundary, data.boundary[0]!].map(
-    (p) =>
-      new Vector3(
-        p[0],
-        ((data.seaRegions ?? []).some((region) => inside(p, region))
-          ? data.seaHeight!
-          : heightAt(p[0], p[1])) + 0.8,
-        p[1],
-      ),
-  );
-  const boundary = new Line(
-    new BufferGeometry().setFromPoints(points),
-    new LineBasicMaterial({ color: "#444e4b" }),
-  );
-  boundary.name = "Approved site boundary";
-  scene.add(boundary);
   const dispose = () => {
     terrainGeometry.dispose();
     shellGeometry.dispose();
@@ -214,10 +190,8 @@ export function createSiteScene(data: SiteData) {
     clay.dispose();
     contextClay.dispose();
     groundClay.dispose();
-    boundary.geometry.dispose();
-    boundary.material.dispose();
     for (const child of buildings.children)
       if (child instanceof Mesh) (child.geometry as BufferGeometry).dispose();
   };
-  return { scene, buildings, terrain, boundary, shell, dispose };
+  return { scene, buildings, terrain, shell, dispose };
 }

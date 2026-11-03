@@ -7,29 +7,26 @@
   </head>
   <body>
     <header>
-      <div class="badge">Procedural rebuild · private review candidate</div>
+      <div class="badge">Procedural rebuild · public clay prototype</div>
       <h1>Wah Fu — terrain & building massing</h1>
-      <p id="status" role="status">Loading semantic reference parameters…</p>
+      <p id="status" role="status">Loading model…</p>
       <div class="toolbar">
         <button id="pan" aria-pressed="false">Pan mode</button>
         <button id="reset">Reset overview</button
         ><button id="top">Top view · north up</button
         ><label
-          ><input id="boundary" type="checkbox" checked /> Accepted
-          boundary</label
-        ><label
           ><input id="context" type="checkbox" checked /> Other legacy
           buildings</label
         ><span class="note"
           >Drag: orbit · Pan mode: drag to pan · two fingers/right-drag: pan ·
-          pinch/wheel: zoom</span
+          pinch/wheel: zoom · Solid camera boundary on</span
         >
       </div>
     </header>
     <main>
       <div id="app"></div>
       <aside>
-        <h2>Review the base model</h2>
+        <h2>About the base model</h2>
         <p class="note">
           Plain clay only. No textures, façade fittings or imported meshes.
           Buildings and terrain are simplified reference-derived approximations,
@@ -56,8 +53,16 @@
       </aside>
     </main>
     <footer>
-      Approved boundary retained · Simplified terrain needs owner review · No
-      public release approval implied
+      Provisional terrain and building forms · Not for survey or navigation
+      use.<br />
+      Source:
+      <a
+        href="https://portal.csdi.gov.hk/csdi-webpage/dataset/landsd_rcd_1742809441342_98380"
+        >Lands Department, HKSAR Government · CSDI Portal</a
+      >. Government and relevant organisations retain source-data rights.
+      <a href="./DATA-ATTRIBUTION.txt">Data attribution and terms</a> ·
+      <a href="./THREE-LICENSE.txt">Three.js licence</a> ·
+      <a href="./EARCUT-LICENSE.txt">Earcut licence</a>
     </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>

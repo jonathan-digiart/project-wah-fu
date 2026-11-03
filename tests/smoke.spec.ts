@@ -60,8 +60,7 @@ test("clay review loads and repeat navigation/reset/reload remains stable", asyn
     await page.locator("#pan").click();
     await page.locator("#top").click();
     await page.locator("#reset").click();
-    await page.locator("#boundary").uncheck();
-    await page.locator("#boundary").check();
+    await expect(page.locator("#boundary")).toHaveCount(0);
   }
   await page.reload();
   await expect(page.locator("#status")).toContainText(

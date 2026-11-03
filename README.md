@@ -1,29 +1,33 @@
-# Project Wah Fu — experimental procedural clay engine
+# Project Wah Fu
 
-**Experimental code scaffold, not a completed estate reconstruction or a public demo.** Site parameters are deliberately excluded. GitHub Pages has not been enabled by this work; no deployment workflow is included.
+An independent procedural clay model of Wah Fu Estate and its surroundings. This approved visual baseline has 18 estate houses and 103 surrounding building objects, rendered as 124 components. It is an early reconstruction, not a survey or verified historical record.
 
-Three.js + strict TypeScript + Vite. This phase is plain clay terrain and building massing only: no runtime mesh/texture assets or facade details.
+The browser generates terrain and building geometry from semantic parameters. No mesh files, textures, photographs, external model services or authentication keys are needed at runtime. The static demo supports orbit, pan, zoom, building focus and a camera collision envelope.
 
-## Run
+## Development
 
-Use the pinned Node version in `.nvmrc`, then `npm ci` and `npm run dev`.
+Node.js 24 and the committed npm lockfile are required.
 
-`npm run check` runs formatting, strict types, typed lint, unit/regression tests and production build. `npm run test:e2e` requires Playwright browsers and a working WebGL 2 environment. A successful unit/build check is not a visual, mobile-performance or survey-accuracy pass.
+- npm ci --ignore-scripts
+- npm run dev
+- npm run check:release
 
-An authorised private preview receives **semantic parameters** at `public/site-data.json`: a short boundary polygon, short building footprints/base/height and explicit uncertainty, sparse terrain controls, optional land/sea regions and presentation-bottom datum. It is excluded from Git. Without this file the application intentionally shows a missing-parameters state; no estate geometry is fabricated. Synthetic fixtures exercise the public engine without private source data.
+Checks cover formatting, TypeScript, lint, unit/geometry/collision tests, production build and public-artifact safeguards. npm run test:e2e runs browser scenarios when approved Playwright browsers are available; browser tests are separate from the default checks. A passed build is not proof of mobile performance.
 
-## Architecture
+## Selected public releases
 
-- `src/model.ts`: metre coordinate conversion, semantic contract, validation and height interpolation.
-- `src/scene.ts`: algorithmic terrain subdivision, semantic footprint extrusion, presentation shell and boundary.
-- `src/main.ts`: responsive review/navigation and graceful error state. Rendering is on-demand instead of consuming frames while idle.
-- `src/*.test.ts`: coordinate, topology, interpolation, geometry and asset-policy regressions. Private-data verification runs only when authorised parameters are locally supplied.
-- `tests/smoke.spec.ts`: missing-data, repeated navigation/reload and WebGL-unavailable flows.
+The GitHub Pages workflow runs only by manual dispatch. Select the full 40-character commit SHA of an approved version. It checks out that exact commit, runs release checks and deploys only the resulting dist artifact. Normal pushes and PRs do not deploy. GitHub Pages must be configured to use GitHub Actions.
 
-See [base-model review gate](docs/base-model-review.md) for limits and acceptance order. Each discovered issue should gain a focused regression test or lint rule when statically expressible, rather than a brittle blanket lint rule.
+The relative Vite base supports the project Pages subdirectory. The private working preview remains a separate deployment.
 
-## Publication boundaries
+## Accuracy and limitations
 
-The first procedural rebuild must receive owner approval before public demo publication. Reference-derived measurements and source provenance remain private pending rights review. Do not copy private preview `dist` into GitHub Pages or a public preview. Rebuild public code from a clean checkout without private parameters. No deployment or merge is performed by these scripts.
+Footprints and heights are simplified source-derived envelopes. Terrain is provisional: the retained independent comparison summary is about 2.6 m mean absolute error and 7.5 m 95th-percentile error. Ground contacts, steps, access routes and walkability are not yet verified. Sea height and the presentation base are illustrative. Collision protects the rendered clay shapes, not surveyed real-world surfaces. One-metre camera clearance intentionally excludes gaps narrower than two metres.
 
-Toolchain dependencies are exact-pinned in the lockfile. `npm audit --omit=dev` previously returned zero production findings; a development-only minimatch advisory remains in the lint dependency chain and must be tracked rather than blindly overridden.
+## Data, attribution and licensing
+
+Source: Lands Department, Government of the Hong Kong SAR, through the CSDI Portal, 3D Visualisation Map (Non-textured models). Government and relevant organisations retain source-data intellectual property rights.
+
+See [data attribution and terms](public/DATA-ATTRIBUTION.txt). The source terms are distinct from project code. No blanket open-source licence is assigned to the project or third-party data by this release; code is publicly viewable, with no additional project licence grant.
+
+Three.js is MIT-licensed; its incorporated Earcut triangulator is ISC-licensed. Their required notices are in public/ and included in each deployment. This project is not endorsed by the Government.

@@ -1,0 +1,11 @@
+# Data attribution
+
+Derived from the Lands Department, Government of the Hong Kong Special Administrative Region, 3D Visualisation Map (Non-textured models), available through the CSDI Portal and Open3Dhk.
+
+Dataset: https://portal.csdi.gov.hk/csdi-webpage/dataset/landsd_rcd_1742809441342_98380
+Source viewer: https://3d.map.gov.hk/
+Terms: https://portal.csdi.gov.hk/csdi-webpage/doc/TNC
+
+The Government and relevant organisations retain intellectual property rights in the source data. The source data and this project’s approximation are provided without a guarantee of accuracy. This is an independent, simplified reconstruction and is not endorsed by the Government. Building outlines and heights are simplified; terrain, ground contacts and access routes are provisional. Illustrative sea and presentation base are not surveyed bathymetry or geology.
+
+The source terms are separate from any project-code licence. No project licence changes the source owners’ rights.

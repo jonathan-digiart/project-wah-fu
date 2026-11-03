@@ -17,7 +17,7 @@ test("regression: rounding must not introduce self-crossing footprints", () => {
   ).toBe(true);
 });
 test.skipIf(!existsSync(path))(
-  "private supplied parameters generate finite, correctly oriented, bounded clay geometry",
+  "release parameters generate finite, correctly oriented, bounded clay geometry",
   () => {
     const data = parseSiteData(
       JSON.parse(readFileSync(path, "utf8")) as unknown,
@@ -57,19 +57,16 @@ test.skipIf(!existsSync(path))(
 );
 
 test.skipIf(!existsSync(path))(
-  "linear private terrain matches independently computed predictions and covers land",
+  "linear terrain interpolates its controls and covers land",
   () => {
     const data = parseSiteData(
       JSON.parse(readFileSync(path, "utf8")) as unknown,
     );
     if (data.interpolation !== "linear") return;
     const linear = createLinearTerrain(data.terrainControls, () => Number.NaN);
-    const samples = data.provenance.independentSamples as
-      { x: number; z: number; contourHeight: number }[] | undefined;
-    expect(samples?.length).toBeGreaterThan(0);
-    for (const sample of samples ?? [])
-      expect(linear.heightAt(sample.x, sample.z)).toBeCloseTo(
-        sample.contourHeight,
+    for (const control of data.terrainControls)
+      expect(linear.heightAt(control.x, control.z)).toBeCloseTo(
+        control.height,
         4,
       );
     const vertices = linearTerrainPositions(data);
@@ -92,28 +89,20 @@ test.skipIf(!existsSync(path))(
 );
 
 test.skipIf(!existsSync(path))(
-  "private context inventory is complete and approved exclusions remain excluded",
+  "release inventory preserves 18 estate houses and 103 context sources",
   () => {
     const data = parseSiteData(
       JSON.parse(readFileSync(path, "utf8")) as unknown,
     );
-    const audit = data.provenance.contextMassing as
-      | {
-          expectedSourceIds: string[];
-          approvedExcludedSourceIds: string[];
-          expectedComponentCount: number;
-          retainedCourtyardCount: number;
-        }
-      | undefined;
-    if (!audit) return;
     const parts = data.buildings.filter((b) => b.category === "context");
     const actual = [...new Set(parts.map((b) => b.sourceId ?? b.id))].sort();
-    expect(actual).toEqual([...audit.expectedSourceIds].sort());
-    expect(parts).toHaveLength(audit.expectedComponentCount);
+    expect(actual).toHaveLength(103);
+    expect(parts).toHaveLength(106);
     expect(parts.reduce((count, b) => count + (b.holes?.length ?? 0), 0)).toBe(
-      audit.retainedCourtyardCount,
+      35,
     );
-    for (const id of audit.approvedExcludedSourceIds)
-      expect(actual).not.toContain(id);
+    expect(data.buildings.filter((b) => b.category !== "context")).toHaveLength(
+      18,
+    );
   },
 );

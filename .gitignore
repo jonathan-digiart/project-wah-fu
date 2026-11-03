@@ -3,6 +3,3 @@ node_modules/
 dist/
 test-results/
 playwright-report/
-
-# Private measured parameters: never commit without rights review
-public/site-data.json

@@ -24,9 +24,17 @@ test("review page supplies every required control before runtime binds handlers"
     "pan",
     "reset",
     "top",
-    "boundary",
     "selection-note",
     "terrain-note",
   ])
     expect(html).toContain(`id="${id}"`);
+  expect(html).not.toContain('id="boundary"');
+});
+
+test("browser discovery excludes Vitest collision unit files", () => {
+  const config = readFileSync(
+    new URL("../playwright.config.ts", import.meta.url),
+    "utf8",
+  );
+  expect(config).toContain('testMatch: "**/*.spec.ts"');
 });

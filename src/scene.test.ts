@@ -99,3 +99,18 @@ test("procedural building extrusion retains footprint, base and height without m
     expect(normal.getY(i)).toBeGreaterThan(0);
   dispose();
 });
+
+test("site crop remains data-driven without a visual boundary overlay", () => {
+  const data = { ...fixture, presentationBottom: 0 };
+  const before = JSON.stringify(data);
+  const { scene, buildings, terrain, shell, dispose } = createSiteScene(data);
+  scene.traverse((object) => {
+    expect(object.type).not.toMatch(/^Line/);
+    expect(object.name).not.toBe("Approved site boundary");
+  });
+  expect(JSON.stringify(data)).toBe(before);
+  expect(buildings.children).toHaveLength(1);
+  expect(terrain.geometry.getAttribute("position").count).toBeGreaterThan(0);
+  expect(shell.geometry.getAttribute("position").count).toBeGreaterThan(0);
+  dispose();
+});

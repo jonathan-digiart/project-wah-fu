@@ -1,6 +1,10 @@
 import "./style.css";
+import { protectCamera } from "./collision";
 import {
   fitCamera,
+  OVERVIEW_DIRECTION,
+  fitOverview,
+  framingPoints,
   focusDirection,
   uniqueSentences,
   highlightSelection,
@@ -31,7 +35,7 @@ async function start() {
   });
   if (!response.ok)
     throw new Error(
-      "Private reference parameters not supplied. The public renderer contains no legacy assets.",
+      "Model parameters not supplied. Reload or report the missing model file.",
     );
   const data = parseSiteData(await response.json());
   if (data.review) {
@@ -58,8 +62,7 @@ async function start() {
     buttons.set(building.id, button);
   }
 
-  const { scene, buildings, terrain, boundary, dispose } =
-    createSiteScene(data);
+  const { scene, buildings, terrain, shell, dispose } = createSiteScene(data);
   const box = new Box3()
     .setFromObject(terrain)
     .union(new Box3().setFromObject(buildings));
@@ -72,7 +75,7 @@ async function start() {
   } catch {
     dispose();
     throw new Error(
-      "WebGL 2 is unavailable in this browser. The list remains available; open this private preview in a WebGL-enabled browser for 3D review.",
+      "WebGL 2 is unavailable in this browser. The list remains available; open this model in a WebGL-enabled browser for 3D review.",
     );
   }
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -88,9 +91,27 @@ async function start() {
   controls.maxDistance = span * 12;
   controls.screenSpacePanning = true;
   controls.maxPolarAngle = Math.PI * 0.49;
-  const render = () => renderer.render(scene, camera);
+  const overviewPoints = framingPoints([terrain, buildings, shell]);
+  // Initialize a safe overview before subscribing to navigation. Origin is not a starting pose.
+  controls.target.copy(
+    fitOverview(camera, overviewPoints, OVERVIEW_DIRECTION.clone()),
+  );
+  controls.update();
+  const collision = protectCamera(
+    camera,
+    controls,
+    data,
+    buildings,
+    terrain,
+    shell,
+  );
+  let framing = false;
+  const render = () => {
+    if (!framing) renderer.render(scene, camera);
+  };
   let currentBox = box;
-  let currentDirection = new Vector3(0.65, 0.8, 0.85);
+  let isOverview = true;
+  let currentDirection = OVERVIEW_DIRECTION.clone();
   const meshes = buildings.children.filter(
     (node): node is Mesh => node instanceof Mesh,
   );
@@ -111,8 +132,19 @@ async function start() {
       : "Select a building to inspect its highlighted mass.";
   };
   const frame = () => {
-    controls.target.copy(fitCamera(camera, currentBox, currentDirection));
-    controls.update();
+    framing = true;
+    try {
+      collision.teleport(() => {
+        controls.target.copy(
+          isOverview
+            ? fitOverview(camera, overviewPoints, currentDirection)
+            : fitCamera(camera, currentBox, currentDirection),
+        );
+        controls.update();
+      });
+    } finally {
+      framing = false;
+    }
     render();
   };
   const resize = () => {
@@ -124,13 +156,15 @@ async function start() {
     frame();
   };
   const overview = () => {
+    isOverview = true;
     select();
     currentBox = box;
-    currentDirection = new Vector3(0.65, 0.8, 0.85);
+    currentDirection = OVERVIEW_DIRECTION.clone();
     frame();
   };
   reset.onclick = overview;
   top.onclick = () => {
+    isOverview = false;
     currentBox = box;
     currentDirection = new Vector3(0, 1, 0.001);
     frame();
@@ -164,6 +198,7 @@ async function start() {
         setContextVisible(meshes, true);
       }
       select(building.id);
+      isOverview = false;
       currentBox = new Box3();
       for (const mesh of selected)
         currentBox.union(new Box3().setFromObject(mesh));
@@ -176,11 +211,6 @@ async function start() {
       frame();
     };
   }
-  const boundaryToggle = document.querySelector<HTMLInputElement>("#boundary")!;
-  boundaryToggle.onchange = () => {
-    boundary.visible = boundaryToggle.checked;
-    render();
-  };
   status.textContent = `${records.filter((record) => record.category === "estate").length} estate + ${records.filter((record) => record.category === "context").length} other legacy building objects · ${data.buildings.length} clay components · provisional terrain`;
   renderer.domElement.addEventListener("webglcontextlost", (event) => {
     event.preventDefault();
@@ -188,6 +218,7 @@ async function start() {
   });
   cleanup = () => {
     observer.disconnect();
+    collision.dispose();
     controls.dispose();
     selectedMaterial.dispose();
     dispose();
