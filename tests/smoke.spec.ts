@@ -120,3 +120,39 @@ test("context starts visible, multipart source has one focus entry and focusing 
     page.getByRole("button", { name: "Synthetic campus · campus" }),
   ).toHaveAttribute("aria-pressed", "true");
 });
+
+test("project repository link is visible and keyboard accessible on desktop and mobile", async ({
+  page,
+}) => {
+  for (const viewport of [
+    { width: 1280, height: 800 },
+    { width: 390, height: 844 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await page.route("**/site-data.json", (route) =>
+      route.fulfill({ status: 404, body: "Missing" }),
+    );
+    await page.goto("/");
+    const link = page.getByRole("link", {
+      name: "View Project Wah Fu on GitHub",
+    });
+    await expect(link).toHaveAttribute(
+      "href",
+      "https://github.com/jonathan-digiart/project-wah-fu",
+    );
+    await link.scrollIntoViewIfNeeded();
+    await expect(link).toBeVisible();
+    const box = await link.boundingBox();
+    expect(box).not.toBeNull();
+    expect(box!.x).toBeGreaterThanOrEqual(0);
+    expect(box!.x + box!.width).toBeLessThanOrEqual(viewport.width);
+    await page.locator("body").click({ position: { x: 1, y: 1 } });
+    for (let i = 0; i < 30; i++) {
+      await page.keyboard.press("Tab");
+      if (await link.evaluate((element) => element === document.activeElement))
+        break;
+    }
+    await expect(link).toBeFocused();
+    await page.unroute("**/site-data.json");
+  }
+});
