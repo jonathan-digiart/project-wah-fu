@@ -6,7 +6,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test test/*.node.mjs collision/*.node.mjs",
+    "test": "node --test test/*.node.mjs collision/*.node.mjs masked/*.node.mjs",
     "test:geometry": "node --test test/geometry-policy.node.mjs"
   }
 }

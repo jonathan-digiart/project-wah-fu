@@ -60,4 +60,14 @@ export default [
       },
     },
   },
+  {
+    files: ["experiments/adjacent-tiles/masked/*.node.mjs"],
+    languageOptions: {
+      globals: {
+        AbortController: "readonly",
+        structuredClone: "readonly",
+        setTimeout: "readonly",
+      },
+    },
+  },
 ];
