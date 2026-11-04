@@ -3,6 +3,10 @@ import { readFileSync, readdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { URL } from "node:url";
 import console from "node:console";
+import {
+  validateAttributionTerms,
+  validateDatasetUrl,
+} from "./release-policy.mjs";
 const root = new URL("../dist/", import.meta.url);
 const walk = (directory, prefix = "") =>
   readdirSync(directory, { withFileTypes: true }).flatMap((entry) =>
@@ -43,7 +47,7 @@ assert.equal(
   ).size,
   103,
 );
-assert(data.provenance.datasetUrl.startsWith("https://portal.csdi.gov.hk/"));
+validateDatasetUrl(data.provenance.datasetUrl);
 const allowed = new Set([
   "boundary",
   "interpolation",
@@ -96,10 +100,8 @@ assert(
     "Copyright (c) 2024, Mapbox",
   ),
 );
-assert(
-  readFileSync(new URL("DATA-ATTRIBUTION.txt", root), "utf8").includes(
-    "https://portal.csdi.gov.hk/csdi-webpage/doc/TNC",
-  ),
+validateAttributionTerms(
+  readFileSync(new URL("DATA-ATTRIBUTION.txt", root), "utf8"),
 );
 console.log(
   JSON.stringify(

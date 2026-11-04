@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       release_commit:
-        description: Full 40-character SHA of the approved commit
+        description: Full 40-character SHA of an approved commit already in main
         required: true
         type: string
 permissions:
@@ -13,27 +13,25 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - name: Validate selected commit
-        env:
-          RELEASE_COMMIT: ${{ inputs.release_commit }}
-        run: |
-          [[ "$RELEASE_COMMIT" =~ ^[0-9a-f]{40}$ ]] || { echo "Use a full commit SHA"; exit 1; }
-      - name: Check out selected version
+      - name: Check out trusted release policy
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
-          ref: ${{ inputs.release_commit }}
+          ref: main
+          fetch-depth: 0
           persist-credentials: false
-      - name: Verify exact checkout
+      - name: Validate and select approved main commit
         env:
           RELEASE_COMMIT: ${{ inputs.release_commit }}
-        run: test "$(git rev-parse HEAD)" = "$RELEASE_COMMIT"
+        run: bash scripts/select-release-commit.sh
       - name: Set up Node
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: "24"
-          cache: npm
+          # Release jobs must not read or write shared dependency caches.
+          package-manager-cache: false
       - run: npm ci --ignore-scripts
       - run: npm run check:release
       - name: Configure Pages
