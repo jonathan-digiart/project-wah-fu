@@ -1,7 +1,7 @@
 import { defineConfig } from "vitest/config";
 export default defineConfig({
   test: {
-    include: ["src/**/*.test.ts", "tests/exterior-camera-collision.test.mjs"],
+    include: ["src/**/*.test.ts", "tests/*.test.mjs"],
     maxWorkers: 1,
   },
 });

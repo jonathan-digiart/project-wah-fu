@@ -16,7 +16,7 @@ Checks cover formatting, TypeScript, lint, unit/geometry/collision tests, produc
 
 ## Selected public releases
 
-The GitHub Pages workflow runs only by manual dispatch. Select the full 40-character commit SHA of an approved version. It checks out that exact commit, runs release checks and deploys only the resulting dist artifact. Normal pushes and PRs do not deploy. GitHub Pages must be configured to use GitHub Actions.
+The GitHub Pages workflow runs only by manual dispatch from `main`. Select the full 40-character lowercase commit SHA of an approved version already merged into `main`. The workflow first checks out the trusted release policy from `main`, verifies that the selected commit belongs to its history, then checks out that exact commit and runs release checks. Unmerged branch or PR commits are rejected before their code runs. Dependency caching is disabled in the release job. Only the resulting checked `dist` artifact is deployed, in a separate job with Pages permissions. Normal pushes and PRs do not deploy. GitHub Pages must be configured to use GitHub Actions.
 
 The relative Vite base supports the project Pages subdirectory. The private working preview remains a separate deployment.
 
