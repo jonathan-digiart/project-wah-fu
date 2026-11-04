@@ -42,4 +42,22 @@ export default [
     files: ["experiments/adjacent-tiles/test/*.node.mjs"],
     languageOptions: { globals: { setTimeout: "readonly" } },
   },
+  {
+    files: ["experiments/adjacent-tiles/collision/collider-loader.mjs"],
+    languageOptions: { globals: { Worker: "readonly", URL: "readonly" } },
+  },
+  {
+    files: ["experiments/adjacent-tiles/collision/collider-worker.mjs"],
+    languageOptions: { globals: { postMessage: "readonly" } },
+  },
+  {
+    files: ["experiments/adjacent-tiles/collision/*.node.mjs"],
+    languageOptions: {
+      globals: {
+        AbortController: "readonly",
+        structuredClone: "readonly",
+        setTimeout: "readonly",
+      },
+    },
+  },
 ];
