@@ -24,4 +24,22 @@ export default [
       },
     },
   },
+  {
+    files: ["experiments/adjacent-tiles/src/manager.mjs"],
+    languageOptions: {
+      globals: { structuredClone: "readonly", AbortController: "readonly" },
+    },
+  },
+  {
+    files: ["experiments/adjacent-tiles/src/worker-loader.mjs"],
+    languageOptions: { globals: { Worker: "readonly", URL: "readonly" } },
+  },
+  {
+    files: ["experiments/adjacent-tiles/src/worker.mjs"],
+    languageOptions: { globals: { postMessage: "readonly" } },
+  },
+  {
+    files: ["experiments/adjacent-tiles/test/*.node.mjs"],
+    languageOptions: { globals: { setTimeout: "readonly" } },
+  },
 ];
