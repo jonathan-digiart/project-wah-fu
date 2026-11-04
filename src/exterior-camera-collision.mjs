@@ -559,11 +559,42 @@ export function attachExteriorCamera(camera, controls, roots, options = {}) {
   function apply(teleport = false) {
     if (applying || suspended || !collider.config.enabled) return;
     applying = true;
-    if (!teleport && camera.position.distanceToSquared(previous) < EPS * EPS) {
+    if (
+      !teleport &&
+      camera.position.distanceToSquared(previous) < EPS * EPS &&
+      controls.target.distanceToSquared(previousTarget) < EPS * EPS
+    ) {
       clipNear();
       previousTarget.copy(controls.target);
       applying = false;
       return;
+    }
+    // Limit the requested navigation before the physical sweep. Binary search
+    // accepts a continuous prefix of input, never a forced recenter or target snap.
+    const accepts = options.acceptNavigationPose;
+    if (
+      !teleport &&
+      accepts &&
+      !accepts(camera.position, controls.target) &&
+      accepts(previous, previousTarget)
+    ) {
+      const requestedPosition = camera.position.clone();
+      const requestedTarget = controls.target.clone();
+      const candidatePosition = new Vector3(),
+        candidateTarget = new Vector3();
+      let low = 0,
+        high = 1;
+      for (let i = 0; i < 24; i++) {
+        const fraction = (low + high) / 2;
+        candidatePosition.copy(previous).lerp(requestedPosition, fraction);
+        candidateTarget.copy(previousTarget).lerp(requestedTarget, fraction);
+        if (accepts(candidatePosition, candidateTarget)) low = fraction;
+        else high = fraction;
+      }
+      if (low < 1e-6) low = 0;
+      camera.position.copy(previous).lerp(requestedPosition, low);
+      controls.target.copy(previousTarget).lerp(requestedTarget, low);
+      camera.lookAt(controls.target);
     }
     const requested = camera.position.clone(),
       movement = requested.clone().sub(previous),
@@ -627,6 +658,18 @@ export function attachExteriorCamera(camera, controls, roots, options = {}) {
           .copy(previousTarget)
           .addScaledVector(targetMovement, accepted);
       }
+    }
+    // Collision wins over navigation. If physical correction crosses the view
+    // boundary, retain the last jointly safe pose instead of alternating clamps.
+    if (
+      !teleport &&
+      accepts &&
+      !accepts(camera.position, controls.target) &&
+      accepts(previous, previousTarget)
+    ) {
+      camera.position.copy(previous);
+      controls.target.copy(previousTarget);
+      camera.lookAt(controls.target);
     }
     if (correction.lengthSq() > EPS * EPS) camera.lookAt(controls.target);
     clipNear();
