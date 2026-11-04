@@ -1,6 +1,6 @@
 # Wah Mei pilot: reference and sampling proposal
 
-Status: proposed reference and extent for owner review. Supports #9 and prepares #10; no runtime geometry change or public deployment. Baseline runtime is commit `348b19d7166fbee2ef01b6fb6bf6b048b3bf5e4b`; this report starts from documentation main `f2da5a7d42679d40fb50867f79ef893f3643d4ee`.
+Status: Jonathan approved the selected reference and 30 m pilot extent on 4 November 2026, with the tighter target below. The documentation PR remains unmerged; supported level definitions and the eventual geometry candidate still require review. Supports #9 and prepares #10; no runtime geometry change or public deployment. Baseline runtime is commit `348b19d7166fbee2ef01b6fb6bf6b048b3bf5e4b`; this report starts from documentation main `f2da5a7d42679d40fb50867f79ef893f3643d4ee`.
 
 ## Proposed scope and reference
 
@@ -43,7 +43,7 @@ All held-out samples are retained in the full result. Heights compare the baseli
 
 There are no reference-coverage gaps in these samples; two multi-height points and 25 steep points are retained and flagged. The full maximum lies under another building envelope. Excluding steep samples does not explain the failure. These pilot values must not be compared numerically with the historical whole-estate 256-probe summary as if the sampling scope were identical.
 
-Working target: mean absolute vertical difference ≤0.5 m against WM-TERRAIN-01, with 0.1 m stretch. Neither is met by this baseline. No numeric tail threshold has been adopted; local errors remain review findings regardless of a future mean. Source accuracy, physical ground correctness and procedural fidelity remain separate claims.
+Approved target: mean absolute vertical difference in the 0.10–0.25 m range against WM-TERRAIN-01. Use ≤0.25 m as the maximum target and aim for 0.10 m; lower error is welcome, not a failure for falling below the range. Both the full pilot and the outside-building stratum must report results, alongside signed bias, p95 and maximum absolute error. The current baseline does not meet this target. No numeric tail threshold has been adopted; local errors remain review findings regardless of a future mean. Source accuracy, physical ground correctness and procedural fidelity remain separate claims.
 
 ## What #10 can and cannot use
 
@@ -55,7 +55,7 @@ Source-only cross-sections show:
 
 These are source-observed samples, not yet validated two-dimensional platforms, wall topology, entrances or road identities. The original building minimum 25.856 m is not a uniform ground-floor/entrance elevation. Do not flatten surrounding terrain to it.
 
-Next: review the reference and pilot extent; investigate bounded planes, slopes and transition locations from calibration/source evidence; assign stable feature IDs with observed/inferred/unknown status. Entrances, stair/ramp endpoints and route usability remain unknown until supported. Only then propose a bounded procedural terrain change, with the same held-out audit, preserved estate seams and camera tests.
+Next: using the approved reference and extent, investigate bounded planes, slopes and transition locations from calibration/source evidence; assign stable feature IDs with observed/inferred/unknown status. Entrances, stair/ramp endpoints and route usability remain unknown until supported. Only then propose a bounded procedural terrain change, with the same held-out audit, preserved estate seams and camera tests.
 
 ## Sources and attribution
 
@@ -70,4 +70,14 @@ Source data: Lands Department, HKSAR Government, through the CSDI Portal. Govern
 
 ## Verification and gates
 
-Source archive/member identities, node transform, coordinate bounds and frozen split verified independently. Four offline regression checks cover transform, disjoint split, source hashes and sample retention/metrics. No runtime terrain replacement, browser regression run, mobile performance measurement or final fidelity pass is claimed. Owner review of this proposal and subsequently supported levels remains open.
+Source archive/member identities, node transform, coordinate bounds and frozen split verified independently. Four offline regression checks cover transform, disjoint split, source hashes and sample retention/metrics. No runtime terrain replacement, browser regression run, mobile performance measurement or final fidelity pass is claimed. Reference and extent approval is recorded above. Review of supported levels and the resulting terrain candidate remains open; approval of this plan is not a formal GitHub PR approval, merge or deployment instruction.
+
+## Implementation and performance plan
+
+1. Reproduce the frozen source and baseline audit after workspace recovery, retaining the same calibration/held-out split. Freeze a separate final confirmation design before tuning; do not expose its sample values to fitting.
+2. Define a small set of source-supported terrain patches, slopes and breaklines with uncertainty labels. Avoid importing the reference mesh, embedding its vertices as code, or flattening the pilot to the building minimum.
+3. Implement a bounded pilot candidate on a separate branch, preserving the exterior estate, crop, scene defaults and camera collision. Test interfaces and regressions before requesting review.
+4. Evaluate the frozen candidate against held-out and final confirmation samples. Report coverage, multi-height cases, slope strata, full/exterior MAE, signed bias, p95 and maximum; disclose failures rather than relaxing the target or discarding difficult points.
+5. Benchmark mobile and tablet use as a separate acceptance dimension: record device/browser, viewport, cold-load transfer and timing, frame-time p50/p95, navigation responsiveness, geometry counts and observable memory. Label desktop emulation separately from real hardware. Compare baseline and candidate under the same conditions; do not invent a performance threshold or claim a hardware pass from emulation.
+
+Security-alert remediation is tracked separately and must not be bundled into terrain or reference changes. Public deployment remains unchanged until a checked candidate is reviewed and publication is authorised.
