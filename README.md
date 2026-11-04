@@ -81,3 +81,5 @@ Until the licence files and their scope have been confirmed and published, these
 ### Technical documentation
 
 See [Development and release](docs/development-and-release.md) for development commands, the release procedure, known limitations and data-source notices.
+
+See the [changelog](CHANGELOG.md) for published versions and previews.
