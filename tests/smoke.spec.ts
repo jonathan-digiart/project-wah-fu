@@ -146,13 +146,13 @@ test("project repository link is visible and keyboard accessible on desktop and 
     expect(box).not.toBeNull();
     expect(box!.x).toBeGreaterThanOrEqual(0);
     expect(box!.x + box!.width).toBeLessThanOrEqual(viewport.width);
-    await page.locator("body").click({ position: { x: 1, y: 1 } });
     for (let i = 0; i < 30; i++) {
       await page.keyboard.press("Tab");
       if (await link.evaluate((element) => element === document.activeElement))
         break;
     }
     await expect(link).toBeFocused();
+    await expect(link).toHaveCSS("outline-style", "solid");
     await page.unroute("**/site-data.json");
   }
 });
