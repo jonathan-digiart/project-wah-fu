@@ -81,3 +81,5 @@ Project Wah Fu 源於將生成式 AI 應用於社區記錄的探索，並受到�
 ### 技術文件
 
 開發指令、發布流程、已知限制及資料來源聲明見[開發與發布說明](docs/development-and-release.md)。
+
+已發布的版本及預覽見[更新記錄](CHANGELOG.zh-HK.md)。
