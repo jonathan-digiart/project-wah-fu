@@ -16,9 +16,10 @@ export function colliderTransfers(solids) {
   }
   return [...buffers];
 }
-import { validateCompiled } from "./validation.mjs";
-export function hydrateSolids(solids, root) {
-  validateCompiled(solids);
+import { validateCompiled, validateCompiledGeometry } from "./validation.mjs";
+export function hydrateSolids(solids, root, geometryData = null) {
+  if (geometryData) validateCompiledGeometry(geometryData, solids);
+  else validateCompiled(solids);
   if (!root?.isObject3D) throw Error("Invalid root");
   function visit(n) {
     n.box = new Box3(

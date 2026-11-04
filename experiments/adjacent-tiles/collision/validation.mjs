@@ -1,3 +1,4 @@
+import { MASKED, validateMasked } from "../masked/protocol.mjs";
 /** Deliberately bounded experimental tile protocol, not arbitrary estate meshes. */
 export const LIMITS = Object.freeze({
   vertices: 100000,
@@ -11,6 +12,9 @@ function check(ok, message) {
 }
 const finite = (n) => Number.isFinite(n) && Math.abs(n) <= LIMITS.coordinate;
 export function validateGeometry(data) {
+  if (data?.geometryKind === MASKED) return validateMasked(data);
+  if (data?.geometryKind !== undefined)
+    throw Error("Unsupported geometry kind");
   check(
     data && data.positions instanceof Float32Array,
     "Expected Float32 positions",
@@ -221,4 +225,14 @@ export function validateCompiled(solids) {
     check(ids.size === positions.length / 9, "Missing triangle ids");
   }
   return solids;
+}
+
+export function validateCompiledGeometry(data, solids) {
+  validateGeometry(data);
+  if (data.geometryKind === MASKED && data.indices.length === 0) {
+    if (!Array.isArray(solids) || solids.length !== 0)
+      throw Error("Empty masked geometry requires empty solids");
+    return solids;
+  }
+  return validateCompiled(solids);
 }

@@ -1,11 +1,14 @@
+import { MASKED, maskedTransfers } from "../masked/protocol.mjs";
+const transferables = (d) =>
+  d.geometryKind === MASKED ? maskedTransfers(d) : gridTransfers(d);
 import { BufferGeometry, BufferAttribute, Mesh } from "three";
 import { compileExteriorRoots } from "./compiled-collider.mjs";
 import {
   serializeSolids,
   colliderTransfers,
 } from "./collider-serialization.mjs";
-import { transferables } from "../src/geometry.mjs";
-import { validateGeometry, validateCompiled } from "./validation.mjs";
+import { transferables as gridTransfers } from "../src/geometry.mjs";
+import { validateGeometry, validateCompiledGeometry } from "./validation.mjs";
 function run({ data, generation }, send) {
   try {
     validateGeometry(data);
@@ -16,8 +19,11 @@ function run({ data, generation }, send) {
     geometry.setAttribute("position", new BufferAttribute(data.positions, 3));
     geometry.setIndex(new BufferAttribute(data.indices, 1));
     const root = new Mesh(geometry);
-    const solids = serializeSolids(compileExteriorRoots([root]));
-    validateCompiled(solids);
+    const solids =
+      data.geometryKind === MASKED && data.indices.length === 0
+        ? []
+        : serializeSolids(compileExteriorRoots([root]));
+    validateCompiledGeometry(data, solids);
     send(
       {
         data,
