@@ -81,3 +81,13 @@ Source archive/member identities, node transform, coordinate bounds and frozen s
 5. Benchmark mobile and tablet use as a separate acceptance dimension: record device/browser, viewport, cold-load transfer and timing, frame-time p50/p95, navigation responsiveness, geometry counts and observable memory. Label desktop emulation separately from real hardware. Compare baseline and candidate under the same conditions; do not invent a performance threshold or claim a hardware pass from emulation.
 
 Security-alert remediation is tracked separately and must not be bundled into terrain or reference changes. Public deployment remains unchanged until a checked candidate is reviewed and publication is authorised.
+
+## LOD and resource-management strategy
+
+Use distance-based levels of detail (LOD): a lightweight far view for estate navigation and a more detailed near view where the pilot's source-relative fidelity is evaluated. Report the rendered near-view error and the degradation introduced by each coarser level separately; a far-view approximation must not be presented as meeting the near-view accuracy target without measurement.
+
+Load or generate detail incrementally. When zooming out, release or recycle no-longer-needed GPU geometries and materials and cancel obsolete work. Keep a bounded cache to avoid repeated rebuilds while preventing unbounded CPU/GPU memory growth. Shared resources require ownership tracking so disposal cannot invalidate objects still in use. Exact distance thresholds, cache budgets and scheduling policy remain implementation decisions to benchmark rather than invented acceptance limits.
+
+Transitions must preserve terrain seams and camera collision consistency. Check cracks, popping, inconsistent ground heights, stale collision surfaces and focus/reset behaviour during repeated zoom and pan cycles. Resource recycling must not weaken camera safety or change the accepted site crop.
+
+Implement LOD, incremental loading and resource recycling in new, focused PRs, separate from this reference/sampling documentation. Each should include regression tests, explicit lifecycle/ownership rules and reproducible performance evidence. Measure cold and warm loading, frame-time distribution, transition latency, navigation responsiveness and memory/resource counts on actual phones/tablets as well as desktop browsers. Emulation is useful for layout and interaction checks but is not evidence of physical-device performance. Any suggested numerical performance benchmark remains provisional until Jonathan adopts it; the approved 0.10–0.25 m source-relative mean-error target is unchanged.
