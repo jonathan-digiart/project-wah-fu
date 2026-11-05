@@ -1,3 +1,4 @@
+import { createNavigationBound, visibleInspection } from "./navigation";
 import "./style.css";
 import { protectCamera } from "./collision";
 import {
@@ -91,12 +92,13 @@ async function start() {
   controls.maxDistance = span * 12;
   controls.screenSpacePanning = true;
   controls.maxPolarAngle = Math.PI * 0.49;
-  const overviewPoints = framingPoints([terrain, buildings, shell]);
+  let overviewPoints = framingPoints([terrain, buildings, shell]);
   // Initialize a safe overview before subscribing to navigation. Origin is not a starting pose.
   controls.target.copy(
     fitOverview(camera, overviewPoints, OVERVIEW_DIRECTION.clone()),
   );
   controls.update();
+  let currentBox = box;
   const collision = protectCamera(
     camera,
     controls,
@@ -104,12 +106,12 @@ async function start() {
     buildings,
     terrain,
     shell,
+    createNavigationBound(camera, () => currentBox),
   );
   let framing = false;
   const render = () => {
     if (!framing) renderer.render(scene, camera);
   };
-  let currentBox = box;
   let isOverview = true;
   let currentDirection = OVERVIEW_DIRECTION.clone();
   const meshes = buildings.children.filter(
@@ -123,7 +125,9 @@ async function start() {
   });
   const selectionNote =
     document.querySelector<HTMLParagraphElement>("#selection-note")!;
+  let selectedId: string | undefined;
   const select = (id?: string) => {
+    selectedId = id;
     highlightSelection(meshes, originals, selectedMaterial, id);
     for (const [key, button] of buttons)
       button.setAttribute("aria-pressed", String(key === id));
@@ -158,14 +162,15 @@ async function start() {
   const overview = () => {
     isOverview = true;
     select();
-    currentBox = box;
+    currentBox = visibleInspection(terrain, meshes).bounds;
     currentDirection = OVERVIEW_DIRECTION.clone();
     frame();
   };
   reset.onclick = overview;
   top.onclick = () => {
+    select();
     isOverview = false;
-    currentBox = box;
+    currentBox = visibleInspection(terrain, meshes).bounds;
     currentDirection = new Vector3(0, 1, 0.001);
     frame();
   };
@@ -183,6 +188,20 @@ async function start() {
   const contextToggle = document.querySelector<HTMLInputElement>("#context")!;
   contextToggle.onchange = () => {
     setContextVisible(meshes, contextToggle.checked);
+    const next = visibleInspection(terrain, meshes, selectedId);
+    currentBox = next.bounds;
+    if (next.selection !== selectedId) {
+      select(next.selection);
+      isOverview = true;
+      currentDirection = OVERVIEW_DIRECTION.clone();
+    }
+    overviewPoints = framingPoints([
+      terrain,
+      shell,
+      ...meshes.filter((mesh) => mesh.visible),
+    ]);
+    // Visibility changes never recenter the camera/target. Explicit reset/focus
+    // can recover an offscreen view, and inward pan remains available meanwhile.
     render();
   };
   for (const building of records) {
@@ -196,6 +215,7 @@ async function start() {
       if (building.category === "context") {
         contextToggle.checked = true;
         setContextVisible(meshes, true);
+        overviewPoints = framingPoints([terrain, shell, ...meshes]);
       }
       select(building.id);
       isOverview = false;

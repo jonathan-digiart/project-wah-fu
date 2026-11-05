@@ -72,7 +72,11 @@ export function protectCamera(
   buildings: Group,
   terrain: Object3D,
   shell: Object3D,
+  acceptNavigationPose?: (position: Vector3, target: Vector3) => boolean,
 ) {
   const { roots, options } = collisionInputs(data, buildings, terrain, shell);
-  return attachExteriorCamera(camera, controls, roots, options);
+  return attachExteriorCamera(camera, controls, roots, {
+    ...options,
+    ...(acceptNavigationPose ? { acceptNavigationPose } : {}),
+  });
 }
