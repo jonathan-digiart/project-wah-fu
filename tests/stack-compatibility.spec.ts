@@ -21,7 +21,9 @@ test("Vite-built ES2022 class fields use define semantics in the browser", async
   });
   const outputs = Array.isArray(result) ? result : [result];
   const chunks = outputs.flatMap((output) =>
-    "output" in output ? output.output.filter((item) => item.type === "chunk") : [],
+    "output" in output
+      ? output.output.filter((item) => item.type === "chunk")
+      : [],
   );
   expect(chunks).toHaveLength(1);
   await page.setContent('<output id="result">pending</output>');
