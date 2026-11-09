@@ -19,7 +19,9 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run check:release
   browser:
-    runs-on: ubuntu-latest
+    # Newer Ubuntu AppArmor blocks bundled Chromium user namespaces.
+    # Keep Chromium sandbox enabled; use the supported 22.04 runner.
+    runs-on: ubuntu-22.04
     timeout-minutes: 20
     env:
       PLAYWRIGHT_BROWSERS_PATH: .cache/ms-playwright
