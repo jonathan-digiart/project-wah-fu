@@ -6,6 +6,7 @@ export const tileKey = (x, z) => `${x},${z}`;
 export class TileManager {
   constructor({
     loader,
+    heightQuery = heightOnTile,
     config,
     maxActive = 10,
     maxCached = 4,
@@ -19,6 +20,7 @@ export class TileManager {
   }) {
     if (
       typeof loader !== "function" ||
+      typeof heightQuery !== "function" ||
       !config ||
       ![maxActive, maxCached, maxBytes, concurrency].every(Number.isInteger) ||
       maxActive < 1 ||
@@ -28,6 +30,7 @@ export class TileManager {
     )
       throw Error("Invalid manager configuration");
     this.loader = loader;
+    this.heightQuery = heightQuery;
     this.config = structuredClone(config);
     Object.assign(this, {
       maxActive,
@@ -351,7 +354,13 @@ export class TileManager {
   heightAt(x, z) {
     const key = this.owner(x, z),
       b = this.active.get(key);
-    return b ? heightOnTile(b.data, x, z) : null;
+    if (!b || !Number.isFinite(x) || !Number.isFinite(z)) return null;
+    try {
+      const y = this.heightQuery(b.data, x, z);
+      return Number.isFinite(y) ? y : null;
+    } catch {
+      return null;
+    }
   }
   /** Conservatively reject any segment crossing an unavailable tile, even with large camera jumps.
    * Terrain clearance uses vertex maximum: conservative for every triangle, no under-surface tunnelling.
@@ -381,6 +390,18 @@ export class TileManager {
         b = this.active.get(this.owner(x, z));
       if (!b)
         return { position: [...from], blocked: true, reason: "tile-pending" };
+      if (b.data.geometryKind !== undefined)
+        return {
+          position: [...from],
+          blocked: true,
+          reason: "coverage-policy-required",
+        };
+      if (this.heightAt(x, z) === null)
+        return {
+          position: [...from],
+          blocked: true,
+          reason: "ground-unavailable",
+        };
       for (let i = 1; i < b.data.positions.length; i += 3)
         max = Math.max(max, b.data.positions[i]);
     }

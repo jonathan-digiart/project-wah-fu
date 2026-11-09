@@ -1,5 +1,8 @@
-import { transferables } from "../src/geometry.mjs";
-import { validateGeometry, validateCompiled } from "./validation.mjs";
+import { MASKED, maskedTransfers } from "../masked/protocol.mjs";
+const transferables = (d) =>
+  d.geometryKind === MASKED ? maskedTransfers(d) : gridTransfers(d);
+import { transferables as gridTransfers } from "../src/geometry.mjs";
+import { validateGeometry, validateCompiledGeometry } from "./validation.mjs";
 export function compileInWorker(
   data,
   { signal, generation },
@@ -43,7 +46,7 @@ export function compileInWorker(
         if (v.generation !== generation)
           throw Error("Collider generation mismatch");
         validateGeometry(v.data);
-        validateCompiled(v.solids);
+        validateCompiledGeometry(v.data, v.solids);
         finish(null, v);
       } catch (e) {
         finish(e);
