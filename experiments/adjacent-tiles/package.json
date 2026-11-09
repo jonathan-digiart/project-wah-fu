@@ -1,0 +1,12 @@
+{
+  "name": "adjacent-tile-experiment",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.node.mjs",
+    "test:geometry": "node --test test/geometry-policy.node.mjs"
+  }
+}
