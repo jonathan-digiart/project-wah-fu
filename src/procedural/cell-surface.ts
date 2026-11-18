@@ -33,6 +33,7 @@ export function authoredCellGeometry(input: AuthoredCellSurface): GeometryData {
     outline.length > 2048 ||
     ![...origin, ...outline.flat()].every(Number.isFinite) ||
     hasCrossingEdges(outline) ||
+    !Number.isFinite(area(outline)) ||
     Math.abs(area(outline)) < precision * precision
   )
     throw new Error("Invalid authored outline");
@@ -61,6 +62,37 @@ export function authoredCellGeometry(input: AuthoredCellSurface): GeometryData {
       Math.floor((minZ - origin[1]) / step));
   if (!Number.isSafeInteger(cellCount) || cellCount > maxCells)
     throw new Error("Authored surface exceeds cell budget");
+  if (
+    [minX, maxX].some(
+      (x) => !Number.isSafeInteger(Math.floor((x - origin[0]) / step)),
+    ) ||
+    [minZ, maxZ].some(
+      (z) => !Number.isSafeInteger(Math.floor((z - origin[1]) / step)),
+    )
+  )
+    throw new Error("Authoring grid index outside safe range");
+  const snappedOutline = outline.map(snap);
+  if (
+    new Set(snappedOutline.map(key)).size !== outline.length ||
+    hasCrossingEdges(snappedOutline)
+  )
+    throw new Error("Snapped outline is invalid");
+  for (let i = 0; i < snappedOutline.length; i++) {
+    const p = snappedOutline[i]!;
+    for (let j = 0; j < snappedOutline.length; j++) {
+      if (j === i || (j + 1) % snappedOutline.length === i) continue;
+      const a = snappedOutline[j]!,
+        b = snappedOutline[(j + 1) % snappedOutline.length]!;
+      if (
+        Math.abs(cross(a, b, p)) <= precision * precision &&
+        p[0] >= Math.min(a[0], b[0]) &&
+        p[0] <= Math.max(a[0], b[0]) &&
+        p[1] >= Math.min(a[1], b[1]) &&
+        p[1] <= Math.max(a[1], b[1])
+      )
+        throw new Error("Authored outline touches itself");
+    }
+  }
   const levels = new Map<string, number>();
   for (const [name, height] of Object.entries(input.levels)) {
     if (!/^(g:-?\d+:-?\d+|v:\d+|e:\d+:[xz]:-?\d+)$/.test(name))

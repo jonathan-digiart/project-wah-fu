@@ -29,6 +29,12 @@ export default defineConfig({
   webServer: [
     {
       command:
+        "npm run build:procedural && npm exec -- vite preview --host 127.0.0.1 --outDir dist-procedural --port 4175 --strictPort",
+      url: "http://127.0.0.1:4175/procedural.html",
+      reuseExistingServer: false,
+    },
+    {
+      command:
         "npm exec -- vite preview --host 127.0.0.1 --outDir dist-legacy --port 4173 --strictPort",
       url: "http://127.0.0.1:4173",
       reuseExistingServer: false,

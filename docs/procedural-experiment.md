@@ -37,9 +37,9 @@ Earlier generic scattered-height experiments either increased triangle count at
 as the viewer's primary surface. The viewer now offers only the strict-fidelity
 optimised surface and its code-generated reference; coarse variants are excluded from the repository model data and runtime build.
 
-The current experimental build contains **six files / 682,884 bytes**, including
+The current experimental build contains **six files / 685,479 bytes**, including
 Three.js, the scaffold and both lazy-loaded carpark authoring variants. The
-178,683-byte QA archive is packaging size, not measured HTTP transfer. This is
+178,683-byte pre-safety-guard QA archive is packaging size, not measured HTTP transfer. This is
 still not a whole-estate size/performance comparison. Module-generation timings
 are attached to the selected surface; they are hidden on Overview rather than
 mislabelled as timings for a different view.
@@ -171,3 +171,8 @@ rejects nonfinite derived arithmetic. Regressions check oriented edge cancellati
 projected area, and the concave counterexample. All 99 tests pass. Both accepted
 carpark geometry exports remain byte-identical after these validation changes;
 their independent source-overlay results therefore remain applicable.
+
+Automated desktop/portrait switching and delayed-import regressions are now defined
+for both Chromium and WebKit in CI. They are pending their first remote run; the
+local cloud sandbox cannot launch browsers. This is distinct from the completed
+Mac Chrome manual smoke above.
