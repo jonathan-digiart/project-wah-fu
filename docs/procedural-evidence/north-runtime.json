@@ -1,0 +1,20 @@
+{
+  "sourceSha256": "84002054e9d8468c47152f10d530d67588e089f36b6519bf1873717d934ed3cb",
+  "sourceOwnership": "Replacement-node faces whose centroids lie inside authored domain. Excludes obsolete outside remnants.",
+  "sourceUnsupportedNumericalArea": 0.0001507455760683595,
+  "ownedSourceFaceCount": 2397,
+  "runtimeTriangles": 2379,
+  "runtimeVertices": 1321,
+  "maxOwnedPLOverlayErrorMetres": 0.005231857299822451,
+  "maxCoreOverlayErrorMetres": 1.907348649210494e-5,
+  "worstXZ": [209.52374267578125, -594.125],
+  "checks": 11600,
+  "coverageArea": 70.05506668404912,
+  "inwardBoundaryAreaDifference": 8.35722182990516e-5,
+  "fullBoundarySymmetricDifference": 0.00018114266413548927,
+  "overlapArea": 0,
+  "float32OutsideAuthoredDomainArea": 9.757044583638895e-5,
+  "maxSharedEdgeStep": 0.0,
+  "unpairedInternalEdges": 0,
+  "nonmanifoldEdges": 0
+}

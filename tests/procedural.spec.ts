@@ -19,6 +19,10 @@ for (const viewport of [
       "5,950 drawn triangles",
     );
     for (let repeat = 0; repeat < 2; repeat++) {
+      await page.locator("#north").click();
+      await expect(page.locator("#metrics")).toContainText(
+        "2,379 drawn triangles",
+      );
       await page.locator("#carpark10").click();
       await expect(page.locator("#metrics")).toContainText(
         "1,260 drawn triangles",

@@ -27,7 +27,12 @@ export interface RoadStrip extends ComponentIdentity {
   stations: readonly RoadStation[];
 }
 export type Component =
-  Footprint | RoadStrip | HeightPatch | ControlSurface | AuthoredCellComponent;
+  | Footprint
+  | RoadStrip
+  | HeightPatch
+  | ControlSurface
+  | AuthoredCellComponent
+  | ConstructionSurface;
 export interface GeometryData {
   positions: number[];
   indices: number[];
@@ -55,4 +60,12 @@ export interface ControlSurface extends ComponentIdentity {
 export interface AuthoredCellComponent
   extends ComponentIdentity, AuthoredCellSurface {
   kind: "authored-cells";
+}
+
+/** Code-defined authoring recipe loaded on demand; never a decoded mesh asset. */
+export interface ConstructionSurface extends ComponentIdentity {
+  kind: "construction-surface";
+  generate: () => GeometryData;
+  /** Local coordinate origin preserves small features in Float32 buffers. */
+  origin?: Position;
 }

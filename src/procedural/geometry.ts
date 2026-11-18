@@ -119,6 +119,7 @@ export function roadGeometry(input: RoadStrip): GeometryData {
 }
 export function generateComponent(component: Component): GeometryData {
   if (!component.id.trim()) throw new Error("Component requires a stable ID");
+  if (component.kind === "construction-surface") return component.generate();
   if (component.kind === "authored-cells")
     return authoredCellGeometry(component);
   if (component.kind === "control-surface")

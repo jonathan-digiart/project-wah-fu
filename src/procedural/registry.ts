@@ -25,7 +25,23 @@ export class ComponentRegistry {
       throw new Error("Invalid triangle budget");
   }
   replace(component: Component) {
+    if (
+      component.kind === "construction-surface" &&
+      component.origin &&
+      !component.origin.every(Number.isFinite)
+    )
+      throw new Error("Invalid component origin");
     const data = generateComponent(component);
+    if (
+      data.positions.length % 3 ||
+      data.indices.length % 3 ||
+      !data.positions.every(Number.isFinite) ||
+      data.indices.some(
+        (i) =>
+          !Number.isSafeInteger(i) || i < 0 || i >= data.positions.length / 3,
+      )
+    )
+      throw new Error("Invalid generated component geometry");
     const stats: ComponentStats = {
       id: component.id,
       triangles: data.indices.length / 3,
@@ -56,11 +72,19 @@ export class ComponentRegistry {
       flatShading:
         component.kind !== "height-patch" &&
         component.kind !== "control-surface" &&
-        component.kind !== "authored-cells",
+        component.kind !== "authored-cells" &&
+        component.kind !== "construction-surface",
     });
     const mesh = new Mesh(geometry, material);
+    if (component.kind === "construction-surface" && component.origin)
+      mesh.position.set(...component.origin);
     mesh.name = component.label;
-    mesh.userData = { ...component, outline: undefined, stations: undefined };
+    mesh.userData = {
+      ...component,
+      outline: undefined,
+      stations: undefined,
+      generate: undefined,
+    };
     if (old) this.remove(component.id);
     this.entries.set(component.id, { mesh, stats });
     this.group.add(mesh);

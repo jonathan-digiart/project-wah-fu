@@ -153,3 +153,39 @@ test("malformed parameters fail before creating geometry", () => {
     }),
   ).toThrow();
 });
+test("code-defined recipe output is validated before registry replacement", () => {
+  const registry = new ComponentRegistry();
+  registry.replace(box);
+  for (const data of [
+    { positions: [0, NaN, 0], indices: [0, 0, 0] },
+    { positions: [0, 0, 0], indices: [0, 1, 2] },
+    { positions: [0, 0], indices: [] },
+  ])
+    expect(() =>
+      registry.replace({
+        ...box,
+        kind: "construction-surface",
+        generate: () => data,
+      }),
+    ).toThrow(/geometry/);
+  expect(registry.stats()[0]!.triangles).toBe(10);
+  registry.dispose();
+});
+
+test("local construction origins preserve component placement independently", () => {
+  const registry = new ComponentRegistry();
+  registry.replace({
+    ...box,
+    kind: "construction-surface",
+    origin: [444, 55, -314],
+    generate: () => ({
+      positions: [0, 0, 0, 0, 0, 1, 1, 0, 0],
+      indices: [0, 1, 2],
+    }),
+  });
+  expect(registry.group.children[0]!.position.toArray()).toEqual([
+    444, 55, -314,
+  ]);
+  expect(registry.stats()[0]!.triangles).toBe(1);
+  registry.dispose();
+});

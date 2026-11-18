@@ -125,6 +125,34 @@ const surface = async (optimised: boolean) => {
       viewNote.textContent = `Surface generation failed: ${error instanceof Error ? error.message : String(error)}`;
   }
 };
+const northSurface = async () => {
+  const token = ++viewGeneration;
+  viewNote.textContent = "Generating northern boundary from procedural levels…";
+  try {
+    const data = await import("./north-surface");
+    if (token !== viewGeneration) return;
+    const id = "north-boundary";
+    if (!registry.group.children.some((x) => x.userData.id === id)) {
+      const start = performance.now();
+      registry.replace({
+        id,
+        label: "Northern boundary construction surface",
+        kind: "construction-surface",
+        source:
+          "Original construction domain, PCHIP and boundary-level recipe; obsolete overlapping remnants excluded",
+        confidence: "reference-derived",
+        generate: data.northSurfaceGeometry,
+      });
+      generationTimes.set(id, performance.now() - start);
+    }
+    isolate(id);
+    viewNote.textContent =
+      "Northern boundary: 2,379 triangles, maximum 5.232 mm height difference on construction-owned surface. Obsolete conflicting remnants excluded. Draft, not integrated.";
+  } catch (error) {
+    if (token === viewGeneration)
+      viewNote.textContent = `Surface generation failed: ${error instanceof Error ? error.message : String(error)}`;
+  }
+};
 const resize = () => {
   const width = viewport.clientWidth,
     height = Math.max(1, viewport.clientHeight);
@@ -148,6 +176,9 @@ document.querySelector("#carpark10")!.addEventListener("click", () => {
 });
 document.querySelector("#carpark50")!.addEventListener("click", () => {
   void surface(false);
+});
+document.querySelector("#north")!.addEventListener("click", () => {
+  void northSurface();
 });
 resize();
 overview();

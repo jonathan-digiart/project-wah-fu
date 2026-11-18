@@ -37,8 +37,8 @@ Earlier generic scattered-height experiments either increased triangle count at
 as the viewer's primary surface. The viewer now offers only the strict-fidelity
 optimised surface and its code-generated reference; coarse variants are excluded from the repository model data and runtime build.
 
-The current experimental build contains **six files / 685,479 bytes**, including
-Three.js, the scaffold and both lazy-loaded carpark authoring variants. The
+The current experimental build contains **seven files / 707,719 bytes**, including
+Three.js, the scaffold, both lazy-loaded carpark authoring variants and the northern surface. The
 178,683-byte pre-safety-guard QA archive is packaging size, not measured HTTP transfer. This is
 still not a whole-estate size/performance comparison. Module-generation timings
 are attached to the selected surface; they are hidden on Overview rather than
@@ -173,6 +173,31 @@ carpark geometry exports remain byte-identical after these validation changes;
 their independent source-overlay results therefore remain applicable.
 
 Automated desktop/portrait switching and delayed-import regressions are now defined
-for both Chromium and WebKit in CI. They are pending their first remote run; the
+for both Chromium and WebKit in CI. They passed GitHub Actions run 44366159436 on commit ece3c5e; the
 local cloud sandbox cannot launch browsers. This is distinct from the completed
 Mac Chrome manual smoke above.
+
+## Northern boundary constructive surface
+
+The next isolated component reconstructs the original construction domain using
+90 PCHIP levels, 584 named non-core lattice levels and 132 edge-profile stations.
+World-XZ triangulation and final boundary-height constraints preserve the original
+recipe without storing mesh XYZ or connectivity. The runtime produces 2,379
+triangles versus 2,397 construction-owned source faces: a fidelity milestone,
+not yet a meaningful compression improvement.
+
+Independent continuous-overlay checks on actual Float32 output find maximum
+5.232 mm height error (core 0.0191 mm), zero overlap, zero shared-edge steps,
+zero non-manifold edges and zero unpaired internal edges. This is the isolated
+surface, not verified attachment to neighbouring road/terrain components.
+
+Ownership is explicit: obsolete outside-domain remnants are excluded. Those
+microscopic old/new overlap slivers disagree by up to 36.38 mm at identical XZ,
+so no claim is made to match both within 10 mm. Original numerical coverage
+omission is 0.00015075 square metres; Float32 boundary symmetric difference is
+0.00018114 square metres. The report records these exceptions rather than
+silently treating them as exact coverage. Mac Chrome visual QA passed at desktop and 390×844: full framing, five header buttons, repeated surface switches, delayed north import race, correct per-component timings and no console warnings/errors. The QA server observed only HTML/JS requests (plus automatic favicon404), no images or model assets.
+
+Independent read-only recheck reproduced the concave-ridge rejection and verified
+both carpark hashes unchanged. No blocker remains for the trusted checked-in
+pilot; this is not yet an arbitrary imported-JSON geometry editor.
