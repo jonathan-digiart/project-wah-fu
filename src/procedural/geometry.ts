@@ -1,3 +1,6 @@
+import { authoredCellGeometry } from "./cell-surface";
+import { controlSurfaceGeometry } from "./control-surface";
+import { heightPatchGeometry } from "./height-patch";
 import { ShapeUtils, Vector2 } from "three";
 import { area, hasCrossingEdges } from "../model";
 import type {
@@ -116,6 +119,11 @@ export function roadGeometry(input: RoadStrip): GeometryData {
 }
 export function generateComponent(component: Component): GeometryData {
   if (!component.id.trim()) throw new Error("Component requires a stable ID");
+  if (component.kind === "authored-cells")
+    return authoredCellGeometry(component);
+  if (component.kind === "control-surface")
+    return controlSurfaceGeometry(component);
+  if (component.kind === "height-patch") return heightPatchGeometry(component);
   return component.kind === "footprint"
     ? footprintGeometry(component)
     : roadGeometry(component);

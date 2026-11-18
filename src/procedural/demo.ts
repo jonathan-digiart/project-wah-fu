@@ -49,17 +49,22 @@ const box = new Box3().setFromObject(registry.group);
 const carparkMesh = registry.group.children.find(
   (x) => x.userData.id === "wah-ming-north-carpark-plan",
 )!;
-const carparkBox = new Box3().setFromObject(carparkMesh);
+let selectedBox = new Box3().setFromObject(carparkMesh);
 let focus: "overview" | "carpark" = "overview";
+let viewGeneration = 0;
+let selectedId: string | undefined;
+const generationTimes = new Map<string, number>();
+const initialObjects = new Set(registry.group.children);
+const viewNote = document.querySelector<HTMLParagraphElement>("#view-note")!;
 const render = () => {
   renderer.render(scene, camera);
-  metrics.textContent = `${registry.stats().length} modules · ${renderer.info.render.triangles.toLocaleString()} drawn triangles · ${renderer.info.render.calls} draw calls · ${generationMs.toFixed(1)} ms geometry generation`;
+  metrics.textContent = `${registry.stats().length} registered modules · ${renderer.info.render.triangles.toLocaleString()} drawn triangles · ${renderer.info.render.calls} draw calls · ${generationMs.toFixed(1)} ms initial geometry${selectedId && generationTimes.has(selectedId) ? ` · ${generationTimes.get(selectedId)!.toFixed(1)} ms selected surface generation` : ""}`;
 };
 const frame = () => {
   controls.target.copy(
     fitCamera(
       camera,
-      focus === "overview" ? box : carparkBox,
+      focus === "overview" ? box : selectedBox,
       focus === "overview"
         ? new Vector3(0.6, 0.85, 1)
         : new Vector3(0, 1, 0.0001),
@@ -69,9 +74,56 @@ const frame = () => {
   render();
 };
 const overview = () => {
+  ++viewGeneration;
   focus = "overview";
-  for (const child of registry.group.children) child.visible = true;
+  selectedId = undefined;
+  for (const child of registry.group.children)
+    child.visible = initialObjects.has(child);
+  viewNote.textContent =
+    "Partial envelope and plan scaffold, not a replacement.";
   frame();
+};
+const isolate = (id: string) => {
+  selectedId = id;
+  const mesh = registry.group.children.find((x) => x.userData.id === id)!;
+  focus = "carpark";
+  selectedBox = new Box3().setFromObject(mesh);
+  for (const child of registry.group.children) child.visible = child === mesh;
+  frame();
+};
+const surface = async (optimised: boolean) => {
+  const token = ++viewGeneration;
+  viewNote.textContent =
+    "Generating an isolated surface from editable height controls…";
+  try {
+    const data = await import("./wah-ming-authored");
+    if (token !== viewGeneration) return;
+    const component = {
+      ...(optimised
+        ? data.WAH_MING_AUTHORED_OPTIMISED
+        : data.WAH_MING_AUTHORED),
+      id: optimised ? "wah-ming-optimised" : "wah-ming-reference",
+      label: optimised
+        ? "Wah Ming procedural surface"
+        : "Wah Ming authoring-grid reference",
+      kind: "authored-cells" as const,
+      source:
+        "Accepted v126/v127 inferred paving; original constructive grid and named scalar levels",
+      confidence: "inferred" as const,
+    };
+    if (!registry.group.children.some((x) => x.userData.id === component.id)) {
+      const start = performance.now();
+      registry.replace(component);
+      generationTimes.set(component.id, performance.now() - start);
+    }
+    isolate(component.id);
+    viewNote.textContent = optimised
+      ? "Feature-aware carpark: 1,260 triangles, maximum 9.481 mm height difference. Draft component, not integrated."
+      : "Code-generated authoring-grid reference: 1,616 triangles. No imported 3D asset.";
+  } catch (error) {
+    if (token === viewGeneration)
+      viewNote.textContent = `Surface generation failed: ${error instanceof Error ? error.message : String(error)}`;
+  }
 };
 const resize = () => {
   const width = viewport.clientWidth,
@@ -86,16 +138,23 @@ const resizeObserver = new ResizeObserver(resize);
 resizeObserver.observe(viewport);
 document.querySelector("#overview")!.addEventListener("click", overview);
 document.querySelector("#carpark")!.addEventListener("click", () => {
-  focus = "carpark";
-  for (const child of registry.group.children)
-    child.visible = child === carparkMesh;
-  frame();
+  ++viewGeneration;
+  isolate("wah-ming-north-carpark-plan");
+  viewNote.textContent =
+    "Locked footprint only, displayed at arbitrary zero elevation.";
+});
+document.querySelector("#carpark10")!.addEventListener("click", () => {
+  void surface(true);
+});
+document.querySelector("#carpark50")!.addEventListener("click", () => {
+  void surface(false);
 });
 resize();
 overview();
 window.addEventListener(
   "pagehide",
   () => {
+    ++viewGeneration;
     resizeObserver.disconnect();
     controls.dispose();
     registry.dispose();

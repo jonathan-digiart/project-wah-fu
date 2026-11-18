@@ -1,0 +1,48 @@
+{
+  "sourceSha256": "f6fe962de33a519ee93d7d6768011525c41dce538656515b68413ea6d7143abe",
+  "runtimeInputSha256": "afd6e18584424c9d360199fd79f5426d02c2e86d3e7216462b63c752769baa23",
+  "reports": [
+    {
+      "float32": false,
+      "meaningfulFaces": 1616,
+      "maxMeaningfulGrade": 0.35101434756344685,
+      "duplicateFaces": 0,
+      "qaOnly10MicrometreClosedBoundaryHausdorffM": 7.519334004012427e-6,
+      "triangles": 1616,
+      "vertices": 967,
+      "maxHeightErrorM": 3.2001991314700717e-6,
+      "maxErrorAtXZ": [90.9999980991624, -199.1866683059393],
+      "referenceAreaM2": 1419.8814652500746,
+      "candidateAreaM2": 1419.8815148007707,
+      "missingAreaM2": 0.0002256572751577995,
+      "extraAreaM2": 0.00027520797118919495,
+      "overlapAreaM2": 0.0,
+      "boundaryHausdorffM": 7.519334004012427e-6,
+      "degenerateFaces": 0,
+      "facesMissingReference": 0,
+      "finite": true,
+      "method": "Exact affine height difference at every source/runtime triangle overlay vertex; only common covered area, missing/extra area separately reported"
+    },
+    {
+      "float32": true,
+      "meaningfulFaces": 1616,
+      "maxMeaningfulGrade": 0.35101434756344685,
+      "duplicateFaces": 0,
+      "qaOnly10MicrometreClosedBoundaryHausdorffM": 7.519334004012427e-6,
+      "triangles": 1616,
+      "vertices": 967,
+      "maxHeightErrorM": 3.2001991314700717e-6,
+      "maxErrorAtXZ": [90.9999980991624, -199.1866683059393],
+      "referenceAreaM2": 1419.8814652500746,
+      "candidateAreaM2": 1419.8815148007707,
+      "missingAreaM2": 0.0002256572751577995,
+      "extraAreaM2": 0.00027520797118919495,
+      "overlapAreaM2": 0.0,
+      "boundaryHausdorffM": 7.519334004012427e-6,
+      "degenerateFaces": 0,
+      "facesMissingReference": 0,
+      "finite": true,
+      "method": "Exact affine height difference at every source/runtime triangle overlay vertex; only common covered area, missing/extra area separately reported"
+    }
+  ]
+}

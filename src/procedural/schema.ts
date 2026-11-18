@@ -1,3 +1,4 @@
+import type { AuthoredCellSurface } from "./cell-surface";
 /** Authoring inputs, not saved triangles. Coordinates are metres, +Y up, -Z north. */
 export type PlanPoint = readonly [x: number, z: number];
 export type Position = readonly [x: number, y: number, z: number];
@@ -25,8 +26,33 @@ export interface RoadStrip extends ComponentIdentity {
   /** Paired edge stations preserve variable width, crossfall and bridge levels. */
   stations: readonly RoadStation[];
 }
-export type Component = Footprint | RoadStrip;
+export type Component =
+  Footprint | RoadStrip | HeightPatch | ControlSurface | AuthoredCellComponent;
 export interface GeometryData {
   positions: number[];
   indices: number[];
+}
+/** Sparse editable height controls, not mesh connectivity. Axes map parameters to XZ. */
+export interface HeightPatch extends ComponentIdentity {
+  kind: "height-patch";
+  origin: PlanPoint;
+  uAxis: PlanPoint;
+  vAxis: PlanPoint;
+  uKnots: readonly number[];
+  vKnots: readonly number[];
+  /** Row-major semantic elevations: heights[v][u]. */
+  heights: readonly (readonly number[])[];
+  tolerance: number;
+  maxTriangles: number;
+}
+export interface ControlSurface extends ComponentIdentity {
+  kind: "control-surface";
+  outline: readonly PlanPoint[];
+  controls: readonly { x: number; z: number; height: number }[];
+  maxTriangles: number;
+}
+
+export interface AuthoredCellComponent
+  extends ComponentIdentity, AuthoredCellSurface {
+  kind: "authored-cells";
 }

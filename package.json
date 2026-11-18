@@ -18,10 +18,10 @@
     "preview": "python3 -m http.server --bind 127.0.0.1 --directory dist",
     "browsers:install": "PLAYWRIGHT_BROWSERS_PATH=.cache/ms-playwright playwright install chromium webkit",
     "test:e2e": "PLAYWRIGHT_BROWSERS_PATH=.cache/ms-playwright playwright test",
-    "check": "npm run format:check && npm run typecheck && npm run lint && npm test && npm run build",
+    "check": "npm run format:check && npm run typecheck && npm run lint && npm test && npm run build && npm run build:procedural",
     "check:all": "npm run check && npm run test:e2e",
     "check:release": "npm run check && node scripts/check-release.mjs",
-    "build:procedural": "tsc --noEmit && vite build --config procedural.config.ts",
+    "build:procedural": "tsc --noEmit && vite build --config procedural.config.ts && node scripts/check-procedural.mjs",
     "dev:procedural": "vite --config procedural.config.ts --host 127.0.0.1"
   },
   "dependencies": {

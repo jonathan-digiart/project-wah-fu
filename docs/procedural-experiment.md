@@ -1,10 +1,50 @@
-# Code-only reconstruction experiment (stage 1, incomplete)
+# Code-only reconstruction experiment (incomplete)
 
 The owner requested a genuinely code-only, modular procedural reconstruction of
 v128, using as few triangles as practicable, to compare size, loading efficiency
 and runtime performance. The published v128 page remains untouched.
 
-## What this branch actually provides
+## Current milestone: strict-fidelity carpark surface
+
+The viewer now includes a genuinely procedural Wah Ming carpark top, in addition
+to the earlier envelope/plan scaffold. It reconstructs the original authoring
+mechanism: a 1.5 m grid clipped to the locked footprint, named scalar elevation
+levels, editable ridge-diagonal rules and 31 feature-aware macro cells. No saved
+mesh vertex/index buffers are used. Each macro retains every original perimeter
+station and generates a centre fan, reducing interior triangles without cracks.
+
+- Regenerated reference: **1,616 triangles / 967 vertices**.
+- Optimised surface: **1,260 triangles / 789 vertices**, **22.03% fewer triangles**.
+- Continuous maximum height difference versus accepted source: **9.480587 mm**.
+- All **316 boundary vertices and edges, including elevations, are bit-exact**
+  between regenerated reference and optimised surface.
+- One connected topological disk; no non-manifold/internal hanging edges,
+  duplicate/degenerate/downward faces, overlaps or non-finite coordinates.
+- Float32 perimeter deviation from source is 7.519 micrometres. Tiny missing/extra
+  projected areas, each below 0.000276 square metres, are reported separately.
+
+The continuous bound was checked at every source/candidate triangle-overlay
+vertex, where the difference of affine surfaces reaches its extrema. The CI test
+also compares the two code-generated surfaces continuously and checks their exact
+shared boundary and topology. Evidence is in `procedural-evidence/`.
+
+**Scope remains the isolated paving top.** Adjacent terrain, retaining supports,
+external seam integration and the entire estate have not been reconstructed or
+validated by this result. The public v128 scene is unchanged.
+
+Earlier generic scattered-height experiments either increased triangle count at
+10 mm fidelity or required a 50 mm relaxation for savings. These were not adopted
+as the viewer's primary surface. The viewer now offers only the strict-fidelity
+optimised surface and its code-generated reference; coarse variants are excluded from the repository model data and runtime build.
+
+The current experimental build contains **six files / 682,884 bytes**, including
+Three.js, the scaffold and both lazy-loaded carpark authoring variants. The
+178,683-byte QA archive is packaging size, not measured HTTP transfer. This is
+still not a whole-estate size/performance comparison. Module-generation timings
+are attached to the selected surface; they are hidden on Overview rather than
+mislabelled as timings for a different view.
+
+## Stage-1 foundation
 
 - Separate `procedural.html` development entry and `npm run build:procedural`.
   It cannot replace the Pages release through the existing build command.
@@ -25,13 +65,13 @@ and runtime performance. The published v128 page remains untouched.
   authoring data is bundled as code, not loaded as 3D assets.
 
 This is **not a v128-equivalent scene**. Do not present its small download as a
-reduction achieved at the same fidelity. No accepted terrain or road surfaces
-are reconstructed in this first stage. Earlier envelope parameters are not the
+reduction achieved at the same fidelity. At the first stage no accepted terrain or road surfaces were reconstructed;
+the subsequent isolated carpark milestone above is the first exception. Earlier envelope parameters are not the
 accepted detailed building geometry. In particular, the older 265-point terrain
 scaffold has approximately 2.58 m mean error and 7.53 m p95 error; it is deliberately
 not included in this experiment.
 
-## Stage-1 measurements
+## Historical stage-1 measurements
 
 Measured deterministically by `src/procedural/inventory.test.ts`:
 
@@ -110,3 +150,24 @@ replacement. No automatic deployment or merge is part of this experiment.
 - `node scripts/smoke-procedural.mjs` (supported Chromium environment required)
 
 The original `npm run build` still verifies/copies the accepted public v128 release.
+
+### Current carpark browser smoke
+
+Mac Chrome verified the strict-fidelity build at desktop and 390×844: optimised
+1,260 triangles / 1 draw, regenerated reference 1,616 / 1, full footprint visible,
+repeated switches and per-surface timing labels correct. A deliberately delayed
+lazy-module response did not override a newer Overview action. No console
+warnings/errors occurred. Requests were only HTML and the two JavaScript modules,
+plus the browser's unserved favicon request. This was functional smoke, not a
+controlled performance benchmark. The local test server was stopped afterwards.
+
+### Authoring-input safety review
+
+The independent review reproduced an exterior-diagonal bug on a synthetic concave
+quad. Conflicting authored ridges now reject rather than produce overlapping faces.
+Input validation bounds cell/macro work, checks semantic key syntax and finite
+simple outlines, and rejects Float32 vertex/face collapse. Profile interpolation
+rejects nonfinite derived arithmetic. Regressions check oriented edge cancellation,
+projected area, and the concave counterexample. All 99 tests pass. Both accepted
+carpark geometry exports remain byte-identical after these validation changes;
+their independent source-overlay results therefore remain applicable.

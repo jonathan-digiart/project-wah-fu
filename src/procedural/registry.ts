@@ -53,7 +53,10 @@ export class ComponentRegistry {
     const material = new MeshStandardMaterial({
       color: component.kind === "road-strip" ? "#9e9d97" : "#d4c8b4",
       roughness: 1,
-      flatShading: true,
+      flatShading:
+        component.kind !== "height-patch" &&
+        component.kind !== "control-surface" &&
+        component.kind !== "authored-cells",
     });
     const mesh = new Mesh(geometry, material);
     mesh.name = component.label;
