@@ -57,8 +57,13 @@ execution environment's localhost. This branch does not bypass the sandbox.
 The first Mac Chrome smoke completed without console warnings/errors and loaded
 only local HTML/JavaScript (apart from an unserved favicon). It found a portrait
 framing defect, now corrected with aspect-aware fitting, a non-overlapping header
-and an isolated carpark-plan view. Final retest is pending. No load-time or FPS
-advantage over v128 is claimed.
+and an isolated carpark-plan view. Final Mac Chrome retest of archive SHA-256
+`b9d5137f93b6d51e4e33043cc1aebb47e6dc32583d332f2e220a15cdec95ffe6`
+passed at desktop and 390×844: full estate fits (5,950 triangles / 125 draw calls),
+full isolated carpark fits (146 / 1), repeated view switching works, and there
+were no console warnings/errors. The one observed geometry-generation time was
+10.6 ms; it is not a benchmark distribution. No load-time or FPS advantage over
+v128 is claimed.
 
 ## Next stages and fidelity gate
 
