@@ -45,7 +45,11 @@ all static-release SHA-256 identities, then copies only the approved release int
 `dist`. `npm run check:release` checks both targets. The release manifest is
 `verification/public-v128/FILE-MANIFEST.json`; its verifier rejects missing,
 extra, changed or symlinked files. It is portable and requires only Python 3.
-`npm run preview` serves the actual new public release. Playwright runs the
+`npm run preview -- 4174` serves the actual new public release on port 4174.
+This plain static server preserves explicitly requested `.gz` bytes; Vite preview
+adds Content-Encoding to those files and is unsuitable for compressed-byte
+integrity checks. Actual Pages response semantics and live loading are verified
+after deployment, not inferred from this local server. Playwright runs the
 legacy scenarios at port 4173 and the public-release smoke at port 4174.
 
 This is a provisional reconstruction, not a survey. Accepted road changes are
