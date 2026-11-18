@@ -1,3 +1,4 @@
+import { constrainReversibleOrbit } from "./reversible-orbit.mjs";
 import { Box3, Ray, Triangle, Vector3 } from "three";
 
 // Coordinates in all three viewers are metres. This is physical camera
@@ -594,14 +595,29 @@ export function attachExteriorCamera(camera, controls, roots, options = {}) {
           ),
         );
     }
-    const position = teleport
-        ? collider.recover(requested)
-        : collider.move(
+    const orbitPolicy =
+      !teleport &&
+      !surfaceCloseUp &&
+      isOrbit &&
+      targetMovement.lengthSq() < EPS * EPS
+        ? constrainReversibleOrbit(
+            collider,
             previous,
-            physicalRequest,
+            previousTarget,
+            requested,
             collider.config.clearance,
-            isPan,
-          ),
+          )
+        : null;
+    const position = orbitPolicy
+        ? orbitPolicy.position
+        : teleport
+          ? collider.recover(requested)
+          : collider.move(
+              previous,
+              physicalRequest,
+              collider.config.clearance,
+              isPan,
+            ),
       correction = position.clone().sub(requested);
     camera.position.copy(position);
     if (!teleport && surfaceCloseUp && isOrbit) controls.target.add(correction);
