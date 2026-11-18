@@ -1,0 +1,5 @@
+const events=new Set(['gesture-start','gesture-end','selection','request','phase','abort','timeout','error','complete','worker-reset','visibility','context-loss','context-restored']);
+const labels=new Set(['phase','reason','input']);const numbers=new Set(['requestId','generation','active','queued','wanted','resident','durationMs','receivedBytes','pointerCount']);
+export function createDiagnosticRing({limit=128,now=()=>performance.now()}={}){if(!Number.isInteger(limit)||limit<1||limit>200)throw new RangeError('Invalid diagnostic limit');const ring=[],counts=Object.fromEntries([...events].map(e=>[e,0]));let dropped=0;return{
+ record(event,fields={}){if(!events.has(event))return;const item={event,atMs:now()};for(const[k,v]of Object.entries(fields)){if(numbers.has(k)&&Number.isFinite(v))item[k]=v;else if(labels.has(k)&&typeof v==='string'&&/^[a-z0-9-]{1,48}$/.test(v))item[k]=v;}counts[event]++;ring.push(item);if(ring.length>limit){ring.shift();dropped++;}},
+ snapshot(){return{limit,dropped,counts:{...counts},events:ring.map(e=>({...e}))}}};}

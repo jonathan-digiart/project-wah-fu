@@ -1,0 +1,3464 @@
+{
+  "schema": "wah-fu.lossless-compact-terrain-manifest/1",
+  "coordinate_frame": {
+    "sourceHorizontalCRS": "EPSG:2326 (Hong Kong 1980 Grid)",
+    "sourceVerticalDatum": "Hong Kong Principal Datum",
+    "units": "metres",
+    "sourceOriginENH": [
+      831875,
+      812300,
+      0
+    ],
+    "blenderToBrowser": "(X,Y,Z) -> (X,Z,-Y); glTF exporter Y-up",
+    "hk80ToBrowser": "x=E-831875; y=HKPD height; z=-(N-812300)",
+    "browserToHK80": "E=x+831875; N=812300-z; H=y",
+    "sourceAlreadyLocal": true,
+    "additionalTranslation": [
+      0,
+      0,
+      0
+    ],
+    "scale": 1
+  },
+  "bounds_space": "browser world xyz",
+  "collision_enabled": false,
+  "classification": "Lossless full-detail encoding of existing processed context. Not a coarse mesh, not original Government data. Existing source joins and source gaps remain.",
+  "chunks": [
+    {
+      "id": "C-x-3-z-4",
+      "file": "terrain-compact/terrain-C-x-3-z-4.wft",
+      "sha256": "f405eb772665ab22d5cf14893510a21c52a7d1ec970d649a694169b097a5f98b",
+      "bytes": 1241,
+      "triangles": 12,
+      "bounds": {
+        "min": [
+          -225,
+          1.2999595403671265,
+          -300.5000305175781
+        ],
+        "max": [
+          -200,
+          5.034483432769775,
+          -299.5000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -3,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 2424,
+      "decodedSha256": "8ac1b85ba1d4da3425ea144fd772d7bb3552ab4320c2baddc4bffcb37a0ce4b2",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-3-z-4.glb",
+        "bytes": 4028,
+        "sha256": "bfa54871c4cf5292454ccd26cd19297f5f3bef2ef382ee88683211af56a71e62"
+      },
+      "geometryBytes": 864,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-3-z-4"
+    },
+    {
+      "id": "C-x-3-z-3",
+      "file": "terrain-compact/terrain-C-x-3-z-3.wft",
+      "sha256": "c357885bd916262951a049dd145001832ed9219cca4916c4ea438e4c935eea98",
+      "bytes": 4871,
+      "triangles": 139,
+      "bounds": {
+        "min": [
+          -225,
+          1.299959659576416,
+          -300.5000305175781
+        ],
+        "max": [
+          -183.63818359375,
+          5.034483432769775,
+          -253.75599670410156
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -3,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 7688,
+      "decodedSha256": "a28bdaae2cce692117f320f8d913b17b9d840bb0bd1e7966f51ed4a8d50a3bea",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-3-z-3.glb",
+        "bytes": 17416,
+        "sha256": "7a8bc9786cdbd78a4959a53bbe942c59977c02d391f7d965fc9c298e561f96ea"
+      },
+      "geometryBytes": 10008,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-3-z-3"
+    },
+    {
+      "id": "C-x-3-z-1",
+      "file": "terrain-compact/terrain-C-x-3-z-1.wft",
+      "sha256": "0dc0d60d93e123a89e0d82ca1e7ff0c5b0038a2fd0da71ad40f9da10c4c31cfb",
+      "bytes": 800,
+      "triangles": 1,
+      "bounds": {
+        "min": [
+          -225,
+          1.299991250038147,
+          -64.56172180175781
+        ],
+        "max": [
+          -218.22047424316406,
+          1.2999931573867798,
+          -50.671409606933594
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -3,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1404,
+      "decodedSha256": "983482fc752f10562e3000cbff2733888db4312453b336b5d2d0a31a56f7cefa",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-3-z-1.glb",
+        "bytes": 2168,
+        "sha256": "d21b215a41458476f227d03572fcb988863dee33204a17c4faa33f87953cea5d"
+      },
+      "geometryBytes": 72,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-3-z-1"
+    },
+    {
+      "id": "C-x-2-z-4",
+      "file": "terrain-compact/terrain-C-x-2-z-4.wft",
+      "sha256": "c41d58bb5e462a5d75e0e47be89de43b9a5d4881e5878bdc0a61e811bef02bd5",
+      "bytes": 3773,
+      "triangles": 84,
+      "bounds": {
+        "min": [
+          -200,
+          1.4317163228988647,
+          -300.5000305175781
+        ],
+        "max": [
+          -100.5,
+          15.3955717086792,
+          -299.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -2,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 6024,
+      "decodedSha256": "6aee83b15353388c5dc195e6993f14844253eb64b9145e4858681e01607dede4",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-2-z-4.glb",
+        "bytes": 11524,
+        "sha256": "61d9db824d64d5b7050ad4bdd9ccad93fa5077fad360ad509c347ccb555bbac0"
+      },
+      "geometryBytes": 6048,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-2-z-4"
+    },
+    {
+      "id": "C-x-2-z-3",
+      "file": "terrain-compact/terrain-C-x-2-z-3.wft",
+      "sha256": "9f3e6ab5a46ac66bd3f4e75d77c997666bbc94bcbf1162974222ef8d521307df",
+      "bytes": 62441,
+      "triangles": 2252,
+      "bounds": {
+        "min": [
+          -225,
+          1.2912496328353882,
+          -300.5000305175781
+        ],
+        "max": [
+          -1.2685546875,
+          15.518768310546875,
+          -172.00929260253906
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -2,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 94808,
+      "decodedSha256": "8489b674abf7dc7538f4f3705749688ea7b5456de43b9bfd22133b0274595577",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-2-z-3.glb",
+        "bytes": 245672,
+        "sha256": "2a290aaf9a8b07f3e17decb4a73563d8f8a8d46b1ed4b778c43efe911ffe23b6"
+      },
+      "geometryBytes": 162144,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-2-z-3"
+    },
+    {
+      "id": "C-x-2-z-2",
+      "file": "terrain-compact/terrain-C-x-2-z-2.wft",
+      "sha256": "95cfbaf622aea04a1db6eb47153f29116fd58b00466037d8a86d799469b7b51b",
+      "bytes": 1122,
+      "triangles": 10,
+      "bounds": {
+        "min": [
+          -225,
+          1.2999658584594727,
+          -253.75599670410156
+        ],
+        "max": [
+          13.927734375,
+          1.299988865852356,
+          -82.80641174316406
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -2,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1844,
+      "decodedSha256": "015652bf71e691d42dd57a03a4e8f1bc79b9b6d09bb21014a248fc8f8162265d",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-2-z-2.glb",
+        "bytes": 2760,
+        "sha256": "42e33ea991768408c4bbd5b72b898bf2ef47256c12cb85e7910bceede7248bce"
+      },
+      "geometryBytes": 720,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-2-z-2"
+    },
+    {
+      "id": "C-x-2-z-1",
+      "file": "terrain-compact/terrain-C-x-2-z-1.wft",
+      "sha256": "eec5e78559c80924d422e8e20d2c041c549ff752285e5e34eaba011c8770aea9",
+      "bytes": 1859,
+      "triangles": 36,
+      "bounds": {
+        "min": [
+          -225,
+          1.299981713294983,
+          -135.57911682128906
+        ],
+        "max": [
+          69.3740234375,
+          1.3000009059906006,
+          6.995713233947754
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -2,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 3036,
+      "decodedSha256": "f286af3ee5644a902de15a038f11bf476ee5d9fb3bbd47bb77ebbaa5d78429e1",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-2-z-1.glb",
+        "bytes": 4332,
+        "sha256": "51b92b4f784e97bcbf9949c499622254844c56ffca7dbf19ea45c6f90db47665"
+      },
+      "geometryBytes": 2592,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-2-z-1"
+    },
+    {
+      "id": "C-x-1-z-4",
+      "file": "terrain-compact/terrain-C-x-1-z-4.wft",
+      "sha256": "0a7bbbc9c611d8a5e494bd1a35e8a7217bf0388c0e10f262f8bb88ff39b129a3",
+      "bytes": 1934,
+      "triangles": 27,
+      "bounds": {
+        "min": [
+          -100.5,
+          3.3746275901794434,
+          -300.5000305175781
+        ],
+        "max": [
+          22.98681640625,
+          24.811962127685547,
+          -299.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -1,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 3048,
+      "decodedSha256": "041c22ac359c71d9ac076234a6c12b04aba89e51922b088d81b93de231f98928",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-1-z-4.glb",
+        "bytes": 5060,
+        "sha256": "26c95e6ea1d6720d7ae06fdfe7edfbedd49e88b89ac9c62cdac3376ba38cc73c"
+      },
+      "geometryBytes": 1944,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-1-z-4"
+    },
+    {
+      "id": "C-x-1-z-3",
+      "file": "terrain-compact/terrain-C-x-1-z-3.wft",
+      "sha256": "382846ed79ade6150164b35006f2b8d066f39400be6dc25bcf3e6d95e7257e88",
+      "bytes": 75048,
+      "triangles": 2712,
+      "bounds": {
+        "min": [
+          -183.63818359375,
+          1.2999610900878906,
+          -300.5000305175781
+        ],
+        "max": [
+          22.98681640625,
+          25.00634002685547,
+          -172.00929260253906
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -1,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 112644,
+      "decodedSha256": "8f08c094342142bb0681084f09fbd11d3eeb88a52d66d7c5f6ffe9bea51f073d",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-1-z-3.glb",
+        "bytes": 298184,
+        "sha256": "b04506318c1d0c9ff294d587a0d0e0e260c74ba79ef057d3f573da911d4426c7"
+      },
+      "geometryBytes": 195264,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-1-z-3"
+    },
+    {
+      "id": "C-x-1-z-2",
+      "file": "terrain-compact/terrain-C-x-1-z-2.wft",
+      "sha256": "b3724fb4fc7bf7dbd12ff077f283667b284469f3e4dbd5a23170c342700698c6",
+      "bytes": 3370,
+      "triangles": 73,
+      "bounds": {
+        "min": [
+          -225,
+          1.2999703884124756,
+          -219.88235473632812
+        ],
+        "max": [
+          28.357421875,
+          4.034986972808838,
+          -73.94786834716797
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -1,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 5292,
+      "decodedSha256": "b68f4d64e3d21a87e3917b706dad6610daac6575ff3989ceb1fa5a46cd89225c",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-1-z-2.glb",
+        "bytes": 10576,
+        "sha256": "682ae1207a53e8fe6efe3188cca67cbb3dc97ce6da5caef63791c2fc039a1c10"
+      },
+      "geometryBytes": 5256,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-1-z-2"
+    },
+    {
+      "id": "C-x-1-z-1",
+      "file": "terrain-compact/terrain-C-x-1-z-1.wft",
+      "sha256": "0805f11c685d411e888ae52790b0f2858955a99181665a574e3a29ee11047a76",
+      "bytes": 1573,
+      "triangles": 21,
+      "bounds": {
+        "min": [
+          -225,
+          1.2999845743179321,
+          -114.39698791503906
+        ],
+        "max": [
+          82.84716796875,
+          1.3000049591064453,
+          37.67659378051758
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -1,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 2472,
+      "decodedSha256": "7ff1d35529c1a144780d7ba20086fb2b718bafbd5f1c9dc1a7a95eb6e73355d5",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-1-z-1.glb",
+        "bytes": 3612,
+        "sha256": "695b5cb6c0fcdfd071f241b73966d8d587cb554bec80af9910cc69af0629fa2b"
+      },
+      "geometryBytes": 1512,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-1-z-1"
+    },
+    {
+      "id": "C-x-1-z0",
+      "file": "terrain-compact/terrain-C-x-1-z0.wft",
+      "sha256": "30c1d7ea4230d142151ea996c0356571d6b4f5e8a45d5cd92fa120fa08f38f92",
+      "bytes": 1120,
+      "triangles": 10,
+      "bounds": {
+        "min": [
+          -169.22610473632812,
+          1.2999939918518066,
+          -44.632328033447266
+        ],
+        "max": [
+          87.12109375,
+          1.3000234365463257,
+          174.69044494628906
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        -1,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1812,
+      "decodedSha256": "d138340bb2267b0917cf0004cd7e2b9ed40eb575cdd31b1d1cdaf66596396b1d",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x-1-z0.glb",
+        "bytes": 2716,
+        "sha256": "f9426e1460f5dab9f250ab7ed91fc95c495695b6bcad588bf6f0a728d1bd30b9"
+      },
+      "geometryBytes": 720,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x-1-z0"
+    },
+    {
+      "id": "C-x0-z-4",
+      "file": "terrain-compact/terrain-C-x0-z-4.wft",
+      "sha256": "1c45446a24e4dc373a74b9d737c2ca80dec58eb7d52c3728f83450df15804d9d",
+      "bytes": 5671,
+      "triangles": 141,
+      "bounds": {
+        "min": [
+          22.98681640625,
+          24.811962127685547,
+          -300.5000305175781
+        ],
+        "max": [
+          100,
+          29.753568649291992,
+          -299.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        0,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 9228,
+      "decodedSha256": "d377caba4650ab41796a3f33220169e1e07a8a12bac4597cc95fc994c7b76bad",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x0-z-4.glb",
+        "bytes": 16316,
+        "sha256": "20dc23c927732fcc195c97896c7473c663ca102eb5915bc872b6e0a050dcfffa"
+      },
+      "geometryBytes": 10152,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x0-z-4"
+    },
+    {
+      "id": "C-x0-z-3",
+      "file": "terrain-compact/terrain-C-x0-z-3.wft",
+      "sha256": "510422a8fd6a96e267c027e4403997f2a2098893fc074f16f879eb723035416f",
+      "bytes": 75083,
+      "triangles": 2740,
+      "bounds": {
+        "min": [
+          -11,
+          2.9472544193267822,
+          -300.5000305175781
+        ],
+        "max": [
+          105,
+          29.753568649291992,
+          -196.50003051757812
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        0,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 111108,
+      "decodedSha256": "5e38bccf02ede709b7549c5ef5c7473f7c7801bd0b9b7e7d900a5f408d59a01e",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x0-z-3.glb",
+        "bytes": 290408,
+        "sha256": "06cee9c85c60d18419ee7cd5b7788e0f4f77553890fbfb221bb9e1f971bd387f"
+      },
+      "geometryBytes": 197280,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x0-z-3"
+    },
+    {
+      "id": "C-x0-z-2",
+      "file": "terrain-compact/terrain-C-x0-z-2.wft",
+      "sha256": "7b589e6c0439a9bd8b89ea68336368b099e160e3fb55f47a40b5f23c7d55de27",
+      "bytes": 108782,
+      "triangles": 4026,
+      "bounds": {
+        "min": [
+          -1.5,
+          1.2999768257141113,
+          -203.61721801757812
+        ],
+        "max": [
+          104.81103515625,
+          20.5529842376709,
+          -94.94824981689453
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        0,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 160772,
+      "decodedSha256": "6bd57cd80cfdf32f6272bd0ef147dc2e2baef47761bef5ef29a8fe89ca302614",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x0-z-2.glb",
+        "bytes": 418568,
+        "sha256": "2893fe7667134c76a9ee4335258d78c2acbc4cfadf1571857c6ec14177a0207b"
+      },
+      "geometryBytes": 289872,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x0-z-2"
+    },
+    {
+      "id": "C-x0-z-1",
+      "file": "terrain-compact/terrain-C-x0-z-1.wft",
+      "sha256": "072c54d4154df6b6518d93310df39a44f3362f385db08b521c5f32f6b1449c04",
+      "bytes": 76796,
+      "triangles": 2791,
+      "bounds": {
+        "min": [
+          -166.52720642089844,
+          1.2999866008758545,
+          -102.50001525878906
+        ],
+        "max": [
+          107,
+          16.109878540039062,
+          38.627803802490234
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        0,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 116220,
+      "decodedSha256": "34b2a5649d316d4dff6e58b560c4721e5fb4792391fbc40b6101b36dafb7c9db",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x0-z-1.glb",
+        "bytes": 307752,
+        "sha256": "364125adcdb75c989bf6cd83c18f9f4eac390e8f2c75471b1ed19b760c08a75a"
+      },
+      "geometryBytes": 200952,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x0-z-1"
+    },
+    {
+      "id": "C-x0-z0",
+      "file": "terrain-compact/terrain-C-x0-z0.wft",
+      "sha256": "4bd6354587584bf8575f2c9e103fb49f6de1a568f50e76e39036e6164251ec56",
+      "bytes": 1446,
+      "triangles": 15,
+      "bounds": {
+        "min": [
+          -23.62273597717285,
+          1.2999955415725708,
+          -32.552738189697266
+        ],
+        "max": [
+          144.41357421875,
+          1.3000315427780151,
+          234.93653869628906
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        0,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 2232,
+      "decodedSha256": "afbbb607e1fbcca8d5c73a4d4cecc9bc4db46131aadbae7e7088c6ad615bc235",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x0-z0.glb",
+        "bytes": 3312,
+        "sha256": "946b29258f36935024d0d2c9d4878830a238b92e58505be06aa95401c7cb2a19"
+      },
+      "geometryBytes": 1080,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x0-z0"
+    },
+    {
+      "id": "C-x0-z1",
+      "file": "terrain-compact/terrain-C-x0-z1.wft",
+      "sha256": "45efd0c4d836d941a2010cb6e6400adfeb20eaf333a0d37f7236d68f3873fb9a",
+      "bytes": 1597,
+      "triangles": 20,
+      "bounds": {
+        "min": [
+          -45.07040786743164,
+          1.2999955415725708,
+          -32.552738189697266
+        ],
+        "max": [
+          177.81005859375,
+          1.3000351190567017,
+          261.9991149902344
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        0,
+        1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 2456,
+      "decodedSha256": "5cb65ac4261207f3154d58b73ddb44703d3e8d3ef3fa47abb626763d807438c1",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x0-z1.glb",
+        "bytes": 3616,
+        "sha256": "0b106e4938ab08042afec06c078593e88f674587e5cd3497aae1539ab61550de"
+      },
+      "geometryBytes": 1440,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x0-z1"
+    },
+    {
+      "id": "C-x0-z2",
+      "file": "terrain-compact/terrain-C-x0-z2.wft",
+      "sha256": "aaf4d2288a24df0c5fe193e3d41f5a0a4f26aeaa7883b4d5cc5ad58ea89aa753",
+      "bytes": 806,
+      "triangles": 1,
+      "bounds": {
+        "min": [
+          13.271512985229492,
+          1.3000316619873047,
+          235.80813598632812
+        ],
+        "max": [
+          21.500459671020508,
+          1.3000327348709106,
+          243.61160278320312
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        0,
+        2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1412,
+      "decodedSha256": "5f4a58d7921d6f76c12c41f44e525f76f09e2a2d888ca5f489b21274c1c4d79a",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x0-z2.glb",
+        "bytes": 2184,
+        "sha256": "36c0b35ab07394a829cf63e2f41a3950229c8e67ace1ecf082664bcb7b1b160a"
+      },
+      "geometryBytes": 72,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x0-z2"
+    },
+    {
+      "id": "C-x1-z-4",
+      "file": "terrain-compact/terrain-C-x1-z-4.wft",
+      "sha256": "768aae93eebdf0ab91f30e5ca5db787c6be6034f3aa97b6969e830dda5029f04",
+      "bytes": 6392,
+      "triangles": 166,
+      "bounds": {
+        "min": [
+          100,
+          29.695112228393555,
+          -300.5000305175781
+        ],
+        "max": [
+          199.5,
+          54.24006271362305,
+          -299.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        1,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 10624,
+      "decodedSha256": "ba1ea8470f30eb7d8b773c0a86c2a0ea00c24957c1ebe917e224551373feea5e",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x1-z-4.glb",
+        "bytes": 19944,
+        "sha256": "e30058507a97cfd3cb85d0f14a1128250585faafd70bbfc6197038a21cebcdea"
+      },
+      "geometryBytes": 11952,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x1-z-4"
+    },
+    {
+      "id": "C-x1-z-3",
+      "file": "terrain-compact/terrain-C-x1-z-3.wft",
+      "sha256": "2c852c96a3b398379b512e3d072b1f15a0250d50ad05b6bcee5a9dc98edc9764",
+      "bytes": 147346,
+      "triangles": 5499,
+      "bounds": {
+        "min": [
+          96.5,
+          19.270917892456055,
+          -300.5000305175781
+        ],
+        "max": [
+          205.37109375,
+          54.2411003112793,
+          -193.50003051757812
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        1,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 225976,
+      "decodedSha256": "695462ce17998a92201ae5855f8368b9cf574ec02deaeeaecc68ba1eb33ab65e",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x1-z-3.glb",
+        "bytes": 605780,
+        "sha256": "f04a862751b01c0f77970a354ec6ef82242200b6d037ec5ffd124e01d38d23cf"
+      },
+      "geometryBytes": 395928,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x1-z-3"
+    },
+    {
+      "id": "C-x1-z-2",
+      "file": "terrain-compact/terrain-C-x1-z-2.wft",
+      "sha256": "7bd4ce92c7a8cc8d76add9f8f213637ff3b77b3dbf36f79c8c3785e34dd99ed0",
+      "bytes": 99161,
+      "triangles": 3995,
+      "bounds": {
+        "min": [
+          94.947265625,
+          14.465985298156738,
+          -211.50003051757812
+        ],
+        "max": [
+          209,
+          32.4490966796875,
+          -97.95069885253906
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        1,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 155620,
+      "decodedSha256": "af9cab0f232690ba5ed844297d3f82329a2abc0acb129e0cade8a4ba31d5fd46",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x1-z-2.glb",
+        "bytes": 417652,
+        "sha256": "ba75b99084d6dba12c34326917c6d37466f68e0f8ec8b2c0024d02e8aef90940"
+      },
+      "geometryBytes": 287640,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x1-z-2"
+    },
+    {
+      "id": "C-x1-z-1",
+      "file": "terrain-compact/terrain-C-x1-z-1.wft",
+      "sha256": "033bece557d8b4e349621ebce02a0740baad79e9a54d211dee9647a31afb4ff6",
+      "bytes": 188990,
+      "triangles": 6972,
+      "bounds": {
+        "min": [
+          94.5,
+          1.2999968528747559,
+          -102.47901916503906
+        ],
+        "max": [
+          202.5,
+          34.29500961303711,
+          3.9999992847442627
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        1,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 283892,
+      "decodedSha256": "82aadb68078f54d44efe7b893477fe178330cbcb659cae1a7934728de6afc477",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x1-z-1.glb",
+        "bytes": 748812,
+        "sha256": "fbbe45ee104454367c8ea3e9fa70b54444fb68698a8ff0ede509c32e660c361d"
+      },
+      "geometryBytes": 501984,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x1-z-1"
+    },
+    {
+      "id": "C-x1-z0",
+      "file": "terrain-compact/terrain-C-x1-z0.wft",
+      "sha256": "56c85e0942e7bf532aaabed6b916d76c78bff3cd86f368a8b9ddc19b1ccb742b",
+      "bytes": 89489,
+      "triangles": 3236,
+      "bounds": {
+        "min": [
+          125.31591796875,
+          1.2999999523162842,
+          -3.000002384185791
+        ],
+        "max": [
+          205.51416015625,
+          24.057992935180664,
+          71.69385528564453
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        1,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 134348,
+      "decodedSha256": "37e1112c0c3ca726253aa361631bf7712a70824ce5b79033484e902957480679",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x1-z0.glb",
+        "bytes": 357752,
+        "sha256": "c42d17d421454c6140d19d097fa7238ab0c73e394159a6d0a1f430b4cba5fa5d"
+      },
+      "geometryBytes": 232992,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x1-z0"
+    },
+    {
+      "id": "C-x1-z1",
+      "file": "terrain-compact/terrain-C-x1-z1.wft",
+      "sha256": "6c51842c6d01a713bed0b591782d2b3dd8f15d69681aca0f6d76d92f3e1d65fb",
+      "bytes": 866,
+      "triangles": 2,
+      "bounds": {
+        "min": [
+          13.271512985229492,
+          1.300002098083496,
+          15.846681594848633
+        ],
+        "max": [
+          205.51416015625,
+          1.3000380992889404,
+          284.3373107910156
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        1,
+        1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1460,
+      "decodedSha256": "9ff86ca295a937cb36d268bae47e72188bde932bb4e5aab6d73d291307047f8a",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x1-z1.glb",
+        "bytes": 2256,
+        "sha256": "62bc9e36ae11cbdc7307260b229831f39399b0cdf36d7003a5b388781f647cc7"
+      },
+      "geometryBytes": 144,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x1-z1"
+    },
+    {
+      "id": "C-x1-z2",
+      "file": "terrain-compact/terrain-C-x1-z2.wft",
+      "sha256": "432f5e02323176d48499087c2ae0a42c09e1fba8f775e733e5b9329c6ea5935a",
+      "bytes": 949,
+      "triangles": 6,
+      "bounds": {
+        "min": [
+          48.611515045166016,
+          1.3000072240829468,
+          54.06397247314453
+        ],
+        "max": [
+          205.51416015625,
+          1.3000402450561523,
+          300.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        1,
+        2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1616,
+      "decodedSha256": "e71edae90b348e95d254640c24edbaee44a0075aed9a04ba93da78408efce424",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x1-z2.glb",
+        "bytes": 2452,
+        "sha256": "060b06e4fe8c92dffb1b4d32e4958429f6a569d07272f9543c2522fa211f058a"
+      },
+      "geometryBytes": 432,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x1-z2"
+    },
+    {
+      "id": "C-x1-z3",
+      "file": "terrain-compact/terrain-C-x1-z3.wft",
+      "sha256": "3debb92b38785bab7fd20b4eb89200aa5936c4da02920ea642cb912f31c5a56c",
+      "bytes": 861,
+      "triangles": 4,
+      "bounds": {
+        "min": [
+          109.8402099609375,
+          1.3000402450561523,
+          300.0000305175781
+        ],
+        "max": [
+          375,
+          1.300040364265442,
+          300.5000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        1,
+        3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1528,
+      "decodedSha256": "b4eb831880996ecf8aa367610ccdb271c508a8688fd94783536622f83d7e4a59",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x1-z3.glb",
+        "bytes": 2332,
+        "sha256": "1aabb3f93545ce6bf5c0e706a2c6f5545d95720fff142aa9a3fdc2117d0966ea"
+      },
+      "geometryBytes": 288,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x1-z3"
+    },
+    {
+      "id": "C-x2-z-4",
+      "file": "terrain-compact/terrain-C-x2-z-4.wft",
+      "sha256": "b8e604f2cc3e1d3dc84261e36afa9575f1d5df6b1585b1da2e1a56ea75ffa869",
+      "bytes": 4289,
+      "triangles": 102,
+      "bounds": {
+        "min": [
+          199.5,
+          54.24006271362305,
+          -300.5000305175781
+        ],
+        "max": [
+          300,
+          64.30079650878906,
+          -299.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        2,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 6948,
+      "decodedSha256": "3afecbedc89e657484fb9e2f8c38361b157cb374f73ae41a3c8bf9559d04141e",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x2-z-4.glb",
+        "bytes": 13092,
+        "sha256": "d85a13b09d1bff08b10caca34f6ff4cdbc43bf3be8b0c3c0dcb35f15b10ca5be"
+      },
+      "geometryBytes": 7344,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x2-z-4"
+    },
+    {
+      "id": "C-x2-z-3",
+      "file": "terrain-compact/terrain-C-x2-z-3.wft",
+      "sha256": "00f6169c345e2121f960db8f412edc3b7a237578770a56026a01809c0bbf34de",
+      "bytes": 245978,
+      "triangles": 9283,
+      "bounds": {
+        "min": [
+          190,
+          29.528400421142578,
+          -300.5000305175781
+        ],
+        "max": [
+          305.9228515625,
+          64.307373046875,
+          -193.50003051757812
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        2,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 374376,
+      "decodedSha256": "469911d45bb28f79250d0c5c516bbcff509c77326ec5c2c1ef0f8fc157352562",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x2-z-3.glb",
+        "bytes": 1018044,
+        "sha256": "b36b6d6617676399698ccfa278870c99bdedacad3677aaf07bb11c90c7941622"
+      },
+      "geometryBytes": 668376,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x2-z-3"
+    },
+    {
+      "id": "C-x2-z-2",
+      "file": "terrain-compact/terrain-C-x2-z-2.wft",
+      "sha256": "356a95f8b67bb26d536b1bd176f79336189c33eab3762548f0ef9a27740ee67e",
+      "bytes": 177523,
+      "triangles": 6710,
+      "bounds": {
+        "min": [
+          192.5,
+          24.374174118041992,
+          -207.87014770507812
+        ],
+        "max": [
+          323.904296875,
+          55.99495315551758,
+          -95.50001525878906
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        2,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 269564,
+      "decodedSha256": "d094a187bfe003045781cd12df2784d2f3ca8545f00167382ab93c1050041caa",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x2-z-2.glb",
+        "bytes": 732288,
+        "sha256": "b9e776207919e45643608d9c31648fd420686d3229a4636997845bfacd4f8b5a"
+      },
+      "geometryBytes": 483120,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x2-z-2"
+    },
+    {
+      "id": "C-x2-z-1",
+      "file": "terrain-compact/terrain-C-x2-z-1.wft",
+      "sha256": "3f76e237e64bbe8aa284ab09dfeacc1b8e122bdde8959d7870e416c0394d59d4",
+      "bytes": 96066,
+      "triangles": 3680,
+      "bounds": {
+        "min": [
+          198,
+          24.057992935180664,
+          -109.50001525878906
+        ],
+        "max": [
+          323.9375,
+          38.982994079589844,
+          8.49999713897705
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        2,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 144172,
+      "decodedSha256": "f2a877d38ed56848aa9bc643e91bdf6e01e12c41d256149d3aa40472e832e2fe",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x2-z-1.glb",
+        "bytes": 371280,
+        "sha256": "8c3695266bc0eebeb52f8f8138b7cd093595a461b32cecb8b27779e85add533c"
+      },
+      "geometryBytes": 264960,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x2-z-1"
+    },
+    {
+      "id": "C-x2-z0",
+      "file": "terrain-compact/terrain-C-x2-z0.wft",
+      "sha256": "f84db329be350dc92c9675a8be34385cbd26ccae98f05d94f83f81dfd3b10470",
+      "bytes": 193197,
+      "triangles": 7159,
+      "bounds": {
+        "min": [
+          198,
+          1.2982951402664185,
+          -2.0000038146972656
+        ],
+        "max": [
+          319.2724609375,
+          32.39036560058594,
+          84.99854278564453
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        2,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 294712,
+      "decodedSha256": "194131acc6c42b34f8c4aa9d57f39a1da131769120647970a0fe02da24fd76c1",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x2-z0.glb",
+        "bytes": 783320,
+        "sha256": "a9dbadcb751ad121e6facb269a91f9a89b9374bf3ad26e9c2e3afffdb6b98015"
+      },
+      "geometryBytes": 515448,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x2-z0"
+    },
+    {
+      "id": "C-x2-z1",
+      "file": "terrain-compact/terrain-C-x2-z1.wft",
+      "sha256": "cc297cebd0a20b2e64b1d4a3f5f91dbac4e642a21997152de5a29f36bdd50ed9",
+      "bytes": 824,
+      "triangles": 2,
+      "bounds": {
+        "min": [
+          205.51416015625,
+          1.3000096082687378,
+          71.69385528564453
+        ],
+        "max": [
+          375,
+          1.3000402450561523,
+          300.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        2,
+        1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1428,
+      "decodedSha256": "bd3c2e0e03db47630623442670522e5c4e8bd3ade88c31a3ed37c705b7dbec0f",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x2-z1.glb",
+        "bytes": 2196,
+        "sha256": "a0fd47e105f76e9ca21f467a1e4bbb5b677146f426d14af20c5ff108f91fae63"
+      },
+      "geometryBytes": 144,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x2-z1"
+    },
+    {
+      "id": "C-x2-z2",
+      "file": "terrain-compact/terrain-C-x2-z2.wft",
+      "sha256": "7b90c230bf1d310912e8745cbedcf8ee2740525afa2b2e0f387cd649618f28f9",
+      "bytes": 810,
+      "triangles": 2,
+      "bounds": {
+        "min": [
+          175,
+          1.3000096082687378,
+          71.69385528564453
+        ],
+        "max": [
+          375,
+          1.3000402450561523,
+          300.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        2,
+        2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1436,
+      "decodedSha256": "413902d3161b6b09464b5b0852df14b4a51b495ce287cc039a40982ddd502269",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x2-z2.glb",
+        "bytes": 2208,
+        "sha256": "e4fb8824e13a347c4915251a4b7848abfcf107962335004b98c8b9e70ab15a46"
+      },
+      "geometryBytes": 144,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x2-z2"
+    },
+    {
+      "id": "C-x2-z3",
+      "file": "terrain-compact/terrain-C-x2-z3.wft",
+      "sha256": "201db59e076795aae7c8db16d4fa54360b073df68d40629c918e341e0ca0cba1",
+      "bytes": 829,
+      "triangles": 4,
+      "bounds": {
+        "min": [
+          110.01656341552734,
+          1.3000402450561523,
+          300.0000305175781
+        ],
+        "max": [
+          375,
+          1.300040364265442,
+          300.5000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        2,
+        3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1508,
+      "decodedSha256": "7f091f1cc7c21f6a4cd0196930483cc63a8fb3a4eee52be80e55302b8ef9caf6",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x2-z3.glb",
+        "bytes": 2300,
+        "sha256": "fdb11519d473243199bfa7c6f86bac5f24c78da920a4657652e45d4f15bbc3a2"
+      },
+      "geometryBytes": 288,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x2-z3"
+    },
+    {
+      "id": "C-x3-z-4",
+      "file": "terrain-compact/terrain-C-x3-z-4.wft",
+      "sha256": "c5ef3afd6e61274c35f4e2187b3e306c02359c860e2ecc11c03a514065bba317",
+      "bytes": 3992,
+      "triangles": 81,
+      "bounds": {
+        "min": [
+          299.98486328125,
+          61.799015045166016,
+          -300.5000305175781
+        ],
+        "max": [
+          375.5,
+          73.93989562988281,
+          -299.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        3,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 6108,
+      "decodedSha256": "7a2d5f71b77782ae727ad1d5487fae6fa0576896acbdc53d37f50e1099ce9814",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x3-z-4.glb",
+        "bytes": 10336,
+        "sha256": "0faa87f561d4248a56e39a6681431968ee3838e6b0859023ba4808b847fb9bb7"
+      },
+      "geometryBytes": 5832,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x3-z-4"
+    },
+    {
+      "id": "C-x3-z-3",
+      "file": "terrain-compact/terrain-C-x3-z-3.wft",
+      "sha256": "c7890de812c7941f8cb05011612f98be82397c8b8ab9c2f442c277c7a38373b0",
+      "bytes": 291338,
+      "triangles": 11292,
+      "bounds": {
+        "min": [
+          296.625,
+          33.202972412109375,
+          -300.5000305175781
+        ],
+        "max": [
+          375.5,
+          73.94510650634766,
+          -193.64895629882812
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        3,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 450360,
+      "decodedSha256": "28e0dc1d497bacb55c84761c50d2a213b1a6550a097d657c8dc70637862b50c9",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x3-z-3.glb",
+        "bytes": 1246692,
+        "sha256": "211455f7e1cc003b0e0251bd52326ceb4a577560e71bc2d5b6aeaa057940976e"
+      },
+      "geometryBytes": 813024,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x3-z-3"
+    },
+    {
+      "id": "C-x3-z-2",
+      "file": "terrain-compact/terrain-C-x3-z-2.wft",
+      "sha256": "b48471aae6a2169ac10974c8ae72418a1a23bda284332bac38b65c636e975bf9",
+      "bytes": 145056,
+      "triangles": 5663,
+      "bounds": {
+        "min": [
+          262.625,
+          14.034116744995117,
+          -204.30764770507812
+        ],
+        "max": [
+          375.5,
+          56.152915954589844,
+          -97.00001525878906
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        3,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 226520,
+      "decodedSha256": "894cb2ab8b20675a7a982137775e1753cb018ff6910d59113cbe45c87dee0284",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x3-z-2.glb",
+        "bytes": 628916,
+        "sha256": "865d939e2e11b03d7aa74e5403ae562949c5c8e248a1bdd11401da114f1940f4"
+      },
+      "geometryBytes": 407736,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x3-z-2"
+    },
+    {
+      "id": "C-x3-z-1",
+      "file": "terrain-compact/terrain-C-x3-z-1.wft",
+      "sha256": "5ee763b833574547b311cd0c656748ef74d94a75eb41a041f8c7f6bb4367fe81",
+      "bytes": 86883,
+      "triangles": 3378,
+      "bounds": {
+        "min": [
+          268.5,
+          10.704996109008789,
+          -104.00001525878906
+        ],
+        "max": [
+          375.5,
+          37.50899887084961,
+          1.9999985694885254
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        3,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 132412,
+      "decodedSha256": "6af2768afa57f289b4b8ca4fb096470ef87ad45b7fd1e447e4b702510f7df428",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x3-z-1.glb",
+        "bytes": 350348,
+        "sha256": "b94f045954af88634a2fae407191adf28699d21e1687449e748cc8bf22f97ba8"
+      },
+      "geometryBytes": 243216,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x3-z-1"
+    },
+    {
+      "id": "C-x3-z0",
+      "file": "terrain-compact/terrain-C-x3-z0.wft",
+      "sha256": "db602027656853eb9ac330a24951268b1299c9182b61caf81a3d0652b1f999be",
+      "bytes": 181210,
+      "triangles": 6811,
+      "bounds": {
+        "min": [
+          282.86181640625,
+          1.3000102043151855,
+          -1.812991738319397
+        ],
+        "max": [
+          375.5,
+          29.908517837524414,
+          102.76661682128906
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        3,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 277852,
+      "decodedSha256": "8a656409ada44f72c5ac0c8c85b688832e2c9ef068b38796cfc6e8d11c6e6d7d",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x3-z0.glb",
+        "bytes": 753224,
+        "sha256": "422ef44ee67bd921fd51a1af97f197a07d0458bd1299047cfad12002931908d2"
+      },
+      "geometryBytes": 490392,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x3-z0"
+    },
+    {
+      "id": "C-x3-z1",
+      "file": "terrain-compact/terrain-C-x3-z1.wft",
+      "sha256": "764d258acb7baae3e61aa317de0805c8a2aa2777e709656ffe5f0450522b4e6d",
+      "bytes": 43828,
+      "triangles": 1599,
+      "bounds": {
+        "min": [
+          264.2060546875,
+          1.3000097274780273,
+          73.14990997314453
+        ],
+        "max": [
+          375.5,
+          6.473260402679443,
+          200.00003051757812
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        3,
+        1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 66960,
+      "decodedSha256": "376e2a5b3c860f00456efa8ec61f7cea5e46825c322b0f589a6a77101956fb07",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x3-z1.glb",
+        "bytes": 183428,
+        "sha256": "d84b549a04f3d7ed0ae489eb7aa73f15625eb0682ba8866043eac42624928da2"
+      },
+      "geometryBytes": 115128,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x3-z1"
+    },
+    {
+      "id": "C-x3-z2",
+      "file": "terrain-compact/terrain-C-x3-z2.wft",
+      "sha256": "456a12d85cfcb45cece33a82bfc049329968a5aa3e097ba3f0eaac098f5fb5c4",
+      "bytes": 859,
+      "triangles": 8,
+      "bounds": {
+        "min": [
+          275,
+          1.3000147342681885,
+          109.85987854003906
+        ],
+        "max": [
+          375.5,
+          1.3000402450561523,
+          300.0000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        3,
+        2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1608,
+      "decodedSha256": "113cff2c0fd23ec19df93b7e2748c0cf57185462ac41ff122e4a6d5356d72c0e",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x3-z2.glb",
+        "bytes": 2400,
+        "sha256": "d40ed576205b9b3e3ae9897323d120959e0dbdfacd9fce8bd6ef245faff74c61"
+      },
+      "geometryBytes": 576,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x3-z2"
+    },
+    {
+      "id": "C-x3-z3",
+      "file": "terrain-compact/terrain-C-x3-z3.wft",
+      "sha256": "abcfd9c966df818fd28d9043c92fddf3e003f3bfebea4c1341a48c766cca7b12",
+      "bytes": 799,
+      "triangles": 4,
+      "bounds": {
+        "min": [
+          275,
+          1.3000402450561523,
+          300.0000305175781
+        ],
+        "max": [
+          375.5,
+          1.300040364265442,
+          300.5000305175781
+        ]
+      },
+      "sheet": "11-SW-22C",
+      "grid": [
+        3,
+        3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1496,
+      "decodedSha256": "130200e0413381b5245ce5d107b37aa58fca710564089ce943ffd56bdfb3ce6c",
+      "fine": {
+        "file": "processed-context/terrain-context-C-x3-z3.glb",
+        "bytes": 2268,
+        "sha256": "ce4c65575a528eb95650ab2da167c857a7c67139c0ab763bf623257f29ee95be"
+      },
+      "geometryBytes": 288,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-C-x3-z3"
+    },
+    {
+      "id": "A-x-3-z-4",
+      "file": "terrain-compact/terrain-A-x-3-z-4.wft",
+      "sha256": "bd07560c467a5eca29394480cae2d64ad984be1424da99f2210e9a3719317626",
+      "bytes": 60206,
+      "triangles": 2144,
+      "bounds": {
+        "min": [
+          -225,
+          1.2643603086471558,
+          -360.30242919921875
+        ],
+        "max": [
+          -197,
+          20.051193237304688,
+          -300.5
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        -3,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 89832,
+      "decodedSha256": "49754a7ea91e05d713110b57f38a0acc5983dd0d1de29d344bdb1e38173384d0",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x-3-z-4.glb",
+        "bytes": 233484,
+        "sha256": "8e3cd90bae229c67f7f30c2e4025bd77febfa268513420c452e5bc41aa710bcc"
+      },
+      "geometryBytes": 154368,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x-3-z-4"
+    },
+    {
+      "id": "A-x-2-z-4",
+      "file": "terrain-compact/terrain-A-x-2-z-4.wft",
+      "sha256": "36c19bf18e2e9e73bd392d4ce143e867a626e4afac932c8ebca59a80043f7aa4",
+      "bytes": 295471,
+      "triangles": 11151,
+      "bounds": {
+        "min": [
+          -203.5,
+          1.469656229019165,
+          -393.6683044433594
+        ],
+        "max": [
+          -92.5,
+          33.01850128173828,
+          -300.5
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        -2,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 453732,
+      "decodedSha256": "f9d9a71dd64ababac3a73043ff5318e5bfd58942169df17cddcb4c363e4790a5",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x-2-z-4.glb",
+        "bytes": 1223812,
+        "sha256": "a12a0ec2727d06ff308ba4f021af88a3114360e8c41e4f1cce4c22deb187385b"
+      },
+      "geometryBytes": 802872,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x-2-z-4"
+    },
+    {
+      "id": "A-x-1-z-5",
+      "file": "terrain-compact/terrain-A-x-1-z-5.wft",
+      "sha256": "8dc68ceac65266a677f2018e206e5e5532060e0f618c03cfca6e2a2f7094016a",
+      "bytes": 76056,
+      "triangles": 2700,
+      "bounds": {
+        "min": [
+          -93.31981658935547,
+          25.273664474487305,
+          -480.6923522949219
+        ],
+        "max": [
+          9,
+          43.70228958129883,
+          -397
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        -1,
+        -5
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 112584,
+      "decodedSha256": "1e0c7de24600c1b63ef653f4866d8bec158987b1667624d1fc6a970277538e88",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x-1-z-5.glb",
+        "bytes": 292352,
+        "sha256": "a7449367cdaf13e9d8a4765fd931536dac662a6b7aa1c07444dbb792f233df56"
+      },
+      "geometryBytes": 194400,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x-1-z-5"
+    },
+    {
+      "id": "A-x-1-z-4",
+      "file": "terrain-compact/terrain-A-x-1-z-4.wft",
+      "sha256": "d22462bfef88e877e732da6bb9a1dd0b5ebc650b73dbf02ae1b6ac50bdd4e234",
+      "bytes": 268056,
+      "triangles": 10250,
+      "bounds": {
+        "min": [
+          -104.22021484375,
+          2.275237798690796,
+          -404
+        ],
+        "max": [
+          8.11279296875,
+          48.912166595458984,
+          -300.5
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        -1,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 411296,
+      "decodedSha256": "a771613737d4c360369d044b6ca1fd25f5e8dde62ebeb5a3393b6b18a61e0df7",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x-1-z-4.glb",
+        "bytes": 1096368,
+        "sha256": "b659fa30bd84261cb7ee66f4bbf20bfba94b493fb9f656587d13405b42646c55"
+      },
+      "geometryBytes": 738000,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x-1-z-4"
+    },
+    {
+      "id": "A-x0-z-6",
+      "file": "terrain-compact/terrain-A-x0-z-6.wft",
+      "sha256": "4de61915267f33bb7574d920d6b8a8ffade7cff95eecf413159e8eebda676d8e",
+      "bytes": 104684,
+      "triangles": 3759,
+      "bounds": {
+        "min": [
+          15,
+          28.812301635742188,
+          -578.1815795898438
+        ],
+        "max": [
+          102,
+          49.92133331298828,
+          -496
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        0,
+        -6
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 156204,
+      "decodedSha256": "9cce132d7a33b686c93d580c6bd775ba07baf44e8e195cc9d77e550bded82935",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x0-z-6.glb",
+        "bytes": 410340,
+        "sha256": "081bb0c263ef748c4a7312f5e06b3f8cbf3d8d9d7c1170db1973b7578a0c80d6"
+      },
+      "geometryBytes": 270648,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x0-z-6"
+    },
+    {
+      "id": "A-x0-z-5",
+      "file": "terrain-compact/terrain-A-x0-z-5.wft",
+      "sha256": "e9d06bd2cfdad45fed2f1c1ee19cdf3f31cfbd55c38f805f61ed09403ec06beb",
+      "bytes": 163049,
+      "triangles": 6054,
+      "bounds": {
+        "min": [
+          -7.283137321472168,
+          28.52440643310547,
+          -504.5
+        ],
+        "max": [
+          105.998046875,
+          53.24089813232422,
+          -398.3125
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        0,
+        -5
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 245564,
+      "decodedSha256": "08f2969e5e53d5cbb9a22b290a95f0adb6d6fe51bf336ab6869a2457b69dbe3b",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x0-z-5.glb",
+        "bytes": 649924,
+        "sha256": "27390ee61a7eca982c8ed7484605e0aa675b7bc80b8dcf2388142b01e63db0e8"
+      },
+      "geometryBytes": 435888,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x0-z-5"
+    },
+    {
+      "id": "A-x0-z-4",
+      "file": "terrain-compact/terrain-A-x0-z-4.wft",
+      "sha256": "8923cbb1f840896bc3ea9323c5f9dcd0cdf1deef4b562266529c9221865e87ac",
+      "bytes": 241525,
+      "triangles": 9551,
+      "bounds": {
+        "min": [
+          -16.178842544555664,
+          24.80687141418457,
+          -402.0107421875
+        ],
+        "max": [
+          102.2734375,
+          50.858001708984375,
+          -300.5
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        0,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 376800,
+      "decodedSha256": "2b21e707c8401e9845c5c381938f82606435bf055d096b1bd3d89ed82134abee",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x0-z-4.glb",
+        "bytes": 1012316,
+        "sha256": "1fb200d1d90c5c60e1427a84efb8e7cbb9506e696829caf6191dc21b42c5b38f"
+      },
+      "geometryBytes": 687672,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x0-z-4"
+    },
+    {
+      "id": "A-x1-z-4",
+      "file": "terrain-compact/terrain-A-x1-z-4.wft",
+      "sha256": "3c1abee14c2bf3af6978da1e6f016db50ce4739565426575a8557f7ad509b348",
+      "bytes": 258157,
+      "triangles": 10107,
+      "bounds": {
+        "min": [
+          96.98291015625,
+          29.69515037536621,
+          -401.34326171875
+        ],
+        "max": [
+          207.49267578125,
+          62.87977981567383,
+          -300.5
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        1,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 400396,
+      "decodedSha256": "61953179f5ac006989c3bd182155a486c4ac5a3c2ad1dab483aeae45c4e757b1",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x1-z-4.glb",
+        "bytes": 1075704,
+        "sha256": "7314f60fcd13437231c655351d4baa0caeec31635699fdcb692810c868826f0f"
+      },
+      "geometryBytes": 727704,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x1-z-4"
+    },
+    {
+      "id": "A-x2-z-6",
+      "file": "terrain-compact/terrain-A-x2-z-6.wft",
+      "sha256": "70d311d661726398228c2d958a7e5abe1bc27f0988f371808fa0641243ed6d4c",
+      "bytes": 233077,
+      "triangles": 8837,
+      "bounds": {
+        "min": [
+          192,
+          46.17488479614258,
+          -600
+        ],
+        "max": [
+          304.5,
+          80.90254974365234,
+          -493.6650390625
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        2,
+        -6
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 357472,
+      "decodedSha256": "b73a1f899dbdee631617feb4f6caeb80d45764e99174fbd2c04c82bc6486ab20",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x2-z-6.glb",
+        "bytes": 970836,
+        "sha256": "6520000aadd5681fe3af2840f9bd5a2fcada346028b0908b90d03308cf4311e3"
+      },
+      "geometryBytes": 636264,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x2-z-6"
+    },
+    {
+      "id": "A-x2-z-5",
+      "file": "terrain-compact/terrain-A-x2-z-5.wft",
+      "sha256": "b2f77d79cfd74ed88f900385773190055fafd9ab3652fed792aecf0c5ac1fa22",
+      "bytes": 121279,
+      "triangles": 4567,
+      "bounds": {
+        "min": [
+          173,
+          46.80500030517578,
+          -507
+        ],
+        "max": [
+          305.40283203125,
+          73.79804992675781,
+          -376
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        2,
+        -5
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 184420,
+      "decodedSha256": "0832aacc1f0aed784f40aa57569b26e87ad78db17feb05e3b208d2314b43cd9f",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x2-z-5.glb",
+        "bytes": 495108,
+        "sha256": "2ad0b807aa8e4c7062cb230286a3ed247bc7d1d757100b6e992e5cca92ee1cbf"
+      },
+      "geometryBytes": 328824,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x2-z-5"
+    },
+    {
+      "id": "A-x2-z-4",
+      "file": "terrain-compact/terrain-A-x2-z-4.wft",
+      "sha256": "ffe0159c7b50bdd66220a180bd8d838f3035a2fa5412cf0532acccb995da602c",
+      "bytes": 235232,
+      "triangles": 9106,
+      "bounds": {
+        "min": [
+          187.18701171875,
+          46.13887023925781,
+          -417
+        ],
+        "max": [
+          303.5,
+          74.2018051147461,
+          -300.5
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        2,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 364704,
+      "decodedSha256": "9bd04f2c78132ee89e3fb53e1711a4ff26b221cc9f9c7b9b68b94c22a96d43f3",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x2-z-4.glb",
+        "bytes": 978488,
+        "sha256": "272e158a1f7bfd97b01b5726497fc3c8a6fab1a513bd052098ce08633eb8230d"
+      },
+      "geometryBytes": 655632,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x2-z-4"
+    },
+    {
+      "id": "A-x3-z-6",
+      "file": "terrain-compact/terrain-A-x3-z-6.wft",
+      "sha256": "bef44d89800b43ce28daf36639f316841b392656260ef35d45deb70f354e316f",
+      "bytes": 123651,
+      "triangles": 4560,
+      "bounds": {
+        "min": [
+          294.27001953125,
+          61.940635681152344,
+          -600
+        ],
+        "max": [
+          375.5,
+          94.39403533935547,
+          -496.095703125
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        3,
+        -6
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 186372,
+      "decodedSha256": "600273387d3ab898966426278015a1f500a76f5337c2e6681fcf6f434d0eb689",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x3-z-6.glb",
+        "bytes": 493720,
+        "sha256": "45de4d4810fa2943269d3a8ee3eae848e58c60a1434fad50f72c4265e63cbe72"
+      },
+      "geometryBytes": 328320,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x3-z-6"
+    },
+    {
+      "id": "A-x3-z-5",
+      "file": "terrain-compact/terrain-A-x3-z-5.wft",
+      "sha256": "720db22cd00174c9ff2389e82aa5bb388d0d28074510d546692b8bbf99fe9568",
+      "bytes": 79017,
+      "triangles": 2915,
+      "bounds": {
+        "min": [
+          294,
+          63.32240295410156,
+          -504.42333984375
+        ],
+        "max": [
+          375.5,
+          73.79804992675781,
+          -397.15869140625
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        3,
+        -5
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 116400,
+      "decodedSha256": "06a5deec77caa4b4103287559a8c33f8d8076ee9bd5fe61faa9528249fd6df1d",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x3-z-5.glb",
+        "bytes": 299940,
+        "sha256": "05a478f5431b2bd8807ad42658cdb67c808114d805c764b6727e00b0ed49210a"
+      },
+      "geometryBytes": 209880,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x3-z-5"
+    },
+    {
+      "id": "A-x3-z-4",
+      "file": "terrain-compact/terrain-A-x3-z-4.wft",
+      "sha256": "734709798f292bdb7bafe4ccb53716069f2f0a1b6a12a3ca5375cad35271dcfb",
+      "bytes": 136671,
+      "triangles": 5416,
+      "bounds": {
+        "min": [
+          294,
+          61.90620422363281,
+          -417
+        ],
+        "max": [
+          375.5,
+          74.64567565917969,
+          -300.5
+        ]
+      },
+      "sheet": "11-SW-22A",
+      "grid": [
+        3,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 215480,
+      "decodedSha256": "8ebd52e980c70d2ae7924d731180d3bc311ef5eec7ad4e914e8de70ca50ea177",
+      "fine": {
+        "file": "processed-context/terrain-context-A-x3-z-4.glb",
+        "bytes": 569984,
+        "sha256": "d6d1cadbb39c943f2812b16a6211c049f09ae24c2a7d5f7e9da4abf032abdc8e"
+      },
+      "geometryBytes": 389952,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-A-x3-z-4"
+    },
+    {
+      "id": "D-x3-z-4",
+      "file": "terrain-compact/terrain-D-x3-z-4.wft",
+      "sha256": "0dbee4071602601be645600aa2d0526e1729c8f7f9f23cf0a49934424a02cb91",
+      "bytes": 1793,
+      "triangles": 25,
+      "bounds": {
+        "min": [
+          378.1546630859375,
+          55.8255615234375,
+          -300.16363525390625
+        ],
+        "max": [
+          387.68798828125,
+          66.54949951171875,
+          -300
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        3,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 2752,
+      "decodedSha256": "200dae88cbd9bfea99fc774bf953feb2d459b6cb5593a971524a7b1c49f592e4",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x3-z-4.glb",
+        "bytes": 4964,
+        "sha256": "c287f8aae61a2d472223714d6c5138d7cb5d93b119b1e24de9b3efc442d592fb"
+      },
+      "geometryBytes": 1800,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x3-z-4"
+    },
+    {
+      "id": "D-x3-z-3",
+      "file": "terrain-compact/terrain-D-x3-z-3.wft",
+      "sha256": "4676e957de78d365773ca634da5e70e0a29e6892e9d0d946ca129aed483aacb5",
+      "bytes": 83310,
+      "triangles": 3199,
+      "bounds": {
+        "min": [
+          375.5,
+          31.786212921142578,
+          -300.16424560546875
+        ],
+        "max": [
+          404.5,
+          69.78297424316406,
+          -197.26953125
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        3,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 126940,
+      "decodedSha256": "706bf1be44aa172dab42b6775d8b26c01992d51c57ad3b07a564b81dc494c55d",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x3-z-3.glb",
+        "bytes": 334740,
+        "sha256": "9f6f8ea7188cfb00d61fdcf2563dd32f787161f834908e26c88bea9dbc988a1c"
+      },
+      "geometryBytes": 230328,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x3-z-3"
+    },
+    {
+      "id": "D-x3-z-2",
+      "file": "terrain-compact/terrain-D-x3-z-2.wft",
+      "sha256": "0f170103c5e8eff03ab36a9eb42883fbb9ce619032feebaf32a891f4e686aa7b",
+      "bytes": 39369,
+      "triangles": 1431,
+      "bounds": {
+        "min": [
+          375.5,
+          6.944943428039551,
+          -205.97508239746094
+        ],
+        "max": [
+          406.7568359375,
+          35.56745529174805,
+          -97.34521484375
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        3,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 58536,
+      "decodedSha256": "42e08e64c08e28e81b3a540b99da617bf8f9ce03d3d39220d077c02e88bbfc3b",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x3-z-2.glb",
+        "bytes": 156068,
+        "sha256": "debd2f61f238f52340d7d26554624d8a27f046658f1ad50acca2c83ead696f93"
+      },
+      "geometryBytes": 103032,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x3-z-2"
+    },
+    {
+      "id": "D-x3-z-1",
+      "file": "terrain-compact/terrain-D-x3-z-1.wft",
+      "sha256": "f8e84e92556dfbf700d0b27c47c99d132dea988162f8c7bd34ea0129e6448418",
+      "bytes": 27052,
+      "triangles": 1350,
+      "bounds": {
+        "min": [
+          375.5,
+          6.944943428039551,
+          -101.13818359375
+        ],
+        "max": [
+          404.74560546875,
+          14.034071922302246,
+          1.1875
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        3,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 47584,
+      "decodedSha256": "fef1cc5af986de436dc72adc8d05d9b79b7ae0c656ae3c24fae0ebdc6f7643b9",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x3-z-1.glb",
+        "bytes": 99900,
+        "sha256": "7531905874fddd0e214db6502343b2734a26d1e3405f2883c40cdaac552619cc"
+      },
+      "geometryBytes": 97200,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x3-z-1"
+    },
+    {
+      "id": "D-x3-z0",
+      "file": "terrain-compact/terrain-D-x3-z0.wft",
+      "sha256": "4e1c59c043384562655388e6b43a614a2c3c175af6056ac1e9c9fcf841a0fc70",
+      "bytes": 46953,
+      "triangles": 1809,
+      "bounds": {
+        "min": [
+          375.5,
+          2.4190361499786377,
+          -2.875
+        ],
+        "max": [
+          407.5,
+          11.18620777130127,
+          100.5
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        3,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 71724,
+      "decodedSha256": "b6521abe443bb60ad51d4117e83e09c8fc7ef7191e1596201c2d4fd9393e0f52",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x3-z0.glb",
+        "bytes": 179576,
+        "sha256": "13abba32452fdcffd81c45ab2d37c6ad697e6521a304da0a3fe8e771711af13e"
+      },
+      "geometryBytes": 130248,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x3-z0"
+    },
+    {
+      "id": "D-x3-z1",
+      "file": "terrain-compact/terrain-D-x3-z1.wft",
+      "sha256": "f616b0ad3fd1cdf448682d5187698102bc43594e36ed35380a8c418044a2cb46",
+      "bytes": 23816,
+      "triangles": 913,
+      "bounds": {
+        "min": [
+          375.5,
+          1.299942970275879,
+          94.23486328125
+        ],
+        "max": [
+          444.7802734375,
+          5.497676849365234,
+          171.7429656982422
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        3,
+        1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 38896,
+      "decodedSha256": "4b687f1ddd2f7d4f36b03529cbb16e2819b1a09df581d0e1c508c8eb4a021e03",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x3-z1.glb",
+        "bytes": 101040,
+        "sha256": "1e8184eaccc4596e1f8612317339f9b745c64ec0c9998c6ad5c0f161f7529f33"
+      },
+      "geometryBytes": 65736,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x3-z1"
+    },
+    {
+      "id": "D-x3-z2",
+      "file": "terrain-compact/terrain-D-x3-z2.wft",
+      "sha256": "fd63205fdb9a858a3131394367e070e5f275bed444126325a3437e01e97f514e",
+      "bytes": 846,
+      "triangles": 4,
+      "bounds": {
+        "min": [
+          375.5,
+          1.299942970275879,
+          250.3552703857422
+        ],
+        "max": [
+          434.36865234375,
+          1.299942970275879,
+          300
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        3,
+        2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1512,
+      "decodedSha256": "ab7072a3fd80ef56706382c99c855849996a8216ed20e346a12b4324e0446b94",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x3-z2.glb",
+        "bytes": 2300,
+        "sha256": "f63b84bf4fd039e80da89f33611d3ff71be2d0ac09a5c1dec3966125598f0328"
+      },
+      "geometryBytes": 288,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x3-z2"
+    },
+    {
+      "id": "D-x4-z-4",
+      "file": "terrain-compact/terrain-D-x4-z-4.wft",
+      "sha256": "d478cd1799f14d9760836a9e6a0920b36f4e47be00ac533b7113fba1a14b0865",
+      "bytes": 2415,
+      "triangles": 44,
+      "bounds": {
+        "min": [
+          425.30859375,
+          50.277618408203125,
+          -300.15338134765625
+        ],
+        "max": [
+          485.35968017578125,
+          55.65099334716797,
+          -299.8583984375
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        4,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 3712,
+      "decodedSha256": "adf73a6cd510009a40fe0fbe1cf161b1cb3f4a3f64bfe8fee6a06efc70e78ba0",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x4-z-4.glb",
+        "bytes": 6984,
+        "sha256": "d4c28d09e1dad4272bfa7ededb09e5deeb644fb223c24c8c78bea5502c7100ee"
+      },
+      "geometryBytes": 3168,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x4-z-4"
+    },
+    {
+      "id": "D-x4-z-3",
+      "file": "terrain-compact/terrain-D-x4-z-3.wft",
+      "sha256": "a7d608037c76d23c74417fe611807a8f7ff7547e7f76894fbbfb42128f2424ea",
+      "bytes": 188977,
+      "triangles": 7397,
+      "bounds": {
+        "min": [
+          394.119140625,
+          24.141931533813477,
+          -300.1585998535156
+        ],
+        "max": [
+          504.890625,
+          56.43677520751953,
+          -193
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        4,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 292328,
+      "decodedSha256": "a850746fb023a2e5c0a9fd0d482024e3e75e42aaa2fcefc713f99b3d546aedfe",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x4-z-3.glb",
+        "bytes": 788524,
+        "sha256": "dbeb698ce41ff1f430ea43fee1658a788ae1b385272aa7f991fcbcc0a0e93efa"
+      },
+      "geometryBytes": 532584,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x4-z-3"
+    },
+    {
+      "id": "D-x4-z-2",
+      "file": "terrain-compact/terrain-D-x4-z-2.wft",
+      "sha256": "1c7db54077c12329d9d9035bc6b4193ac8e7642fe8fe61877a7d4b0f5506dca6",
+      "bytes": 99200,
+      "triangles": 3947,
+      "bounds": {
+        "min": [
+          392.5,
+          6.944943428039551,
+          -205
+        ],
+        "max": [
+          510.34814453125,
+          33.434513092041016,
+          -86.43115234375
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        4,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 151796,
+      "decodedSha256": "6262a2beef888eb3aca5051993f820aa9382da220e8b890bb990bd99db41b3e4",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x4-z-2.glb",
+        "bytes": 398000,
+        "sha256": "88df9c7c54467f668d70087370a6cb2afd44dd6a90dd42a6976a57610eb2d501"
+      },
+      "geometryBytes": 284184,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x4-z-2"
+    },
+    {
+      "id": "D-x4-z-1",
+      "file": "terrain-compact/terrain-D-x4-z-1.wft",
+      "sha256": "85c018edd0ec749e11a0c13a480db0e2fe9b832d9ee3f5890defb8480e22cd3e",
+      "bytes": 42356,
+      "triangles": 1756,
+      "bounds": {
+        "min": [
+          393.5625,
+          6.944943428039551,
+          -107.396484375
+        ],
+        "max": [
+          505.375,
+          11.83752155303955,
+          1.2880859375
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        4,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 63864,
+      "decodedSha256": "dc3a0050ccff79c0217ac9a049bb81e3b3ffcad5953ba54bcc42ac3fc2776da1",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x4-z-1.glb",
+        "bytes": 149016,
+        "sha256": "e0fc8d701a489a4cbdd6fd8313f7ddfc5247cc766586e2a0e4d2e2eb8a6a03af"
+      },
+      "geometryBytes": 126432,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x4-z-1"
+    },
+    {
+      "id": "D-x4-z0",
+      "file": "terrain-compact/terrain-D-x4-z0.wft",
+      "sha256": "ad3f0552eea293e3655f5559bf063130eecc25deb5f68f9cd129a4e7787edb6e",
+      "bytes": 222756,
+      "triangles": 8676,
+      "bounds": {
+        "min": [
+          389,
+          1.299942970275879,
+          -2.875
+        ],
+        "max": [
+          508,
+          10.993558883666992,
+          100
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        4,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 349884,
+      "decodedSha256": "11f70c49f28ca67a2ee646f36896e7b354f2a98aaf6f5db267938e7db1a877bd",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x4-z0.glb",
+        "bytes": 958472,
+        "sha256": "0e27300e36a5050afb37d3cd02a912f11b7a3261381c9bc0a794853c571eeebd"
+      },
+      "geometryBytes": 624672,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x4-z0"
+    },
+    {
+      "id": "D-x4-z1",
+      "file": "terrain-compact/terrain-D-x4-z1.wft",
+      "sha256": "f713efdc1183f89f0f32f515476377164f8f0208eefd5e8d879d1c7f9bca1a55",
+      "bytes": 5228,
+      "triangles": 167,
+      "bounds": {
+        "min": [
+          375.5,
+          1.299942970275879,
+          84.58935546875
+        ],
+        "max": [
+          525,
+          3.315164089202881,
+          300
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        4,
+        1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 8924,
+      "decodedSha256": "2fe72899a84bf87f351693ba2291538e7bf8b31a155276ac820e8d42e29cc943",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x4-z1.glb",
+        "bytes": 20100,
+        "sha256": "57f9207932e2b15cac1e52fddf8c2dce86a5e02be63078655ead6524e4540355"
+      },
+      "geometryBytes": 12024,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x4-z1"
+    },
+    {
+      "id": "D-x4-z2",
+      "file": "terrain-compact/terrain-D-x4-z2.wft",
+      "sha256": "abbcf85c1a0c9553cfb6eb2faaa32a7c0d3fedd3a04630d2b4a6a8561a3a9cc0",
+      "bytes": 990,
+      "triangles": 12,
+      "bounds": {
+        "min": [
+          375.5,
+          1.299942970275879,
+          200.1317596435547
+        ],
+        "max": [
+          525,
+          1.299942970275879,
+          300
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        4,
+        2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1812,
+      "decodedSha256": "0df72349b7dcaf9eed1cf9d875a942be7336fdde61eab0714dbe077ebedf1ff0",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x4-z2.glb",
+        "bytes": 2664,
+        "sha256": "b057d9921e6500e08a84ccf83ae6973122fccd410071ebaee7c9ab31b5479df8"
+      },
+      "geometryBytes": 864,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x4-z2"
+    },
+    {
+      "id": "D-x5-z-4",
+      "file": "terrain-compact/terrain-D-x5-z-4.wft",
+      "sha256": "502568b2f31eecbbf8b355281560b03be9fdaa4a45b72f548d56708cfa6fa6f1",
+      "bytes": 1917,
+      "triangles": 27,
+      "bounds": {
+        "min": [
+          501.3787841796875,
+          49.208526611328125,
+          -300.1368103027344
+        ],
+        "max": [
+          596.326171875,
+          53.99000930786133,
+          -299.99951171875
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        5,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 2856,
+      "decodedSha256": "698dedc86aac7da2a629593116313ee2b6561769ecf00ec4e584189a418bf351",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x5-z-4.glb",
+        "bytes": 4892,
+        "sha256": "ee74e7a9567170f618bd59aef7697b80a75949b1bc37fadd855418843332fcbd"
+      },
+      "geometryBytes": 1944,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x5-z-4"
+    },
+    {
+      "id": "D-x5-z-3",
+      "file": "terrain-compact/terrain-D-x5-z-3.wft",
+      "sha256": "d97908bbfcc2b5fccfa91c2113a849b386d8a4eff49c1515a515ab5730c799a3",
+      "bytes": 120183,
+      "triangles": 4349,
+      "bounds": {
+        "min": [
+          495.05322265625,
+          16.903844833374023,
+          -300.1372375488281
+        ],
+        "max": [
+          604.5,
+          54.693199157714844,
+          -194
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        5,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 177212,
+      "decodedSha256": "833944a6dcf6ca72e8213dd37b4734d2e66b9822bf5ef3b3c10caa16742b5a65",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x5-z-3.glb",
+        "bytes": 465332,
+        "sha256": "839d67e2724436cee99040784b41107699bf2b6fc77d9abbcbb6d8b716400472"
+      },
+      "geometryBytes": 313128,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x5-z-3"
+    },
+    {
+      "id": "D-x5-z-2",
+      "file": "terrain-compact/terrain-D-x5-z-2.wft",
+      "sha256": "0cfece3569b268dead4266805eac9d105312eb4114b2a6dc43d10034221ca681",
+      "bytes": 102719,
+      "triangles": 4133,
+      "bounds": {
+        "min": [
+          491.49072265625,
+          9.350942611694336,
+          -209
+        ],
+        "max": [
+          608,
+          31.951461791992188,
+          -91.5
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        5,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 157324,
+      "decodedSha256": "8fc17eac7039a6142670d8d1572b4dddb2f1bc4221a17c39f22faee444d75ef4",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x5-z-2.glb",
+        "bytes": 396700,
+        "sha256": "9f0eccb2b9c75ae4e08d1b7a59bc4b5771b99116230310db4c4dc81839c17683"
+      },
+      "geometryBytes": 297576,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x5-z-2"
+    },
+    {
+      "id": "D-x5-z-1",
+      "file": "terrain-compact/terrain-D-x5-z-1.wft",
+      "sha256": "c5a5f4ee0d1dcf25e5ca382349fb810087a082742d02cd5a26e825d58da8bf44",
+      "bytes": 79651,
+      "triangles": 3046,
+      "bounds": {
+        "min": [
+          496.2099609375,
+          7.2649431228637695,
+          -104.39794921875
+        ],
+        "max": [
+          608.25,
+          13.589009284973145,
+          6.9189453125
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        5,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 117056,
+      "decodedSha256": "fe669432367ceb26df566d203c61b909baa4d466b3f6d407460f580c5df4df19",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x5-z-1.glb",
+        "bytes": 299088,
+        "sha256": "6310225c6010f8f6532966710173ebfc3a607829a6229fbac0ff600d608d6487"
+      },
+      "geometryBytes": 219312,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x5-z-1"
+    },
+    {
+      "id": "D-x5-z0",
+      "file": "terrain-compact/terrain-D-x5-z0.wft",
+      "sha256": "9f309946901beda0cd42a6f7861c8f8c920f8520774ac4581fb6135bc575d628",
+      "bytes": 247024,
+      "triangles": 9475,
+      "bounds": {
+        "min": [
+          486,
+          1.299942970275879,
+          -4.94287109375
+        ],
+        "max": [
+          607,
+          11.120543479919434,
+          82.44580078125
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        5,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 385372,
+      "decodedSha256": "55ad515f6962a6bfaa45a4b6d0cfd6fc933848876dbd755cda44729fb5598fa1",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x5-z0.glb",
+        "bytes": 1046436,
+        "sha256": "6e6df3787691649139bc91fd383c9c35c01f63d0902517b7daaf18936b294913"
+      },
+      "geometryBytes": 682200,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x5-z0"
+    },
+    {
+      "id": "D-x5-z1",
+      "file": "terrain-compact/terrain-D-x5-z1.wft",
+      "sha256": "3b41f44f3546c64fe1f290a370eb165822c1e1f80e3bf6f7623df7bed9464705",
+      "bytes": 1102,
+      "triangles": 14,
+      "bounds": {
+        "min": [
+          488.734375,
+          1.299942970275879,
+          77.5341796875
+        ],
+        "max": [
+          613.93994140625,
+          1.299942970275879,
+          300
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        5,
+        1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1916,
+      "decodedSha256": "1f6fc041d3e8be294f1dcd7efe37a70457152c2af03aea4f514215a74ca9d8c2",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x5-z1.glb",
+        "bytes": 2808,
+        "sha256": "98e051893012fd84eb92ff2e1a356663d36992e49eaca6a59273cfd0ba0ab507"
+      },
+      "geometryBytes": 1008,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x5-z1"
+    },
+    {
+      "id": "D-x5-z2",
+      "file": "terrain-compact/terrain-D-x5-z2.wft",
+      "sha256": "064859d01db37a5edce5b19a6a48e85249b5c26e1978df9ea18ddf3ec8bffea8",
+      "bytes": 1121,
+      "triangles": 11,
+      "bounds": {
+        "min": [
+          493.61767578125,
+          1.299942970275879,
+          77.9951171875
+        ],
+        "max": [
+          622,
+          1.299942970275879,
+          300
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        5,
+        2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1924,
+      "decodedSha256": "aba96fc629284e97fa18938e8a5f1d5e181248a5bc7a3260e9661dc3dd0bb069",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x5-z2.glb",
+        "bytes": 2856,
+        "sha256": "2b92d3275a390bf1be0f03ce1a9fe8dba5b9628fe72d8165c106ac92de347cd7"
+      },
+      "geometryBytes": 792,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x5-z2"
+    },
+    {
+      "id": "D-x6-z-4",
+      "file": "terrain-compact/terrain-D-x6-z-4.wft",
+      "sha256": "be299f431951b2ab2899cce9c034515673cbf2e478c9a20ce9cacc77f12d09e3",
+      "bytes": 3629,
+      "triangles": 77,
+      "bounds": {
+        "min": [
+          609.5,
+          54.16633605957031,
+          -300.11328125
+        ],
+        "max": [
+          695,
+          59.5001335144043,
+          -299.86663818359375
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        6,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 5568,
+      "decodedSha256": "3f019c0a6bcf46a8a0ab6d60d93c3398974b976adda79e14e6f686df395ce1db",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x6-z-4.glb",
+        "bytes": 10744,
+        "sha256": "d227c787d391825ad5d265aac8bbe81c39d371a891d581a9aff4be95e8313f5c"
+      },
+      "geometryBytes": 5544,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x6-z-4"
+    },
+    {
+      "id": "D-x6-z-3",
+      "file": "terrain-compact/terrain-D-x6-z-3.wft",
+      "sha256": "7578a9364d1ce01ebbc007e78ca13af8ba48dd8c7bdbccf18b36a1c3f5a30e2d",
+      "bytes": 168675,
+      "triangles": 6175,
+      "bounds": {
+        "min": [
+          597,
+          16.903844833374023,
+          -300.11578369140625
+        ],
+        "max": [
+          695,
+          59.57748794555664,
+          -194
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        6,
+        -3
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 254112,
+      "decodedSha256": "7f621ee9b56ad06e7a926bbca18ad217a420ecde903384804c3ee71e57669fd3",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x6-z-3.glb",
+        "bytes": 667196,
+        "sha256": "c82d962fd36e98aa253dae993069b3bfe6afecd0bbb658f962b35cc66e9b4bc6"
+      },
+      "geometryBytes": 444600,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x6-z-3"
+    },
+    {
+      "id": "D-x6-z-2",
+      "file": "terrain-compact/terrain-D-x6-z-2.wft",
+      "sha256": "e4221ff2b5bc76ce5e885e9978b890911bfeb8f93e5d5eae61b2eaf770d399ff",
+      "bytes": 230629,
+      "triangles": 8563,
+      "bounds": {
+        "min": [
+          593.66357421875,
+          10.532400131225586,
+          -206
+        ],
+        "max": [
+          695,
+          57.059173583984375,
+          -94
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        6,
+        -2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 349712,
+      "decodedSha256": "5182f7218498fd43a7f62e0c050a0757673cc15615b695b7af52c5453906ada4",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x6-z-2.glb",
+        "bytes": 940204,
+        "sha256": "7198bf75a8db3a8686e84c62cd833e52dd51f1f38efae411bd48387b5effe328"
+      },
+      "geometryBytes": 616536,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x6-z-2"
+    },
+    {
+      "id": "D-x6-z-1",
+      "file": "terrain-compact/terrain-D-x6-z-1.wft",
+      "sha256": "1c360e730af0edfdaa2ba8f5db9b72752392040549bcd8724eb031c9fe1a9d83",
+      "bytes": 85203,
+      "triangles": 3245,
+      "bounds": {
+        "min": [
+          593.2080078125,
+          9.744314193725586,
+          -107.875
+        ],
+        "max": [
+          687.4456176757812,
+          35.674922943115234,
+          4.072265625
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        6,
+        -1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 128296,
+      "decodedSha256": "bbdc91a73bb8ed1387dcacf4675c1480b96aef22584e9b6c68fee49635e21bc3",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x6-z-1.glb",
+        "bytes": 321772,
+        "sha256": "467353a1b10958b9d6236b29e56a122d16db0d0f8536d1729205cc16330becba"
+      },
+      "geometryBytes": 233640,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x6-z-1"
+    },
+    {
+      "id": "D-x6-z0",
+      "file": "terrain-compact/terrain-D-x6-z0.wft",
+      "sha256": "096757cb42661c867b6020d4049146dbe901dad0d27f7c75ce51a56872a4e364",
+      "bytes": 62988,
+      "triangles": 2265,
+      "bounds": {
+        "min": [
+          595.5,
+          1.299942970275879,
+          -2.94775390625
+        ],
+        "max": [
+          622,
+          11.370254516601562,
+          84.95541381835938
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        6,
+        0
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 93600,
+      "decodedSha256": "1bfab69f88bfb48377612198eac7a4860353c159199f593ec37802c3181acaa6",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x6-z0.glb",
+        "bytes": 244624,
+        "sha256": "9329a6647cd01e7117f22e6c988bedf17dbb7293574fd5c7ffc7ba5d4c3b3b8f"
+      },
+      "geometryBytes": 163080,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x6-z0"
+    },
+    {
+      "id": "D-x6-z1",
+      "file": "terrain-compact/terrain-D-x6-z1.wft",
+      "sha256": "0955161567c501e0a6eb279dbd7051c75dbeb5f04715c677c1bf3a758cafb07c",
+      "bytes": 1064,
+      "triangles": 11,
+      "bounds": {
+        "min": [
+          575,
+          1.299942970275879,
+          82.9541015625
+        ],
+        "max": [
+          622,
+          1.299942970275879,
+          300
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        6,
+        1
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1856,
+      "decodedSha256": "a32351b46cf263873638e5d791343873e454da96630e5da67b1a88fa82d7151f",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x6-z1.glb",
+        "bytes": 2744,
+        "sha256": "2bd52e02da3c37341e867502fae3d251500a6bc32e57f060ee486d64eeb066b1"
+      },
+      "geometryBytes": 792,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x6-z1"
+    },
+    {
+      "id": "D-x6-z2",
+      "file": "terrain-compact/terrain-D-x6-z2.wft",
+      "sha256": "2436822c2db73a0f44d12ffc18f5c6aa323bdd2bb2c91f24343a2e958e759bf0",
+      "bytes": 852,
+      "triangles": 3,
+      "bounds": {
+        "min": [
+          585.358154296875,
+          1.299942970275879,
+          152.49220275878906
+        ],
+        "max": [
+          622,
+          1.299942970275879,
+          296.1213684082031
+        ]
+      },
+      "sheet": "11-SW-22D",
+      "grid": [
+        6,
+        2
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 1492,
+      "decodedSha256": "6bd08123fae987be357ed64cf8399628a3c2e7292d1bcd60070eaf07efa825fe",
+      "fine": {
+        "file": "processed-context/terrain-context-D-x6-z2.glb",
+        "bytes": 2280,
+        "sha256": "f43acec1c16863f8c4d570ac0532eafe8d456e6757a22be683f441b96de5fe7f"
+      },
+      "geometryBytes": 216,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-D-x6-z2"
+    },
+    {
+      "id": "B-x3-z-6",
+      "file": "terrain-compact/terrain-B-x3-z-6.wft",
+      "sha256": "0ddd462f47ad50cfe9dc63efc75daf8910aebde7a7fb5c2cb8628a0a400073a1",
+      "bytes": 24783,
+      "triangles": 945,
+      "bounds": {
+        "min": [
+          375.5,
+          63.34500503540039,
+          -600
+        ],
+        "max": [
+          417.31298828125,
+          93.43592834472656,
+          -497.14208984375
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        3,
+        -6
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 39996,
+      "decodedSha256": "b05d5db541c80f4724a2f5fbb6356888780fef60918d7fdd682aed50640dc7c4",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x3-z-6.glb",
+        "bytes": 98896,
+        "sha256": "fac02f8e89d793662d1d93824086e49d052ba093381b40ae88621d339a60b565"
+      },
+      "geometryBytes": 68040,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x3-z-6"
+    },
+    {
+      "id": "B-x3-z-5",
+      "file": "terrain-compact/terrain-B-x3-z-5.wft",
+      "sha256": "54afd47675badf96f7c6d779f632a74d16982f70ad59714ab9975b46a021bbc3",
+      "bytes": 21333,
+      "triangles": 871,
+      "bounds": {
+        "min": [
+          375.5,
+          63.34500503540039,
+          -504.8359375
+        ],
+        "max": [
+          405.57763671875,
+          66.12088012695312,
+          -390.5146484375
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        3,
+        -5
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 34152,
+      "decodedSha256": "2e4a4ec6ba112388c099d18e4a2aff463fd2e8507ac3ecda55007f6ceef83fde",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x3-z-5.glb",
+        "bytes": 82868,
+        "sha256": "6ba272093d2a951f9982efbecb93ee80d928f53ddad9a04eeee8f0d7ee2eff00"
+      },
+      "geometryBytes": 62712,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x3-z-5"
+    },
+    {
+      "id": "B-x3-z-4",
+      "file": "terrain-compact/terrain-B-x3-z-4.wft",
+      "sha256": "88f132dde5e5b04f4ef3f885be1d7c72524df295a27f897ef4283face44acabe",
+      "bytes": 73869,
+      "triangles": 2740,
+      "bounds": {
+        "min": [
+          375.5,
+          54.67860412597656,
+          -404.2216796875
+        ],
+        "max": [
+          418.3447265625,
+          69.92494201660156,
+          -300.1587829589844
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        3,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 111660,
+      "decodedSha256": "64ec075fc408de0aff7c92133eded4af4ed94cfa20ed12e2711b1e6a4be62b12",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x3-z-4.glb",
+        "bytes": 297900,
+        "sha256": "c6d89570ba69f9183b32a7a5b3d638b7b2bc6f390733ea78b628a4f637438c63"
+      },
+      "geometryBytes": 197280,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x3-z-4"
+    },
+    {
+      "id": "B-x4-z-6",
+      "file": "terrain-compact/terrain-B-x4-z-6.wft",
+      "sha256": "8745e0373a743166551e966926e66ec8acfc44ea24972a35e2695d00993c893d",
+      "bytes": 182661,
+      "triangles": 6930,
+      "bounds": {
+        "min": [
+          390.68603515625,
+          63.34500503540039,
+          -600
+        ],
+        "max": [
+          506.5,
+          105.59817504882812,
+          -489.7265625
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        4,
+        -6
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 279896,
+      "decodedSha256": "b5713c6bab189fe51c94e61fdcccfec17392b8aa52e2fb5ef5ab6e4b4647c618",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x4-z-6.glb",
+        "bytes": 752180,
+        "sha256": "c8d6230a5d0981488105c4ae67d705777ecfc00a7e9d308491ae8568f0b875e1"
+      },
+      "geometryBytes": 498960,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x4-z-6"
+    },
+    {
+      "id": "B-x4-z-4",
+      "file": "terrain-compact/terrain-B-x4-z-4.wft",
+      "sha256": "d58141fbdf12d356b0e0289f95cdbffaa234c923d11c6e0ff2772fe502678046",
+      "bytes": 251411,
+      "triangles": 9756,
+      "bounds": {
+        "min": [
+          386.625,
+          49.28843307495117,
+          -413.54248046875
+        ],
+        "max": [
+          507.54296875,
+          67.23611450195312,
+          -300.1371765136719
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        4,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 387404,
+      "decodedSha256": "ca7bcac8183972da46e462d25ed826561626f58fe7eaf8e7b4c9069ad2639e79",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x4-z-4.glb",
+        "bytes": 1051144,
+        "sha256": "5ffa2f04376f2e6d5c299795b34f46e41f44488ce514976f000eb17917762073"
+      },
+      "geometryBytes": 702432,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x4-z-4"
+    },
+    {
+      "id": "B-x5-z-6",
+      "file": "terrain-compact/terrain-B-x5-z-6.wft",
+      "sha256": "49690477f81a1e2be6859702743ab1d6524846680d7095f6229574e630dea518",
+      "bytes": 7049,
+      "triangles": 228,
+      "bounds": {
+        "min": [
+          490.5,
+          75.53450012207031,
+          -580.4883422851562
+        ],
+        "max": [
+          569.2999877929688,
+          97.7585220336914,
+          -474
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        5,
+        -6
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 11120,
+      "decodedSha256": "dace85a59e6004d348ce805a778639271c4315b2e2638dd6d8ff6d03e1223d09",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x5-z-6.glb",
+        "bytes": 26952,
+        "sha256": "df6147af31401f1b12d0b5f5ab16171ad7067688340c16347d413f09a227bf33"
+      },
+      "geometryBytes": 16416,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x5-z-6"
+    },
+    {
+      "id": "B-x5-z-4",
+      "file": "terrain-compact/terrain-B-x5-z-4.wft",
+      "sha256": "67d8b296640ef593d649a6d1eb2f9a33119907b70a26c05585209e2da2f60860",
+      "bytes": 169070,
+      "triangles": 6308,
+      "bounds": {
+        "min": [
+          488.64697265625,
+          47.927001953125,
+          -404.5302734375
+        ],
+        "max": [
+          606.5,
+          67.57386779785156,
+          -300
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        5,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 252500,
+      "decodedSha256": "54869d2e36ab4feb8fd98062dda2965ca0c26c70fc087c77845b641c73aa6457",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x5-z-4.glb",
+        "bytes": 665840,
+        "sha256": "f378c5aec981696e1963ba06a4cea99a0f3ea68bd22486bb5fc4eefb299364c9"
+      },
+      "geometryBytes": 454176,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x5-z-4"
+    },
+    {
+      "id": "B-x6-z-5",
+      "file": "terrain-compact/terrain-B-x6-z-5.wft",
+      "sha256": "05c155203c3af856867c541c9ee98ffc66cc51d6f3dd429b4979bbed5bd71320",
+      "bytes": 88699,
+      "triangles": 3185,
+      "bounds": {
+        "min": [
+          594.5810546875,
+          54.266719818115234,
+          -484.21429443359375
+        ],
+        "max": [
+          685,
+          74.16072845458984,
+          -395.9384765625
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        6,
+        -5
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 132140,
+      "decodedSha256": "c14ef17827098f846f8da454349686518d16ccc9391dcccd08d5e5fbe8457c4d",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x6-z-5.glb",
+        "bytes": 342936,
+        "sha256": "243c4b0c6b08128531073e770275bff34245c6a225ef328653017153e5050f1e"
+      },
+      "geometryBytes": 229320,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x6-z-5"
+    },
+    {
+      "id": "B-x6-z-4",
+      "file": "terrain-compact/terrain-B-x6-z-4.wft",
+      "sha256": "c24772f1746cb43b34fa10286d1c1fbc2cf727ca98330df446d4a385ccc1e8df",
+      "bytes": 216999,
+      "triangles": 8205,
+      "bounds": {
+        "min": [
+          595.95947265625,
+          51.63240051269531,
+          -405.4583435058594
+        ],
+        "max": [
+          695,
+          70.64895629882812,
+          -300.0946350097656
+        ]
+      },
+      "sheet": "11-SW-22B",
+      "grid": [
+        6,
+        -4
+      ],
+      "format": "wft-gzip-v1",
+      "decodedBytes": 328876,
+      "decodedSha256": "e1cefcc0b9f5a90956c78b0cab85911938e3fdf1d4683c8dabce8cde3ac7a965",
+      "fine": {
+        "file": "processed-context/terrain-context-B-x6-z-4.glb",
+        "bytes": 868580,
+        "sha256": "e3aed48293daa0e482b317fcf67f32663926ae93076af269bfca89abd6878d4a"
+      },
+      "geometryBytes": 590760,
+      "fullDetail": true,
+      "maxGeometryErrorM": 0,
+      "catalogueId": "context-terrain-B-x6-z-4"
+    }
+  ],
+  "totals": {
+    "chunks": 94,
+    "triangles": 293178,
+    "compactGzipFileBytes": 7760691,
+    "compactDecodedBytes": 11866008,
+    "gpuInterleavedBytes": 21108816
+  },
+  "sourceManifestSha256": "8456c7f7e1b8b81626cd11e19e89727ffda494ff0f5065037c8b28cbd986bf11",
+  "approvedBoundarySha256": "c648e4428195f235b6153eebb06ac593299fb087409edea2716350eaee05af54",
+  "requires": "DecompressionStream(gzip); otherwise use unchanged source GLBs",
+  "automaticFineReplacement": false,
+  "boundedFineGLBExceptions": [
+    {
+      "id": "context-terrain-B-x4-z-5",
+      "sha256": "2378cc024cdae6e8c5a28adfdebe27dfeb9e29a5bf1a77d018cfe007fa466bb1",
+      "bytes": 476644,
+      "triangles": 4167,
+      "reason": "Preserve local-frame repaired geometry precision"
+    },
+    {
+      "id": "context-terrain-B-x5-z-5",
+      "sha256": "62edfe39899b99f6dfe5fe6b7bbbe2049f2eb6664f6d0ed0e6c4d7c1c2077edc",
+      "bytes": 846436,
+      "triangles": 7022,
+      "reason": "Preserve local-frame repaired geometry precision"
+    },
+    {
+      "id": "context-terrain-A-x1-z-6",
+      "sha256": "c28049d398f8a3b1e0688038aec7933dddeebd1d32c1a2831e6f04c1397a193f",
+      "bytes": 972476,
+      "triangles": 7459,
+      "reason": "Preserve independently checked M01 fine-road clearance; no stale WFTC substitution"
+    },
+    {
+      "id": "context-terrain-A-x1-z-5",
+      "sha256": "014e3d4b742c1459b3a38d3c3e3fd7e632951250fa1c0955f71c014d0ff5c6b0",
+      "bytes": 433696,
+      "triangles": 3492,
+      "reason": "Preserve independently checked M01 fine-road clearance; no stale WFTC substitution"
+    }
+  ],
+  "historicalTotals": {
+    "chunks": 98,
+    "triangles": 314726,
+    "originalRawBytes": 33823108,
+    "originalTheoreticalGzipBytes": 11224863,
+    "compactGzipFileBytes": 8331322,
+    "compactDecodedBytes": 12730652,
+    "gpuInterleavedBytes": 22660272,
+    "seaTriangles": 471,
+    "steepFaces": 33601
+  }
+}

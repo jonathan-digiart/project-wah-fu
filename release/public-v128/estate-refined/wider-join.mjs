@@ -1,0 +1,8 @@
+/** Additive, explicit unprotected A/B comparison. Original catalogues are never mutated. */
+export const WIDER_QUERY='join-ab-21.5',WIDER_FOCUS='join-ab',WIDER_ID='context-terrain-A-x3-z-5-join-ab-21.5';
+export const WIDER_SHA='c792baa074c6619374876c9a069714eeebe2af1ceb93d18e9e01ae36301855de';
+export const WIDER_CAMERA=Object.freeze({yaw:-.35,pitch:.8,pivot:[375,67,-478.25],halfSpan:16,publicHome:false});
+export const WIDER_LOCAL_ORIGIN=Object.freeze([375,70,-478.25]);
+const SOURCE_ID='context-terrain-A-x3-z-5',SOURCE_SHA='05a478f5431b2bd8807ad42658cdb67c808114d805c764b6727e00b0ed49210a';
+export function applyWiderJoin(catalogue){const found=catalogue?.chunks?.filter(e=>e.id===SOURCE_ID);if(found?.length!==1||found[0].sha256!==SOURCE_SHA||found[0].triangles!==2915||found[0].layer!=='terrain'||found[0].mode!=='context'||catalogue.chunks.some(e=>e.id===WIDER_ID))throw Error('A/B source identity mismatch; return to original terrain.');const replacement={...found[0],id:WIDER_ID,file:'terrain-join-ab/terrain.glb',sha256:WIDER_SHA,bytes:468724,triangles:6487};return{...catalogue,chunks:catalogue.chunks.map(e=>e.id===SOURCE_ID?replacement:e),contextNote:'Conditional A/B 1 × 21.5 m numerical join trial only. Maximum source departure 87.9 mm; maximum measured edge step 2.04 mm. Original structure/terrain elsewhere preserved. Not surveyed ground, physical clearance, camera collision approval or estate-wide completion.'};}
+export function widerComparisonURL(href,treated){const u=new URL(href);u.searchParams.set('camera','unprotected');u.searchParams.set('encoding','glb');u.searchParams.set('focus',WIDER_FOCUS);if(treated)u.searchParams.set('terrain',WIDER_QUERY);else u.searchParams.delete('terrain');return u.href;}

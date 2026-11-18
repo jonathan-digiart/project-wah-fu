@@ -1,0 +1,14 @@
+// One in-flight command, one latest pose, no queued geometry copies.
+export class CollisionController {
+ constructor(worker,{onPose=()=>{},onStatus=()=>{},timeoutMs=30000}={}){this.worker=worker;this.timeoutMs=timeoutMs;this.timer=null;this.onPose=onPose;this.onStatus=onStatus;this.epoch=0;this.serial=0;this.latest=0;this.active=null;this.pending=null;this.failed=false;this.suspended=false;worker.onmessage=e=>this.receive(e.data);worker.onerror=()=>this.fail('worker-error');worker.onmessageerror=()=>this.fail('worker-messageerror');}
+ send(message,transfer){clearTimeout(this.timer);const epoch=message.epoch,id=message.requestId;this.timer=setTimeout(()=>{if(this.active&&this.epoch===epoch&&this.active.requestId===id)this.fail('worker-command-timeout: '+this.active.type);},this.timeoutMs);this.timer?.unref?.();try{this.worker.postMessage(message,transfer);return true;}catch(error){this.fail('worker-postmessage: '+error.message);return false;}}
+ init(entries,options){this.epoch++;this.active={type:'init',requestId:++this.serial};this.pending=null;this.failed=false;this.send({type:'init',epoch:this.epoch,requestId:this.active.requestId,entries,options});}
+ add(id,positions){if(this.failed||this.suspended||this.active||this.pending)return false;this.active={type:'add',requestId:++this.serial};return this.send({type:'add',epoch:this.epoch,requestId:this.active.requestId,id,positions},[positions.buffer]);}
+ pose(previous,requested,kind){if(this.failed||this.suspended)return false;const requestId=++this.serial;this.latest=requestId;this.pending={type:'pose',epoch:this.epoch,requestId,previous:structuredClone(previous),requested:structuredClone(requested),kind};this.pump();return !this.failed;}
+ pump(){if(this.failed||this.suspended||this.active||!this.pending)return;this.active=this.pending;this.pending=null;this.send(this.active);}
+ receive(d){if(d.type==='protocol-error'){this.fail(d.error??'worker-protocol-error');return;}if(d.epoch!==this.epoch||!this.active||d.requestId!==this.active.requestId)return;clearTimeout(this.timer);this.timer=null;const a=this.active;this.active=null;if(d.type==='error'){this.fail(d.error);return;}if(a.type==='pose'&&d.type==='pose'&&d.requestId===this.latest&&!this.suspended)this.onPose(d.result);this.onStatus(d);this.pump();}
+ suspend(){if(this.suspended)return;this.suspended=true;if(this.failed)return;this.epoch++;this.latest=++this.serial;this.pending=null;this.active={type:'barrier',requestId:++this.serial};this.send({type:'epoch',epoch:this.epoch,requestId:this.active.requestId});}
+ resume(){if(this.failed)return false;this.suspended=false;this.pump();return !this.failed;}
+ fail(reason){clearTimeout(this.timer);this.timer=null;this.failed=true;this.pending=null;this.active=null;this.onStatus({type:'blocked',reason});}
+ dispose(){clearTimeout(this.timer);this.timer=null;this.epoch++;this.pending=null;this.active=null;this.failed=true;this.worker.terminate();}
+}

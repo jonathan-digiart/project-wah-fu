@@ -3,3 +3,6 @@ node_modules/
 dist/
 test-results/
 playwright-report/
+dist-legacy/
+release/
+verification/public-v128/FILE-MANIFEST.json

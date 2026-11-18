@@ -1,0 +1,3 @@
+// One tested configuration; public query strings cannot select historical models or QA faults.
+const fixed=new URL(location.href);fixed.search='?encoding=glb&m04-blend=off&north-lot=provisional&r06-recovery=on&r06-west=building-contact&r09-recovery=on';fixed.hash='';history.replaceState(null,'',fixed);
+try{await import('./protected-combined-entry.mjs');document.querySelector('#north-lot-protected-focus')?.setAttribute('hidden','');document.querySelector('#r06-protected-focus')?.setAttribute('hidden','');}catch(error){document.querySelector('#direct-module-error').hidden=false;console.error(error);}
