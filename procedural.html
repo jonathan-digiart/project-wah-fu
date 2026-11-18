@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wah Fu procedural experiment</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        font: 14px system-ui;
+        background: #e9e7e1;
+        color: #252722;
+      }
+      header {
+        position: relative;
+        z-index: 1;
+        background: #ffffffed;
+        padding: 12px;
+        flex: 0 0 auto;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 18px;
+        margin: 0 0 8px;
+      }
+      p {
+        margin: 8px 0;
+      }
+      button {
+        padding: 6px 10px;
+        margin-right: 5px;
+      }
+      main {
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+      details {
+        margin-top: 8px;
+      }
+      #metrics {
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Wah Fu · code-only experiment</h1>
+      <p>
+        Partial prototype, not the accepted public model. Building envelopes use
+        earlier semantic parameters. Roads and accepted terrain are not
+        reconstructed yet.
+      </p>
+      <button id="overview">Overview</button
+      ><button id="carpark">Carpark plan</button>
+      <p id="metrics">Generating…</p>
+      <details>
+        <summary>Sources and limitations</summary>
+        <p>
+          Footprints/heights: Lands Department, Hong Kong SAR, via CSDI.
+          Simplified envelopes are not detailed buildings. Carpark retains the
+          accepted outline but is shown flat at an arbitrary display height, not
+          its final elevation. No images or imported 3D assets are used.
+        </p>
+        <a href="https://portal.csdi.gov.hk/csdi-webpage/doc/TNC">Data terms</a>
+        ·
+        <a href="https://github.com/jonathan-digiart/project-wah-fu"
+          >Repository</a
+        >
+      </details>
+    </header>
+    <main id="viewport"></main>
+    <script type="module" src="/src/procedural/demo.ts"></script>
+  </body>
+</html>

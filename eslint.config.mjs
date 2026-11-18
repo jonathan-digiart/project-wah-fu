@@ -7,6 +7,7 @@ export default [
       ".cache/**",
       "dist/**",
       "dist-legacy/**",
+      "dist-procedural/**",
       "release/**",
       "test-results/**",
       "playwright-report/**",
