@@ -26,9 +26,17 @@ export default defineConfig({
     },
     { name: "webkit", use: { browserName: "webkit" } },
   ],
-  webServer: {
-    command: "npm run preview -- --port 4173 --strictPort",
-    url: "http://127.0.0.1:4173",
-    reuseExistingServer: false,
-  },
+  webServer: [
+    {
+      command:
+        "npm exec -- vite preview --host 127.0.0.1 --outDir dist-legacy --port 4173 --strictPort",
+      url: "http://127.0.0.1:4173",
+      reuseExistingServer: false,
+    },
+    {
+      command: "npm run preview -- 4174",
+      url: "http://127.0.0.1:4174",
+      reuseExistingServer: false,
+    },
+  ],
 });

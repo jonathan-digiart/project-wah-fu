@@ -1,0 +1,1658 @@
+{
+  "favicon.svg": {
+    "bytes": 238,
+    "sha256": "6fc00b5750f4c98beda05e514d39057ec21b9ef4ecd442721736b0de9dfa1b02"
+  },
+  "index.html": {
+    "bytes": 6412,
+    "sha256": "32307adba18ea982258e212f142ce617c0d82b98be28ba963432d4aa791fddd4"
+  },
+  "EARCUT-LICENSE.txt": {
+    "bytes": 737,
+    "sha256": "9feffdee4d0130bd3dee575410c40efafac3eb582328d8c4615e29966e6503c4"
+  },
+  "THREE-LICENSE.txt": {
+    "bytes": 1081,
+    "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+  },
+  ".nojekyll": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "credits.html": {
+    "bytes": 2334,
+    "sha256": "e522be207eeb2fbaca484f6c97966ea40ca84d17076d39ec0a9bd597dd9ad043"
+  },
+  "estate-collision-test/connected-scope.mjs": {
+    "bytes": 1151,
+    "sha256": "0258d7ab409f6a7512bb9083753e6295214c3f046b07b486551366459c4dfd09"
+  },
+  "estate-road-trial/roads-upper-gaps.glb": {
+    "bytes": 5933264,
+    "sha256": "8b0b9c80406664a69554d4be0fbfc0c0f99f4d0ff0a352cbf335a7b95a80597a"
+  },
+  "estate-combined-region-lod/region-fallback.wfr.gz": {
+    "bytes": 4105031,
+    "sha256": "e83d5e00a44a89a4397f8a5c366d0c5a4d9ab9870414fa262f24596ff046e3ee"
+  },
+  "estate-combined-region-lod/region-fallback-manifest.json": {
+    "bytes": 226170,
+    "sha256": "bb4cc908bd98f8841e9e6821402c2e10f69d98cffc3ea4d3679544b7472938e4"
+  },
+  "estate-refined/tinwan-pins.mjs": {
+    "bytes": 2173,
+    "sha256": "58154b563deb6932c53d4d15435ebc52f318b2250043a6e6989430cceafa71e0"
+  },
+  "estate-refined/appearance.mjs": {
+    "bytes": 1927,
+    "sha256": "ed3887eaa66e562a8ab0e9a990b9a78cbecd314587afb1b20166259c51b12312"
+  },
+  "estate-refined/install-combined-regions.mjs": {
+    "bytes": 1214,
+    "sha256": "1b6e948657ad0af31adc4cdd94bec90fe3ca3ceb1b6704292146aa1cfed5e064"
+  },
+  "estate-refined/marked-buildings.mjs": {
+    "bytes": 882,
+    "sha256": "e6dc31ff5f80ad604f071be3e31d7fccd846ffe5861e9601f5133b4088968204"
+  },
+  "estate-refined/reference-geometry.mjs": {
+    "bytes": 383,
+    "sha256": "3efaa0cfba210df3b0d9d39601bc32af5ba4dcf12f744d8406769c776d9fdf79"
+  },
+  "estate-refined/public-framing.json": {
+    "bytes": 10244,
+    "sha256": "92298d2fe35272069449bb7d2c8d57d3a1e9b4e8bd8e936a779f0bb9c77d4620"
+  },
+  "estate-refined/bootstrap-fine-owner.mjs": {
+    "bytes": 12855,
+    "sha256": "2d5421f38c95d081f3fc0b246016e9901b128a424eec67ef66ced7ab82476949"
+  },
+  "estate-refined/wider-join-decode.mjs": {
+    "bytes": 1591,
+    "sha256": "2d28a6e457b49653f06a787864ba017644e4372605d6f434945191fa278f2942"
+  },
+  "estate-refined/buffer-intent.mjs": {
+    "bytes": 775,
+    "sha256": "6176eec744afd5bafc4f8bb1f4a77792c7411011cfe69f2b9c64a2ac109253bc"
+  },
+  "estate-refined/protected-collision-input.mjs": {
+    "bytes": 6934,
+    "sha256": "9ad715951a8a76d9700289b007ebcc5a5ded54d644db4cd3c1f8ab31832d6ac8"
+  },
+  "estate-refined/reference.js": {
+    "bytes": 3420,
+    "sha256": "3ee68137c81fb85499cc348083eebd3a8c920a8236ffd0dbcf11b1f4b7b7c43c"
+  },
+  "estate-refined/north-boundary-terrain-transport.mjs": {
+    "bytes": 1342,
+    "sha256": "56da073e67b30415f8bc8896f8f098d251d4c90d8f010d2e09977cb1f10b96e6"
+  },
+  "estate-refined/decode-region-fallback.mjs": {
+    "bytes": 4799,
+    "sha256": "e96448ac49a3c7779db0464b9cbde8cb823907f33d4c33f9eef84073147632a3"
+  },
+  "estate-refined/wider-join.mjs": {
+    "bytes": 1736,
+    "sha256": "0a9d14f581ab7a8df013131e51009dee554275ca1e57cd13294715774fa2b4c5"
+  },
+  "estate-refined/north-boundary-A2.control.gz": {
+    "bytes": 21921,
+    "sha256": "eb30114b3027c856fef20432948293e242280d576d4b008ba73924772ffbb26d"
+  },
+  "estate-refined/apply-tunnel-bd.mjs": {
+    "bytes": 1095,
+    "sha256": "4200978ac839273301769ce306fbe984bd88378c9941decb285081cadddf0720"
+  },
+  "estate-refined/approved-terrain.mjs": {
+    "bytes": 360,
+    "sha256": "5dea5443a1353a5727ea7fd7a61fd6fb928bbeef348bad94a016e928850ce153"
+  },
+  "estate-refined/ab-north-join-decode.mjs": {
+    "bytes": 1618,
+    "sha256": "43c956893dab1ecab6feed2dc51c14f4c652572deabbe3ceb03a65eee835dbba"
+  },
+  "estate-refined/glb.mjs": {
+    "bytes": 5860,
+    "sha256": "451af6449e6eb3d6d4622a4466c71ff789103cc38c59906be6b029c54fe27f6a"
+  },
+  "estate-refined/install-approved-regions.mjs": {
+    "bytes": 977,
+    "sha256": "ab078b15c2e0cc879c7f8f3e5bee190c87958169371c63f5aeff8c253a03eb5d"
+  },
+  "estate-refined/r09-collision-input.mjs": {
+    "bytes": 1153,
+    "sha256": "c2768bb9c3ecf2a44d3df8b113dcd3f163fb8cc2a138f9a37973921b7185a000"
+  },
+  "estate-refined/install-regions.mjs": {
+    "bytes": 2544,
+    "sha256": "f287305fe4770abc11a3126d66bcb1fc3221b4878948f92a8cf8356ea00ba73e"
+  },
+  "estate-refined/tunnel-terrain-decode.mjs": {
+    "bytes": 2291,
+    "sha256": "38b3557740c76df5f2d6c8425f0106aae4cee26442f3f3ad37e28852bc8a2292"
+  },
+  "estate-refined/tinwan-transport.mjs": {
+    "bytes": 5898,
+    "sha256": "c0c07911ded0417461582f1be2a7eab358c1adaaa004c6ef8012ff63cd189f33"
+  },
+  "estate-refined/overpass-packet-transport.mjs": {
+    "bytes": 6280,
+    "sha256": "3a2fd696a1aa77a5cf190a2380d3c95be41fec035b1bc8e6b4f2f3b104cfa259"
+  },
+  "estate-refined/cumulative-context-terrain-C-x0-z-2.glb.gz": {
+    "bytes": 49241,
+    "sha256": "6a0c3de262b3a2c2af8bd89b4cc648948ebba377f3e4c07d2c0105a09e1bc696"
+  },
+  "estate-refined/tunnel-inspection.mjs": {
+    "bytes": 953,
+    "sha256": "dd723aeb833b384102a4074c281f1a36772c8cf476f5d60d828afcd8d7ffb18f"
+  },
+  "estate-refined/overpass-packet-pins.mjs": {
+    "bytes": 3102,
+    "sha256": "6ee373d61558947314960c0f9ce9645b9bb9a5425f059043e79b2a1afffaf177"
+  },
+  "estate-refined/protected-collision-scope.mjs": {
+    "bytes": 1847,
+    "sha256": "6216ada58ca8b41b6a59add773e1a755f3c5fca39fbff39432833212bddb7f22"
+  },
+  "estate-refined/install-overpass-restoration.mjs": {
+    "bytes": 2782,
+    "sha256": "9fb4bfe3bfc4f01f9889525f5ccf13a222609dd7a7f6b1fcc8633dc8b9f18676"
+  },
+  "estate-refined/road-finish.mjs": {
+    "bytes": 1487,
+    "sha256": "07e5b2da161e8edae2924e2aaea7b77e345ad63618c94601ecc2c9de2503cd6c"
+  },
+  "estate-refined/overpass-section-ranges.mjs": {
+    "bytes": 6886,
+    "sha256": "f316c82da6651fbae7bfce0b6c942dbccd971520383a9f79866a8ef309433ed7"
+  },
+  "estate-refined/plan-pan.mjs": {
+    "bytes": 1529,
+    "sha256": "cbd47b0f9b707c90f2bda1995613aa31d5616d98fc88efb609647d477ae7195d"
+  },
+  "estate-refined/ac-join-decode.mjs": {
+    "bytes": 1805,
+    "sha256": "65a01f9b79aeacdeb50af32a1085480638f321d2968339b1cb74bdb8c3f0221a"
+  },
+  "estate-refined/transition-cover.mjs": {
+    "bytes": 2051,
+    "sha256": "558a17bb95a246508cb0a85f862fc9973215745bfe5a4dbdd809b553246f62da"
+  },
+  "estate-refined/public.css": {
+    "bytes": 9049,
+    "sha256": "f4e892e63ca1467d21e7dd459cbdecd311a45101b98d7c37f7c6db0b6e570689"
+  },
+  "estate-refined/stage-core.mjs": {
+    "bytes": 1345,
+    "sha256": "82aec6ebcd185affc1b1aa39ec7cf28e16583d3089708a820011def7eb7acf1e"
+  },
+  "estate-refined/transport-capability.mjs": {
+    "bytes": 242,
+    "sha256": "b0105b4fe717fd271a2e9a5f8fc923de3de25952024c36e48d6a66fd204d73c5"
+  },
+  "estate-refined/road-reference.json": {
+    "bytes": 501507,
+    "sha256": "d82a19e60d57f77793dc1a1da0a97c6967e1215538d92b308ecc5088073a2a1f"
+  },
+  "estate-refined/cumulative-context-roads-wahming-north-provisional.glb.gz": {
+    "bytes": 15274,
+    "sha256": "5dadbe64d7bf519870247d708fade51d18a443bbbb5497693718367fa1f1623a"
+  },
+  "estate-refined/tunnel-terrain.mjs": {
+    "bytes": 6747,
+    "sha256": "f7e8be62bdf7853b528cef6f21bc2de34e3b338f77c04c26b8f1254a8e6d7d22"
+  },
+  "estate-refined/validate-partial-road-fallback.mjs": {
+    "bytes": 4677,
+    "sha256": "617c8d466fec604d3aaa4fb87fac7c41565513715013a6cc1b7b3bc3199ea53e"
+  },
+  "estate-refined/protected-combined-entry-core.mjs": {
+    "bytes": 2611,
+    "sha256": "4ad2553a5bc9d00b5601bd2f7ac01b70c1effa8a6f2b320126620a93b7e611e4"
+  },
+  "estate-refined/overpass-sections.bin": {
+    "bytes": 43312,
+    "sha256": "1145793d8c1b265976198c69e1f3209324efd47db4acdf778dcd79c6cfa46504"
+  },
+  "estate-refined/install-m01-r02-fallback.mjs": {
+    "bytes": 7150,
+    "sha256": "2c297db263f33c50a1ef61ea7e307787ee826dc1708268a8f7945f8223918b2e"
+  },
+  "estate-refined/cumulative-context-roads-r06-west-inference.glb.gz": {
+    "bytes": 36128,
+    "sha256": "448eca9d844f5466ea92ce760fa53b4d207bf796a37db902c92c7e23d4c368ef"
+  },
+  "estate-refined/cd-next-join-decode.mjs": {
+    "bytes": 1613,
+    "sha256": "14f0b812c6a9cbdc6e225a06a5c2eaa749ea4966d3fffc512795188e0a0cfa9f"
+  },
+  "estate-refined/ab-next-join.mjs": {
+    "bytes": 1788,
+    "sha256": "cabb2fda45a87257af7debf8d6af5bb727bfa9fe023a378247d343374fa5ab64"
+  },
+  "estate-refined/health-summary.mjs": {
+    "bytes": 1008,
+    "sha256": "866123ec1a886bd8766d956b5dd9d749b8987e57127673e196b367f41e1df686"
+  },
+  "estate-refined/join-variant-decode.mjs": {
+    "bytes": 3737,
+    "sha256": "abb69849dfd8981b8cf39d6c12256216bb52929a9d5ed2247bb4d5ccba7d83a6"
+  },
+  "estate-refined/cumulative-context-roads-a8-native-strip.glb.gz": {
+    "bytes": 4454,
+    "sha256": "2ebb421b3fc4f98e3432482bccf665fdf21c03d46baaeed819fdeb521789b97a"
+  },
+  "estate-refined/cumulative-context-terrain-C-x0-z-3.glb.gz": {
+    "bytes": 68770,
+    "sha256": "326e8fc08b528783bc8ec6861befc0fc844f44bbf4c5f3dd726618770d23f07e"
+  },
+  "estate-refined/decode-worker-ready.mjs": {
+    "bytes": 603,
+    "sha256": "71a56df6c91010a1218b50cdc3be68754f123e48c9d428ccf92cb9aa6eb7e207"
+  },
+  "estate-refined/connected-scope.mjs": {
+    "bytes": 686,
+    "sha256": "ef3be1d51e76a736d6bd7bb3699250e2faf09db9d7a4a1dbb5f442ce1d398380"
+  },
+  "estate-refined/ac-join.mjs": {
+    "bytes": 2183,
+    "sha256": "3f6de7369da1cd8f5fe9efdf44c4881255d9e4886ff1589a4d1fbf3d289b546e"
+  },
+  "estate-refined/bounded-fine-terrain.mjs": {
+    "bytes": 731,
+    "sha256": "55db2841e13bf933e8a1c9d3dfda1c0c7e4f2ffa227ffdfa3959fab99c06c92d"
+  },
+  "estate-refined/install-m01-combined.mjs": {
+    "bytes": 10438,
+    "sha256": "549bb616eb7c978a54ed59a69b8001f58db41f0cc8da2529a75831ca36030224"
+  },
+  "estate-refined/bridge-appearance.mjs": {
+    "bytes": 4914,
+    "sha256": "fcbbaaa1a2dbb1c441e4ea49f6e2ebf0a91c2f32ee348bb9ceceecf060d64c53"
+  },
+  "estate-refined/install-a-connector.mjs": {
+    "bytes": 2974,
+    "sha256": "158f06b621bf0cac3116e18f039983fa5da0aae378a8868018aff33e287d950b"
+  },
+  "estate-refined/tunnel-glb.mjs": {
+    "bytes": 5860,
+    "sha256": "451af6449e6eb3d6d4622a4466c71ff789103cc38c59906be6b029c54fe27f6a"
+  },
+  "estate-refined/protected-start-view.mjs": {
+    "bytes": 1579,
+    "sha256": "7c9d7ecd0b4b037d0a94dd937e784f2ca324438cc71ee5e834c61d10f4f82e34"
+  },
+  "estate-refined/wah-mei-west-decode.mjs": {
+    "bytes": 1715,
+    "sha256": "deb6b7099dc238260f03b2b0ace0ce4d81bab2e701992acf1be13283261b2a65"
+  },
+  "estate-refined/protected-a8.mjs": {
+    "bytes": 4535,
+    "sha256": "17a8e34dbd85da3f39d7cadffd1a16ac5b3378e029fd5af65886c6493b4d6f26"
+  },
+  "estate-refined/cd-next-join.mjs": {
+    "bytes": 1788,
+    "sha256": "161346df2dfbb025ad5505422748a64840fc91e836963cc5b770f2ceb9eef7c0"
+  },
+  "estate-refined/protected-north-lot.mjs": {
+    "bytes": 9032,
+    "sha256": "7c1ba2c1d39677c5d297e107c4c724947d7b62a9cabb6392603d15fb940120b7"
+  },
+  "estate-refined/noncancellable-gate.mjs": {
+    "bytes": 2575,
+    "sha256": "5938a328827588989a0557a3f47b6542fcc4fb99d348a18752231eaf8e028d16"
+  },
+  "estate-refined/north-boundary-A2.patch": {
+    "bytes": 88039,
+    "sha256": "c51f0619af6160fb45347a56cd50efa2fb3a5696d3ac02651fcbcaa9a65e8f27"
+  },
+  "estate-refined/cumulative-transport-decode.mjs": {
+    "bytes": 4563,
+    "sha256": "f0bea8cd87f9bd2a71fd12fc4a17855bc2eff09e5afecf652fd45240488bdf62"
+  },
+  "estate-refined/render-scheduler.mjs": {
+    "bytes": 3423,
+    "sha256": "82cf03878d019abb34e465c9dd41e36dd89d717fddc77b1d81246b6751c76335"
+  },
+  "estate-refined/validate-fine-only-regions.mjs": {
+    "bytes": 1925,
+    "sha256": "0f8d5f5d6be517c84bb48c85813d662631181d3a1c932b20a28cd663f994b6b0"
+  },
+  "estate-refined/install-north-boundary-terrain.mjs": {
+    "bytes": 685,
+    "sha256": "08580d7a3f66bbf2f5e39a3fb911804d1fa6b5d12cdf22bc31f49b4a5bd5d9c2"
+  },
+  "estate-refined/catalogue.json": {
+    "bytes": 119931,
+    "sha256": "52f304659f4d6a907cfda5e3aca9a2b71e2d9b5bf56d355c9d1a28edc763e1b2"
+  },
+  "estate-refined/overpass-section-source-pins.mjs": {
+    "bytes": 31626,
+    "sha256": "1bd55860c49abf25970943e5fdfc54eaa088f6eeb901c0f519f2a86d58e991bc"
+  },
+  "estate-refined/m04-strip-fallback-proof.mjs": {
+    "bytes": 11642,
+    "sha256": "f112260d3550d5274d6ee8f81c3ce193d098cdb23d06f0601e8fd268876c9447"
+  },
+  "estate-refined/geometry-decode.mjs": {
+    "bytes": 750,
+    "sha256": "be4a0bae605ce95a8bafc128cd399c346cd9f671628072e5e00b539be0d82cc1"
+  },
+  "estate-refined/ab-next-join-decode.mjs": {
+    "bytes": 1608,
+    "sha256": "fdf7c4327b418fea3482cad9bd2aac08c873240b848d31d51f7762add57da255"
+  },
+  "estate-refined/protected-combined-binding.mjs": {
+    "bytes": 3967,
+    "sha256": "b823425db593e935c58ce533041432443ada9db2bd6c5d64464ba875d8b9738c"
+  },
+  "estate-refined/direct-entry-ui.mjs": {
+    "bytes": 2029,
+    "sha256": "47456146b9adf7ef0ae483b12141d6189c2fb3387530b1ab13708cb5ab7eb55d"
+  },
+  "estate-refined/bd-next-join.mjs": {
+    "bytes": 1782,
+    "sha256": "26654afc4592f82a59f6c995171930c214f753ebd41e16d3efb079a1b5aac5aa"
+  },
+  "estate-refined/overpass-road-off.control.gz": {
+    "bytes": 144847,
+    "sha256": "a3ef1599dd78f9ca719ee6aa38454606484696e5bd173140297231917ff57544"
+  },
+  "estate-refined/install.mjs": {
+    "bytes": 1706,
+    "sha256": "53fd671b0720cfb0ce16426c41b4b0ca7798db00df81c4e9217c24414254488d"
+  },
+  "estate-refined/cumulative-context-terrain-C-x1-z-3.glb.gz": {
+    "bytes": 64944,
+    "sha256": "f152d95b4e99b5f8015bc6576ab2727e2ca15408f5c026cbb4399f62c00f7630"
+  },
+  "estate-refined/combined-road-snapshot.mjs": {
+    "bytes": 3465,
+    "sha256": "e98769eac5cdcec427552bcbed832de6952a3272861597d764412c916c7bcc87"
+  },
+  "estate-refined/m01-r02-append-fallback.mjs": {
+    "bytes": 5524,
+    "sha256": "8090de919243087fc50549e79a48c5c55314668d3263fbaa6ca3935073bac490"
+  },
+  "estate-refined/public-entry.mjs": {
+    "bytes": 607,
+    "sha256": "952824052d630ca7f970caf15ae1452e07cd1c270c1e8a1e27734da410935e7f"
+  },
+  "estate-refined/directed-ac-decode.mjs": {
+    "bytes": 1712,
+    "sha256": "b112a2ed224354591cc6861d2d29bfef3f47f2728927b04c0bdbc00c423e1734"
+  },
+  "estate-refined/sets.mjs": {
+    "bytes": 5171,
+    "sha256": "3d98fa4f639f2cb5f0541c12afd867f1757b50b07b58d1e0653fdce36a593260"
+  },
+  "estate-refined/compatible-glb-decode.mjs": {
+    "bytes": 4033,
+    "sha256": "753080142284c50199dfce479fde98d68cb0459e7b695df2aef2cfdd3caf8392"
+  },
+  "estate-refined/protected-a9.mjs": {
+    "bytes": 4518,
+    "sha256": "bf2f215200b646c8bb78ce0027e042368f512e9178b52fad297508aaffd7218e"
+  },
+  "estate-refined/source-bounded-fine-terrain.mjs": {
+    "bytes": 1944,
+    "sha256": "5aaa170f454bda76e872fcce02f4535ddf187e559e9a480b719c857ab6f4d6ee"
+  },
+  "estate-refined/render-reuse.mjs": {
+    "bytes": 806,
+    "sha256": "1312dd0fff4a21e7844e401c1a99dd88a5601cc21f7564aa7b531d1547976710"
+  },
+  "estate-refined/pre-overpass-m01-transport.mjs": {
+    "bytes": 1277,
+    "sha256": "788eaf2f483541e2a6a4f4219aad62f4bea6c1c21d5af4999ddedfe9131f152c"
+  },
+  "estate-refined/terrain-context-compact-manifest.json": {
+    "bytes": 98076,
+    "sha256": "e9b0c0bf4e1a3fa5f210f8dc172eff3c714c192129f78f6a2c6c07f0ec81fb2d"
+  },
+  "estate-refined/overpass-terrain.control.gz": {
+    "bytes": 41581,
+    "sha256": "e541cca6d8fb94b92ce1a0cbb8ab8337a711cde51e2225c5c77c5e8a53e7fab0"
+  },
+  "estate-refined/road-join-readiness.mjs": {
+    "bytes": 1019,
+    "sha256": "e51b72a6e32a6c3bd32c12fd6bfa6b20fdf93d60f87a340640992226fc0b9d74"
+  },
+  "estate-refined/base-appearance.mjs": {
+    "bytes": 6219,
+    "sha256": "02b1f097bcad91bf6271900a70408ed5c76e2ef8ef3d4b95ec4e2244171ef79c"
+  },
+  "estate-refined/ab-north-join.mjs": {
+    "bytes": 1796,
+    "sha256": "c70adb3fb5a308a278cee2d900e6a6c4f1096b1908055161f5de97c5f8b026bf"
+  },
+  "estate-refined/replacement-geometry-decode.mjs": {
+    "bytes": 2747,
+    "sha256": "80e286119ee3ee2a6bb840d2b3940265e0d96012a0338b64368d8b5f5c4594bd"
+  },
+  "estate-refined/bd-east-join.mjs": {
+    "bytes": 1829,
+    "sha256": "889c4aaafe65830dccab419bdceee0b5fbcfb9b1287d6ab3f9e352259ecf1f52"
+  },
+  "estate-refined/m01-append-transport.mjs": {
+    "bytes": 2304,
+    "sha256": "8268b4233e5f2c763f404814790b69d8ca8e2f481ae3212e71424742c11f8fdb"
+  },
+  "estate-refined/directed-ac.mjs": {
+    "bytes": 2729,
+    "sha256": "17bc689eec30ae26a4b02cecb7ee9c8665f98a24bc92d364d7d01c6e9e17bfc2"
+  },
+  "estate-refined/overpass-sections.json": {
+    "bytes": 49322,
+    "sha256": "efda4fcb42e64467acbb0713a2849b9b15e0d9bdadd85037d0d17d19f20ce371"
+  },
+  "estate-refined/install-bus-stop-display.mjs": {
+    "bytes": 2561,
+    "sha256": "7f608b81d3bd761843e76c4845a41cdfdbec3f04090bee676cac734964ff90d8"
+  },
+  "estate-refined/protected-combined-entry.mjs": {
+    "bytes": 381,
+    "sha256": "59cd291e636399a0bdcb9440892b0b2d492ac4e889b443795e58c98dc957fb43"
+  },
+  "estate-refined/region-retirement.mjs": {
+    "bytes": 10871,
+    "sha256": "e03aff766fdac36e47884ededbf67b8d2aa56472200765ca4b5c6fae53d28c7e"
+  },
+  "estate-refined/bd-east-join-decode.mjs": {
+    "bytes": 1612,
+    "sha256": "3db7cc926cf12fcda5c8a1e4ad0cf0b840858b9c5f40e1ba6771a1117bf47380"
+  },
+  "estate-refined/TINWAN-off.append.gz": {
+    "bytes": 295515,
+    "sha256": "a70e73fce0032ec55014503dcb0ce94be91c52ed77d6de2548a7eb0c67fe60ac"
+  },
+  "estate-refined/install-r06-west-inference.mjs": {
+    "bytes": 4767,
+    "sha256": "a3ac9a163a6acba57e035e66c191d531729e0dd9cbe1af601a8d103b2f3a25f3"
+  },
+  "estate-refined/directed-other-joins.mjs": {
+    "bytes": 3130,
+    "sha256": "4f780434e320578166da4957551a54bade4bd92fac984832705f3bc3009d3e10"
+  },
+  "estate-refined/north-boundary-terrain-pins.mjs": {
+    "bytes": 1415,
+    "sha256": "4296e1ecc49d0eee84f0c8b3ef9ad58072aebd3ce9180b8eddff930bdd6886b7"
+  },
+  "estate-refined/tunnel-bd-terrain-decode.mjs": {
+    "bytes": 3677,
+    "sha256": "40bf57ab8c820e1eab305e4f8691800a87235a1817f455a6283c008f7ef8096c"
+  },
+  "estate-refined/transport-pins.mjs": {
+    "bytes": 2265,
+    "sha256": "8f7d6e2b8d36c323eadd6125359b801d33de0c6965c283e49d81be0f404eceae"
+  },
+  "estate-refined/wah-mei-west.mjs": {
+    "bytes": 2582,
+    "sha256": "413b129854a0c40a33a5c9533148191942d69e1a57007402a1904b42bd202e47"
+  },
+  "estate-refined/combined-joins.mjs": {
+    "bytes": 4303,
+    "sha256": "ec0cc7044ff084ba5e6c5a7033a7fefaed203a24934b2e55c055224c08d5e2e1"
+  },
+  "estate-refined/source-buffer-inventory.mjs": {
+    "bytes": 42126,
+    "sha256": "5c29d634cd56ae891993817bb40f89573099990e4dbc9649273ba1678715af0b"
+  },
+  "estate-refined/cumulative-context-terrain-C-x1-z-2.glb.gz": {
+    "bytes": 44175,
+    "sha256": "3997b128b37fe1932f863b367e3a198db98cb7aa5bf878f827b8d92a944bbac6"
+  },
+  "estate-refined/selection-scheduler.mjs": {
+    "bytes": 960,
+    "sha256": "4093eb7d9b00c53e336e36a850ef91239d383b62011df990e058a99e4a670db6"
+  },
+  "estate-refined/admission-queue.mjs": {
+    "bytes": 1159,
+    "sha256": "8248c7eb0e10d9c1f4f4fd573de97694664b5ecf4767131baca7fc2c2f6b996b"
+  },
+  "estate-refined/protected-combined-viewer.js": {
+    "bytes": 79897,
+    "sha256": "5c946a67555d7cd7b9c7e4fa0c4f5c3b50e57361312159dd103f1396f2522fc5"
+  },
+  "estate-refined/projection.mjs": {
+    "bytes": 2221,
+    "sha256": "156651eee0a4d144bc63ef2800e2694bc9a77508cad06982a6962bbdac90b0d5"
+  },
+  "estate-refined/transport-decode.mjs": {
+    "bytes": 4529,
+    "sha256": "e611a6bbf878e7628bb90b9940e375846b1b9aacaee9fdf6adadba37736c3542"
+  },
+  "estate-refined/bd-next-join-decode.mjs": {
+    "bytes": 1609,
+    "sha256": "1dc7a5432553af655b7528a847f0ba86dd5e6c23eac6e8689da760500d66447d"
+  },
+  "estate-refined/source-geometry-decode.mjs": {
+    "bytes": 5393,
+    "sha256": "f951db5e0ba431a4ecf304e6a2337e7f52c48bb6443ffec1d963421d24726c02"
+  },
+  "estate-refined/decode-compact-terrain.mjs": {
+    "bytes": 6878,
+    "sha256": "725e98f4c459b7debdca4afff22b1ec7a6a8e65d8a7e87c06a1f179011375f6e"
+  },
+  "estate-refined/install-r09-current.mjs": {
+    "bytes": 3595,
+    "sha256": "b0afee6b85cbf2e728bb276bb605d33094a4434d74a38b3090b39dd7cd5da22b"
+  },
+  "estate-refined/protected-demand-bridge.mjs": {
+    "bytes": 1463,
+    "sha256": "4d7a64202d7da07b6bc7e7527a5567a9d3be5679d3e371542e5597b2bcebf1b4"
+  },
+  "estate-refined/stream-core.mjs": {
+    "bytes": 9689,
+    "sha256": "6f911c31069fc11c0c0921c5b3d6d40f8ac5754f2a36eab0d53fe75e065b6899"
+  },
+  "estate-refined/atomic-geometry-group.mjs": {
+    "bytes": 2507,
+    "sha256": "736821c4a28b301736ca648491c35a1165a0924190e8facca2fc0b65cfa670e9"
+  },
+  "estate-refined/overpass-road-shared.bin.gz": {
+    "bytes": 1896598,
+    "sha256": "82e7aebb1fb373b1ac9dc72360eaf2972b304816449a0340e42efd2679400c4c"
+  },
+  "estate-refined/install-tinwan.mjs": {
+    "bytes": 18448,
+    "sha256": "a078a2e0ac4cb4497929d5e015e5acbc7d726168584952d1853795e7587ad44a"
+  },
+  "estate-refined/overpass-terrain-shared.bin.gz": {
+    "bytes": 48977,
+    "sha256": "9b814ce248541ac78c896efc516827952dd9a0ab47c5240038c8ba640784cba1"
+  },
+  "estate-refined/render-depth.mjs": {
+    "bytes": 3871,
+    "sha256": "ae47fee79e364e0f2a1c2735b4440b6c80db399b10a434deef8a7672398d662a"
+  },
+  "estate-refined/initial-view-feedback.mjs": {
+    "bytes": 1045,
+    "sha256": "da0820d7eb78f3bcee8f828b44f8f567ba19fa0daa110bba1b898faf0281b74d"
+  },
+  "estate-refined/cumulative-context-roads-a9-native-strip.glb.gz": {
+    "bytes": 1387,
+    "sha256": "443cb95991b63b1c00ec4f063d1024c685f39b5b3c8705585a766545b37db814"
+  },
+  "estate-refined/region-stage.mjs": {
+    "bytes": 3462,
+    "sha256": "1d417b7f924b4ec7f04ffbd26abd6d88cc7e47ba9e00c66fd43fee5a0cc7c7cf"
+  },
+  "estate-refined/cpu-renderer.mjs": {
+    "bytes": 4013,
+    "sha256": "3f6e9fbfa01b12f53c5a5a658c248c326adccbd81d2aa4188f60c6d828bdcf25"
+  },
+  "estate-refined/decode-pool-ready.mjs": {
+    "bytes": 3868,
+    "sha256": "25c92b1d788a4809d44017d5d76d408348982a770efab99b6f55019850eda27a"
+  },
+  "estate-refined/diagnostic-ring.mjs": {
+    "bytes": 1054,
+    "sha256": "bef8a4f648a30c13d7bc50b0b07b7f9fecc319bb4cfd0e7fcbe74c99dfaffd6b"
+  },
+  "estate-refined/west-collision-input.mjs": {
+    "bytes": 3222,
+    "sha256": "d82acad66eb2ffd89f644b354d2e7e7f81b430580fae36f03707bbeaee5e82bd"
+  },
+  "estate-refined/directed-other-decode.mjs": {
+    "bytes": 1718,
+    "sha256": "83ddc593c0144c107b76f6effc378584207e25127ef501b2f9275d75f1bbb9a7"
+  },
+  "estate-refined/compatible-original-pins.mjs": {
+    "bytes": 2535,
+    "sha256": "4e11d55452c5db5dd3bf8910ecc46d27ad0e6b265c46424290917e936961d5b0"
+  },
+  "estate-refined/load-guard.mjs": {
+    "bytes": 9926,
+    "sha256": "a1ec34bd7c672610e2285152ef992ee0e33c7c13e52fb803ac9e9d5a307bf6f6"
+  },
+  "estate-refined/install-r05.mjs": {
+    "bytes": 3035,
+    "sha256": "dd7a2a65346283c5cf6a8f7d452dc0c40a0cdb8ecc62a6224e858b78f0a8a6d0"
+  },
+  "estate-refined/protected-r06.mjs": {
+    "bytes": 4511,
+    "sha256": "addf65e42dd91906672d7cee29b718e1e69d3c8a2b0663081d301b282551269c"
+  },
+  "estate-refined/cumulative-transport-pins.mjs": {
+    "bytes": 3764,
+    "sha256": "1df001bfe3dabea09dd1499e898c68494607f752be4435dc9885a4bd2fe6f627"
+  },
+  "estate-refined/protected-west.mjs": {
+    "bytes": 1411,
+    "sha256": "bfaf95814f6465a6d4e9724f8180758885e5cc597a0e65f7870cd9b440ac80bf"
+  },
+  "estate-refined/cumulative-context-roads-r09-continuation.glb.gz": {
+    "bytes": 7535,
+    "sha256": "3c465bcec0c856f6d469b932c5ed7487eddfe5ac767c9b9229e74fd699c72e02"
+  },
+  "estate-refined/install-cumulative-transport.mjs": {
+    "bytes": 416,
+    "sha256": "578b8f9953dace588bec9bfe511f6575f5bcb28e85cf3796eb3a7b79eb4636ce"
+  },
+  "estate-refined/north-sketch-collision.mjs": {
+    "bytes": 1257,
+    "sha256": "0ed6ba52565b27953c3eec60fded39c83a5c846c631fb6a7abb6a1b08110c680"
+  },
+  "estate-collision-test/collision/demand-scheduler.mjs": {
+    "bytes": 1747,
+    "sha256": "5ee24a1c76e004bf3a7c8d85abc38f28810020f014067181aee99fe54ae1e573"
+  },
+  "estate-collision-test/collision/controller.mjs": {
+    "bytes": 2945,
+    "sha256": "7e5184abf019edf34113f74746537ac0d7cdcc59d66ee82c5c1b565a4339b66a"
+  },
+  "estate-collision-test/collision/prepare-input.mjs": {
+    "bytes": 509,
+    "sha256": "a7dc3d078b3aee59847b3e1197dcb33b07451e23bb16983b8600b711ebb23165"
+  },
+  "estate-collision-test/collision/worker.bundle.mjs": {
+    "bytes": 211969,
+    "sha256": "20895242cf5b49289e17e080abfa5d1c52c8fedc9829cdcad1744d10fb10cbae"
+  },
+  "estate-collision-test/collision/viewer-bridge.mjs": {
+    "bytes": 5253,
+    "sha256": "c78b460b8e4de6e766ef63780f79f36cbd489f810e248428c103c004d6451ca7"
+  },
+  "estate-refined/clay/public-clay-cell--1--3.glb": {
+    "bytes": 23004,
+    "sha256": "742b51a07c2b972e89a90beb8320db7bc7d7747602b031f2220f1a5ceb7a37c4"
+  },
+  "estate-refined/clay/infrastructure-cell-2--1.glb": {
+    "bytes": 35816,
+    "sha256": "b5b66118cdbe5a37934aaa38c78e0d3f76558e90d3ac7389f6a0f6ff4626cb26"
+  },
+  "estate-refined/clay/public-clay-cell-2-0.glb": {
+    "bytes": 11792,
+    "sha256": "a2a3c2561ae473664771775d5de75f590af8b0c99c89b14093d6b53fa40cffdc"
+  },
+  "estate-refined/clay/public-clay-cell-2--4.glb": {
+    "bytes": 30892,
+    "sha256": "ef9432da30506a77aabdfecd416feb0bdb9c3149fcf52bb2ccaa6719b0bab925"
+  },
+  "estate-refined/clay/public-clay-cell-3--3.glb": {
+    "bytes": 51660,
+    "sha256": "be38158b399846fa00ea58897a297723caada06e6709c460b82ef623a1659ab0"
+  },
+  "estate-refined/clay/public-clay-cell-0--3.glb": {
+    "bytes": 82780,
+    "sha256": "2a6757d8722134a7604640679d6fb9fa65f4e62d60d79ddbafd95ad09c11a1bd"
+  },
+  "estate-refined/clay/public-clay-cell-4--3.glb": {
+    "bytes": 4464,
+    "sha256": "f99b82917c8708eefe5f703bbd9b3761fe73ae8d6571bcb665258a6e60baee60"
+  },
+  "estate-refined/clay/infrastructure-cell-2--3.glb": {
+    "bytes": 6556,
+    "sha256": "fad06e561a3ae17413445f312aacb5a1b66bbc1d135125c0158f6f52c6b80440"
+  },
+  "estate-refined/clay/infrastructure-cell-4--3.glb": {
+    "bytes": 28340,
+    "sha256": "f5643166f25f398c9974b659c09bab3b14a2162502a4f2fcccdb290f3b48422d"
+  },
+  "estate-refined/clay/public-clay-cell-0--4.glb": {
+    "bytes": 2452,
+    "sha256": "64256bdc8bbca4f7c16d88edbc67dfd74c18ad900c06cce8885016135bbf3161"
+  },
+  "estate-refined/clay/public-clay-cell-3--2.glb": {
+    "bytes": 59348,
+    "sha256": "4e208d5c1eff4bfc7cef89c6bb241de7040f9e8adc7bca43275af3414df804d6"
+  },
+  "estate-refined/clay/public-clay-cell-4--2.glb": {
+    "bytes": 3796,
+    "sha256": "9c54d08984c1d5d21567da5a625e4ca6e96d3b7c0d6a05b443d526fa0d0411e2"
+  },
+  "estate-refined/clay/infrastructure-cell-1--4.glb": {
+    "bytes": 24360,
+    "sha256": "89c4f0dfa3ace3d3d7ba3b12681b63416d84ad805893ed5def811794bd7a0fe7"
+  },
+  "estate-refined/clay/public-clay-cell-3--1.glb": {
+    "bytes": 58852,
+    "sha256": "931335d5dbaf3119f486d65062149b8ce757bbf95b37ffde6e174b55843acdfb"
+  },
+  "estate-refined/clay/public-clay-cell-0--2.glb": {
+    "bytes": 21048,
+    "sha256": "aaca18788ab5668c4cc47ab4c89a0e3d4072556cd1d7a7d2fa0cb7cbf1ebedbd"
+  },
+  "estate-refined/clay/infrastructure-cell-1--3.glb": {
+    "bytes": 3308,
+    "sha256": "dea4a81e2c6c9ee2378f7fd305280c3d5c6ce4ca497dc6d0955de3c51af613d0"
+  },
+  "estate-refined/clay/public-clay-cell-4--1.glb": {
+    "bytes": 8508,
+    "sha256": "fd280ed629a90a54ab726bde2570eabbad8cdbd209f7cd33b893b72b10b37d93"
+  },
+  "estate-refined/clay/infrastructure-cell-0--3.glb": {
+    "bytes": 4040,
+    "sha256": "337c355a3771da71283d10edfac76a7ed7eea7f67eeb6548d65a0b5c383f5996"
+  },
+  "estate-refined/clay/public-clay-cell-3-0.glb": {
+    "bytes": 2448,
+    "sha256": "3789d3a97135bd5dc5307fd3449642269d2dd8745a57d82195b67f0e46050c14"
+  },
+  "estate-refined/clay/public-clay-cell-2--3.glb": {
+    "bytes": 68308,
+    "sha256": "a9a63d48b49ac4fe84ac26a87a42ba3fe584138d2e5f079763d9f428dfaa78ad"
+  },
+  "estate-refined/clay/infrastructure-cell-3--1.glb": {
+    "bytes": 91720,
+    "sha256": "0a1e0ecec3a17ee7b38e6ac5360c59ccbc6a9960046431618f3b9ea5159709c1"
+  },
+  "estate-refined/clay/public-clay-cell-1-0.glb": {
+    "bytes": 8508,
+    "sha256": "7e7c8feeacb3885f049115d09283d0d5d592d6ce2b3c1eebe09a056b47370765"
+  },
+  "estate-refined/terrain-join-cd-next/terrain.glb": {
+    "bytes": 1510060,
+    "sha256": "dc6439cb1975e699fc9ef5838d28167e3d367b84ab524bce1d8bd5c9596f66da"
+  },
+  "estate-refined/terrain-wah-mei-west/context-terrain-C-x2-z-1.glb": {
+    "bytes": 516952,
+    "sha256": "9236ed7e1a4cb07428769f8690522242a385c1f9a1044a7564589a0fab43c71b"
+  },
+  "estate-refined/terrain-wah-mei-west/context-terrain-C-x2-z0.glb": {
+    "bytes": 897444,
+    "sha256": "049258c3ce6ea3f35ed5051a76f11dbcf7d92e14fa919eec3f6676803c4daa12"
+  },
+  "estate-refined/terrain-tunnel-bd/terrain.glb": {
+    "bytes": 1631056,
+    "sha256": "f8522038915536f3f15251fa11b6b214815d2f130cdfd6e4807c85f1af416470"
+  },
+  "estate-refined/terrain-join-ab/terrain.glb": {
+    "bytes": 468724,
+    "sha256": "c792baa074c6619374876c9a069714eeebe2af1ceb93d18e9e01ae36301855de"
+  },
+  "estate-refined/roads/wah-kwai-boundary.glb": {
+    "bytes": 71196,
+    "sha256": "218801f1c9ce439d20e03285e48edfc1644b146b91b79b4f9571890b0ef01b9c"
+  },
+  "estate-refined/roads/bus-stop-paved-strips-v126.glb": {
+    "bytes": 15392,
+    "sha256": "078654504b64ef1450b6f598aedfb6eb5930c9446a7878dd244fa58f87431234"
+  },
+  "estate-refined/roads/R06-native-margin-fill-review.glb": {
+    "bytes": 199024,
+    "sha256": "0bf4c170eed3cd5064496b6bf91e5ee7e4e1c688ec545c02b322d991e1eca4fd"
+  },
+  "estate-refined/roads/northwest-A-with-R05.glb": {
+    "bytes": 106224,
+    "sha256": "af4b906ae259e0b3666f1d5e078cc9c5ec2f8976470e3302c9a78cb4139d9ec8"
+  },
+  "estate-refined/roads/wah-fu-D.glb": {
+    "bytes": 50568,
+    "sha256": "ce85db3724ac195068ef0019c707a3f2c3e9bd81eb4c93cc24cf566c2f7dfab2"
+  },
+  "estate-refined/roads/a-connector-v126.glb": {
+    "bytes": 15264,
+    "sha256": "435493dd5f06d36c6e9d81a10e7b6a8453181c6967a02740c6ef1991973eca24"
+  },
+  "estate-refined/roads/king-west.glb": {
+    "bytes": 105892,
+    "sha256": "de93980c1d1a7ae59954e9a4fe89c173a090dfe3d51e903b44cbe2caf4c1a627"
+  },
+  "estate-refined/terrain-join-ab-north/terrain.glb": {
+    "bytes": 570572,
+    "sha256": "7753835e79d2993ef9b2d41ab9b659a97a48abb9f05d1401616f071dc94a434f"
+  },
+  "estate-refined/terrain-join-bd-next/terrain.glb": {
+    "bytes": 875596,
+    "sha256": "973751c6e7c2f361ca60a34c6c88d126f637e628ae1232cd89c70bb49be1a4eb"
+  },
+  "estate-refined/terrain-join-ab-next/terrain.glb": {
+    "bytes": 654384,
+    "sha256": "648a51353d4f4caed803295ff153221a0a2b3a5c003e8bba16921068a226bdb5"
+  },
+  "estate-refined/connected/associated-b-original.glb": {
+    "bytes": 220344,
+    "sha256": "a94cb981f151ad00d8d771a8b0c5f693c421c5821b742b5413bde4d8e1d2807e"
+  },
+  "estate-refined/connected/associated-a-original.glb": {
+    "bytes": 398404,
+    "sha256": "26392833498a0f798b8aabfefc888da0ccfa2e5ef3113f01e603ee79789eb2f1"
+  },
+  "estate-refined/connected/associated-triangle6to8-original.glb": {
+    "bytes": 28632,
+    "sha256": "c7a5a1138fad2358a23fb6c1770ffe547f6cf16746eeb5a39d378010f6489c53"
+  },
+  "estate-refined/connected/public-clay-cell-1--3-confirmed-trimmed.glb": {
+    "bytes": 7964,
+    "sha256": "b2b7e3797458da51a6400692ec8227b127a8fa5a455b25510610750d9bf51455"
+  },
+  "estate-refined/connected/associated-c-original.glb": {
+    "bytes": 392932,
+    "sha256": "fb8634fb86f24730250df50bd00a2bb2aa295ff02d3e740aee25c40dc3f36af4"
+  },
+  "estate-refined/terrain-compact/terrain-D-x5-z1.wft": {
+    "bytes": 1102,
+    "sha256": "3b41f44f3546c64fe1f290a370eb165822c1e1f80e3bf6f7623df7bed9464705"
+  },
+  "estate-refined/terrain-compact/terrain-D-x6-z-3.wft": {
+    "bytes": 168675,
+    "sha256": "7578a9364d1ce01ebbc007e78ca13af8ba48dd8c7bdbccf18b36a1c3f5a30e2d"
+  },
+  "estate-refined/terrain-compact/terrain-C-x3-z1.wft": {
+    "bytes": 43828,
+    "sha256": "764d258acb7baae3e61aa317de0805c8a2aa2777e709656ffe5f0450522b4e6d"
+  },
+  "estate-refined/terrain-compact/terrain-D-x6-z-1.wft": {
+    "bytes": 85203,
+    "sha256": "1c360e730af0edfdaa2ba8f5db9b72752392040549bcd8724eb031c9fe1a9d83"
+  },
+  "estate-refined/terrain-compact/terrain-D-x3-z-1.wft": {
+    "bytes": 27052,
+    "sha256": "f8e84e92556dfbf700d0b27c47c99d132dea988162f8c7bd34ea0129e6448418"
+  },
+  "estate-refined/terrain-compact/terrain-B-x4-z-6.wft": {
+    "bytes": 182661,
+    "sha256": "8745e0373a743166551e966926e66ec8acfc44ea24972a35e2695d00993c893d"
+  },
+  "estate-refined/terrain-compact/terrain-A-x0-z-5.wft": {
+    "bytes": 163049,
+    "sha256": "e9d06bd2cfdad45fed2f1c1ee19cdf3f31cfbd55c38f805f61ed09403ec06beb"
+  },
+  "estate-refined/terrain-compact/terrain-B-x3-z-6.wft": {
+    "bytes": 24783,
+    "sha256": "0ddd462f47ad50cfe9dc63efc75daf8910aebde7a7fb5c2cb8628a0a400073a1"
+  },
+  "estate-refined/terrain-compact/terrain-C-x3-z3.wft": {
+    "bytes": 799,
+    "sha256": "abcfd9c966df818fd28d9043c92fddf3e003f3bfebea4c1341a48c766cca7b12"
+  },
+  "estate-refined/terrain-compact/terrain-D-x6-z0.wft": {
+    "bytes": 62988,
+    "sha256": "096757cb42661c867b6020d4049146dbe901dad0d27f7c75ce51a56872a4e364"
+  },
+  "estate-refined/terrain-compact/terrain-D-x3-z-2.wft": {
+    "bytes": 39369,
+    "sha256": "0f170103c5e8eff03ab36a9eb42883fbb9ce619032feebaf32a891f4e686aa7b"
+  },
+  "estate-refined/terrain-compact/terrain-A-x3-z-5.wft": {
+    "bytes": 79017,
+    "sha256": "720db22cd00174c9ff2389e82aa5bb388d0d28074510d546692b8bbf99fe9568"
+  },
+  "estate-refined/terrain-compact/terrain-C-x2-z-4.wft": {
+    "bytes": 4289,
+    "sha256": "b8e604f2cc3e1d3dc84261e36afa9575f1d5df6b1585b1da2e1a56ea75ffa869"
+  },
+  "estate-refined/terrain-compact/terrain-C-x1-z-1.wft": {
+    "bytes": 188990,
+    "sha256": "033bece557d8b4e349621ebce02a0740baad79e9a54d211dee9647a31afb4ff6"
+  },
+  "estate-refined/terrain-compact/terrain-A-x-1-z-4.wft": {
+    "bytes": 268056,
+    "sha256": "d22462bfef88e877e732da6bb9a1dd0b5ebc650b73dbf02ae1b6ac50bdd4e234"
+  },
+  "estate-refined/terrain-compact/terrain-C-x1-z0.wft": {
+    "bytes": 89489,
+    "sha256": "56c85e0942e7bf532aaabed6b916d76c78bff3cd86f368a8b9ddc19b1ccb742b"
+  },
+  "estate-refined/terrain-compact/terrain-D-x6-z-4.wft": {
+    "bytes": 3629,
+    "sha256": "be299f431951b2ab2899cce9c034515673cbf2e478c9a20ce9cacc77f12d09e3"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-2-z-3.wft": {
+    "bytes": 62441,
+    "sha256": "9f3e6ab5a46ac66bd3f4e75d77c997666bbc94bcbf1162974222ef8d521307df"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-1-z-2.wft": {
+    "bytes": 3370,
+    "sha256": "b3724fb4fc7bf7dbd12ff077f283667b284469f3e4dbd5a23170c342700698c6"
+  },
+  "estate-refined/terrain-compact/terrain-B-x5-z-4.wft": {
+    "bytes": 169070,
+    "sha256": "67d8b296640ef593d649a6d1eb2f9a33119907b70a26c05585209e2da2f60860"
+  },
+  "estate-refined/terrain-compact/terrain-D-x6-z-2.wft": {
+    "bytes": 230629,
+    "sha256": "e4221ff2b5bc76ce5e885e9978b890911bfeb8f93e5d5eae61b2eaf770d399ff"
+  },
+  "estate-refined/terrain-compact/terrain-C-x0-z-3.wft": {
+    "bytes": 75083,
+    "sha256": "510422a8fd6a96e267c027e4403997f2a2098893fc074f16f879eb723035416f"
+  },
+  "estate-refined/terrain-compact/terrain-C-x2-z2.wft": {
+    "bytes": 810,
+    "sha256": "7b90c230bf1d310912e8745cbedcf8ee2740525afa2b2e0f387cd649618f28f9"
+  },
+  "estate-refined/terrain-compact/terrain-C-x2-z-1.wft": {
+    "bytes": 96066,
+    "sha256": "3f76e237e64bbe8aa284ab09dfeacc1b8e122bdde8959d7870e416c0394d59d4"
+  },
+  "estate-refined/terrain-compact/terrain-A-x1-z-4.wft": {
+    "bytes": 258157,
+    "sha256": "3c1abee14c2bf3af6978da1e6f016db50ce4739565426575a8557f7ad509b348"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-2-z-2.wft": {
+    "bytes": 1122,
+    "sha256": "95cfbaf622aea04a1db6eb47153f29116fd58b00466037d8a86d799469b7b51b"
+  },
+  "estate-refined/terrain-compact/terrain-D-x3-z0.wft": {
+    "bytes": 46953,
+    "sha256": "4e1c59c043384562655388e6b43a614a2c3c175af6056ac1e9c9fcf841a0fc70"
+  },
+  "estate-refined/terrain-compact/terrain-D-x6-z2.wft": {
+    "bytes": 852,
+    "sha256": "2436822c2db73a0f44d12ffc18f5c6aa323bdd2bb2c91f24343a2e958e759bf0"
+  },
+  "estate-refined/terrain-compact/terrain-C-x0-z-2.wft": {
+    "bytes": 108782,
+    "sha256": "7b589e6c0439a9bd8b89ea68336368b099e160e3fb55f47a40b5f23c7d55de27"
+  },
+  "estate-refined/terrain-compact/terrain-B-x4-z-4.wft": {
+    "bytes": 251411,
+    "sha256": "d58141fbdf12d356b0e0289f95cdbffaa234c923d11c6e0ff2772fe502678046"
+  },
+  "estate-refined/terrain-compact/terrain-D-x4-z-4.wft": {
+    "bytes": 2415,
+    "sha256": "d478cd1799f14d9760836a9e6a0920b36f4e47be00ac533b7113fba1a14b0865"
+  },
+  "estate-refined/terrain-compact/terrain-D-x3-z-3.wft": {
+    "bytes": 83310,
+    "sha256": "4676e957de78d365773ca634da5e70e0a29e6892e9d0d946ca129aed483aacb5"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-3-z-3.wft": {
+    "bytes": 4871,
+    "sha256": "c357885bd916262951a049dd145001832ed9219cca4916c4ea438e4c935eea98"
+  },
+  "estate-refined/terrain-compact/terrain-C-x2-z0.wft": {
+    "bytes": 193197,
+    "sha256": "f84db329be350dc92c9675a8be34385cbd26ccae98f05d94f83f81dfd3b10470"
+  },
+  "estate-refined/terrain-compact/terrain-C-x3-z-1.wft": {
+    "bytes": 86883,
+    "sha256": "5ee763b833574547b311cd0c656748ef74d94a75eb41a041f8c7f6bb4367fe81"
+  },
+  "estate-refined/terrain-compact/terrain-A-x0-z-6.wft": {
+    "bytes": 104684,
+    "sha256": "4de61915267f33bb7574d920d6b8a8ffade7cff95eecf413159e8eebda676d8e"
+  },
+  "estate-refined/terrain-compact/terrain-D-x4-z-3.wft": {
+    "bytes": 188977,
+    "sha256": "a7d608037c76d23c74417fe611807a8f7ff7547e7f76894fbbfb42128f2424ea"
+  },
+  "estate-refined/terrain-compact/terrain-C-x3-z-4.wft": {
+    "bytes": 3992,
+    "sha256": "c5ef3afd6e61274c35f4e2187b3e306c02359c860e2ecc11c03a514065bba317"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-3-z-1.wft": {
+    "bytes": 800,
+    "sha256": "0dc0d60d93e123a89e0d82ca1e7ff0c5b0038a2fd0da71ad40f9da10c4c31cfb"
+  },
+  "estate-refined/terrain-compact/terrain-A-x3-z-6.wft": {
+    "bytes": 123651,
+    "sha256": "bef44d89800b43ce28daf36639f316841b392656260ef35d45deb70f354e316f"
+  },
+  "estate-refined/terrain-compact/terrain-C-x0-z1.wft": {
+    "bytes": 1597,
+    "sha256": "45efd0c4d836d941a2010cb6e6400adfeb20eaf333a0d37f7236d68f3873fb9a"
+  },
+  "estate-refined/terrain-compact/terrain-C-x3-z2.wft": {
+    "bytes": 859,
+    "sha256": "456a12d85cfcb45cece33a82bfc049329968a5aa3e097ba3f0eaac098f5fb5c4"
+  },
+  "estate-refined/terrain-compact/terrain-A-x2-z-5.wft": {
+    "bytes": 121279,
+    "sha256": "b2f77d79cfd74ed88f900385773190055fafd9ab3652fed792aecf0c5ac1fa22"
+  },
+  "estate-refined/terrain-compact/terrain-A-x3-z-4.wft": {
+    "bytes": 136671,
+    "sha256": "734709798f292bdb7bafe4ccb53716069f2f0a1b6a12a3ca5375cad35271dcfb"
+  },
+  "estate-refined/terrain-compact/terrain-D-x4-z-2.wft": {
+    "bytes": 99200,
+    "sha256": "1c7db54077c12329d9d9035bc6b4193ac8e7642fe8fe61877a7d4b0f5506dca6"
+  },
+  "estate-refined/terrain-compact/terrain-D-x4-z2.wft": {
+    "bytes": 990,
+    "sha256": "abbcf85c1a0c9553cfb6eb2faaa32a7c0d3fedd3a04630d2b4a6a8561a3a9cc0"
+  },
+  "estate-refined/terrain-compact/terrain-A-x-3-z-4.wft": {
+    "bytes": 60206,
+    "sha256": "bd07560c467a5eca29394480cae2d64ad984be1424da99f2210e9a3719317626"
+  },
+  "estate-refined/terrain-compact/terrain-D-x4-z0.wft": {
+    "bytes": 222756,
+    "sha256": "ad3f0552eea293e3655f5559bf063130eecc25deb5f68f9cd129a4e7787edb6e"
+  },
+  "estate-refined/terrain-compact/terrain-D-x5-z-4.wft": {
+    "bytes": 1917,
+    "sha256": "502568b2f31eecbbf8b355281560b03be9fdaa4a45b72f548d56708cfa6fa6f1"
+  },
+  "estate-refined/terrain-compact/terrain-C-x1-z3.wft": {
+    "bytes": 861,
+    "sha256": "3debb92b38785bab7fd20b4eb89200aa5936c4da02920ea642cb912f31c5a56c"
+  },
+  "estate-refined/terrain-compact/terrain-A-x0-z-4.wft": {
+    "bytes": 241525,
+    "sha256": "8923cbb1f840896bc3ea9323c5f9dcd0cdf1deef4b562266529c9221865e87ac"
+  },
+  "estate-refined/terrain-compact/terrain-C-x1-z2.wft": {
+    "bytes": 949,
+    "sha256": "432f5e02323176d48499087c2ae0a42c09e1fba8f775e733e5b9329c6ea5935a"
+  },
+  "estate-refined/terrain-compact/terrain-D-x3-z-4.wft": {
+    "bytes": 1793,
+    "sha256": "0dbee4071602601be645600aa2d0526e1729c8f7f9f23cf0a49934424a02cb91"
+  },
+  "estate-refined/terrain-compact/terrain-A-x2-z-6.wft": {
+    "bytes": 233077,
+    "sha256": "70d311d661726398228c2d958a7e5abe1bc27f0988f371808fa0641243ed6d4c"
+  },
+  "estate-refined/terrain-compact/terrain-C-x2-z-3.wft": {
+    "bytes": 245978,
+    "sha256": "00f6169c345e2121f960db8f412edc3b7a237578770a56026a01809c0bbf34de"
+  },
+  "estate-refined/terrain-compact/terrain-D-x4-z-1.wft": {
+    "bytes": 42356,
+    "sha256": "85c018edd0ec749e11a0c13a480db0e2fe9b832d9ee3f5890defb8480e22cd3e"
+  },
+  "estate-refined/terrain-compact/terrain-D-x3-z2.wft": {
+    "bytes": 846,
+    "sha256": "fd63205fdb9a858a3131394367e070e5f275bed444126325a3437e01e97f514e"
+  },
+  "estate-refined/terrain-compact/terrain-C-x0-z0.wft": {
+    "bytes": 1446,
+    "sha256": "4bd6354587584bf8575f2c9e103fb49f6de1a568f50e76e39036e6164251ec56"
+  },
+  "estate-refined/terrain-compact/terrain-C-x0-z2.wft": {
+    "bytes": 806,
+    "sha256": "aaf4d2288a24df0c5fe193e3d41f5a0a4f26aeaa7883b4d5cc5ad58ea89aa753"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-2-z-4.wft": {
+    "bytes": 3773,
+    "sha256": "c41d58bb5e462a5d75e0e47be89de43b9a5d4881e5878bdc0a61e811bef02bd5"
+  },
+  "estate-refined/terrain-compact/terrain-A-x2-z-4.wft": {
+    "bytes": 235232,
+    "sha256": "ffe0159c7b50bdd66220a180bd8d838f3035a2fa5412cf0532acccb995da602c"
+  },
+  "estate-refined/terrain-compact/terrain-D-x4-z1.wft": {
+    "bytes": 5228,
+    "sha256": "f713efdc1183f89f0f32f515476377164f8f0208eefd5e8d879d1c7f9bca1a55"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-1-z-4.wft": {
+    "bytes": 1934,
+    "sha256": "0a7bbbc9c611d8a5e494bd1a35e8a7217bf0388c0e10f262f8bb88ff39b129a3"
+  },
+  "estate-refined/terrain-compact/terrain-C-x3-z-3.wft": {
+    "bytes": 291338,
+    "sha256": "c7890de812c7941f8cb05011612f98be82397c8b8ab9c2f442c277c7a38373b0"
+  },
+  "estate-refined/terrain-compact/terrain-C-x0-z-4.wft": {
+    "bytes": 5671,
+    "sha256": "1c45446a24e4dc373a74b9d737c2ca80dec58eb7d52c3728f83450df15804d9d"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-1-z0.wft": {
+    "bytes": 1120,
+    "sha256": "30c1d7ea4230d142151ea996c0356571d6b4f5e8a45d5cd92fa120fa08f38f92"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-1-z-3.wft": {
+    "bytes": 75048,
+    "sha256": "382846ed79ade6150164b35006f2b8d066f39400be6dc25bcf3e6d95e7257e88"
+  },
+  "estate-refined/terrain-compact/terrain-D-x5-z2.wft": {
+    "bytes": 1121,
+    "sha256": "064859d01db37a5edce5b19a6a48e85249b5c26e1978df9ea18ddf3ec8bffea8"
+  },
+  "estate-refined/terrain-compact/terrain-A-x-2-z-4.wft": {
+    "bytes": 295471,
+    "sha256": "36c19bf18e2e9e73bd392d4ce143e867a626e4afac932c8ebca59a80043f7aa4"
+  },
+  "estate-refined/terrain-compact/terrain-D-x5-z-1.wft": {
+    "bytes": 79651,
+    "sha256": "c5a5f4ee0d1dcf25e5ca382349fb810087a082742d02cd5a26e825d58da8bf44"
+  },
+  "estate-refined/terrain-compact/terrain-C-x0-z-1.wft": {
+    "bytes": 76796,
+    "sha256": "072c54d4154df6b6518d93310df39a44f3362f385db08b521c5f32f6b1449c04"
+  },
+  "estate-refined/terrain-compact/terrain-C-x2-z1.wft": {
+    "bytes": 824,
+    "sha256": "cc297cebd0a20b2e64b1d4a3f5f91dbac4e642a21997152de5a29f36bdd50ed9"
+  },
+  "estate-refined/terrain-compact/terrain-D-x6-z1.wft": {
+    "bytes": 1064,
+    "sha256": "0955161567c501e0a6eb279dbd7051c75dbeb5f04715c677c1bf3a758cafb07c"
+  },
+  "estate-refined/terrain-compact/terrain-C-x1-z-3.wft": {
+    "bytes": 147346,
+    "sha256": "2c852c96a3b398379b512e3d072b1f15a0250d50ad05b6bcee5a9dc98edc9764"
+  },
+  "estate-refined/terrain-compact/terrain-B-x6-z-4.wft": {
+    "bytes": 216999,
+    "sha256": "c24772f1746cb43b34fa10286d1c1fbc2cf727ca98330df446d4a385ccc1e8df"
+  },
+  "estate-refined/terrain-compact/terrain-A-x-1-z-5.wft": {
+    "bytes": 76056,
+    "sha256": "8dc68ceac65266a677f2018e206e5e5532060e0f618c03cfca6e2a2f7094016a"
+  },
+  "estate-refined/terrain-compact/terrain-C-x1-z1.wft": {
+    "bytes": 866,
+    "sha256": "6c51842c6d01a713bed0b591782d2b3dd8f15d69681aca0f6d76d92f3e1d65fb"
+  },
+  "estate-refined/terrain-compact/terrain-B-x6-z-5.wft": {
+    "bytes": 88699,
+    "sha256": "05c155203c3af856867c541c9ee98ffc66cc51d6f3dd429b4979bbed5bd71320"
+  },
+  "estate-refined/terrain-compact/terrain-C-x2-z-2.wft": {
+    "bytes": 177523,
+    "sha256": "356a95f8b67bb26d536b1bd176f79336189c33eab3762548f0ef9a27740ee67e"
+  },
+  "estate-refined/terrain-compact/terrain-B-x5-z-6.wft": {
+    "bytes": 7049,
+    "sha256": "49690477f81a1e2be6859702743ab1d6524846680d7095f6229574e630dea518"
+  },
+  "estate-refined/terrain-compact/terrain-B-x3-z-5.wft": {
+    "bytes": 21333,
+    "sha256": "54afd47675badf96f7c6d779f632a74d16982f70ad59714ab9975b46a021bbc3"
+  },
+  "estate-refined/terrain-compact/terrain-C-x2-z3.wft": {
+    "bytes": 829,
+    "sha256": "201db59e076795aae7c8db16d4fa54360b073df68d40629c918e341e0ca0cba1"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-2-z-1.wft": {
+    "bytes": 1859,
+    "sha256": "eec5e78559c80924d422e8e20d2c041c549ff752285e5e34eaba011c8770aea9"
+  },
+  "estate-refined/terrain-compact/terrain-C-x1-z-4.wft": {
+    "bytes": 6392,
+    "sha256": "768aae93eebdf0ab91f30e5ca5db787c6be6034f3aa97b6969e830dda5029f04"
+  },
+  "estate-refined/terrain-compact/terrain-D-x3-z1.wft": {
+    "bytes": 23816,
+    "sha256": "f616b0ad3fd1cdf448682d5187698102bc43594e36ed35380a8c418044a2cb46"
+  },
+  "estate-refined/terrain-compact/terrain-C-x1-z-2.wft": {
+    "bytes": 99161,
+    "sha256": "7bd4ce92c7a8cc8d76add9f8f213637ff3b77b3dbf36f79c8c3785e34dd99ed0"
+  },
+  "estate-refined/terrain-compact/terrain-D-x5-z-3.wft": {
+    "bytes": 120183,
+    "sha256": "d97908bbfcc2b5fccfa91c2113a849b386d8a4eff49c1515a515ab5730c799a3"
+  },
+  "estate-refined/terrain-compact/terrain-B-x3-z-4.wft": {
+    "bytes": 73869,
+    "sha256": "88f132dde5e5b04f4ef3f885be1d7c72524df295a27f897ef4283face44acabe"
+  },
+  "estate-refined/terrain-compact/terrain-D-x5-z-2.wft": {
+    "bytes": 102719,
+    "sha256": "0cfece3569b268dead4266805eac9d105312eb4114b2a6dc43d10034221ca681"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-1-z-1.wft": {
+    "bytes": 1573,
+    "sha256": "0805f11c685d411e888ae52790b0f2858955a99181665a574e3a29ee11047a76"
+  },
+  "estate-refined/terrain-compact/terrain-C-x-3-z-4.wft": {
+    "bytes": 1241,
+    "sha256": "f405eb772665ab22d5cf14893510a21c52a7d1ec970d649a694169b097a5f98b"
+  },
+  "estate-refined/terrain-compact/terrain-C-x3-z0.wft": {
+    "bytes": 181210,
+    "sha256": "db602027656853eb9ac330a24951268b1299c9182b61caf81a3d0652b1f999be"
+  },
+  "estate-refined/terrain-compact/terrain-D-x5-z0.wft": {
+    "bytes": 247024,
+    "sha256": "9f309946901beda0cd42a6f7861c8f8c920f8520774ac4581fb6135bc575d628"
+  },
+  "estate-refined/terrain-compact/terrain-C-x3-z-2.wft": {
+    "bytes": 145056,
+    "sha256": "b48471aae6a2169ac10974c8ae72418a1a23bda284332bac38b65c636e975bf9"
+  },
+  "estate-refined/terrain-directed-ac/chunk-4.glb": {
+    "bytes": 105432,
+    "sha256": "33343c17980d8fc51ce1069878ae8b3071af170f4f449eec8b25b98e7c7a74c3"
+  },
+  "estate-refined/terrain-directed-ac/chunk-3.glb": {
+    "bytes": 521508,
+    "sha256": "f7fcd780b6536c7d199b4c50703912ab61931d248c491bdbe12e9f847640f3b9"
+  },
+  "estate-refined/connected/new-marked/public-infrastructure-cell-1--2-trimmed.glb": {
+    "bytes": 3192,
+    "sha256": "feb89bc481825940d6bfb167d6892b599fde645a2861bc14414b785a6ebb47a4"
+  },
+  "estate-refined/connected/new-marked/public-public-clay-cell-1--1-trimmed.glb": {
+    "bytes": 4384,
+    "sha256": "263e87e456482cb8249467ce591eb3ab763baf8a3fb7f7af5a8456a4af7da314"
+  },
+  "estate-refined/connected/new-marked/public-public-clay-cell-1--2-trimmed.glb": {
+    "bytes": 6736,
+    "sha256": "c14e57057f1fd132997e57fe1420d603c2258631ad38bd3989aabf8aa285d325"
+  },
+  "estate-refined/connected/new-marked/public-public-clay-cell-2--2-trimmed.glb": {
+    "bytes": 2432,
+    "sha256": "19edec7f99fc333b6258844df31750786a2a47345a5d7906378562550375c82e"
+  },
+  "estate-refined/connected/new-marked/five-marked-associated-source.glb": {
+    "bytes": 100960,
+    "sha256": "41ecd407ce4d154d86bb8150a7f7a071251e0206712c8d58d5189d85c5dc4641"
+  },
+  "estate-refined/connected/arrows/public-public-clay-cell-2--1-trimmed.glb": {
+    "bytes": 57860,
+    "sha256": "efcfb74d2631dd42d4e0f5da0805752877e117dd00df63e3d89868efe150bd5a"
+  },
+  "estate-refined/connected/arrows/seven-arrow-associated-source.glb": {
+    "bytes": 99896,
+    "sha256": "653cae0592995a733b5f24525fa95fb87131f28bd6d7c6c8f773f272fed692f9"
+  },
+  "estate-foundation/roads/context.glb": {
+    "bytes": 422244,
+    "sha256": "fc5d2ca0ea87bbc9f6fa61489abb44a7b12678e910663d8c5987e1c234509727"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B320441252301063C0.glb": {
+    "bytes": 45188,
+    "sha256": "d5120a34fbf7e43127cd93ee17d10585fa7528aea206b09bc7935c65338b1008"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B320961263701063C0.glb": {
+    "bytes": 61088,
+    "sha256": "321e224d2465cfc5204767f1ff598ecae853645fdeca231b730cb27d49e29424"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B320791278001063C0.glb": {
+    "bytes": 32408,
+    "sha256": "4ff6c6028f20d1409d25d7535af08c216e6b455388205b5da1b69c695acaf12f"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B320211247701063C0.glb": {
+    "bytes": 35280,
+    "sha256": "050d546e289d79ee6bc52e3a9d9c90bf72ff0c2bfe91ada4e3c9237a4d603435"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B320961237801063C0.glb": {
+    "bytes": 41368,
+    "sha256": "cfebbb2e8f1158132365aa6bc8f671476bed171c4c88e30d7c5c14706e5d2862"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B320701242801063C0.glb": {
+    "bytes": 39216,
+    "sha256": "a29f5fc4e771946c37673749539ffae116895c619773fd5dd912ea0457342fd6"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B322311254301063C0.glb": {
+    "bytes": 85972,
+    "sha256": "86debf2fb3c9c1adc3f18066de6ef98f6cd6fab30847c62c85bc2e55aac2dd7b"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B321751251701063C0.glb": {
+    "bytes": 72804,
+    "sha256": "ce45cfdf8d5fedbad8e83fe0d599242d77dd256f6d0ea11d0b361f2362e7f746"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B321621236201063C0.glb": {
+    "bytes": 64224,
+    "sha256": "b8343fac092fc0b785f4c597d9aa08214c8b0cb14191718cd524e0478692a0ba"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B321551271001063C0.glb": {
+    "bytes": 43032,
+    "sha256": "c58da58d008981881de3e030f9e6250bffd0d384c9571f4145e59e0f4d9db6d3"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B319711245301063C0.glb": {
+    "bytes": 38088,
+    "sha256": "c9c77c5695aba193ec8cb3bd02d32fc4a780ebe1b69383a4d54e3e4b1531d098"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B321481231301063C0.glb": {
+    "bytes": 764300,
+    "sha256": "91c0ea96550236911fd84ae1fb3795263df458152abf62a1b3d7bec9d3445046"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B319321253701063C0.glb": {
+    "bytes": 33644,
+    "sha256": "aa22380900b2d04869d661ab794c298ce6403b8e1aee273f28542a04f88c3483"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B319741259301063C0.glb": {
+    "bytes": 39188,
+    "sha256": "81cbe1c1e21fe3a09539882c4032f3860c9151658a66814acd3ac287bce6bd43"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B322241247801063C0.glb": {
+    "bytes": 133612,
+    "sha256": "a3a2c68bbe056a3a040c55d800fec664b7ff5126217851c3498901c9378361b5"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B319801262901063C0.glb": {
+    "bytes": 53620,
+    "sha256": "7c649d539c0f0a58555c580bcb90751c42e6609fea8016717c3db1d87c7b59a6"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B321201256601063C0.glb": {
+    "bytes": 29664,
+    "sha256": "592de3cbe2ec75f295d44dd5d424445fb3d0c63a81ebccfd56900091cfadf535"
+  },
+  "estate-foundation/buildings/chunks/estate-house-B322081264001063C0.glb": {
+    "bytes": 55276,
+    "sha256": "201d76c4b879da449ab13f97b491fd630954c0fa3cdbbd1b464d0971613fb0eb"
+  },
+  "estate-foundation/terrain/optional-context/wah-fu-25m-base.glb": {
+    "bytes": 155860,
+    "sha256": "c8335864d837f1f141d46a55e40260c3966af146125f80120f2127cf6b2ad76a"
+  },
+  "estate-foundation/terrain/optional-context/illustrative-sea-continuation.glb": {
+    "bytes": 2076,
+    "sha256": "d79b54baf0ec02517779acd9c5ac4e4aa89e424b134f3309c4348fab3f8a378a"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x0-z2.glb": {
+    "bytes": 2184,
+    "sha256": "36c0b35ab07394a829cf63e2f41a3950229c8e67ace1ecf082664bcb7b1b160a"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x2-z-6.glb": {
+    "bytes": 970836,
+    "sha256": "6520000aadd5681fe3af2840f9bd5a2fcada346028b0908b90d03308cf4311e3"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-1-z-1.glb": {
+    "bytes": 3612,
+    "sha256": "695b5cb6c0fcdfd071f241b73966d8d587cb554bec80af9910cc69af0629fa2b"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x3-z0.glb": {
+    "bytes": 179576,
+    "sha256": "13abba32452fdcffd81c45ab2d37c6ad697e6521a304da0a3fe8e771711af13e"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x3-z2.glb": {
+    "bytes": 2400,
+    "sha256": "d40ed576205b9b3e3ae9897323d120959e0dbdfacd9fce8bd6ef245faff74c61"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x1-z0.glb": {
+    "bytes": 357752,
+    "sha256": "c42d17d421454c6140d19d097fa7238ab0c73e394159a6d0a1f430b4cba5fa5d"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x4-z2.glb": {
+    "bytes": 2664,
+    "sha256": "b057d9921e6500e08a84ccf83ae6973122fccd410071ebaee7c9ab31b5479df8"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x3-z1.glb": {
+    "bytes": 183428,
+    "sha256": "d84b549a04f3d7ed0ae489eb7aa73f15625eb0682ba8866043eac42624928da2"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x4-z-2.glb": {
+    "bytes": 398000,
+    "sha256": "88df9c7c54467f668d70087370a6cb2afd44dd6a90dd42a6976a57610eb2d501"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x1-z2.glb": {
+    "bytes": 2452,
+    "sha256": "060b06e4fe8c92dffb1b4d32e4958429f6a569d07272f9543c2522fa211f058a"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x4-z1.glb": {
+    "bytes": 20100,
+    "sha256": "57f9207932e2b15cac1e52fddf8c2dce86a5e02be63078655ead6524e4540355"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x4-z-3.glb": {
+    "bytes": 788524,
+    "sha256": "dbeb698ce41ff1f430ea43fee1658a788ae1b385272aa7f991fcbcc0a0e93efa"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x4-z-4.glb": {
+    "bytes": 1051144,
+    "sha256": "5ffa2f04376f2e6d5c299795b34f46e41f44488ce514976f000eb17917762073"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x4-z-1.glb": {
+    "bytes": 149016,
+    "sha256": "e0fc8d701a489a4cbdd6fd8313f7ddfc5247cc766586e2a0e4d2e2eb8a6a03af"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x3-z2.glb": {
+    "bytes": 2300,
+    "sha256": "f63b84bf4fd039e80da89f33611d3ff71be2d0ac09a5c1dec3966125598f0328"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x3-z-1.glb": {
+    "bytes": 99900,
+    "sha256": "7531905874fddd0e214db6502343b2734a26d1e3405f2883c40cdaac552619cc"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x5-z0.glb": {
+    "bytes": 1046436,
+    "sha256": "6e6df3787691649139bc91fd383c9c35c01f63d0902517b7daaf18936b294913"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x4-z-5.glb": {
+    "bytes": 476644,
+    "sha256": "2378cc024cdae6e8c5a28adfdebe27dfeb9e29a5bf1a77d018cfe007fa466bb1"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x5-z-3.glb": {
+    "bytes": 465332,
+    "sha256": "839d67e2724436cee99040784b41107699bf2b6fc77d9abbcbb6d8b716400472"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x1-z-4.glb": {
+    "bytes": 1075704,
+    "sha256": "7314f60fcd13437231c655351d4baa0caeec31635699fdcb692810c868826f0f"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x6-z-2.glb": {
+    "bytes": 940204,
+    "sha256": "7198bf75a8db3a8686e84c62cd833e52dd51f1f38efae411bd48387b5effe328"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-1-z-2.glb": {
+    "bytes": 10576,
+    "sha256": "682ae1207a53e8fe6efe3188cca67cbb3dc97ce6da5caef63791c2fc039a1c10"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x3-z1.glb": {
+    "bytes": 101040,
+    "sha256": "1e8184eaccc4596e1f8612317339f9b745c64ec0c9998c6ad5c0f161f7529f33"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x2-z-5.glb": {
+    "bytes": 495108,
+    "sha256": "2ad0b807aa8e4c7062cb230286a3ed247bc7d1d757100b6e992e5cca92ee1cbf"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-3-z-3.glb": {
+    "bytes": 17416,
+    "sha256": "7a8bc9786cdbd78a4959a53bbe942c59977c02d391f7d965fc9c298e561f96ea"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x3-z-2.glb": {
+    "bytes": 628916,
+    "sha256": "865d939e2e11b03d7aa74e5403ae562949c5c8e248a1bdd11401da114f1940f4"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x0-z-4.glb": {
+    "bytes": 1012316,
+    "sha256": "1fb200d1d90c5c60e1427a84efb8e7cbb9506e696829caf6191dc21b42c5b38f"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-3-z-1.glb": {
+    "bytes": 2168,
+    "sha256": "d21b215a41458476f227d03572fcb988863dee33204a17c4faa33f87953cea5d"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x2-z2.glb": {
+    "bytes": 2208,
+    "sha256": "e4fb8824e13a347c4915251a4b7848abfcf107962335004b98c8b9e70ab15a46"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x2-z-4.glb": {
+    "bytes": 978488,
+    "sha256": "272e158a1f7bfd97b01b5726497fc3c8a6fab1a513bd052098ce08633eb8230d"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-3-z-4.glb": {
+    "bytes": 4028,
+    "sha256": "bfa54871c4cf5292454ccd26cd19297f5f3bef2ef382ee88683211af56a71e62"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x0-z-6.glb": {
+    "bytes": 410340,
+    "sha256": "081bb0c263ef748c4a7312f5e06b3f8cbf3d8d9d7c1170db1973b7578a0c80d6"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x3-z-6.glb": {
+    "bytes": 98896,
+    "sha256": "fac02f8e89d793662d1d93824086e49d052ba093381b40ae88621d339a60b565"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x1-z-6.glb": {
+    "bytes": 972476,
+    "sha256": "c28049d398f8a3b1e0688038aec7933dddeebd1d32c1a2831e6f04c1397a193f"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x5-z-4.glb": {
+    "bytes": 4892,
+    "sha256": "ee74e7a9567170f618bd59aef7697b80a75949b1bc37fadd855418843332fcbd"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x6-z-1.glb": {
+    "bytes": 321772,
+    "sha256": "467353a1b10958b9d6236b29e56a122d16db0d0f8536d1729205cc16330becba"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x0-z1.glb": {
+    "bytes": 3616,
+    "sha256": "0b106e4938ab08042afec06c078593e88f674587e5cd3497aae1539ab61550de"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x0-z0.glb": {
+    "bytes": 3312,
+    "sha256": "946b29258f36935024d0d2c9d4878830a238b92e58505be06aa95401c7cb2a19"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x3-z3.glb": {
+    "bytes": 2268,
+    "sha256": "ce4c65575a528eb95650ab2da167c857a7c67139c0ab763bf623257f29ee95be"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x2-z1.glb": {
+    "bytes": 2196,
+    "sha256": "a0fd47e105f76e9ca21f467a1e4bbb5b677146f426d14af20c5ff108f91fae63"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x1-z3.glb": {
+    "bytes": 2332,
+    "sha256": "1aabb3f93545ce6bf5c0e706a2c6f5545d95720fff142aa9a3fdc2117d0966ea"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x-1-z-5.glb": {
+    "bytes": 292352,
+    "sha256": "a7449367cdaf13e9d8a4765fd931536dac662a6b7aa1c07444dbb792f233df56"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x3-z-4.glb": {
+    "bytes": 4964,
+    "sha256": "c287f8aae61a2d472223714d6c5138d7cb5d93b119b1e24de9b3efc442d592fb"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-2-z-1.glb": {
+    "bytes": 4332,
+    "sha256": "51b92b4f784e97bcbf9949c499622254844c56ffca7dbf19ea45c6f90db47665"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x6-z1.glb": {
+    "bytes": 2744,
+    "sha256": "2bd52e02da3c37341e867502fae3d251500a6bc32e57f060ee486d64eeb066b1"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-2-z-2.glb": {
+    "bytes": 2760,
+    "sha256": "42e33ea991768408c4bbd5b72b898bf2ef47256c12cb85e7910bceede7248bce"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x2-z-3.glb": {
+    "bytes": 1018044,
+    "sha256": "b36b6d6617676399698ccfa278870c99bdedacad3677aaf07bb11c90c7941622"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x0-z-4.glb": {
+    "bytes": 16316,
+    "sha256": "20dc23c927732fcc195c97896c7473c663ca102eb5915bc872b6e0a050dcfffa"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-1-z-3.glb": {
+    "bytes": 298184,
+    "sha256": "b04506318c1d0c9ff294d587a0d0e0e260c74ba79ef057d3f573da911d4426c7"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x6-z2.glb": {
+    "bytes": 2280,
+    "sha256": "f43acec1c16863f8c4d570ac0532eafe8d456e6757a22be683f441b96de5fe7f"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x-3-z-4.glb": {
+    "bytes": 233484,
+    "sha256": "8e3cd90bae229c67f7f30c2e4025bd77febfa268513420c452e5bc41aa710bcc"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x3-z-4.glb": {
+    "bytes": 297900,
+    "sha256": "c6d89570ba69f9183b32a7a5b3d638b7b2bc6f390733ea78b628a4f637438c63"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x3-z-2.glb": {
+    "bytes": 156068,
+    "sha256": "debd2f61f238f52340d7d26554624d8a27f046658f1ad50acca2c83ead696f93"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x1-z-5.glb": {
+    "bytes": 433696,
+    "sha256": "014e3d4b742c1459b3a38d3c3e3fd7e632951250fa1c0955f71c014d0ff5c6b0"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x3-z-1.glb": {
+    "bytes": 350348,
+    "sha256": "b94f045954af88634a2fae407191adf28699d21e1687449e748cc8bf22f97ba8"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x0-z-5.glb": {
+    "bytes": 649924,
+    "sha256": "27390ee61a7eca982c8ed7484605e0aa675b7bc80b8dcf2388142b01e63db0e8"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x3-z0.glb": {
+    "bytes": 753224,
+    "sha256": "422ef44ee67bd921fd51a1af97f197a07d0458bd1299047cfad12002931908d2"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x1-z1.glb": {
+    "bytes": 2256,
+    "sha256": "62bc9e36ae11cbdc7307260b229831f39399b0cdf36d7003a5b388781f647cc7"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x4-z0.glb": {
+    "bytes": 958472,
+    "sha256": "0e27300e36a5050afb37d3cd02a912f11b7a3261381c9bc0a794853c571eeebd"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x2-z-4.glb": {
+    "bytes": 13092,
+    "sha256": "d85a13b09d1bff08b10caca34f6ff4cdbc43bf3be8b0c3c0dcb35f15b10ca5be"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x1-z-1.glb": {
+    "bytes": 748812,
+    "sha256": "fbbe45ee104454367c8ea3e9fa70b54444fb68698a8ff0ede509c32e660c361d"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x0-z-1.glb": {
+    "bytes": 307752,
+    "sha256": "364125adcdb75c989bf6cd83c18f9f4eac390e8f2c75471b1ed19b760c08a75a"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x6-z0.glb": {
+    "bytes": 244624,
+    "sha256": "9329a6647cd01e7117f22e6c988bedf17dbb7293574fd5c7ffc7ba5d4c3b3b8f"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x5-z-1.glb": {
+    "bytes": 299088,
+    "sha256": "6310225c6010f8f6532966710173ebfc3a607829a6229fbac0ff600d608d6487"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x5-z2.glb": {
+    "bytes": 2856,
+    "sha256": "2b92d3275a390bf1be0f03ce1a9fe8dba5b9628fe72d8165c106ac92de347cd7"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x1-z-4.glb": {
+    "bytes": 19944,
+    "sha256": "e30058507a97cfd3cb85d0f14a1128250585faafd70bbfc6197038a21cebcdea"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x4-z-6.glb": {
+    "bytes": 752180,
+    "sha256": "c8d6230a5d0981488105c4ae67d705777ecfc00a7e9d308491ae8568f0b875e1"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x5-z-5.glb": {
+    "bytes": 846436,
+    "sha256": "62edfe39899b99f6dfe5fe6b7bbbe2049f2eb6664f6d0ed0e6c4d7c1c2077edc"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x6-z-4.glb": {
+    "bytes": 10744,
+    "sha256": "d227c787d391825ad5d265aac8bbe81c39d371a891d581a9aff4be95e8313f5c"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x3-z-3.glb": {
+    "bytes": 334740,
+    "sha256": "9f6f8ea7188cfb00d61fdcf2563dd32f787161f834908e26c88bea9dbc988a1c"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-1-z0.glb": {
+    "bytes": 2716,
+    "sha256": "f9426e1460f5dab9f250ab7ed91fc95c495695b6bcad588bf6f0a728d1bd30b9"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x-1-z-4.glb": {
+    "bytes": 1096368,
+    "sha256": "b659fa30bd84261cb7ee66f4bbf20bfba94b493fb9f656587d13405b42646c55"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x-1-z-4.glb": {
+    "bytes": 5060,
+    "sha256": "26c95e6ea1d6720d7ae06fdfe7edfbedd49e88b89ac9c62cdac3376ba38cc73c"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x3-z-5.glb": {
+    "bytes": 82868,
+    "sha256": "6ba272093d2a951f9982efbecb93ee80d928f53ddad9a04eeee8f0d7ee2eff00"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x5-z-6.glb": {
+    "bytes": 26952,
+    "sha256": "df6147af31401f1b12d0b5f5ab16171ad7067688340c16347d413f09a227bf33"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-A-x-2-z-4.glb": {
+    "bytes": 1223812,
+    "sha256": "a12a0ec2727d06ff308ba4f021af88a3114360e8c41e4f1cce4c22deb187385b"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x6-z-3.glb": {
+    "bytes": 667196,
+    "sha256": "c82d962fd36e98aa253dae993069b3bfe6afecd0bbb658f962b35cc66e9b4bc6"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x2-z3.glb": {
+    "bytes": 2300,
+    "sha256": "fdb11519d473243199bfa7c6f86bac5f24c78da920a4657652e45d4f15bbc3a2"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x3-z-4.glb": {
+    "bytes": 10336,
+    "sha256": "0faa87f561d4248a56e39a6681431968ee3838e6b0859023ba4808b847fb9bb7"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-C-x2-z-2.glb": {
+    "bytes": 732288,
+    "sha256": "b9e776207919e45643608d9c31648fd420686d3229a4636997845bfacd4f8b5a"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x4-z-4.glb": {
+    "bytes": 6984,
+    "sha256": "d4c28d09e1dad4272bfa7ededb09e5deeb644fb223c24c8c78bea5502c7100ee"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-B-x6-z-5.glb": {
+    "bytes": 342936,
+    "sha256": "243c4b0c6b08128531073e770275bff34245c6a225ef328653017153e5050f1e"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x5-z-2.glb": {
+    "bytes": 396700,
+    "sha256": "9f0eccb2b9c75ae4e08d1b7a59bc4b5771b99116230310db4c4dc81839c17683"
+  },
+  "estate-foundation/terrain/processed-context/terrain-context-D-x5-z1.glb": {
+    "bytes": 2808,
+    "sha256": "98e051893012fd84eb92ff2e1a356663d36992e49eaca6a59273cfd0ba0ab507"
+  }
+}

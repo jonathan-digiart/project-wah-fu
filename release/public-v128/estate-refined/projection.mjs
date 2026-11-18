@@ -1,0 +1,11 @@
+import {rotation} from './stream-core.mjs';
+export function viewPoint(p,camera){const m=rotation(camera.yaw,camera.pitch),q=p.map((v,i)=>v-camera.pivot[i]);return [0,1,2].map(i=>m[i]*q[0]+m[i+3]*q[1]+m[i+6]*q[2]);}
+export function projectPoint(p,camera,width,height){const q=viewPoint(p,camera);if(camera.projection==='perspective'){const depth=camera.distance-q[2],s=height/(2*Math.tan(camera.fov*Math.PI/360));return[width/2+q[0]*s/depth,height/2-q[1]*s/depth,depth];}const s=Math.min(width,height)/(2*camera.halfSpan);return[width/2+q[0]*s,height/2-q[1]*s,-q[2]];}
+export function fitPublicCamera(points,aspect){
+ if(!points.length||!(aspect>0))throw Error('Public framing vertices and positive canvas aspect required');
+ const direction=[-.4,.65,1],length=Math.hypot(...direction),back=direction.map(x=>x/length),right=[back[2],0,-back[0]],rl=Math.hypot(...right);for(let i=0;i<3;i++)right[i]/=rl;
+ const up=[back[1]*right[2]-back[2]*right[1],back[2]*right[0]-back[0]*right[2],back[0]*right[1]-back[1]*right[0]],target=[0,1,2].map(i=>(Math.min(...points.map(p=>p[i]))+Math.max(...points.map(p=>p[i])))/2),dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0),coords=points.map(p=>{const q=p.map((v,i)=>v-target[i]);return[dot(q,right),dot(q,up),dot(q,back)];}),tanV=Math.tan(Math.PI/8)*.82,tanH=tanV*aspect;
+ function intervals(distance){let minX=-Infinity,maxX=Infinity,minY=-Infinity,maxY=Infinity;for(const[x,y,z]of coords){const depth=distance-z;minX=Math.max(minX,x-tanH*depth);maxX=Math.min(maxX,x+tanH*depth);minY=Math.max(minY,y-tanV*depth);maxY=Math.min(maxY,y+tanV*depth);}return{minX,maxX,minY,maxY};}
+ const feasible=d=>{const i=intervals(d);return i.minX<=i.maxX&&i.minY<=i.maxY;};let low=Math.max(...coords.map(p=>p[2]))+1,high=Math.max(low,1);while(!feasible(high))high*=2;for(let n=0;n<42;n++){const mid=(low+high)/2;if(feasible(mid))high=mid;else low=mid;}const i=intervals(high),pivot=target.map((v,k)=>v+right[k]*(i.minX+i.maxX)/2+up[k]*(i.minY+i.maxY)/2);
+ return{projection:'perspective',yaw:Math.atan2(back[0],back[2]),pitch:Math.asin(back[1]),pivot,distance:high,halfSpan:high*Math.tan(Math.PI/8),fov:45,near:.5,far:Math.max(6000,high*4),position:pivot.map((v,i)=>v+back[i]*high),aspect,publicHome:true};
+}

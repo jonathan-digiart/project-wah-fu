@@ -31,3 +31,31 @@ Source: Lands Department, Government of the Hong Kong SAR, through the CSDI Port
 See [data attribution and terms](../public/DATA-ATTRIBUTION.txt). The source terms are distinct from project code. No blanket open-source licence is assigned to the project or third-party data by this release; code is publicly viewable, with no additional project licence grant.
 
 Three.js is MIT-licensed; its incorporated Earcut triangulator is ISC-licensed. Their required notices are in public/ and included in each deployment. This project is not endorsed by the Government.
+
+## v128 public replacement
+
+The deployed root now uses the self-contained accepted v127-derived scene in
+`release/public-v128/`, with a minimal interface and source credits. It contains
+414 files (61,940,679 bytes), rather than the private preview's historical variants.
+The prior procedural app remains as development source and regression fixtures;
+it is built to `dist-legacy`, never uploaded by Pages. Git history is retained.
+
+`npm run build` checks TypeScript, builds that legacy regression target, verifies
+all static-release SHA-256 identities, then copies only the approved release into
+`dist`. `npm run check:release` checks both targets. The release manifest is
+`verification/public-v128/FILE-MANIFEST.json`; its verifier rejects missing,
+extra, changed or symlinked files. It is portable and requires only Python 3.
+`npm run preview -- 4174` serves the actual new public release on port 4174.
+This plain static server preserves explicitly requested `.gz` bytes; Vite preview
+adds Content-Encoding to those files and is unsuitable for compressed-byte
+integrity checks. Actual Pages response semantics and live loading are verified
+after deployment, not inferred from this local server. Playwright runs the
+legacy scenarios at port 4173 and the public-release smoke at port 4174.
+
+This is a provisional reconstruction, not a survey. Accepted road changes are
+retained exactly; the Wah Ming carpark perimeter is unchanged at the user's
+request. A short ribbed bridge-head transition remains outside the corrected
+north-boundary strip. Source/license details are in deployed `credits.html`.
+No raw aerial/photos, archived comparison pages, or historical models deploy.
+No new project-code licence is granted. Publication still uses the manual,
+checked-main-commit workflow above, at the existing Pages URL.

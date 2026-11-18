@@ -1,0 +1,4153 @@
+{
+  "schema": "wahfu-estate-refinement/1",
+  "sourceCommit": "6acd49b9102c7e9636724e68bf37114b68ae22ac",
+  "coordinateFrame": "x=E\u2212831875,y=HKPD,z=812300\u2212N; metres; no additional transform",
+  "boundary": [
+    [
+      622,
+      259.479526
+    ],
+    [
+      557.056827,
+      324.422699
+    ],
+    [
+      415.997527,
+      355.454744
+    ],
+    [
+      337.811032,
+      358.478176
+    ],
+    [
+      280.499783,
+      346.481234
+    ],
+    [
+      222.414826,
+      320.612215
+    ],
+    [
+      157.886953,
+      315.90002
+    ],
+    [
+      99.687234,
+      296.640138
+    ],
+    [
+      18.341042,
+      241.468802
+    ],
+    [
+      -29.825251,
+      187.686065
+    ],
+    [
+      -107.443306,
+      121.521111
+    ],
+    [
+      -150.316488,
+      66.268119
+    ],
+    [
+      -199.870066,
+      -18.223943
+    ],
+    [
+      -225,
+      -62.659071
+    ],
+    [
+      -225,
+      -352.893208
+    ],
+    [
+      -105.917614,
+      -388.185454
+    ],
+    [
+      123.501189,
+      -600
+    ],
+    [
+      485,
+      -600
+    ],
+    [
+      695,
+      -390
+    ],
+    [
+      695,
+      -110
+    ],
+    [
+      622,
+      -21
+    ]
+  ],
+  "chunks": [
+    {
+      "id": "context-terrain-C-x-3-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-3-z-4.glb",
+      "bytes": 4028,
+      "triangles": 12,
+      "sha256": "bfa54871c4cf5292454ccd26cd19297f5f3bef2ef382ee88683211af56a71e62",
+      "bounds": {
+        "min": [
+          -225,
+          1.2999595403671265,
+          -300.5000305175781
+        ],
+        "max": [
+          -200,
+          5.034483432769775,
+          -299.5000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-3-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-3-z-3.glb",
+      "bytes": 17416,
+      "triangles": 139,
+      "sha256": "7a8bc9786cdbd78a4959a53bbe942c59977c02d391f7d965fc9c298e561f96ea",
+      "bounds": {
+        "min": [
+          -225,
+          1.299959659576416,
+          -300.5000305175781
+        ],
+        "max": [
+          -183.63818359375,
+          5.034483432769775,
+          -253.75599670410156
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-3-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-3-z-1.glb",
+      "bytes": 2168,
+      "triangles": 1,
+      "sha256": "d21b215a41458476f227d03572fcb988863dee33204a17c4faa33f87953cea5d",
+      "bounds": {
+        "min": [
+          -225,
+          1.299991250038147,
+          -64.56172180175781
+        ],
+        "max": [
+          -218.22047424316406,
+          1.2999931573867798,
+          -50.671409606933594
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-2-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-2-z-4.glb",
+      "bytes": 11524,
+      "triangles": 84,
+      "sha256": "61d9db824d64d5b7050ad4bdd9ccad93fa5077fad360ad509c347ccb555bbac0",
+      "bounds": {
+        "min": [
+          -200,
+          1.4317163228988647,
+          -300.5000305175781
+        ],
+        "max": [
+          -100.5,
+          15.3955717086792,
+          -299.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-2-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-2-z-3.glb",
+      "bytes": 245672,
+      "triangles": 2252,
+      "sha256": "2a290aaf9a8b07f3e17decb4a73563d8f8a8d46b1ed4b778c43efe911ffe23b6",
+      "bounds": {
+        "min": [
+          -225,
+          1.2912496328353882,
+          -300.5000305175781
+        ],
+        "max": [
+          -1.2685546875,
+          15.518768310546875,
+          -172.00929260253906
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-2-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-2-z-2.glb",
+      "bytes": 2760,
+      "triangles": 10,
+      "sha256": "42e33ea991768408c4bbd5b72b898bf2ef47256c12cb85e7910bceede7248bce",
+      "bounds": {
+        "min": [
+          -225,
+          1.2999658584594727,
+          -253.75599670410156
+        ],
+        "max": [
+          13.927734375,
+          1.299988865852356,
+          -82.80641174316406
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-2-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-2-z-1.glb",
+      "bytes": 4332,
+      "triangles": 36,
+      "sha256": "51b92b4f784e97bcbf9949c499622254844c56ffca7dbf19ea45c6f90db47665",
+      "bounds": {
+        "min": [
+          -225,
+          1.299981713294983,
+          -135.57911682128906
+        ],
+        "max": [
+          69.3740234375,
+          1.3000009059906006,
+          6.995713233947754
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-1-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-1-z-4.glb",
+      "bytes": 5060,
+      "triangles": 27,
+      "sha256": "26c95e6ea1d6720d7ae06fdfe7edfbedd49e88b89ac9c62cdac3376ba38cc73c",
+      "bounds": {
+        "min": [
+          -100.5,
+          3.3746275901794434,
+          -300.5000305175781
+        ],
+        "max": [
+          22.98681640625,
+          24.811962127685547,
+          -299.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-1-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-1-z-3.glb",
+      "bytes": 298184,
+      "triangles": 2712,
+      "sha256": "b04506318c1d0c9ff294d587a0d0e0e260c74ba79ef057d3f573da911d4426c7",
+      "bounds": {
+        "min": [
+          -183.63818359375,
+          1.2999610900878906,
+          -300.5000305175781
+        ],
+        "max": [
+          22.98681640625,
+          25.00634002685547,
+          -172.00929260253906
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-1-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-1-z-2.glb",
+      "bytes": 10576,
+      "triangles": 73,
+      "sha256": "682ae1207a53e8fe6efe3188cca67cbb3dc97ce6da5caef63791c2fc039a1c10",
+      "bounds": {
+        "min": [
+          -225,
+          1.2999703884124756,
+          -219.88235473632812
+        ],
+        "max": [
+          28.357421875,
+          4.034986972808838,
+          -73.94786834716797
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-1-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-1-z-1.glb",
+      "bytes": 3612,
+      "triangles": 21,
+      "sha256": "695b5cb6c0fcdfd071f241b73966d8d587cb554bec80af9910cc69af0629fa2b",
+      "bounds": {
+        "min": [
+          -225,
+          1.2999845743179321,
+          -114.39698791503906
+        ],
+        "max": [
+          82.84716796875,
+          1.3000049591064453,
+          37.67659378051758
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x-1-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x-1-z0.glb",
+      "bytes": 2716,
+      "triangles": 10,
+      "sha256": "f9426e1460f5dab9f250ab7ed91fc95c495695b6bcad588bf6f0a728d1bd30b9",
+      "bounds": {
+        "min": [
+          -169.22610473632812,
+          1.2999939918518066,
+          -44.632328033447266
+        ],
+        "max": [
+          87.12109375,
+          1.3000234365463257,
+          174.69044494628906
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x0-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x0-z-4.glb",
+      "bytes": 16316,
+      "triangles": 141,
+      "sha256": "20dc23c927732fcc195c97896c7473c663ca102eb5915bc872b6e0a050dcfffa",
+      "bounds": {
+        "min": [
+          22.98681640625,
+          24.811962127685547,
+          -300.5000305175781
+        ],
+        "max": [
+          100,
+          29.753568649291992,
+          -299.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x0-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x0-z-3.glb",
+      "bytes": 290408,
+      "triangles": 2740,
+      "sha256": "06cee9c85c60d18419ee7cd5b7788e0f4f77553890fbfb221bb9e1f971bd387f",
+      "bounds": {
+        "min": [
+          -11,
+          2.9472544193267822,
+          -300.5000305175781
+        ],
+        "max": [
+          105,
+          29.753568649291992,
+          -196.50003051757812
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x0-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x0-z-2.glb",
+      "bytes": 418568,
+      "triangles": 4026,
+      "sha256": "2893fe7667134c76a9ee4335258d78c2acbc4cfadf1571857c6ec14177a0207b",
+      "bounds": {
+        "min": [
+          -1.5,
+          1.2999768257141113,
+          -203.61721801757812
+        ],
+        "max": [
+          104.81103515625,
+          20.5529842376709,
+          -94.94824981689453
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x0-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x0-z-1.glb",
+      "bytes": 307752,
+      "triangles": 2791,
+      "sha256": "364125adcdb75c989bf6cd83c18f9f4eac390e8f2c75471b1ed19b760c08a75a",
+      "bounds": {
+        "min": [
+          -166.52720642089844,
+          1.2999866008758545,
+          -102.50001525878906
+        ],
+        "max": [
+          107,
+          16.109878540039062,
+          38.627803802490234
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x0-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x0-z0.glb",
+      "bytes": 3312,
+      "triangles": 15,
+      "sha256": "946b29258f36935024d0d2c9d4878830a238b92e58505be06aa95401c7cb2a19",
+      "bounds": {
+        "min": [
+          -23.62273597717285,
+          1.2999955415725708,
+          -32.552738189697266
+        ],
+        "max": [
+          144.41357421875,
+          1.3000315427780151,
+          234.93653869628906
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x0-z1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x0-z1.glb",
+      "bytes": 3616,
+      "triangles": 20,
+      "sha256": "0b106e4938ab08042afec06c078593e88f674587e5cd3497aae1539ab61550de",
+      "bounds": {
+        "min": [
+          -45.07040786743164,
+          1.2999955415725708,
+          -32.552738189697266
+        ],
+        "max": [
+          177.81005859375,
+          1.3000351190567017,
+          261.9991149902344
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x0-z2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x0-z2.glb",
+      "bytes": 2184,
+      "triangles": 1,
+      "sha256": "36c0b35ab07394a829cf63e2f41a3950229c8e67ace1ecf082664bcb7b1b160a",
+      "bounds": {
+        "min": [
+          13.271512985229492,
+          1.3000316619873047,
+          235.80813598632812
+        ],
+        "max": [
+          21.500459671020508,
+          1.3000327348709106,
+          243.61160278320312
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x1-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x1-z-4.glb",
+      "bytes": 19944,
+      "triangles": 166,
+      "sha256": "e30058507a97cfd3cb85d0f14a1128250585faafd70bbfc6197038a21cebcdea",
+      "bounds": {
+        "min": [
+          100,
+          29.695112228393555,
+          -300.5000305175781
+        ],
+        "max": [
+          199.5,
+          54.24006271362305,
+          -299.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x1-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x1-z-3.glb",
+      "bytes": 605780,
+      "triangles": 5499,
+      "sha256": "f04a862751b01c0f77970a354ec6ef82242200b6d037ec5ffd124e01d38d23cf",
+      "bounds": {
+        "min": [
+          96.5,
+          19.270917892456055,
+          -300.5000305175781
+        ],
+        "max": [
+          205.37109375,
+          54.2411003112793,
+          -193.50003051757812
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x1-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x1-z-2.glb",
+      "bytes": 417652,
+      "triangles": 3995,
+      "sha256": "ba75b99084d6dba12c34326917c6d37466f68e0f8ec8b2c0024d02e8aef90940",
+      "bounds": {
+        "min": [
+          94.947265625,
+          14.465985298156738,
+          -211.50003051757812
+        ],
+        "max": [
+          209,
+          32.4490966796875,
+          -97.95069885253906
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x1-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x1-z-1.glb",
+      "bytes": 748812,
+      "triangles": 6972,
+      "sha256": "fbbe45ee104454367c8ea3e9fa70b54444fb68698a8ff0ede509c32e660c361d",
+      "bounds": {
+        "min": [
+          94.5,
+          1.2999968528747559,
+          -102.47901916503906
+        ],
+        "max": [
+          202.5,
+          34.29500961303711,
+          3.9999992847442627
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x1-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x1-z0.glb",
+      "bytes": 357752,
+      "triangles": 3236,
+      "sha256": "c42d17d421454c6140d19d097fa7238ab0c73e394159a6d0a1f430b4cba5fa5d",
+      "bounds": {
+        "min": [
+          125.31591796875,
+          1.2999999523162842,
+          -3.000002384185791
+        ],
+        "max": [
+          205.51416015625,
+          24.057992935180664,
+          71.69385528564453
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x1-z1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x1-z1.glb",
+      "bytes": 2256,
+      "triangles": 2,
+      "sha256": "62bc9e36ae11cbdc7307260b229831f39399b0cdf36d7003a5b388781f647cc7",
+      "bounds": {
+        "min": [
+          13.271512985229492,
+          1.300002098083496,
+          15.846681594848633
+        ],
+        "max": [
+          205.51416015625,
+          1.3000380992889404,
+          284.3373107910156
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x1-z2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x1-z2.glb",
+      "bytes": 2452,
+      "triangles": 6,
+      "sha256": "060b06e4fe8c92dffb1b4d32e4958429f6a569d07272f9543c2522fa211f058a",
+      "bounds": {
+        "min": [
+          48.611515045166016,
+          1.3000072240829468,
+          54.06397247314453
+        ],
+        "max": [
+          205.51416015625,
+          1.3000402450561523,
+          300.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x1-z3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x1-z3.glb",
+      "bytes": 2332,
+      "triangles": 4,
+      "sha256": "1aabb3f93545ce6bf5c0e706a2c6f5545d95720fff142aa9a3fdc2117d0966ea",
+      "bounds": {
+        "min": [
+          109.8402099609375,
+          1.3000402450561523,
+          300.0000305175781
+        ],
+        "max": [
+          375,
+          1.300040364265442,
+          300.5000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x2-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x2-z-4.glb",
+      "bytes": 13092,
+      "triangles": 102,
+      "sha256": "d85a13b09d1bff08b10caca34f6ff4cdbc43bf3be8b0c3c0dcb35f15b10ca5be",
+      "bounds": {
+        "min": [
+          199.5,
+          54.24006271362305,
+          -300.5000305175781
+        ],
+        "max": [
+          300,
+          64.30079650878906,
+          -299.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x2-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x2-z-3.glb",
+      "bytes": 1018044,
+      "triangles": 9283,
+      "sha256": "b36b6d6617676399698ccfa278870c99bdedacad3677aaf07bb11c90c7941622",
+      "bounds": {
+        "min": [
+          190,
+          29.528400421142578,
+          -300.5000305175781
+        ],
+        "max": [
+          305.9228515625,
+          64.307373046875,
+          -193.50003051757812
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x2-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x2-z-2.glb",
+      "bytes": 732288,
+      "triangles": 6710,
+      "sha256": "b9e776207919e45643608d9c31648fd420686d3229a4636997845bfacd4f8b5a",
+      "bounds": {
+        "min": [
+          192.5,
+          24.374174118041992,
+          -207.87014770507812
+        ],
+        "max": [
+          323.904296875,
+          55.99495315551758,
+          -95.50001525878906
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x2-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x2-z-1.glb",
+      "bytes": 371280,
+      "triangles": 3680,
+      "sha256": "8c3695266bc0eebeb52f8f8138b7cd093595a461b32cecb8b27779e85add533c",
+      "bounds": {
+        "min": [
+          198,
+          24.057992935180664,
+          -109.50001525878906
+        ],
+        "max": [
+          323.9375,
+          38.982994079589844,
+          8.49999713897705
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x2-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x2-z0.glb",
+      "bytes": 783320,
+      "triangles": 7159,
+      "sha256": "a9dbadcb751ad121e6facb269a91f9a89b9374bf3ad26e9c2e3afffdb6b98015",
+      "bounds": {
+        "min": [
+          198,
+          1.2982951402664185,
+          -2.0000038146972656
+        ],
+        "max": [
+          319.2724609375,
+          32.39036560058594,
+          84.99854278564453
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x2-z1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x2-z1.glb",
+      "bytes": 2196,
+      "triangles": 2,
+      "sha256": "a0fd47e105f76e9ca21f467a1e4bbb5b677146f426d14af20c5ff108f91fae63",
+      "bounds": {
+        "min": [
+          205.51416015625,
+          1.3000096082687378,
+          71.69385528564453
+        ],
+        "max": [
+          375,
+          1.3000402450561523,
+          300.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x2-z2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x2-z2.glb",
+      "bytes": 2208,
+      "triangles": 2,
+      "sha256": "e4fb8824e13a347c4915251a4b7848abfcf107962335004b98c8b9e70ab15a46",
+      "bounds": {
+        "min": [
+          175,
+          1.3000096082687378,
+          71.69385528564453
+        ],
+        "max": [
+          375,
+          1.3000402450561523,
+          300.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x2-z3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x2-z3.glb",
+      "bytes": 2300,
+      "triangles": 4,
+      "sha256": "fdb11519d473243199bfa7c6f86bac5f24c78da920a4657652e45d4f15bbc3a2",
+      "bounds": {
+        "min": [
+          110.01656341552734,
+          1.3000402450561523,
+          300.0000305175781
+        ],
+        "max": [
+          375,
+          1.300040364265442,
+          300.5000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x3-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x3-z-4.glb",
+      "bytes": 10336,
+      "triangles": 81,
+      "sha256": "0faa87f561d4248a56e39a6681431968ee3838e6b0859023ba4808b847fb9bb7",
+      "bounds": {
+        "min": [
+          299.98486328125,
+          61.799015045166016,
+          -300.5000305175781
+        ],
+        "max": [
+          375.5,
+          73.93989562988281,
+          -299.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x3-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x3-z-3.glb",
+      "bytes": 1246692,
+      "triangles": 11292,
+      "sha256": "211455f7e1cc003b0e0251bd52326ceb4a577560e71bc2d5b6aeaa057940976e",
+      "bounds": {
+        "min": [
+          296.625,
+          33.202972412109375,
+          -300.5000305175781
+        ],
+        "max": [
+          375.5,
+          73.94510650634766,
+          -193.64895629882812
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x3-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x3-z-2.glb",
+      "bytes": 628916,
+      "triangles": 5663,
+      "sha256": "865d939e2e11b03d7aa74e5403ae562949c5c8e248a1bdd11401da114f1940f4",
+      "bounds": {
+        "min": [
+          262.625,
+          14.034116744995117,
+          -204.30764770507812
+        ],
+        "max": [
+          375.5,
+          56.152915954589844,
+          -97.00001525878906
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x3-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x3-z-1.glb",
+      "bytes": 350348,
+      "triangles": 3378,
+      "sha256": "b94f045954af88634a2fae407191adf28699d21e1687449e748cc8bf22f97ba8",
+      "bounds": {
+        "min": [
+          268.5,
+          10.704996109008789,
+          -104.00001525878906
+        ],
+        "max": [
+          375.5,
+          37.50899887084961,
+          1.9999985694885254
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x3-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x3-z0.glb",
+      "bytes": 753224,
+      "triangles": 6811,
+      "sha256": "422ef44ee67bd921fd51a1af97f197a07d0458bd1299047cfad12002931908d2",
+      "bounds": {
+        "min": [
+          282.86181640625,
+          1.3000102043151855,
+          -1.812991738319397
+        ],
+        "max": [
+          375.5,
+          29.908517837524414,
+          102.76661682128906
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x3-z1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x3-z1.glb",
+      "bytes": 183428,
+      "triangles": 1599,
+      "sha256": "d84b549a04f3d7ed0ae489eb7aa73f15625eb0682ba8866043eac42624928da2",
+      "bounds": {
+        "min": [
+          264.2060546875,
+          1.3000097274780273,
+          73.14990997314453
+        ],
+        "max": [
+          375.5,
+          6.473260402679443,
+          200.00003051757812
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x3-z2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x3-z2.glb",
+      "bytes": 2400,
+      "triangles": 8,
+      "sha256": "d40ed576205b9b3e3ae9897323d120959e0dbdfacd9fce8bd6ef245faff74c61",
+      "bounds": {
+        "min": [
+          275,
+          1.3000147342681885,
+          109.85987854003906
+        ],
+        "max": [
+          375.5,
+          1.3000402450561523,
+          300.0000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-C-x3-z3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-C-x3-z3.glb",
+      "bytes": 2268,
+      "triangles": 4,
+      "sha256": "ce4c65575a528eb95650ab2da167c857a7c67139c0ab763bf623257f29ee95be",
+      "bounds": {
+        "min": [
+          275,
+          1.3000402450561523,
+          300.0000305175781
+        ],
+        "max": [
+          375.5,
+          1.300040364265442,
+          300.5000305175781
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x-3-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x-3-z-4.glb",
+      "bytes": 233484,
+      "triangles": 2144,
+      "sha256": "8e3cd90bae229c67f7f30c2e4025bd77febfa268513420c452e5bc41aa710bcc",
+      "bounds": {
+        "min": [
+          -225,
+          1.2643603086471558,
+          -360.30242919921875
+        ],
+        "max": [
+          -197,
+          20.051193237304688,
+          -300.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x-2-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x-2-z-4.glb",
+      "bytes": 1223812,
+      "triangles": 11151,
+      "sha256": "a12a0ec2727d06ff308ba4f021af88a3114360e8c41e4f1cce4c22deb187385b",
+      "bounds": {
+        "min": [
+          -203.5,
+          1.469656229019165,
+          -393.6683044433594
+        ],
+        "max": [
+          -92.5,
+          33.01850128173828,
+          -300.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x-1-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x-1-z-5.glb",
+      "bytes": 292352,
+      "triangles": 2700,
+      "sha256": "a7449367cdaf13e9d8a4765fd931536dac662a6b7aa1c07444dbb792f233df56",
+      "bounds": {
+        "min": [
+          -93.31981658935547,
+          25.273664474487305,
+          -480.6923522949219
+        ],
+        "max": [
+          9,
+          43.70228958129883,
+          -397
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x-1-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x-1-z-4.glb",
+      "bytes": 1096368,
+      "triangles": 10250,
+      "sha256": "b659fa30bd84261cb7ee66f4bbf20bfba94b493fb9f656587d13405b42646c55",
+      "bounds": {
+        "min": [
+          -104.22021484375,
+          2.275237798690796,
+          -404
+        ],
+        "max": [
+          8.11279296875,
+          48.912166595458984,
+          -300.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x0-z-6",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x0-z-6.glb",
+      "bytes": 410340,
+      "triangles": 3759,
+      "sha256": "081bb0c263ef748c4a7312f5e06b3f8cbf3d8d9d7c1170db1973b7578a0c80d6",
+      "bounds": {
+        "min": [
+          15,
+          28.812301635742188,
+          -578.1815795898438
+        ],
+        "max": [
+          102,
+          49.92133331298828,
+          -496
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x0-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x0-z-5.glb",
+      "bytes": 649924,
+      "triangles": 6054,
+      "sha256": "27390ee61a7eca982c8ed7484605e0aa675b7bc80b8dcf2388142b01e63db0e8",
+      "bounds": {
+        "min": [
+          -7.283137321472168,
+          28.52440643310547,
+          -504.5
+        ],
+        "max": [
+          105.998046875,
+          53.24089813232422,
+          -398.3125
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x0-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x0-z-4.glb",
+      "bytes": 1012316,
+      "triangles": 9551,
+      "sha256": "1fb200d1d90c5c60e1427a84efb8e7cbb9506e696829caf6191dc21b42c5b38f",
+      "bounds": {
+        "min": [
+          -16.178842544555664,
+          24.80687141418457,
+          -402.0107421875
+        ],
+        "max": [
+          102.2734375,
+          50.858001708984375,
+          -300.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x1-z-6",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x1-z-6.glb",
+      "bytes": 972476,
+      "triangles": 7459,
+      "sha256": "c28049d398f8a3b1e0688038aec7933dddeebd1d32c1a2831e6f04c1397a193f",
+      "bounds": {
+        "min": [
+          97.0,
+          32.20241928100586,
+          -600.0
+        ],
+        "max": [
+          215.78515625,
+          61.512001037597656,
+          -495.001953125
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x1-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x1-z-5.glb",
+      "bytes": 433696,
+      "triangles": 3492,
+      "sha256": "014e3d4b742c1459b3a38d3c3e3fd7e632951250fa1c0955f71c014d0ff5c6b0",
+      "bounds": {
+        "min": [
+          93.99072265625,
+          41.874332427978516,
+          -502.0
+        ],
+        "max": [
+          225.611328125,
+          62.26599884033203,
+          -398.5625
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x1-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x1-z-4.glb",
+      "bytes": 1075704,
+      "triangles": 10107,
+      "sha256": "7314f60fcd13437231c655351d4baa0caeec31635699fdcb692810c868826f0f",
+      "bounds": {
+        "min": [
+          96.98291015625,
+          29.69515037536621,
+          -401.34326171875
+        ],
+        "max": [
+          207.49267578125,
+          62.87977981567383,
+          -300.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x2-z-6",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x2-z-6.glb",
+      "bytes": 970836,
+      "triangles": 8837,
+      "sha256": "6520000aadd5681fe3af2840f9bd5a2fcada346028b0908b90d03308cf4311e3",
+      "bounds": {
+        "min": [
+          192,
+          46.17488479614258,
+          -600
+        ],
+        "max": [
+          304.5,
+          80.90254974365234,
+          -493.6650390625
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x2-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x2-z-5.glb",
+      "bytes": 495108,
+      "triangles": 4567,
+      "sha256": "2ad0b807aa8e4c7062cb230286a3ed247bc7d1d757100b6e992e5cca92ee1cbf",
+      "bounds": {
+        "min": [
+          173,
+          46.80500030517578,
+          -507
+        ],
+        "max": [
+          305.40283203125,
+          73.79804992675781,
+          -376
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x2-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x2-z-4.glb",
+      "bytes": 978488,
+      "triangles": 9106,
+      "sha256": "272e158a1f7bfd97b01b5726497fc3c8a6fab1a513bd052098ce08633eb8230d",
+      "bounds": {
+        "min": [
+          187.18701171875,
+          46.13887023925781,
+          -417
+        ],
+        "max": [
+          303.5,
+          74.2018051147461,
+          -300.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x3-z-6",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x3-z-6.glb",
+      "bytes": 493720,
+      "triangles": 4560,
+      "sha256": "45de4d4810fa2943269d3a8ee3eae848e58c60a1434fad50f72c4265e63cbe72",
+      "bounds": {
+        "min": [
+          294.27001953125,
+          61.940635681152344,
+          -600
+        ],
+        "max": [
+          375.5,
+          94.39403533935547,
+          -496.095703125
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x3-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x3-z-5.glb",
+      "bytes": 299940,
+      "triangles": 2915,
+      "sha256": "05a478f5431b2bd8807ad42658cdb67c808114d805c764b6727e00b0ed49210a",
+      "bounds": {
+        "min": [
+          294,
+          63.32240295410156,
+          -504.42333984375
+        ],
+        "max": [
+          375.5,
+          73.79804992675781,
+          -397.15869140625
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-A-x3-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-A-x3-z-4.glb",
+      "bytes": 569984,
+      "triangles": 5416,
+      "sha256": "d6d1cadbb39c943f2812b16a6211c049f09ae24c2a7d5f7e9da4abf032abdc8e",
+      "bounds": {
+        "min": [
+          294,
+          61.90620422363281,
+          -417
+        ],
+        "max": [
+          375.5,
+          74.64567565917969,
+          -300.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x3-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x3-z-4.glb",
+      "bytes": 4964,
+      "triangles": 25,
+      "sha256": "c287f8aae61a2d472223714d6c5138d7cb5d93b119b1e24de9b3efc442d592fb",
+      "bounds": {
+        "min": [
+          378.1546630859375,
+          55.8255615234375,
+          -300.16363525390625
+        ],
+        "max": [
+          387.68798828125,
+          66.54949951171875,
+          -300
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x3-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x3-z-3.glb",
+      "bytes": 334740,
+      "triangles": 3199,
+      "sha256": "9f6f8ea7188cfb00d61fdcf2563dd32f787161f834908e26c88bea9dbc988a1c",
+      "bounds": {
+        "min": [
+          375.5,
+          31.786212921142578,
+          -300.16424560546875
+        ],
+        "max": [
+          404.5,
+          69.78297424316406,
+          -197.26953125
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x3-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x3-z-2.glb",
+      "bytes": 156068,
+      "triangles": 1431,
+      "sha256": "debd2f61f238f52340d7d26554624d8a27f046658f1ad50acca2c83ead696f93",
+      "bounds": {
+        "min": [
+          375.5,
+          6.944943428039551,
+          -205.97508239746094
+        ],
+        "max": [
+          406.7568359375,
+          35.56745529174805,
+          -97.34521484375
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x3-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x3-z-1.glb",
+      "bytes": 99900,
+      "triangles": 1350,
+      "sha256": "7531905874fddd0e214db6502343b2734a26d1e3405f2883c40cdaac552619cc",
+      "bounds": {
+        "min": [
+          375.5,
+          6.944943428039551,
+          -101.13818359375
+        ],
+        "max": [
+          404.74560546875,
+          14.034071922302246,
+          1.1875
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x3-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x3-z0.glb",
+      "bytes": 179576,
+      "triangles": 1809,
+      "sha256": "13abba32452fdcffd81c45ab2d37c6ad697e6521a304da0a3fe8e771711af13e",
+      "bounds": {
+        "min": [
+          375.5,
+          2.4190361499786377,
+          -2.875
+        ],
+        "max": [
+          407.5,
+          11.18620777130127,
+          100.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x3-z1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x3-z1.glb",
+      "bytes": 101040,
+      "triangles": 913,
+      "sha256": "1e8184eaccc4596e1f8612317339f9b745c64ec0c9998c6ad5c0f161f7529f33",
+      "bounds": {
+        "min": [
+          375.5,
+          1.299942970275879,
+          94.23486328125
+        ],
+        "max": [
+          444.7802734375,
+          5.497676849365234,
+          171.7429656982422
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x3-z2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x3-z2.glb",
+      "bytes": 2300,
+      "triangles": 4,
+      "sha256": "f63b84bf4fd039e80da89f33611d3ff71be2d0ac09a5c1dec3966125598f0328",
+      "bounds": {
+        "min": [
+          375.5,
+          1.299942970275879,
+          250.3552703857422
+        ],
+        "max": [
+          434.36865234375,
+          1.299942970275879,
+          300
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x4-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x4-z-4.glb",
+      "bytes": 6984,
+      "triangles": 44,
+      "sha256": "d4c28d09e1dad4272bfa7ededb09e5deeb644fb223c24c8c78bea5502c7100ee",
+      "bounds": {
+        "min": [
+          425.30859375,
+          50.277618408203125,
+          -300.15338134765625
+        ],
+        "max": [
+          485.35968017578125,
+          55.65099334716797,
+          -299.8583984375
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x4-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x4-z-3.glb",
+      "bytes": 788524,
+      "triangles": 7397,
+      "sha256": "dbeb698ce41ff1f430ea43fee1658a788ae1b385272aa7f991fcbcc0a0e93efa",
+      "bounds": {
+        "min": [
+          394.119140625,
+          24.141931533813477,
+          -300.1585998535156
+        ],
+        "max": [
+          504.890625,
+          56.43677520751953,
+          -193
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x4-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x4-z-2.glb",
+      "bytes": 398000,
+      "triangles": 3947,
+      "sha256": "88df9c7c54467f668d70087370a6cb2afd44dd6a90dd42a6976a57610eb2d501",
+      "bounds": {
+        "min": [
+          392.5,
+          6.944943428039551,
+          -205
+        ],
+        "max": [
+          510.34814453125,
+          33.434513092041016,
+          -86.43115234375
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x4-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x4-z-1.glb",
+      "bytes": 149016,
+      "triangles": 1756,
+      "sha256": "e0fc8d701a489a4cbdd6fd8313f7ddfc5247cc766586e2a0e4d2e2eb8a6a03af",
+      "bounds": {
+        "min": [
+          393.5625,
+          6.944943428039551,
+          -107.396484375
+        ],
+        "max": [
+          505.375,
+          11.83752155303955,
+          1.2880859375
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x4-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x4-z0.glb",
+      "bytes": 958472,
+      "triangles": 8676,
+      "sha256": "0e27300e36a5050afb37d3cd02a912f11b7a3261381c9bc0a794853c571eeebd",
+      "bounds": {
+        "min": [
+          389,
+          1.299942970275879,
+          -2.875
+        ],
+        "max": [
+          508,
+          10.993558883666992,
+          100
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x4-z1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x4-z1.glb",
+      "bytes": 20100,
+      "triangles": 167,
+      "sha256": "57f9207932e2b15cac1e52fddf8c2dce86a5e02be63078655ead6524e4540355",
+      "bounds": {
+        "min": [
+          375.5,
+          1.299942970275879,
+          84.58935546875
+        ],
+        "max": [
+          525,
+          3.315164089202881,
+          300
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x4-z2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x4-z2.glb",
+      "bytes": 2664,
+      "triangles": 12,
+      "sha256": "b057d9921e6500e08a84ccf83ae6973122fccd410071ebaee7c9ab31b5479df8",
+      "bounds": {
+        "min": [
+          375.5,
+          1.299942970275879,
+          200.1317596435547
+        ],
+        "max": [
+          525,
+          1.299942970275879,
+          300
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x5-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x5-z-4.glb",
+      "bytes": 4892,
+      "triangles": 27,
+      "sha256": "ee74e7a9567170f618bd59aef7697b80a75949b1bc37fadd855418843332fcbd",
+      "bounds": {
+        "min": [
+          501.3787841796875,
+          49.208526611328125,
+          -300.1368103027344
+        ],
+        "max": [
+          596.326171875,
+          53.99000930786133,
+          -299.99951171875
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x5-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x5-z-3.glb",
+      "bytes": 465332,
+      "triangles": 4349,
+      "sha256": "839d67e2724436cee99040784b41107699bf2b6fc77d9abbcbb6d8b716400472",
+      "bounds": {
+        "min": [
+          495.05322265625,
+          16.903844833374023,
+          -300.1372375488281
+        ],
+        "max": [
+          604.5,
+          54.693199157714844,
+          -194
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x5-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x5-z-2.glb",
+      "bytes": 396700,
+      "triangles": 4133,
+      "sha256": "9f0eccb2b9c75ae4e08d1b7a59bc4b5771b99116230310db4c4dc81839c17683",
+      "bounds": {
+        "min": [
+          491.49072265625,
+          9.350942611694336,
+          -209
+        ],
+        "max": [
+          608,
+          31.951461791992188,
+          -91.5
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x5-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x5-z-1.glb",
+      "bytes": 299088,
+      "triangles": 3046,
+      "sha256": "6310225c6010f8f6532966710173ebfc3a607829a6229fbac0ff600d608d6487",
+      "bounds": {
+        "min": [
+          496.2099609375,
+          7.2649431228637695,
+          -104.39794921875
+        ],
+        "max": [
+          608.25,
+          13.589009284973145,
+          6.9189453125
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x5-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x5-z0.glb",
+      "bytes": 1046436,
+      "triangles": 9475,
+      "sha256": "6e6df3787691649139bc91fd383c9c35c01f63d0902517b7daaf18936b294913",
+      "bounds": {
+        "min": [
+          486,
+          1.299942970275879,
+          -4.94287109375
+        ],
+        "max": [
+          607,
+          11.120543479919434,
+          82.44580078125
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x5-z1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x5-z1.glb",
+      "bytes": 2808,
+      "triangles": 14,
+      "sha256": "98e051893012fd84eb92ff2e1a356663d36992e49eaca6a59273cfd0ba0ab507",
+      "bounds": {
+        "min": [
+          488.734375,
+          1.299942970275879,
+          77.5341796875
+        ],
+        "max": [
+          613.93994140625,
+          1.299942970275879,
+          300
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x5-z2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x5-z2.glb",
+      "bytes": 2856,
+      "triangles": 11,
+      "sha256": "2b92d3275a390bf1be0f03ce1a9fe8dba5b9628fe72d8165c106ac92de347cd7",
+      "bounds": {
+        "min": [
+          493.61767578125,
+          1.299942970275879,
+          77.9951171875
+        ],
+        "max": [
+          622,
+          1.299942970275879,
+          300
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x6-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x6-z-4.glb",
+      "bytes": 10744,
+      "triangles": 77,
+      "sha256": "d227c787d391825ad5d265aac8bbe81c39d371a891d581a9aff4be95e8313f5c",
+      "bounds": {
+        "min": [
+          609.5,
+          54.16633605957031,
+          -300.11328125
+        ],
+        "max": [
+          695,
+          59.5001335144043,
+          -299.86663818359375
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x6-z-3",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x6-z-3.glb",
+      "bytes": 667196,
+      "triangles": 6175,
+      "sha256": "c82d962fd36e98aa253dae993069b3bfe6afecd0bbb658f962b35cc66e9b4bc6",
+      "bounds": {
+        "min": [
+          597,
+          16.903844833374023,
+          -300.11578369140625
+        ],
+        "max": [
+          695,
+          59.57748794555664,
+          -194
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x6-z-2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x6-z-2.glb",
+      "bytes": 940204,
+      "triangles": 8563,
+      "sha256": "7198bf75a8db3a8686e84c62cd833e52dd51f1f38efae411bd48387b5effe328",
+      "bounds": {
+        "min": [
+          593.66357421875,
+          10.532400131225586,
+          -206
+        ],
+        "max": [
+          695,
+          57.059173583984375,
+          -94
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x6-z-1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x6-z-1.glb",
+      "bytes": 321772,
+      "triangles": 3245,
+      "sha256": "467353a1b10958b9d6236b29e56a122d16db0d0f8536d1729205cc16330becba",
+      "bounds": {
+        "min": [
+          593.2080078125,
+          9.744314193725586,
+          -107.875
+        ],
+        "max": [
+          687.4456176757812,
+          35.674922943115234,
+          4.072265625
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x6-z0",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x6-z0.glb",
+      "bytes": 244624,
+      "triangles": 2265,
+      "sha256": "9329a6647cd01e7117f22e6c988bedf17dbb7293574fd5c7ffc7ba5d4c3b3b8f",
+      "bounds": {
+        "min": [
+          595.5,
+          1.299942970275879,
+          -2.94775390625
+        ],
+        "max": [
+          622,
+          11.370254516601562,
+          84.95541381835938
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x6-z1",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x6-z1.glb",
+      "bytes": 2744,
+      "triangles": 11,
+      "sha256": "2bd52e02da3c37341e867502fae3d251500a6bc32e57f060ee486d64eeb066b1",
+      "bounds": {
+        "min": [
+          575,
+          1.299942970275879,
+          82.9541015625
+        ],
+        "max": [
+          622,
+          1.299942970275879,
+          300
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-D-x6-z2",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-D-x6-z2.glb",
+      "bytes": 2280,
+      "triangles": 3,
+      "sha256": "f43acec1c16863f8c4d570ac0532eafe8d456e6757a22be683f441b96de5fe7f",
+      "bounds": {
+        "min": [
+          585.358154296875,
+          1.299942970275879,
+          152.49220275878906
+        ],
+        "max": [
+          622,
+          1.299942970275879,
+          296.1213684082031
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x3-z-6",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x3-z-6.glb",
+      "bytes": 98896,
+      "triangles": 945,
+      "sha256": "fac02f8e89d793662d1d93824086e49d052ba093381b40ae88621d339a60b565",
+      "bounds": {
+        "min": [
+          375.5,
+          63.34500503540039,
+          -600
+        ],
+        "max": [
+          417.31298828125,
+          93.43592834472656,
+          -497.14208984375
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x3-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x3-z-5.glb",
+      "bytes": 82868,
+      "triangles": 871,
+      "sha256": "6ba272093d2a951f9982efbecb93ee80d928f53ddad9a04eeee8f0d7ee2eff00",
+      "bounds": {
+        "min": [
+          375.5,
+          63.34500503540039,
+          -504.8359375
+        ],
+        "max": [
+          405.57763671875,
+          66.12088012695312,
+          -390.5146484375
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x3-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x3-z-4.glb",
+      "bytes": 297900,
+      "triangles": 2740,
+      "sha256": "c6d89570ba69f9183b32a7a5b3d638b7b2bc6f390733ea78b628a4f637438c63",
+      "bounds": {
+        "min": [
+          375.5,
+          54.67860412597656,
+          -404.2216796875
+        ],
+        "max": [
+          418.3447265625,
+          69.92494201660156,
+          -300.1587829589844
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x4-z-6",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x4-z-6.glb",
+      "bytes": 752180,
+      "triangles": 6930,
+      "sha256": "c8d6230a5d0981488105c4ae67d705777ecfc00a7e9d308491ae8568f0b875e1",
+      "bounds": {
+        "min": [
+          390.68603515625,
+          63.34500503540039,
+          -600
+        ],
+        "max": [
+          506.5,
+          105.59817504882812,
+          -489.7265625
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x4-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x4-z-5.glb",
+      "bytes": 476644,
+      "triangles": 4167,
+      "sha256": "2378cc024cdae6e8c5a28adfdebe27dfeb9e29a5bf1a77d018cfe007fa466bb1",
+      "bounds": {
+        "min": [
+          393.2265625,
+          62.66438293457031,
+          -510.146484375
+        ],
+        "max": [
+          509.82470703125,
+          75.97410583496094,
+          -388.9697265625
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x4-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x4-z-4.glb",
+      "bytes": 1051144,
+      "triangles": 9756,
+      "sha256": "5ffa2f04376f2e6d5c299795b34f46e41f44488ce514976f000eb17917762073",
+      "bounds": {
+        "min": [
+          386.625,
+          49.28843307495117,
+          -413.54248046875
+        ],
+        "max": [
+          507.54296875,
+          67.23611450195312,
+          -300.1371765136719
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x5-z-6",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x5-z-6.glb",
+      "bytes": 26952,
+      "triangles": 228,
+      "sha256": "df6147af31401f1b12d0b5f5ab16171ad7067688340c16347d413f09a227bf33",
+      "bounds": {
+        "min": [
+          490.5,
+          75.53450012207031,
+          -580.4883422851562
+        ],
+        "max": [
+          569.2999877929688,
+          97.7585220336914,
+          -474
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x5-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x5-z-5.glb",
+      "bytes": 846436,
+      "triangles": 7022,
+      "sha256": "62edfe39899b99f6dfe5fe6b7bbbe2049f2eb6664f6d0ed0e6c4d7c1c2077edc",
+      "bounds": {
+        "min": [
+          489.365234375,
+          53.979652404785156,
+          -522.5
+        ],
+        "max": [
+          606,
+          93.79972839355469,
+          -395.4658203125
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x5-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x5-z-4.glb",
+      "bytes": 665840,
+      "triangles": 6308,
+      "sha256": "f378c5aec981696e1963ba06a4cea99a0f3ea68bd22486bb5fc4eefb299364c9",
+      "bounds": {
+        "min": [
+          488.64697265625,
+          47.927001953125,
+          -404.5302734375
+        ],
+        "max": [
+          606.5,
+          67.57386779785156,
+          -300
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x6-z-5",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x6-z-5.glb",
+      "bytes": 342936,
+      "triangles": 3185,
+      "sha256": "243c4b0c6b08128531073e770275bff34245c6a225ef328653017153e5050f1e",
+      "bounds": {
+        "min": [
+          594.5810546875,
+          54.266719818115234,
+          -484.21429443359375
+        ],
+        "max": [
+          685,
+          74.16072845458984,
+          -395.9384765625
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "context-terrain-B-x6-z-4",
+      "file": "../estate-foundation/terrain/processed-context/terrain-context-B-x6-z-4.glb",
+      "bytes": 868580,
+      "triangles": 8205,
+      "sha256": "e3aed48293daa0e482b317fcf67f32663926ae93076af269bfca89abd6878d4a",
+      "bounds": {
+        "min": [
+          595.95947265625,
+          51.63240051269531,
+          -405.4583435058594
+        ],
+        "max": [
+          695,
+          70.64895629882812,
+          -300.0946350097656
+        ]
+      },
+      "mode": "context",
+      "layer": "terrain"
+    },
+    {
+      "id": "diagnostic-terrain-source-C-terrain-C-west",
+      "file": "../estate-foundation/terrain/diagnostic/C/terrain-C-west.glb",
+      "bytes": 372352,
+      "triangles": 3031,
+      "sha256": "e92e705919bcf50f2221ffc9f98ed36a0b202ff344db019274ba5389f6c82931",
+      "bounds": {
+        "min": [
+          230,
+          22.633514404296875,
+          -51
+        ],
+        "max": [
+          330,
+          38.965999603271484,
+          10
+        ]
+      },
+      "mode": "diagnostic",
+      "layer": "terrain"
+    },
+    {
+      "id": "diagnostic-terrain-source-C-terrain-C-east",
+      "file": "../estate-foundation/terrain/diagnostic/C/terrain-C-east.glb",
+      "bytes": 187216,
+      "triangles": 1560,
+      "sha256": "f27039749580b2746029e3c9dcc917200229556f1d50256a89a9943acfa71312",
+      "bounds": {
+        "min": [
+          330,
+          10.704999923706055,
+          -51
+        ],
+        "max": [
+          375.5,
+          25.4573917388916,
+          10
+        ]
+      },
+      "mode": "diagnostic",
+      "layer": "terrain"
+    },
+    {
+      "id": "diagnostic-terrain-source-D-terrain-D-west",
+      "file": "../estate-foundation/terrain/diagnostic/D/terrain-D-west.glb",
+      "bytes": 92632,
+      "triangles": 825,
+      "sha256": "c70de5b56345130e1f8a0bfa254df235b824e8e00dfbff38bcf236a65d63557f",
+      "bounds": {
+        "min": [
+          375.5,
+          10.70494270324707,
+          -51
+        ],
+        "max": [
+          390,
+          11.166717529296875,
+          10
+        ]
+      },
+      "mode": "diagnostic",
+      "layer": "terrain"
+    },
+    {
+      "id": "diagnostic-terrain-source-D-terrain-D-east",
+      "file": "../estate-foundation/terrain/diagnostic/D/terrain-D-east.glb",
+      "bytes": 82972,
+      "triangles": 797,
+      "sha256": "4efa875f1e423caacbfcad2d8f613da97d170af63e4c6c937e37fa4f9517eaa4",
+      "bounds": {
+        "min": [
+          390,
+          10.70494270324707,
+          -51
+        ],
+        "max": [
+          405,
+          11.18620777130127,
+          10
+        ]
+      },
+      "mode": "diagnostic",
+      "layer": "terrain"
+    },
+    {
+      "id": "shared-houses-estate-house-B319801262901063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B319801262901063C0.glb",
+      "bytes": 53620,
+      "triangles": 655,
+      "sha256": "7c649d539c0f0a58555c580bcb90751c42e6609fea8016717c3db1d87c7b59a6",
+      "bounds": {
+        "min": [
+          60.56298828125,
+          30.856000900268555,
+          -344.35888671875
+        ],
+        "max": [
+          152.06201171875,
+          87.81700134277344,
+          -318.765625
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B320791278001063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B320791278001063C0.glb",
+      "bytes": 32408,
+      "triangles": 385,
+      "sha256": "4ff6c6028f20d1409d25d7535af08c216e6b455388205b5da1b69c695acaf12f",
+      "bounds": {
+        "min": [
+          173.462890625,
+          62.26599884033203,
+          -509.5341796875
+        ],
+        "max": [
+          233.66259765625,
+          129.5,
+          -451.5908203125
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B320961263701063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B320961263701063C0.glb",
+      "bytes": 61088,
+      "triangles": 746,
+      "sha256": "321e224d2465cfc5204767f1ff598ecae853645fdeca231b730cb27d49e29424",
+      "bounds": {
+        "min": [
+          191.88232421875,
+          54.202999114990234,
+          -365.6640625
+        ],
+        "max": [
+          250.1181640625,
+          132.62399291992188,
+          -305.4609375
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B321551271001063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B321551271001063C0.glb",
+      "bytes": 43032,
+      "triangles": 521,
+      "sha256": "c58da58d008981881de3e030f9e6250bffd0d384c9571f4145e59e0f4d9db6d3",
+      "bounds": {
+        "min": [
+          249.79345703125,
+          63.84299850463867,
+          -437.0283203125
+        ],
+        "max": [
+          310.58154296875,
+          132.9739990234375,
+          -378.5966796875
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B322081264001063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B322081264001063C0.glb",
+      "bytes": 55276,
+      "triangles": 678,
+      "sha256": "201d76c4b879da449ab13f97b491fd630954c0fa3cdbbd1b464d0971613fb0eb",
+      "bounds": {
+        "min": [
+          298.35693359375,
+          73.37799835205078,
+          -365.77294921875
+        ],
+        "max": [
+          361.2685546875,
+          141.60800170898438,
+          -307.85205078125
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B319321253701063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B319321253701063C0.glb",
+      "bytes": 33644,
+      "triangles": 402,
+      "sha256": "aa22380900b2d04869d661ab794c298ce6403b8e1aee273f28542a04f88c3483",
+      "bounds": {
+        "min": [
+          53.88037109375,
+          16.614013921509077,
+          -286.3745261134782
+        ],
+        "max": [
+          71.99462890625,
+          73.33499855199001,
+          -194.50050575465167
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B319711245301063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B319711245301063C0.glb",
+      "bytes": 38088,
+      "triangles": 459,
+      "sha256": "c9c77c5695aba193ec8cb3bd02d32fc4a780ebe1b69383a4d54e3e4b1531d098",
+      "bounds": {
+        "min": [
+          91.5078125,
+          15.066999910420348,
+          -200.52686374181647
+        ],
+        "max": [
+          150.61767578125,
+          48.691009160949726,
+          -116.72315563038538
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B319741259301063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B319741259301063C0.glb",
+      "bytes": 39188,
+      "triangles": 473,
+      "sha256": "81cbe1c1e21fe3a09539882c4032f3860c9151658a66814acd3ac287bce6bd43",
+      "bounds": {
+        "min": [
+          43.3681640625,
+          22.602995226000427,
+          -296.64795922402845
+        ],
+        "max": [
+          164.00634765625,
+          60.65800556675668,
+          -238.10206272988134
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B320211247701063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B320211247701063C0.glb",
+      "bytes": 35280,
+      "triangles": 423,
+      "sha256": "050d546e289d79ee6bc52e3a9d9c90bf72ff0c2bfe91ada4e3c9237a4d603435",
+      "bounds": {
+        "min": [
+          102.306640625,
+          19.436997833337294,
+          -180.87013229228555
+        ],
+        "max": [
+          194.193359375,
+          74.73000135679314,
+          -162.75538677980077
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B320441252301063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B320441252301063C0.glb",
+      "bytes": 45188,
+      "triangles": 550,
+      "sha256": "d5120a34fbf7e43127cd93ee17d10585fa7528aea206b09bc7935c65338b1008",
+      "bounds": {
+        "min": [
+          145.86767578125,
+          24.08599198426872,
+          -227.01709710695667
+        ],
+        "max": [
+          204.50732421875,
+          53.91999024568385,
+          -152.23291993619435
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B320701242801063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B320701242801063C0.glb",
+      "bytes": 39216,
+      "triangles": 462,
+      "sha256": "a29f5fc4e771946c37673749539ffae116895c619773fd5dd912ea0457342fd6",
+      "bounds": {
+        "min": [
+          184.228515625,
+          24.19199101520485,
+          -132.35010876496375
+        ],
+        "max": [
+          242.896484375,
+          66.80598917376763,
+          -55.52490648504696
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B320961237801063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B320961237801063C0.glb",
+      "bytes": 41368,
+      "triangles": 501,
+      "sha256": "cfebbb2e8f1158132365aa6bc8f671476bed171c4c88e30d7c5c14706e5d2862",
+      "bounds": {
+        "min": [
+          140.7744140625,
+          17.2679970787381,
+          -86.21046844992418
+        ],
+        "max": [
+          232.60009765625,
+          84.82700502471266,
+          -68.03957025509966
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B321201256601063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B321201256601063C0.glb",
+      "bytes": 29664,
+      "triangles": 351,
+      "sha256": "592de3cbe2ec75f295d44dd5d424445fb3d0c63a81ebccfd56900091cfadf535",
+      "bounds": {
+        "min": [
+          219.38330078125,
+          46.65800874883435,
+          -292.32033520598384
+        ],
+        "max": [
+          279.6162109375,
+          126.29799864770561,
+          -234.3051769068196
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B321481231301063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B321481231301063C0.glb",
+      "bytes": 764300,
+      "triangles": 16175,
+      "sha256": "91c0ea96550236911fd84ae1fb3795263df458152abf62a1b3d7bec9d3445046",
+      "bounds": {
+        "min": [
+          219.51611328125,
+          25.85599708557129,
+          -19.522964477539062
+        ],
+        "max": [
+          311.35888671875,
+          82.16099548339844,
+          0.8984354734420776
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B321621236201063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B321621236201063C0.glb",
+      "bytes": 64224,
+      "triangles": 794,
+      "sha256": "b8343fac092fc0b785f4c597d9aa08214c8b0cb14191718cd524e0478692a0ba",
+      "bounds": {
+        "min": [
+          263.0068359375,
+          25.76198881528358,
+          -66.5576220071398
+        ],
+        "max": [
+          322.11767578125,
+          64.23798898627868,
+          9.182604856441266
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B321751251701063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B321751251701063C0.glb",
+      "bytes": 72804,
+      "triangles": 904,
+      "sha256": "ce45cfdf8d5fedbad8e83fe0d599242d77dd256f6d0ea11d0b361f2362e7f746",
+      "bounds": {
+        "min": [
+          270.6396484375,
+          45.900000937145435,
+          -243.01125262264915
+        ],
+        "max": [
+          330.85986328125,
+          123.4339964818012,
+          -184.98925880549623
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B322241247801063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B322241247801063C0.glb",
+      "bytes": 133612,
+      "triangles": 1683,
+      "sha256": "a3a2c68bbe056a3a040c55d800fec664b7ff5126217851c3498901c9378361b5",
+      "bounds": {
+        "min": [
+          318.375,
+          36.90301227979257,
+          -243.9375013332746
+        ],
+        "max": [
+          511,
+          75.67298591371036,
+          -144.5625116455503
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "shared-houses-estate-house-B322311254301063C0",
+      "file": "../estate-foundation/buildings/chunks/estate-house-B322311254301063C0.glb",
+      "bytes": 85972,
+      "triangles": 1073,
+      "sha256": "86debf2fb3c9c1adc3f18066de6ef98f6cd6fab30847c62c85bc2e55aac2dd7b",
+      "bounds": {
+        "min": [
+          337.40283203125,
+          45.6789922609065,
+          -280.74171007784884
+        ],
+        "max": [
+          492.5966796875,
+          88.42099274878179,
+          -224.00781347096827
+        ]
+      },
+      "mode": "shared",
+      "layer": "houses"
+    },
+    {
+      "id": "context-roads",
+      "mode": "context",
+      "layer": "roads",
+      "file": "../estate-foundation/roads/context.glb",
+      "bytes": 422244,
+      "sha256": "fc5d2ca0ea87bbc9f6fa61489abb44a7b12678e910663d8c5987e1c234509727",
+      "triangles": 4978,
+      "bounds": {
+        "min": [
+          23.699220180511475,
+          15.29379653930664,
+          -290
+        ],
+        "max": [
+          369.6207504272461,
+          47.99624252319336,
+          -22.753799438476562
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-roads",
+      "mode": "diagnostic",
+      "layer": "roads",
+      "file": "../estate-foundation/roads/diagnostic.glb",
+      "bytes": 49924,
+      "sha256": "5244c856d0eecb655c66699968f6ed1bab915170593a55e979b3622e71432d52",
+      "triangles": 578,
+      "bounds": {
+        "min": [
+          230,
+          30.97811186313629,
+          -51
+        ],
+        "max": [
+          256.95098972320557,
+          33.818827509880066,
+          -22.753799438476562
+        ]
+      }
+    },
+    {
+      "id": "context-presentation-base",
+      "mode": "context",
+      "layer": "base",
+      "file": "../estate-foundation/terrain/optional-context/wah-fu-25m-base.glb",
+      "bytes": 155860,
+      "sha256": "c8335864d837f1f141d46a55e40260c3966af146125f80120f2127cf6b2ad76a",
+      "triangles": 2835,
+      "bounds": {
+        "min": [
+          -225,
+          -23.735639572143555,
+          -600
+        ],
+        "max": [
+          695,
+          105.5969467163086,
+          358.4781799316406
+        ]
+      }
+    },
+    {
+      "id": "context-illustrative-sea-extension",
+      "mode": "context",
+      "layer": "sea",
+      "file": "../estate-foundation/terrain/optional-context/illustrative-sea-continuation.glb",
+      "bytes": 2076,
+      "sha256": "d79b54baf0ec02517779acd9c5ac4e4aa89e424b134f3309c4348fab3f8a378a",
+      "triangles": 8,
+      "bounds": {
+        "min": [
+          111.35100555419922,
+          1.2999999523162842,
+          300
+        ],
+        "max": [
+          581.4795532226562,
+          1.2999999523162842,
+          358.4781799316406
+        ]
+      }
+    },
+    {
+      "id": "public-public-clay-cell--1--3",
+      "file": "clay/public-clay-cell--1--3.glb",
+      "bytes": 23004,
+      "sha256": "742b51a07c2b972e89a90beb8320db7bc7d7747602b031f2220f1a5ceb7a37c4",
+      "triangles": 200,
+      "bounds": {
+        "min": [
+          -30.201000213623047,
+          24.811996459960938,
+          -404.4219970703125
+        ],
+        "max": [
+          26.759000778198242,
+          59.448001861572266,
+          -288.61199951171875
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B318511263501063C0",
+        "B318551262602063C0",
+        "B318601262501063C0",
+        "B318621268701063C0",
+        "B318621268702063C0",
+        "B318951259501063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-0--2",
+      "file": "clay/public-clay-cell-0--2.glb",
+      "bytes": 21048,
+      "sha256": "aaca18788ab5668c4cc47ab4c89a0e3d4072556cd1d7a7d2fa0cb7cbf1ebedbd",
+      "triangles": 188,
+      "bounds": {
+        "min": [
+          29.659000396728516,
+          14.951996803283691,
+          -196.86599731445312
+        ],
+        "max": [
+          80.31199645996094,
+          24.18400001525879,
+          -144.91099548339844
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B319111249101063C0",
+        "B319181247501063C0",
+        "B319261245201063C0",
+        "B319411248701063C0",
+        "B319511248401063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-0--3",
+      "file": "clay/public-clay-cell-0--3.glb",
+      "bytes": 82780,
+      "sha256": "2a6757d8722134a7604640679d6fb9fa65f4e62d60d79ddbafd95ad09c11a1bd",
+      "triangles": 808,
+      "bounds": {
+        "min": [
+          -32.1609992980957,
+          33.893001556396484,
+          -456.8139953613281
+        ],
+        "max": [
+          165.11700439453125,
+          88.07499694824219,
+          -319.3810119628906
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B318831266701063C0",
+        "B318861267201063C0",
+        "B318901262101063C0",
+        "B319001270401063C0",
+        "B319081269501063C0",
+        "B319091267901063C0",
+        "B319141267801063C0",
+        "B319281268301063C0",
+        "B319531270401063C0",
+        "B319611272301063C0",
+        "B319801271101063C0",
+        "B319851268701063C0",
+        "B319941275301063C0",
+        "B320111266201063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-0--4",
+      "file": "clay/public-clay-cell-0--4.glb",
+      "bytes": 2452,
+      "sha256": "64256bdc8bbca4f7c16d88edbc67dfd74c18ad900c06cce8885016135bbf3161",
+      "triangles": 12,
+      "bounds": {
+        "min": [
+          105.84300231933594,
+          52.777000427246094,
+          -487.1189880371094
+        ],
+        "max": [
+          119.91400146484375,
+          57.62799835205078,
+          -474.0060119628906
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B319881278101063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-1--3",
+      "file": "connected/public-clay-cell-1--3-confirmed-trimmed.glb",
+      "bytes": 7964,
+      "sha256": "b2b7e3797458da51a6400692ec8227b127a8fa5a455b25510610750d9bf51455",
+      "triangles": 52,
+      "bounds": {
+        "min": [
+          156.79400634765625,
+          44.064998626708984,
+          -393.2850036621094
+        ],
+        "max": [
+          283.7030029296875,
+          74.6969985961914,
+          -341.9339904785156
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B320341268801063C0",
+        "B321531264401063C0",
+        "B321581265401063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-1-0",
+      "file": "clay/public-clay-cell-1-0.glb",
+      "bytes": 8508,
+      "sha256": "7e7c8feeacb3885f049115d09283d0d5d592d6ce2b3c1eebe09a056b47370765",
+      "triangles": 84,
+      "bounds": {
+        "min": [
+          204.23500061035156,
+          3.4459986686706543,
+          52.542999267578125
+        ],
+        "max": [
+          214.51499938964844,
+          8.125001907348633,
+          60.308998107910156
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B320861224401063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-2--1",
+      "file": "connected/arrows/public-public-clay-cell-2--1-trimmed.glb",
+      "bytes": 57860,
+      "sha256": "efcfb74d2631dd42d4e0f5da0805752877e117dd00df63e3d89868efe150bd5a",
+      "triangles": 580,
+      "bounds": {
+        "min": [
+          363.1709899902344,
+          6.945000171661377,
+          -153.39500427246094
+        ],
+        "max": [
+          465.36199951171875,
+          121.43599700927734,
+          12.63700008392334
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B322451239501063C0",
+        "B322531230702063C0",
+        "B322601231901063C0",
+        "B322641237801063C0",
+        "B322911237401063C0",
+        "B323081234601063C0",
+        "B323091242701063C0",
+        "B323181231201063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-2--3",
+      "file": "clay/public-clay-cell-2--3.glb",
+      "bytes": 68308,
+      "sha256": "a9a63d48b49ac4fe84ac26a87a42ba3fe584138d2e5f079763d9f428dfaa78ad",
+      "triangles": 660,
+      "bounds": {
+        "min": [
+          327.3190002441406,
+          54.44200134277344,
+          -465.39898681640625
+        ],
+        "max": [
+          459.3590087890625,
+          153.70199584960938,
+          -288.50299072265625
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B322101273901063C0",
+        "B322151271201063C0",
+        "B322191262501063C0",
+        "B322221274201063C0",
+        "B322381274501063C0",
+        "B322631271201063C0",
+        "B322671265301063C0",
+        "B322671272201063C0",
+        "B322761273501063C0",
+        "B322781270501063C0",
+        "B322861261501063C0",
+        "B322871270402063C0",
+        "B322891264302063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-2--4",
+      "file": "clay/public-clay-cell-2--4.glb",
+      "bytes": 30892,
+      "sha256": "ef9432da30506a77aabdfecd416feb0bdb9c3149fcf52bb2ccaa6719b0bab925",
+      "triangles": 328,
+      "bounds": {
+        "min": [
+          365.53399658203125,
+          63.345001220703125,
+          -541.3319702148438
+        ],
+        "max": [
+          457.10101318359375,
+          99.37999725341797,
+          -444.79400634765625
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B322471279401063C0",
+        "B322891279602063C0",
+        "B322911280101063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-2-0",
+      "file": "clay/public-clay-cell-2-0.glb",
+      "bytes": 11792,
+      "sha256": "a2a3c2561ae473664771775d5de75f590af8b0c99c89b14093d6b53fa40cffdc",
+      "triangles": 112,
+      "bounds": {
+        "min": [
+          320.156005859375,
+          4.826998233795166,
+          -7.548999786376953
+        ],
+        "max": [
+          402.8800048828125,
+          120.09100341796875,
+          66.61599731445312
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B322001223801063C0",
+        "B322591227601063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-3--1",
+      "file": "clay/public-clay-cell-3--1.glb",
+      "bytes": 58852,
+      "sha256": "931335d5dbaf3119f486d65062149b8ce757bbf95b37ffde6e174b55843acdfb",
+      "triangles": 604,
+      "bounds": {
+        "min": [
+          388.489990234375,
+          6.945000171661377,
+          -151.4010009765625
+        ],
+        "max": [
+          598.0070190429688,
+          121.41699981689453,
+          12.628999710083008
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B323401230502063C0",
+        "B323511235501063C0",
+        "B323591231001063C0",
+        "B323591235602063C0",
+        "B323771241201063C0",
+        "B324241237301063C0",
+        "B324371236001063C0",
+        "B324391242401063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-3--2",
+      "file": "clay/public-clay-cell-3--2.glb",
+      "bytes": 59348,
+      "sha256": "4e208d5c1eff4bfc7cef89c6bb241de7040f9e8adc7bca43275af3414df804d6",
+      "triangles": 644,
+      "bounds": {
+        "min": [
+          446.6499938964844,
+          9.35099983215332,
+          -320.4419860839844
+        ],
+        "max": [
+          564.177001953125,
+          157.15187072753906,
+          -146.41000366210938
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B323251259601063C0",
+        "B323781246101063C0",
+        "B324081259502063C0",
+        "B324211246301063C0",
+        "B324271259301063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-3--3",
+      "file": "clay/public-clay-cell-3--3.glb",
+      "bytes": 51660,
+      "sha256": "be38158b399846fa00ea58897a297723caada06e6709c460b82ef623a1659ab0",
+      "triangles": 484,
+      "bounds": {
+        "min": [
+          436.302001953125,
+          49.8849983215332,
+          -441.02899169921875
+        ],
+        "max": [
+          588.0059814453125,
+          161.84800720214844,
+          -311.5050048828125
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B323311267801063C0",
+        "B323311270901063C0",
+        "B323481268401063C0",
+        "B323621264401063C0",
+        "B323631268501063C0",
+        "B323651273601063C0",
+        "B323721263301063C0",
+        "B323821272001063C0",
+        "B324211263001063C0",
+        "B324471266001063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-3-0",
+      "file": "clay/public-clay-cell-3-0.glb",
+      "bytes": 2448,
+      "sha256": "3789d3a97135bd5dc5307fd3449642269d2dd8745a57d82195b67f0e46050c14",
+      "triangles": 12,
+      "bounds": {
+        "min": [
+          472.9960021972656,
+          5.874000072479248,
+          29.382999420166016
+        ],
+        "max": [
+          480.5050048828125,
+          11.206999778747559,
+          38.49100112915039
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B323511226701063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-4--1",
+      "file": "clay/public-clay-cell-4--1.glb",
+      "bytes": 8508,
+      "sha256": "fd280ed629a90a54ab726bde2570eabbad8cdbd209f7cd33b893b72b10b37d93",
+      "triangles": 84,
+      "bounds": {
+        "min": [
+          585.2769775390625,
+          11.022000312805176,
+          -97.89600372314453
+        ],
+        "max": [
+          649.3489990234375,
+          121.08200073242188,
+          -45.104000091552734
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B324951236301063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-4--2",
+      "file": "clay/public-clay-cell-4--2.glb",
+      "bytes": 3796,
+      "sha256": "9c54d08984c1d5d21567da5a625e4ca6e96d3b7c0d6a05b443d526fa0d0411e2",
+      "triangles": 28,
+      "bounds": {
+        "min": [
+          642.7239990234375,
+          53.66899871826172,
+          -299.3370056152344
+        ],
+        "max": [
+          650.6510009765625,
+          64.18499755859375,
+          -291.66400146484375
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B325211259601063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-4--3",
+      "file": "clay/public-clay-cell-4--3.glb",
+      "bytes": 4464,
+      "sha256": "f99b82917c8708eefe5f703bbd9b3761fe73ae8d6571bcb665258a6e60baee60",
+      "triangles": 36,
+      "bounds": {
+        "min": [
+          677.5440063476562,
+          55.314998626708984,
+          -316.7080078125
+        ],
+        "max": [
+          682.9559936523438,
+          65.6989974975586,
+          -309.9169921875
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B325551261301063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-infrastructure-cell-0--3",
+      "file": "clay/infrastructure-cell-0--3.glb",
+      "bytes": 4040,
+      "sha256": "337c355a3771da71283d10edfac76a7ed7eea7f67eeb6548d65a0b5c383f5996",
+      "triangles": 28,
+      "bounds": {
+        "min": [
+          121.42822265625,
+          48.41699981689453,
+          -383.17431640625
+        ],
+        "max": [
+          129.072265625,
+          52.98500061035156,
+          -373.20068359375
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "I319961267303063C0"
+      ],
+      "contextCategory": "external-infrastructure-source-fallback"
+    },
+    {
+      "id": "public-infrastructure-cell-1--4",
+      "file": "clay/infrastructure-cell-1--4.glb",
+      "bytes": 24360,
+      "sha256": "89c4f0dfa3ace3d3d7ba3b12681b63416d84ad805893ed5def811794bd7a0fe7",
+      "triangles": 272,
+      "bounds": {
+        "min": [
+          153.55126953125,
+          54.63100051879883,
+          -582.5517578125
+        ],
+        "max": [
+          283.34228515625,
+          70.78300476074219,
+          -462.8154296875
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "I320281281802063C0",
+        "I321361276202063C0"
+      ],
+      "contextCategory": "external-infrastructure-source-fallback"
+    },
+    {
+      "id": "public-infrastructure-cell-1--3",
+      "file": "clay/infrastructure-cell-1--3.glb",
+      "bytes": 3308,
+      "sha256": "dea4a81e2c6c9ee2378f7fd305280c3d5c6ce4ca497dc6d0955de3c51af613d0",
+      "triangles": 20,
+      "bounds": {
+        "min": [
+          154.9794921875,
+          41.81799904633868,
+          -306.13916050847666
+        ],
+        "max": [
+          161.1455078125,
+          44.407003155932806,
+          -294.4853519631106
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "I320301259502063C0"
+      ],
+      "contextCategory": "external-infrastructure-source-fallback"
+    },
+    {
+      "id": "public-infrastructure-cell-2--3",
+      "file": "clay/infrastructure-cell-2--3.glb",
+      "bytes": 6556,
+      "sha256": "fad06e561a3ae17413445f312aacb5a1b66bbc1d135125c0158f6f52c6b80440",
+      "triangles": 44,
+      "bounds": {
+        "min": [
+          350.64404296875,
+          67.06300354003906,
+          -451.45751953125
+        ],
+        "max": [
+          384.69873046875,
+          72.90499877929688,
+          -342.140625
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "I322251274503063C0",
+        "I322471264202063C0"
+      ],
+      "contextCategory": "external-infrastructure-source-fallback"
+    },
+    {
+      "id": "public-infrastructure-cell-2--1",
+      "file": "clay/infrastructure-cell-2--1.glb",
+      "bytes": 35816,
+      "sha256": "b5b66118cdbe5a37934aaa38c78e0d3f76558e90d3ac7389f6a0f6ff4626cb26",
+      "triangles": 405,
+      "bounds": {
+        "min": [
+          323.85400390625,
+          10.944006625390184,
+          -139.4555742217597
+        ],
+        "max": [
+          458.3603515625,
+          46.65400443114505,
+          -66.17578125
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "I323131236602063C0",
+        "I321981237202063C0",
+        "I322001239502063C0"
+      ],
+      "contextCategory": "external-infrastructure-source-fallback"
+    },
+    {
+      "id": "public-infrastructure-cell-3--1",
+      "file": "clay/infrastructure-cell-3--1.glb",
+      "bytes": 91720,
+      "sha256": "0a1e0ecec3a17ee7b38e6ac5360c59ccbc6a9960046431618f3b9ea5159709c1",
+      "triangles": 1152,
+      "bounds": {
+        "min": [
+          495.201171875,
+          10.800999641418457,
+          -22.79248046875
+        ],
+        "max": [
+          531.048828125,
+          14.905000686645508,
+          -10.83251953125
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "I323701231002063C0"
+      ],
+      "contextCategory": "external-infrastructure-source-fallback"
+    },
+    {
+      "id": "public-infrastructure-cell-4--3",
+      "file": "clay/infrastructure-cell-4--3.glb",
+      "bytes": 28340,
+      "sha256": "f5643166f25f398c9974b659c09bab3b14a2162502a4f2fcccdb290f3b48422d",
+      "triangles": 322,
+      "bounds": {
+        "min": [
+          606.4365234375,
+          52.108001708984375,
+          -366.576171875
+        ],
+        "max": [
+          680.2509765625,
+          61.82099914550781,
+          -292.349609375
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "I324811261804063C0",
+        "I325171259204063C0"
+      ],
+      "contextCategory": "external-infrastructure-source-fallback"
+    },
+    {
+      "id": "context-bootstrapTerrain",
+      "mode": "context",
+      "layer": "bootstrapTerrain",
+      "file": "bootstrap/public-terrain-preview.glb",
+      "bytes": 110016,
+      "sha256": "1af6567c63f845bdfb149eda86c31615b86917b428f91d7984e724b871042bbe",
+      "triangles": 1293,
+      "bounds": {
+        "min": [
+          -225,
+          1.2999999523162842,
+          -600
+        ],
+        "max": [
+          695,
+          105.51899719238281,
+          358.4781799316406
+        ]
+      },
+      "temporary": true,
+      "sourceCommit": "348b19d7166fbee2ef01b6fb6bf6b048b3bf5e4b"
+    },
+    {
+      "id": "context-bootstrapBase",
+      "mode": "context",
+      "layer": "bootstrapBase",
+      "file": "bootstrap/public-shell-preview.glb",
+      "bytes": 196452,
+      "sha256": "8bc7333f2d4f7cea7b09eaeeb8f50c470ff80e86a99695b3ec7ba1884dc6d597",
+      "triangles": 2323,
+      "bounds": {
+        "min": [
+          -225,
+          -23.735639572143555,
+          -600
+        ],
+        "max": [
+          695,
+          105.51899719238281,
+          358.4781799316406
+        ]
+      },
+      "temporary": true,
+      "sourceCommit": "348b19d7166fbee2ef01b6fb6bf6b048b3bf5e4b"
+    },
+    {
+      "id": "context-bootstrapBuildings",
+      "mode": "context",
+      "layer": "bootstrapBuildings",
+      "file": "connected/public-buildings-preview-seven-palette.glb",
+      "bytes": 759268,
+      "sha256": "47f1acc5c43fda47ba25acfd549682bca6d6c1d67cca9035f8aa0998c0fc6c7b",
+      "triangles": 7620,
+      "bounds": {
+        "min": [
+          -32.1609992980957,
+          3.4459986686706543,
+          -541.3319702148438
+        ],
+        "max": [
+          682.9559936523438,
+          161.84800720214844,
+          66.61599731445312
+        ]
+      },
+      "temporary": true,
+      "sourceCommit": "348b19d7166fbee2ef01b6fb6bf6b048b3bf5e4b"
+    },
+    {
+      "id": "context-roads-northwest-A-spatial",
+      "mode": "context",
+      "layer": "roads",
+      "file": "roads/northwest-A-spatial-repack.glb",
+      "sha256": "f400401d4b36628d7ba819b300781906aec011c453a6d81555fa5d9d89f619cd",
+      "bytes": 71632,
+      "triangles": 760,
+      "bounds": {
+        "min": [
+          70,
+          31.73104879260063,
+          -359.99999046325684
+        ],
+        "max": [
+          179.5780906677246,
+          45.49238109588623,
+          -303.5639772415161
+        ]
+      },
+      "meaning": "Four unchanged separately attributed visual-only source-plan terrain overlays in one spatial container; no added geometry, road connection, surveyed height or navigation claim."
+    },
+    {
+      "id": "context-roads-king-west",
+      "mode": "context",
+      "layer": "roads",
+      "file": "roads/king-west.glb",
+      "sha256": "de93980c1d1a7ae59954e9a4fe89c173a090dfe3d51e903b44cbe2caf4c1a627",
+      "bytes": 105892,
+      "triangles": 840,
+      "bounds": {
+        "min": [
+          155.00001136461893,
+          53.72048568725586,
+          -539.9999904632568
+        ],
+        "max": [
+          229.9999885559082,
+          61.8529052734375,
+          -475.0000114440918
+        ]
+      },
+      "meaning": "Visual-only bounded mapped-plan terrain drape; see source spot, crop, omission and ownership limitations."
+    },
+    {
+      "id": "context-roads-wah-fu-D",
+      "mode": "context",
+      "layer": "roads",
+      "file": "roads/wah-fu-D.glb",
+      "sha256": "ce85db3724ac195068ef0019c707a3f2c3e9bd81eb4c93cc24cf566c2f7dfab2",
+      "bytes": 50568,
+      "triangles": 577,
+      "bounds": {
+        "min": [
+          410.00000953674316,
+          45.646668434143066,
+          -262.61780881881714
+        ],
+        "max": [
+          459.99999046325684,
+          47.406493186950684,
+          -246.68763732910156
+        ]
+      },
+      "meaning": "Visual-only bounded mapped-plan terrain drape; see source spot, crop, omission and ownership limitations."
+    },
+    {
+      "id": "context-roads-wah-kwai-boundary",
+      "mode": "context",
+      "layer": "roads",
+      "file": "roads/wah-kwai-boundary.glb",
+      "sha256": "218801f1c9ce439d20e03285e48edfc1644b146b91b79b4f9571890b0ef01b9c",
+      "bytes": 71196,
+      "triangles": 820,
+      "bounds": {
+        "min": [
+          581.8108901977539,
+          10.562406539916992,
+          -154.99999237060547
+        ],
+        "max": [
+          661.4263594150543,
+          11.789047241210938,
+          -63.0353639125824
+        ]
+      },
+      "meaning": "Bounded mapped-margin visual terrain overlay; no surveyed road height, physical connectivity, collision or navigation claim."
+    },
+    {
+      "id": "context-roads-B-king-pokfu-spatial",
+      "mode": "context",
+      "layer": "roads",
+      "file": "../estate-road-trial/roads-v4-approved-waterfall-COMBINED-INACTIVE.glb",
+      "sha256": "ebdce802fc84548d140beef7c2f8f89cae2ad3c216303beda9a808369174f20b",
+      "bytes": 16409408,
+      "triangles": 135021,
+      "bounds": {
+        "min": [
+          -167.93712997436523,
+          9.254785537719727,
+          -600.0
+        ],
+        "max": [
+          695.0,
+          84.90546941757202,
+          39.64983940124512
+        ]
+      },
+      "patch_ids": [
+        "B-batch-1",
+        "B-batch-2",
+        "king-east",
+        "pok-fu-lam"
+      ],
+      "node_patch_ids": [
+        {
+          "node": "B-batch-1",
+          "patch_id": "B-batch-1"
+        },
+        {
+          "node": "B-batch-2",
+          "patch_id": "B-batch-2"
+        },
+        {
+          "node": "wah-king-east",
+          "patch_id": "king-east"
+        },
+        {
+          "node": "pok-fu-lam-south",
+          "patch_id": "pok-fu-lam",
+          "part": "south"
+        },
+        {
+          "node": "pok-fu-lam-north",
+          "patch_id": "pok-fu-lam",
+          "part": "north"
+        }
+      ],
+      "meaning": "INACTIVE local V4 coherent upper-carriageway profile: source-derived interpolation of retained source controls, not surveyed heights. Exact aerial XZ footprint and existing tunnel/bridge contacts retained. Main central chevrons reduced; opposite-carriageway bands, broader approach hump, bank and refuge are not repaired. Includes explicitly approved Waterfall estimated paving within mapped carpark boundary beneath canopy, estimated edge level and 26-face entrance correction. These approved assumptions are not surveyed fact. No renderer change, collision approval or publication. Historical steep-support diagnostic locally superseded only by the reviewed bounded terrain/profile contract."
+    },
+    {
+      "id": "shared-estate-associated-a-original",
+      "file": "connected/associated-a-original.glb",
+      "bytes": 398404,
+      "sha256": "26392833498a0f798b8aabfefc888da0ccfa2e5ef3113f01e603ee79789eb2f1",
+      "triangles": 3462,
+      "bounds": {
+        "min": [
+          259.43115234375,
+          24.996999740600586,
+          -155.73828125
+        ],
+        "max": [
+          331.318359375,
+          54.47600173950195,
+          -18.51123046875
+        ]
+      },
+      "mode": "shared",
+      "layer": "estateAssociated",
+      "sourceIds": [
+        "B321551240701063C0",
+        "B321661239102063C0"
+      ],
+      "namedHouse": false,
+      "detailStatus": "Original Government forms restored; photo-based architectural detail incomplete",
+      "confirmedGroup": "A"
+    },
+    {
+      "id": "shared-estate-associated-b-original",
+      "file": "connected/associated-b-original.glb",
+      "bytes": 220344,
+      "sha256": "a94cb981f151ad00d8d771a8b0c5f693c421c5821b742b5413bde4d8e1d2807e",
+      "triangles": 1900,
+      "bounds": {
+        "min": [
+          181.35400390625,
+          45.71799850463867,
+          -451.66748046875
+        ],
+        "max": [
+          228.89599609375,
+          84.91300201416016,
+          -367.45751953125
+        ]
+      },
+      "mode": "shared",
+      "layer": "estateAssociated",
+      "sourceIds": [
+        "B320681271701063C0",
+        "B320791270602063C0"
+      ],
+      "namedHouse": false,
+      "detailStatus": "Original Government forms restored; photo-based architectural detail incomplete",
+      "confirmedGroup": "B"
+    },
+    {
+      "id": "shared-estate-associated-c-original",
+      "file": "connected/associated-c-original.glb",
+      "bytes": 392932,
+      "sha256": "fb8634fb86f24730250df50bd00a2bb2aa295ff02d3e740aee25c40dc3f36af4",
+      "triangles": 3414,
+      "bounds": {
+        "min": [
+          164.53564453125,
+          46.80500030517578,
+          -519.4560546875
+        ],
+        "max": [
+          280.95068359375,
+          72.12799835205078,
+          -428.66162109375
+        ]
+      },
+      "mode": "shared",
+      "layer": "estateAssociated",
+      "sourceIds": [
+        "B320751277502063C0",
+        "B321241275202063C0"
+      ],
+      "namedHouse": false,
+      "detailStatus": "Original Government forms restored; photo-based architectural detail incomplete",
+      "confirmedGroup": "C"
+    },
+    {
+      "id": "shared-estate-associated-triangle6to8-original",
+      "file": "connected/associated-triangle6to8-original.glb",
+      "bytes": 28632,
+      "sha256": "c7a5a1138fad2358a23fb6c1770ffe547f6cf16746eeb5a39d378010f6489c53",
+      "triangles": 232,
+      "bounds": {
+        "min": [
+          101.5224609375,
+          14.465999603271484,
+          -117.70263671875
+        ],
+        "max": [
+          149.4775390625,
+          25.69300079345703,
+          -78.1728515625
+        ]
+      },
+      "mode": "shared",
+      "layer": "estateAssociated",
+      "sourceIds": [
+        "B320011241002063C0"
+      ],
+      "namedHouse": false,
+      "detailStatus": "Original Government forms restored; photo-based architectural detail incomplete",
+      "confirmedGroup": "triangle6to8"
+    },
+    {
+      "id": "shared-estate-arrow-associated-source",
+      "file": "connected/arrows/seven-arrow-associated-source.glb",
+      "mode": "shared",
+      "layer": "estateAssociated",
+      "sourceIds": [
+        "B321191239302063C0",
+        "B321451247901063C0",
+        "B321911243901063C0",
+        "B322051237701063C0",
+        "B322681252502063C0",
+        "I321251252202063C0",
+        "I321211237202063C0"
+      ],
+      "detailStatus": "Restored preserved historical source geometry; not completed architectural facade detail",
+      "sourceIdentityEvidence": "Independent visual corroboration, camera not calibrated",
+      "bytes": 99896,
+      "sha256": "653cae0592995a733b5f24525fa95fb87131f28bd6d7c6c8f773f272fed692f9",
+      "triangles": 1330,
+      "bounds": {
+        "min": [
+          238.53271484375,
+          25.7619938556113,
+          -255.4394549871208
+        ],
+        "max": [
+          510.9384765625,
+          62.72199941336483,
+          -56.71435606469147
+        ]
+      }
+    },
+    {
+      "id": "shared-estate-new-marked-associated-source",
+      "mode": "shared",
+      "layer": "estateAssociated",
+      "detailStatus": "Three native richer forms and three already-full connectors; no invented facade detail",
+      "sourceIdentityEvidence": "Independent qualified screenshot/source correspondence; approximate 9.03px roof registration, not calibrated. Arrow3 identified by small attachment shape. I321021244102063C0 is adjoining unmarked context, not a sixth arrow or new detail.",
+      "file": "connected/new-marked/five-marked-associated-source.glb",
+      "bytes": 100960,
+      "sha256": "41ecd407ce4d154d86bb8150a7f7a071251e0206712c8d58d5189d85c5dc4641",
+      "triangles": 932,
+      "sourceIds": [
+        "B320991244201063C0",
+        "B321461251901063C0",
+        "B321871257401063C0",
+        "I320661243902063C0",
+        "I321021244102063C0",
+        "I321631259102063C0"
+      ],
+      "bounds": {
+        "min": [
+          191.1875,
+          30.977998733520508,
+          -301.814453125
+        ],
+        "max": [
+          339.08740234375,
+          76.06600952148438,
+          -137.85986328125
+        ]
+      },
+      "connectionLimit": "Native adjacent source forms do not certify watertightness, structural connection or safe passage; I321021 projected separation from block approximately 20.96mm."
+    },
+    {
+      "id": "public-public-clay-cell-1--1",
+      "file": "connected/new-marked/public-public-clay-cell-1--1-trimmed.glb",
+      "bytes": 4384,
+      "sha256": "263e87e456482cb8249467ce591eb3ab763baf8a3fb7f7af5a8456a4af7da314",
+      "triangles": 24,
+      "bounds": {
+        "min": [
+          187.55599975585938,
+          24.41099739074707,
+          -149.33200073242188
+        ],
+        "max": [
+          194.052001953125,
+          39.15999984741211,
+          -97.50299835205078
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B320651244801063C0",
+        "B320661240401063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-1--2",
+      "file": "connected/new-marked/public-public-clay-cell-1--2-trimmed.glb",
+      "bytes": 6736,
+      "sha256": "c14e57057f1fd132997e57fe1420d603c2258631ad38bd3989aabf8aa285d325",
+      "triangles": 52,
+      "bounds": {
+        "min": [
+          250.8280029296875,
+          42.94400405883789,
+          -254.78399658203125
+        ],
+        "max": [
+          264.18701171875,
+          57.13199996948242,
+          -179.4530029296875
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B321291248601063C0",
+        "B321351255301063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-public-clay-cell-2--2",
+      "file": "connected/new-marked/public-public-clay-cell-2--2-trimmed.glb",
+      "bytes": 2432,
+      "sha256": "19edec7f99fc333b6258844df31750786a2a47345a5d7906378562550375c82e",
+      "triangles": 12,
+      "bounds": {
+        "min": [
+          428.01800537109375,
+          54.900001525878906,
+          -292.46600341796875
+        ],
+        "max": [
+          434.23199462890625,
+          75.4000015258789,
+          -288.15899658203125
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "B323061259001063C0"
+      ],
+      "contextCategory": "external-context-public-clay"
+    },
+    {
+      "id": "public-infrastructure-cell-1--2",
+      "file": "connected/new-marked/public-infrastructure-cell-1--2-trimmed.glb",
+      "bytes": 3192,
+      "sha256": "feb89bc481825940d6bfb167d6892b599fde645a2861bc14414b785a6ebb47a4",
+      "triangles": 20,
+      "bounds": {
+        "min": [
+          202.40478515625,
+          40.04499816894531,
+          -223.984375
+        ],
+        "max": [
+          206.220703125,
+          44.15800094604492,
+          -221.14013671875
+        ]
+      },
+      "mode": "shared",
+      "layer": "surroundings",
+      "sourceIds": [
+        "I320771252102063C0"
+      ],
+      "contextCategory": "external-infrastructure-source-fallback"
+    }
+  ],
+  "cameras": {
+    "wahMei": {
+      "yaw": 0.55,
+      "pitch": 0.8,
+      "pivot": [
+        265,
+        35,
+        -25
+      ],
+      "halfSpan": 70
+    },
+    "overview": {
+      "yaw": 0.12,
+      "pitch": 1.05,
+      "pivot": [
+        235,
+        35,
+        -120
+      ],
+      "halfSpan": 520
+    },
+    "diagnostic": {
+      "yaw": 0.2,
+      "pitch": 0.65,
+      "pivot": [
+        318,
+        25,
+        -20
+      ],
+      "halfSpan": 102
+    },
+    "roadSection1": {
+      "yaw": 0,
+      "pitch": 1,
+      "pivot": [
+        173.86,
+        44.64,
+        -347.5
+      ],
+      "halfSpan": 32,
+      "reviewRoad": true
+    },
+    "roadAIsolated": {
+      "yaw": 0,
+      "pitch": 1,
+      "pivot": [
+        169.5,
+        43.8,
+        -335
+      ],
+      "halfSpan": 42,
+      "reviewRoad": "A road connections \u00b7 sampled visual seam checks passed. Micrometre render guards remain; not collision-ready or surveyed."
+    },
+    "roadVictoria": {
+      "yaw": 0,
+      "pitch": 1,
+      "pivot": [
+        455,
+        66.52,
+        -440.53
+      ],
+      "halfSpan": 45,
+      "reviewRoad": "Victoria Road \u00b7 two visual drapes, 486.797 m\u00b2. Withheld terrain areas are not physical road gaps."
+    },
+    "roadKing": {
+      "yaw": 0,
+      "pitch": 1,
+      "pivot": [
+        192.5,
+        57.8,
+        -507.5
+      ],
+      "halfSpan": 60,
+      "reviewRoad": "Wah King Street \u00b7 1,019.559 m\u00b2 mapped visual drape. Original-terrain minus spot levels: \u22120.082, +0.251, \u22120.603 m; no correction. Artificial cuts; not surveyed."
+    },
+    "roadFuD": {
+      "yaw": 0,
+      "pitch": 1,
+      "pivot": [
+        435,
+        46.5,
+        -255
+      ],
+      "halfSpan": 42,
+      "reviewRoad": "Wah Fu Road D \u00b7 780.796 m\u00b2 mapped visual drape. Original terrain +0.328 m above one map ground spot; no correction. Overlapping-support hole withheld, not a physical road gap."
+    },
+    "roadWahKwai": {
+      "yaw": 0.25,
+      "pitch": 1,
+      "pivot": [
+        621.6,
+        11.2,
+        -109
+      ],
+      "halfSpan": 70,
+      "reviewRoad": "Wah Kwai Road \u00b7 881.938 m\u00b2 isolated visual drape. 152.603 m from the nearest existing patch, not a connection. Source heights unchanged; +0.03 m display lift."
+    },
+    "roadKingEast": {
+      "yaw": 0,
+      "pitch": 1,
+      "pivot": [
+        330,
+        65.5,
+        -417
+      ],
+      "halfSpan": 48,
+      "reviewRoad": "Wah King Street east \u00b7 731.553 m\u00b2 visual drape. Native curved margin approximated within 0.1 mm chord error. 88.314 m from the nearest existing patch, not a connection."
+    },
+    "roadPokFuLam": {
+      "yaw": 0,
+      "pitch": 1,
+      "pivot": [
+        450,
+        75.9,
+        -518.4
+      ],
+      "halfSpan": 110,
+      "reviewRoad": "Pok Fu Lam / Victoria \u00b7 2,974.992 m\u00b2 visual drape. Unknown RM interiors and support overlaps withheld. Source height/spot conflicts and the 42.305 mm processed facet kink remain; not surveyed or physically connected."
+    },
+    "tin-wan-access-connection": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        574.4279499053955,
+        8.007573544979095,
+        8.95833969116211
+      ],
+      "halfSpan": 80.72978134155274,
+      "publicHome": false
+    },
+    "waterfall-access-connection": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        72.9568920135498,
+        17.044935405254364,
+        -166.22187614440918
+      ],
+      "halfSpan": 60.11903324127197,
+      "publicHome": false
+    },
+    "victoria-boundary-connection": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        220.6608486175537,
+        60.93031048774719,
+        -595
+      ],
+      "halfSpan": 25.607282447814942,
+      "publicHome": false
+    },
+    "upper-road-gaps": {
+      "yaw": -0.65,
+      "pitch": 0.85,
+      "pivot": [
+        631,
+        60,
+        -345
+      ],
+      "halfSpan": 48,
+      "publicHome": false
+    },
+    "kwai-inner-access-connection": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        516.3577041625977,
+        11.697304368019104,
+        -147.1068458557129
+      ],
+      "halfSpan": 57.3404037475586,
+      "publicHome": false
+    },
+    "wah-king-final-connection": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        262.5,
+        63.7564280629158,
+        -470
+      ],
+      "halfSpan": 62,
+      "publicHome": false
+    },
+    "victoria-east-connection": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        430.27686500549316,
+        66.33078825473785,
+        -457.1444454193115
+      ],
+      "halfSpan": 98.36450023651123,
+      "publicHome": false
+    },
+    "wahlam-junction": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        408.67503356933594,
+        57.888963125646114,
+        -356.2471561431885
+      ],
+      "halfSpan": 110,
+      "publicHome": false
+    },
+    "access4206": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        395,
+        65,
+        -435
+      ],
+      "halfSpan": 30,
+      "publicHome": false
+    },
+    "redPortal": {
+      "yaw": -0.78,
+      "pitch": 0.95,
+      "pivot": [
+        620,
+        56,
+        -333
+      ],
+      "halfSpan": 35,
+      "publicHome": false
+    },
+    "eastSheetline": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        667.5,
+        60,
+        -300.1
+      ],
+      "halfSpan": 12,
+      "publicHome": false
+    },
+    "cheungShadow": {
+      "yaw": -0.65,
+      "pitch": 0.8,
+      "pivot": [
+        282.4,
+        53,
+        -246.7
+      ],
+      "halfSpan": 25,
+      "publicHome": false
+    },
+    "tinWanCoherent": {
+      "yaw": -0.65,
+      "pitch": 0.9,
+      "pivot": [
+        610.73,
+        10.13,
+        22.6
+      ],
+      "halfSpan": 24,
+      "publicHome": false
+    },
+    "carparkCoherent": {
+      "yaw": -0.65,
+      "pitch": 0.95,
+      "pivot": [
+        322.56,
+        58.68,
+        -272.63
+      ],
+      "halfSpan": 40,
+      "publicHome": false
+    },
+    "tinWanIroned": {
+      "yaw": -0.65,
+      "pitch": 1.2,
+      "pivot": [
+        574.54,
+        8.26,
+        7.33
+      ],
+      "halfSpan": 72,
+      "publicHome": false
+    },
+    "westernComplete": {
+      "yaw": -0.8,
+      "pitch": 0.5707963267948966,
+      "pivot": [
+        606.2686567164,
+        56,
+        -322.7014925373
+      ],
+      "halfSpan": 40.25,
+      "publicHome": false
+    }
+  },
+  "contextNote": "Tin Wan mapped corridor under trees; hidden edges are approved estimates. Includes 83.3 m\u00b2 of road-only reprofile, changing the old surface by \u221292 to +262 mm and standing up to 413 mm above unchanged terrain. New southern surface reaches 18 degrees; retained old edge facets may remain steeper. Ground controls still disagree and no datum shift was applied. Not surveyed or engineering/accessibility-certified; other road gaps remain. Mapped Wah Cheung bend under building shadow; hidden edges follow the approved map interpretation. Building and carpark remain unchanged. Model-estimated surface about 30\u2013139 mm above terrain, not surveyed. Centreline and four checked parallel traces stay below 13.6 degrees, but small endpoint/edge facets reach 35 degrees and extend up to 1.12 m from existing-road contacts. Not uniformly gentle or continuously smooth; smaller gaps remain. No road collision-policy change. Eastern existing-road source-sheet correction: finite ramps replace two 22\u201343 mm steps in a 14.707 m\u00b2 strip. Road width, terrain and structures are unchanged. Low humps and slope changes remain; this is not surveyed geometry or universal smoothness. An inherited isolated 47.28 mm point contact 1.678 m outside the target remains unchanged. Conforming local western portal correction covers about 17 m, not the missing 62.907 m western approach. Internal and external road interfaces have independently checked submicrometre height agreement. Terrain and source shell remain unchanged. Floor-relative road fitting is about 25\u2013283 mm; sampled lane-offset grades reach 12.648 degrees, not a continuous bound. Steeper side and microscopic facets remain. This is not surveyed geometry, walking certification or full-western-route completion. Native/aerial-supported green verge restoration: removes299 wrong high-road faces in nodes9/29 and appends6083 exact retained outside fragments. No new paving/height adjustment; lower46/47, terrain and source tunnel unchanged. Explicit13.694mm native endpoint interpolation follows visible aerial continuity, not millimetric photo measurement. Source boundary precision residues remain; independent source, combined lower/upper, installed/collider and budget gates pending. Access4206 is a bounded current-terrain display connection, not surveyed road geometry. A26.181mm native-margin endpoint gap is explicitly interpolated. Simplification has85.306micrometre maximum outward departure from raw source; one7.95e-9m2 thin face was omitted. No interior or within5m ground spot control; external height differences remain. Network incomplete; installed route and budget gates pending. Wah Lam/Wah King native RM/RMU widths are approximate, with islands preserved. Twenty-one source-steep facets remain excluded (0.513649 m\u00b2); two reference gaps total 32.275 mm. Network incomplete. Terrain fit 29.9\u2013154.154 mm and contact differences below 9.5 \u00b5m do not establish survey accuracy. Interior SHG residual +0.132 m; external controls only 0.063/0.144/0.783 m away differ by +0.573/+0.613/+0.722 m. Elevated SHE is not ground. Preserve all 12 local Y frames. Optional combined comparison is budget-held; no cap increase. Victoria eastern adjoining references use approximate native RM/RMU widths, not surveyed edges. Fourteen source facets steeper than35 degrees remain excluded (0.241451m\u00b2); five reference microgaps total18.681mm. Terrain fit29.9\u2013156.3mm; contacts\u22120.100..+0.649mm and10\u00b5m boundary fringes are not exact welds. Interior SHG residual\u22120.197m remains disclosed, no datum shift. Network incomplete. Optional combined comparison is budget-held; no cap increase. Additional separate Wah Kwai inner-access and Wah King connections use approximate native-margin widths, not surveyed edges. Kwai has no interior spot-height control; external height disagreements are not used to shift the road. Its existing clay shoulder is preserved. Wah King preserves overhead bridges and lower structures, removes only documented shoulder overlaps and tapers the bank edge: outer edges at most200mm above terrain, interior up to446mm. Minimum modeled overhead is3.09m, not a vehicle-clearance certification. Source RMU/STP crossings and precision fringes remain disclosed. Network incomplete. The tunnel junction now distinguishes the upper paved separator from the real narrow median. A bounded 15.789 m\u00b2 asphalt separator finish follows source roof and upper contacts; it is not an added traffic lane. Unsupported high road skin was removed from the mapped west portal shoulder, and replaced with a bounded pedestrian shoulder finish 30\u2013320 mm above the roof to clear existing terrain. The lower tunnel road, shell, terrain and collision policy are unchanged. Separator contact differences are within 0.006 mm; boundaries retain micrometre-scale encoding fringes. The fitted shoulder reaches 15.01 degrees locally and is not accessibility certification. Road network remains incomplete. Full mapped upper Pok Fu Lam carriageways now form a continuous pavement across the tunnel. Native longitudinal medians, the tunnel shell and lower passage remain. The approximate fitted road lies about30\u2013854mm above current terrain and at least29.997mm above overlapping source shell surfaces; no terrain or structure was changed. Network remains incomplete; no new road collision admission. Upper Pok Fu Lam carriageway joins preserve the existing upper road and lower tunnel. Source-deck clearance is about 30\u201346 mm; the outside terrain edge can remain 381 mm below the road. At the maximum departure the existing source shell top is about 30 mm below the road; no retaining skirt is invented. A 0.160 micrometre-wide source-pin ribbon remains omitted. Network remains incomplete; no change to collision policy. Additional bounded Tin Wan, Waterfall side-access and Victoria boundary connections. Approximate mapped-margin widths, not surveyed edges. Tin Wan final3m shoulder tapers to1.20m: cap188mm, side240mm, maximum interior467mm above current terrain; prior3.42mm projected reference microgap remains. Waterfall side-access follows current terrain18.009m at mapped15.8m spot (road18.036m); this inherited +2.21m disagreement is flagged for review, not calibrated away. Victoria native-island edge has a10\u00b5m numerical fringe. Network remains incomplete. The main model includes 40 bounded road additions and a narrow Wah Lung path, alongside the five byte-exact original B road nodes. The road network is not complete. These are source-constrained visual surfaces, not surveyed pavement or driving certification. User-approved terrain-following height-conflict sections remain reversible; Waterfall south retains its height-review flag and no forced terrain dips were made. The historical 2D road reference still contains fourteen plans and does not count all additions. Original terrain, coast and Home camera remain unchanged. Seven user-confirmed associated forms in four groups restore preserved source geometry; these are not additional named houses or completed photo-based facades. Wah Fu II carpark loop: estimated coherent road surface with vertical visual roadbed, including 12.93 m\u00b2 of adjoining Cheung end. Old road heights change \u221231 to +801 mm; up to 831 mm stand-off above unchanged terrain. Five checked travel traces stay below 8.7\u00b0, not uniformly gentle or surveyed. Carpark, terrain and native outline unchanged; no new road or side collision support. Other gaps remain. Tin Wan whole loop and foreground connector now use a coherent modelled road surface with estimated vertical roadbed. Replaced old heights change \u2212312 to +1047 mm; maximum stand-off above unchanged terrain is 1077 mm. These replace earlier 413 mm / \u221292 to +262 mm figures for the reprofiled parts. Seven intersecting native references and parallel traces were checked; travel intervals longer than 1 cm stay below 9.384 degrees, while small endpoint/edge facets reach 18.05 degrees and transition facets can extend 2.27 m from contacts. Hidden mapped widths remain approved estimates. Terrain, buildings and all 100 accepted holes remain unchanged; no new road or side collision support. Carpark correction remains unchanged with its separate 831 mm stand-off and \u221231/+801 mm change. Not surveyed, uniformly smooth or engineering-certified. Western tunnel approach now uses a continuous estimated roadbed while retaining the mapped medians, original terrain, tunnel and true adjoining road contacts. Model stand-off is about 25 mm to 1.45 m; side faces are visual only, with no new walking or collision support. Dense interior travel profiles are improved but not uniformly gentle: material intervals reach 18 degrees, narrow median-tip banks about 29 degrees, and short outer facets about 35 degrees. Adjacent upper-road terrain remains visibly faceted. The complete road network and untouched sections are not certified smooth.",
+  "diagnosticNote": "Only this 175 \u00d7 61 m original-source-derived C/D area is shown. The actual sheet interface has an unresolved height step up to 0.270 m. Context terrain and illustrative layers are absent. Building context is off by default: if enabled, shells outside the patch do not establish source terrain beneath them. No surface is bridged, connected or accepted as walkable. The verified western road pilot is draped; other mapped margins are 2D evidence only.",
+  "baselineCommit": "8395768724a3a84eca4cd8741efeae151626b4fd"
+}

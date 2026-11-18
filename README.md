@@ -1,5 +1,11 @@
 # Project Wah Fu
 
+[![3D preview: explore Wah Fu](https://img.shields.io/badge/3D_preview-Explore_Wah_Fu-1683b7?style=plastic)](https://jonathan-digiart.github.io/project-wah-fu/)
+[![Three.js: WebGL](https://img.shields.io/badge/Three.js-WebGL-1683b7?style=plastic&logo=threedotjs&logoColor=white)](https://threejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=plastic&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-646cff?style=plastic&logo=vite&logoColor=white)](https://vite.dev/)
+[![Status: in development](https://img.shields.io/badge/status-in_development-d49a25?style=plastic)](https://github.com/jonathan-digiart/project-wah-fu/issues)
+
 **An AI-assisted 3D reconstruction project to document the architecture, everyday scenery and community memories of Wah Fu Estate, Hong Kong.**
 
 [繁體中文（香港）](README.zh-HK.md) · English

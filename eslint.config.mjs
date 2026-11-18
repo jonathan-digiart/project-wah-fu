@@ -6,6 +6,8 @@ export default [
       "node_modules/**",
       ".cache/**",
       "dist/**",
+      "dist-legacy/**",
+      "release/**",
       "test-results/**",
       "playwright-report/**",
     ],

@@ -1,0 +1,1 @@
+export function supportsM04Gzip(scope=globalThis){try{return typeof scope.ReadableStream==='function'&&typeof scope.DecompressionStream==='function'&&!!scope.crypto?.subtle&&(new scope.DecompressionStream('gzip'),true);}catch{return false;}}
