@@ -35,9 +35,38 @@ test("public v128 renders accepted geometry with minimal navigation and credits"
   } catch (error) {
     const runtime = await page
       .evaluate(() => {
-        const review = Reflect.get(window, "estateFoundationReview");
-        const timeouts: unknown = review?.session?.loadTimeouts;
-        return Array.isArray(timeouts) ? timeouts.slice(-20) : [];
+        const review: unknown = Reflect.get(window, "estateFoundationReview");
+        if (!review || typeof review !== "object" || !("session" in review))
+          return [];
+        const { session } = review;
+        if (
+          !session ||
+          typeof session !== "object" ||
+          !("loadTimeouts" in session)
+        )
+          return [];
+        const { loadTimeouts } = session;
+        if (!Array.isArray(loadTimeouts)) return [];
+        const records: unknown[] = loadTimeouts;
+        return records.slice(-20).flatMap((record) => {
+          if (!record || typeof record !== "object") return [];
+          const { chunkId, phase, elapsedMs } = record as {
+            chunkId?: unknown;
+            phase?: unknown;
+            elapsedMs?: unknown;
+          };
+          const safeLabel = (value: unknown) =>
+            typeof value === "string" && /^[\w:.-]{1,128}$/u.test(value)
+              ? value
+              : undefined;
+          return [
+            {
+              chunkId: safeLabel(chunkId),
+              phase: safeLabel(phase),
+              elapsedMs: typeof elapsedMs === "number" ? elapsedMs : undefined,
+            },
+          ];
+        });
       })
       .catch(() => null);
     console.error(
