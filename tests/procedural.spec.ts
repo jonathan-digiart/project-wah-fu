@@ -10,6 +10,13 @@ for (const viewport of [
     const errors: string[] = [];
     const forbidden: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));
+    page.on("console", (message) => {
+      if (
+        message.type() === "error" &&
+        /shader|webglprogram/i.test(message.text())
+      )
+        errors.push(message.text());
+    });
     page.on("request", (r) => {
       if (/\.(glb|gltf|png|jpe?g|webp|ktx2?)(\?|$)/i.test(r.url()))
         forbidden.push(r.url());

@@ -3,8 +3,9 @@ import {
   Float32BufferAttribute,
   Group,
   Mesh,
-  MeshStandardMaterial,
+  type Material,
 } from "three";
+import { v128Material, type SurfaceRole } from "./palette";
 import { generateComponent } from "./geometry";
 import type { Component } from "./schema";
 export interface ComponentStats {
@@ -18,13 +19,20 @@ export class ComponentRegistry {
   readonly group = new Group();
   private entries = new Map<
     string,
-    { mesh: Mesh<BufferGeometry, MeshStandardMaterial>; stats: ComponentStats }
+    { mesh: Mesh<BufferGeometry, Material>; stats: ComponentStats }
   >();
   constructor(readonly triangleBudget = 100_000) {
     if (!Number.isSafeInteger(triangleBudget) || triangleBudget < 1)
       throw new Error("Invalid triangle budget");
   }
-  replace(component: Component) {
+  replace(
+    component: Component,
+    role: SurfaceRole = component.kind === "footprint"
+      ? "contextBuilding"
+      : component.kind === "road-strip"
+        ? "road"
+        : "terrain",
+  ) {
     if (
       component.kind === "construction-surface" &&
       component.origin &&
@@ -66,15 +74,13 @@ export class ComponentRegistry {
     geometry.setIndex(data.indices);
     // Flat shading keeps roof/wall edges sharp without duplicating vertex positions.
     geometry.computeVertexNormals();
-    const material = new MeshStandardMaterial({
-      color: component.kind === "road-strip" ? "#9e9d97" : "#d4c8b4",
-      roughness: 1,
-      flatShading:
-        component.kind !== "height-patch" &&
+    const material = v128Material(
+      role,
+      component.kind !== "height-patch" &&
         component.kind !== "control-surface" &&
         component.kind !== "authored-cells" &&
         component.kind !== "construction-surface",
-    });
+    );
     const mesh = new Mesh(geometry, material);
     if (component.kind === "construction-surface" && component.origin)
       mesh.position.set(...component.origin);

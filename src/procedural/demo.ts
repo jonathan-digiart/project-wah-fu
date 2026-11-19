@@ -3,8 +3,6 @@ import {
   Box3,
   Color,
   DirectionalLight,
-  Mesh,
-  MeshStandardMaterial,
   PerspectiveCamera,
   Scene,
   Vector3,
@@ -12,28 +10,32 @@ import {
 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { BUILDING_ENVELOPES } from "./building-envelopes";
+import { buildingRole, V128_PALETTE } from "./palette";
 import { ComponentRegistry } from "./registry";
 import { fitCamera } from "../view";
 import { wahMingPlan } from "./wah-ming";
 const started = performance.now();
 const registry = new ComponentRegistry();
 for (const building of BUILDING_ENVELOPES)
-  registry.replace({
-    id: building.id,
-    label: building.name,
-    kind: "footprint",
-    outline: building.footprint,
-    ...(building.holes ? { holes: building.holes } : {}),
-    base: building.base,
-    height: building.height,
-    source:
-      "Earlier semantic footprint/height scaffold; not v128 geometry parity",
-    confidence: "reference-derived",
-  });
-registry.replace(wahMingPlan(0));
+  registry.replace(
+    {
+      id: building.id,
+      label: building.name,
+      kind: "footprint",
+      outline: building.footprint,
+      ...(building.holes ? { holes: building.holes } : {}),
+      base: building.base,
+      height: building.height,
+      source:
+        "Earlier semantic footprint/height scaffold; not v128 geometry parity",
+      confidence: "reference-derived",
+    },
+    buildingRole(building.id),
+  );
+registry.replace(wahMingPlan(0), "paving");
 const generationMs = performance.now() - started;
 const scene = new Scene();
-scene.background = new Color("#e9e7e1");
+scene.background = new Color().setRGB(...V128_PALETTE.background, "srgb");
 scene.add(registry.group, new AmbientLight(0xffffff, 2));
 const light = new DirectionalLight(0xffffff, 3);
 light.position.set(-300, 600, 200);
@@ -117,7 +119,7 @@ const surface = async (optimised: boolean) => {
     };
     if (!registry.group.children.some((x) => x.userData.id === component.id)) {
       const start = performance.now();
-      registry.replace(component);
+      registry.replace(component, "paving");
       generationTimes.set(component.id, performance.now() - start);
     }
     isolate(component.id);
@@ -139,46 +141,41 @@ const northEdgeSection = async () => {
     ]);
     if (token !== viewGeneration) return;
     const id = "wah-ming-north-edge";
-    const parts = [
-      ["paving", "#7f8380"],
-      ["wall", "#bab4a0"],
-      ["bank", "#9eaf79"],
-    ] as const;
+    const parts = ["paving", "wall", "bank"] as const;
     if (!generationTimes.has(id)) {
       const start = performance.now();
-      registry.replace({
-        ...data.WAH_MING_AUTHORED_OPTIMISED,
-        id: `${id}-paving`,
-        label: "Wah Ming accepted carpark surface",
-        kind: "authored-cells",
-        source: "Accepted reference footprint and editable scalar heights",
-        confidence: "inferred",
-      });
+      registry.replace(
+        {
+          ...data.WAH_MING_AUTHORED_OPTIMISED,
+          id: `${id}-paving`,
+          label: "Wah Ming accepted carpark surface",
+          kind: "authored-cells",
+          source: "Accepted reference footprint and editable scalar heights",
+          confidence: "inferred",
+        },
+        "paving",
+      );
       for (const [part, generate] of [
         ["wall", edge.wahMingNorthWall],
         ["bank", edge.wahMingNorthBank],
       ] as const)
-        registry.replace({
-          id: `${id}-${part}`,
-          label: `Wah Ming north edge: ${part}`,
-          kind: "construction-surface",
-          source: "Verified, bounded v128 reference slice, not a survey",
-          confidence: "reference-derived",
-          generate,
-        });
+        registry.replace(
+          {
+            id: `${id}-${part}`,
+            label: `Wah Ming north edge: ${part}`,
+            kind: "construction-surface",
+            source: "Verified, bounded v128 reference slice, not a survey",
+            confidence: "reference-derived",
+            generate,
+          },
+          part === "wall" ? "retainingWall" : "bank",
+        );
       generationTimes.set(id, performance.now() - start);
     }
-    const visible = new Set(parts.map(([part]) => `${id}-${part}`));
+    const visible = new Set(parts.map((part) => `${id}-${part}`));
     for (const child of registry.group.children) {
       const childId: unknown = child.userData.id;
       child.visible = typeof childId === "string" && visible.has(childId);
-      const tint = parts.find(([part]) => childId === `${id}-${part}`);
-      if (
-        tint &&
-        child instanceof Mesh &&
-        child.material instanceof MeshStandardMaterial
-      )
-        child.material.color.set(tint[1]);
     }
     // Frame the measured join rather than imply that the whole carpark edge is rebuilt.
     const { xStart, northing, wallFoot, wallTop } = edge.WAH_MING_NORTH_EDGE;
@@ -234,26 +231,29 @@ const r06Surface = async () => {
     const id = "r06-top";
     if (!registry.group.children.some((x) => x.userData.id === id)) {
       const start = performance.now();
-      registry.replace({
-        id,
-        label: "R06 west top and contact apron",
-        kind: "construction-surface",
-        source:
-          "Accepted plane and localized grade zones; support geometry excluded",
-        confidence: "reference-derived",
-        origin: data.r06SurfaceOrigin,
-        generate: () => {
-          const west = data.r06SurfaceGeometry(0),
-            apron = data.r06SurfaceGeometry(1);
-          return {
-            positions: [...west.positions, ...apron.positions],
-            indices: [
-              ...west.indices,
-              ...apron.indices.map((i) => i + west.positions.length / 3),
-            ],
-          };
+      registry.replace(
+        {
+          id,
+          label: "R06 west top and contact apron",
+          kind: "construction-surface",
+          source:
+            "Accepted plane and localized grade zones; support geometry excluded",
+          confidence: "reference-derived",
+          origin: data.r06SurfaceOrigin,
+          generate: () => {
+            const west = data.r06SurfaceGeometry(0),
+              apron = data.r06SurfaceGeometry(1);
+            return {
+              positions: [...west.positions, ...apron.positions],
+              indices: [
+                ...west.indices,
+                ...apron.indices.map((i) => i + west.positions.length / 3),
+              ],
+            };
+          },
         },
-      });
+        "road",
+      );
       generationTimes.set(id, performance.now() - start);
     }
     isolate(id);

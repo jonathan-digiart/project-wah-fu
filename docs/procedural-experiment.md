@@ -221,3 +221,34 @@ Junction and building-wall plan contacts differ by only 1.329 and 0.239 micromet
 The existing west/apron height step is approximately 9 mm, preserved to 0.000027 mm
 at 265 boundary probes. That is a sampled seam comparison, not a continuous seam
 certificate. These isolated tops must not replace the complete accepted road.
+
+### v128 display palette
+
+Edit `src/procedural/palette.ts` for finish changes instead of modifying
+building footprints or geometry generators. The current codes match published
+v128 `estate-refined/appearance.mjs` and the viewer's clear colour.
+
+| Procedural role                             | v128 display source                            | sRGB input           |
+| ------------------------------------------- | ---------------------------------------------- | -------------------- |
+| Estate building shell                       | houses / estateAssociated                      | #D4C8B4              |
+| Context building shell                      | surroundings                                   | #BCB7AD              |
+| Carpark, retaining slice, R06 ordinary road | roads without the named paved-separator finish | 0.35 / 0.38 / 0.34   |
+| Bank and northern terrain                   | terrain, land role                             | 0.54 / 0.60 / 0.48   |
+| Canvas background                           | WebGL clear colour                             | 0.867 / 0.89 / 0.847 |
+
+The 18 house IDs and 15 associated footprints are matched to the public
+catalogue by stable source ID; unmatched envelopes use the surroundings colour.
+The v128 viewer assigns the same road tint to both Wah Ming GLB primitives
+despite their different source material factors; the retaining wall and paving
+still shade differently because their normals differ. The road-only R06
+primitive has no named paved-separator override. The bank asset has one land
+material. These are runtime display inputs, not colour samples inferred from
+screenshots or GLB material factors. The non-clay material uses the v128
+display-space lighting expression; Three's existing linear-space lighting is
+retained for building shells. Normals, simplified architecture, materials and
+renderers still differ from the baseline, so rendered pixels need not match.
+
+Each semantic role can be recoloured independently, even when two roles share
+today's colour. Future code-generated patterns can extend the material shader
+without adding an image file or extra triangles; new finishes still need
+visual and performance review.
