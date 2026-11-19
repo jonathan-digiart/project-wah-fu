@@ -31,18 +31,15 @@ Project Wah Fu 源於將生成式 AI 應用於社區記錄的探索，並受到�
 
 以上屬於發展目標，尚未全部實現。
 
-### 現階段：程序化模型重建
+### 現階段：公開預覽及純程式碼重建實驗
 
-[公開預覽](https://jonathan-digiart.github.io/project-wah-fu/) · [發布版本](https://github.com/jonathan-digiart/project-wah-fu/commit/348b19d7166fbee2ef01b6fb6bf6b048b3bf5e4b)
+[瀏覽現行 v128 公開預覽](https://jonathan-digiart.github.io/project-wah-fu/) · [v128 發布版本](https://github.com/jonathan-digiart/project-wah-fu/commit/53d214ca9cdb5b8fbe39c82e503bc4bb85b8fac6)
 
-早期原型採用政府開放地理及三維數據建立基礎模型，並以參考照片、藉助AI 建構局部建築細節。
+精簡版 v128 經 [PR #38](https://github.com/jonathan-digiart/project-wah-fu/pull/38) 取代首個公開的素模預覽，以簡潔介面展示屋邨模型，並列明資料來源。這是仍在開發中的重建版本，並非測量成果或完整歷史記錄。
 
-項目以 **[Three.js](https://threejs.org)、[TypeScript](https://www.typescriptlang.org) 和 [Vite](https://vite.dev)** 開發程序化模型，由程式配合明確參數生成地形及樓宇形體。工作重點是先核對範圍、比例、位置、方向，以及樓宇與地面的接合，再逐步增加細節。
+另一項[純程式碼重建實驗（草稿 PR #39）](https://github.com/jonathan-digiart/project-wah-fu/pull/39) 採用 **[Three.js](https://threejs.org)、[TypeScript](https://www.typescriptlang.org) 和 [Vite](https://vite.dev)**，以程式碼及明確參數生成幾何形體，不匯入圖像或三維素材。實驗沿用 [PR #6](https://github.com/jonathan-digiart/project-wah-fu/pull/6) 引入的程序化框架。地形、樓宇及其與地面的接合仍須按參考資料修正；能否達到相若的還原度，以及檔案大小、載入時間或運行效能有否改善，仍待驗證。草稿並未取代現行的公開預覽。
 
-- 程序化模型的實驗性程式框架已透過 [PR #6](https://github.com/jonathan-digiart/project-wah-fu/pull/6) 合併至 `main`，首個公開預覽已發布。
-- 地形、建築形體及地面接合仍需按參考資料修正和驗收。程式測試通過並不代表已準確重現華富邨。
-- 程式碼與場景資料分開處理。原始模型、參考照片及舊版素材不會因程式碼發布而自動納入公開版本；公開場景只應包含已完成檢查及獲准發布的內容。
-- 公開預覽為開發中的原型。已知限制及後續工作記錄於 [Issues](https://github.com/jonathan-digiart/project-wah-fu/issues)。
+早期原型採用政府開放地理及三維數據建立基礎模型，並參照照片及借助 AI 製作局部建築細節。程式碼與場景資料分開處理，發布程式碼不代表同時公開原始模型、參考照片或舊版素材。已知限制及後續工作記錄於 [Issues](https://github.com/jonathan-digiart/project-wah-fu/issues)。
 
 ### 製作流程與 AI 的角色
 
