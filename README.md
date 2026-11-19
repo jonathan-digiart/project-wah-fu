@@ -37,18 +37,15 @@ The intended scope covers Wah Fu I, Wah Fu II and the surrounding environment co
 
 These are development goals and have not all been realised.
 
-### Current stage: a procedural model rebuild
+### Current stage: public preview and code-only experiment
 
-[Public preview](https://jonathan-digiart.github.io/project-wah-fu/) · [Release version](https://github.com/jonathan-digiart/project-wah-fu/commit/348b19d7166fbee2ef01b6fb6bf6b048b3bf5e4b)
+[Explore the live v128 preview](https://jonathan-digiart.github.io/project-wah-fu/) · [Deployed v128 commit](https://github.com/jonathan-digiart/project-wah-fu/commit/53d214ca9cdb5b8fbe39c82e503bc4bb85b8fac6)
 
-Earlier prototypes used government open geospatial and 3D data to establish a base model, with photographic references and AI assistance used to develop selected architectural details.
+The lean v128 release replaced the first public clay preview through [PR #38](https://github.com/jonathan-digiart/project-wah-fu/pull/38). It presents the estate model with a minimal interface and source credits. It is a work-in-progress reconstruction, not a survey or a complete historical record.
 
-The project uses **[Three.js](https://threejs.org), [TypeScript](https://www.typescriptlang.org) and [Vite](https://vite.dev)** to develop procedural models. Code and explicit parameters generate terrain and building forms. The immediate focus is on checking boundaries, scale, placement, orientation and building-to-ground connections before adding further detail.
+The separate [code-only reconstruction experiment (draft PR #39)](https://github.com/jonathan-digiart/project-wah-fu/pull/39) uses **[Three.js](https://threejs.org), [TypeScript](https://www.typescriptlang.org) and [Vite](https://vite.dev)** to generate geometry from code and explicit parameters, without importing images or 3D assets. It builds on the procedural scaffold introduced in [PR #6](https://github.com/jonathan-digiart/project-wah-fu/pull/6). Terrain, buildings and ground connections still need reference-based refinement. Similar visual fidelity and any gains in size, loading time or performance have yet to be demonstrated. The draft has not replaced the live preview.
 
-- The experimental procedural-model code scaffold has been merged into `main` through [PR #6](https://github.com/jonathan-digiart/project-wah-fu/pull/6). The first public preview is now available.
-- Terrain, building forms and ground connections still require reference-based refinement and review. Passing code tests does not establish an accurate reconstruction of Wah Fu.
-- Code and scene data are handled separately. Publishing the code does not automatically include source models, reference photographs or earlier assets. Public scenes should contain only material that has been checked and approved for release.
-- The public preview is a work-in-progress prototype. Known limitations and further work are tracked in [Issues](https://github.com/jonathan-digiart/project-wah-fu/issues).
+Earlier prototypes used government open geospatial and 3D data to establish a base model, with photographic references and AI assistance used to develop selected architectural details. Code and scene data are handled separately; publishing code does not automatically release source models, photographs or earlier assets. Known limitations and further work are tracked in [Issues](https://github.com/jonathan-digiart/project-wah-fu/issues).
 
 ### Workflow and the role of AI
 
