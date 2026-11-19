@@ -1,0 +1,18 @@
+{
+  "reference": "public v128 compressed published files, SHA-256 verified",
+  "xRangeM": [76.0, 80.5],
+  "zM": -246.49996948242188,
+  "wallLengthM": 4.5,
+  "wallTriangles": 6,
+  "wallExactFloat32Faces": true,
+  "bankTriangles": 6,
+  "bankWidthM": 1,
+  "bankMaxContinuousHeightErrorMm": 0.0009182529188784476,
+  "bankUncoveredAreaM2": 0.0,
+  "bankReferenceOverlapAreaM2": 0.0,
+  "exactRuntimeWallBankSeam": true,
+  "pavingLengthVerifiedM": 4.5,
+  "pavingWallFootNominalVerticalOverlapMm": 25,
+  "pavingWallFootMaximumOffsetDeviationMm": 0.0003814697265638878,
+  "pavingTriangles": 1260
+}

@@ -3,6 +3,8 @@ import {
   Box3,
   Color,
   DirectionalLight,
+  Mesh,
+  MeshStandardMaterial,
   PerspectiveCamera,
   Scene,
   Vector3,
@@ -50,7 +52,7 @@ const carparkMesh = registry.group.children.find(
   (x) => x.userData.id === "wah-ming-north-carpark-plan",
 )!;
 let selectedBox = new Box3().setFromObject(carparkMesh);
-let focus: "overview" | "carpark" = "overview";
+let focus: "overview" | "carpark" | "section" = "overview";
 let viewGeneration = 0;
 let selectedId: string | undefined;
 const generationTimes = new Map<string, number>();
@@ -67,7 +69,9 @@ const frame = () => {
       focus === "overview" ? box : selectedBox,
       focus === "overview"
         ? new Vector3(0.6, 0.85, 1)
-        : new Vector3(0, 1, 0.0001),
+        : focus === "section"
+          ? new Vector3(-0.35, 0.7, 1)
+          : new Vector3(0, 1, 0.0001),
     ),
   );
   controls.update();
@@ -123,6 +127,73 @@ const surface = async (optimised: boolean) => {
   } catch (error) {
     if (token === viewGeneration)
       viewNote.textContent = `Surface generation failed: ${error instanceof Error ? error.message : String(error)}`;
+  }
+};
+const northEdgeSection = async () => {
+  const token = ++viewGeneration;
+  viewNote.textContent = "Generating Wah Ming’s north edge…";
+  try {
+    const [data, edge] = await Promise.all([
+      import("./wah-ming-authored"),
+      import("./wah-ming-north-edge"),
+    ]);
+    if (token !== viewGeneration) return;
+    const id = "wah-ming-north-edge";
+    const parts = [
+      ["paving", "#7f8380"],
+      ["wall", "#bab4a0"],
+      ["bank", "#9eaf79"],
+    ] as const;
+    if (!generationTimes.has(id)) {
+      const start = performance.now();
+      registry.replace({
+        ...data.WAH_MING_AUTHORED_OPTIMISED,
+        id: `${id}-paving`,
+        label: "Wah Ming accepted carpark surface",
+        kind: "authored-cells",
+        source: "Accepted reference footprint and editable scalar heights",
+        confidence: "inferred",
+      });
+      for (const [part, generate] of [
+        ["wall", edge.wahMingNorthWall],
+        ["bank", edge.wahMingNorthBank],
+      ] as const)
+        registry.replace({
+          id: `${id}-${part}`,
+          label: `Wah Ming north edge: ${part}`,
+          kind: "construction-surface",
+          source: "Verified, bounded v128 reference slice, not a survey",
+          confidence: "reference-derived",
+          generate,
+        });
+      generationTimes.set(id, performance.now() - start);
+    }
+    const visible = new Set(parts.map(([part]) => `${id}-${part}`));
+    for (const child of registry.group.children) {
+      const childId: unknown = child.userData.id;
+      child.visible = typeof childId === "string" && visible.has(childId);
+      const tint = parts.find(([part]) => childId === `${id}-${part}`);
+      if (
+        tint &&
+        child instanceof Mesh &&
+        child.material instanceof MeshStandardMaterial
+      )
+        child.material.color.set(tint[1]);
+    }
+    // Frame the measured join rather than imply that the whole carpark edge is rebuilt.
+    const { xStart, northing, wallFoot, wallTop } = edge.WAH_MING_NORTH_EDGE;
+    selectedBox = new Box3(
+      new Vector3(xStart - 1, Math.min(...wallFoot), northing - 1),
+      new Vector3(xStart + 5.5, Math.max(...wallTop) + 0.6, northing + 5),
+    );
+    selectedId = id;
+    focus = "section";
+    viewNote.textContent =
+      "Verified north-edge slice: 4.5 m of retaining wall and 1 m of adjoining bank, connected to the accepted paving. Surrounding terrain and the remaining carpark edge are not rebuilt.";
+    frame();
+  } catch (error) {
+    if (token === viewGeneration)
+      viewNote.textContent = `North edge generation failed: ${error instanceof Error ? error.message : String(error)}`;
   }
 };
 const northSurface = async () => {
@@ -217,6 +288,11 @@ document.querySelector("#carpark10")!.addEventListener("click", () => {
 document.querySelector("#carpark50")!.addEventListener("click", () => {
   void surface(false);
 });
+document
+  .querySelector("#wah-ming-north-edge")!
+  .addEventListener("click", () => {
+    void northEdgeSection();
+  });
 document.querySelector("#north")!.addEventListener("click", () => {
   void northSurface();
 });

@@ -27,6 +27,20 @@ for (const viewport of [
       await expect(page.locator("#metrics")).toContainText(
         "2,379 drawn triangles",
       );
+      await page.getByRole("button", { name: "Wah Ming north edge" }).click();
+      await expect(page.locator("#view-note")).toContainText(
+        "Surrounding terrain and the remaining carpark edge are not rebuilt.",
+      );
+      await expect(page.locator("#metrics")).toContainText(
+        "1,272 drawn triangles",
+      );
+      await expect(page.locator("#metrics")).toContainText("3 draw calls");
+      await expect(page.locator("canvas")).toBeVisible();
+      expect(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+      ).toBe(true);
       await page.locator("#carpark10").click();
       await expect(page.locator("#metrics")).toContainText(
         "1,260 drawn triangles",
