@@ -50,10 +50,10 @@ for (const viewport of [
       );
       await page.getByRole("button", { name: "Wah Ming north edge" }).click();
       await expect(page.locator("#view-note")).toContainText(
-        "Surrounding terrain and the remaining carpark edge are not rebuilt.",
+        "Surrounding terrain and the other carpark edges are not rebuilt.",
       );
       await expect(page.locator("#metrics")).toContainText(
-        "1,272 drawn triangles",
+        "1,291 drawn triangles",
       );
       await expect(page.locator("#metrics")).toContainText("3 draw calls");
       // Existing paving is reused; only the wall and bank are additional.

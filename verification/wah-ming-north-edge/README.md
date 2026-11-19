@@ -1,22 +1,21 @@
-# Wah Ming north-edge pilot
+# Wah Ming straight north kerb
 
-An isolated reconstructed section against the **published v128** model, not a
-survey and not a complete carpark edge. It extends along north kerb stations
-X = 76, 77.5, 79 and 80.5 m. The retained footprint and generated paving
-are unchanged. Three profiled wall panels reproduce six Float32 reference
-triangles exactly. A shared crest ties the curtain to a measured 1 m-deep
-uphill bank; it stops before a source breakline. The 25 mm vertical overlap
-below the paving is the original retaining-foot convention, not a visible
-gap. No geometries are claimed beyond the stated span and width.
+A reconstructed section against the **published v128** model, not a survey.
+The whole straight north kerb is covered from X = 73.010002 to 92.800003 m.
+The retaining curtain and bank crest share one set of Float32 stations. Five
+editable foot stations and ten crest stations generate thirteen wall triangles,
+down from 44 source faces. The crest and rear points of ten named grade
+breaklines define nine planar bank zones, generated as 18 faces. The two-metre
+rear crop ends within the bounded reference coverage, not at the top of the
+wider slope. No other edges or adjacent terrain are claimed.
 
-The isolated viewer renders the existing 1,260 paving triangles, six wall
-triangles and six bank triangles. The camera initially frames the measured
-join. Distant terrain, other carpark slopes, structures and public v128
-are unchanged. Both new geometries use editable station and grade controls,
-not a model or image. Published GLBs are used **only** in offline verification.
+The accepted paving footprint and geometry are unchanged. The existing 25 mm
+below-paving wall foot is retained within 1 mm; direct overlay verifies that the
+paving meets the wall along the entire 19.79 m. The view draws 1,291 triangles
+(1,260 paving + 13 wall + 18 bank). No model or image is loaded at runtime.
 
-From the repository root with its locked Node environment and offline
-Python dependencies NumPy and Shapely 2.x:
+From the repository root with its locked Node environment and offline Python
+dependencies NumPy and Shapely 2.x:
 
 ```sh
 python verification/wah-ming-north-edge/verify.py
@@ -24,7 +23,7 @@ npm test
 npm run build:procedural
 ```
 
-The offline script independently parses pinned compressed assets and compares
-them with the actual generated Float32 geometry. Bank height discrepancies
-are evaluated continuously by plane overlay, not inferred from finite probes.
-The model-to-model tolerance is 10 mm; it is not real-world accuracy.
+The offline verifier independently parses SHA-pinned compressed assets and
+compares their full intersecting domains to generated Float32 geometry. Error
+bounds use affine extrema across every overlay or profile interval, not sample
+points alone. The model-to-model tolerance is not real-world survey accuracy.

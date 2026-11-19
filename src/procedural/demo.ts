@@ -164,15 +164,24 @@ const northEdgeSection = async () => {
       child.visible = typeof childId === "string" && visible.has(childId);
     }
     // Frame the measured join rather than imply that the whole carpark edge is rebuilt.
-    const { xStart, northing, wallFoot, wallTop } = edge.WAH_MING_NORTH_EDGE;
+    const { northing, bankDepth, breaklines, wallFoot } =
+      edge.WAH_MING_NORTH_EDGE;
     selectedBox = new Box3(
-      new Vector3(xStart - 1, Math.min(...wallFoot), northing - 1),
-      new Vector3(xStart + 5.5, Math.max(...wallTop) + 0.6, northing + 5),
+      new Vector3(
+        breaklines[0].crest[0] - 1,
+        Math.min(...wallFoot.map(([, y]) => y)),
+        northing - bankDepth,
+      ),
+      new Vector3(
+        breaklines.at(-1)!.crest[0] + 1,
+        Math.max(...breaklines.map(({ rear: [, y] }) => y)),
+        northing + 5,
+      ),
     );
     selectedId = id;
     focus = "section";
     viewNote.textContent =
-      "Verified north-edge slice: 4.5 m of retaining wall and 1 m of adjoining bank, connected to the accepted paving. Surrounding terrain and the remaining carpark edge are not rebuilt.";
+      "Verified straight north edge: 19.79 m of retaining wall and a 2 m strip of adjoining bank, connected to the accepted paving. Surrounding terrain and the other carpark edges are not rebuilt.";
     frame();
   } catch (error) {
     if (token === viewGeneration)
