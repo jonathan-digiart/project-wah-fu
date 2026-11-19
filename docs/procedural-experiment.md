@@ -37,7 +37,7 @@ Earlier generic scattered-height experiments either increased triangle count at
 as the viewer's primary surface. The viewer now offers only the strict-fidelity
 optimised surface and its code-generated reference; coarse variants are excluded from the repository model data and runtime build.
 
-The current experimental build contains **seven files / 707,719 bytes**, including
+The current experimental build contains **eight files / 733,080 bytes**, including
 Three.js, the scaffold, both lazy-loaded carpark authoring variants and the northern surface. The
 178,683-byte pre-safety-guard QA archive is packaging size, not measured HTTP transfer. This is
 still not a whole-estate size/performance comparison. Module-generation timings
@@ -201,3 +201,23 @@ silently treating them as exact coverage. Mac Chrome visual QA passed at desktop
 Independent read-only recheck reproduced the concave-ridge rejection and verified
 both carpark hashes unchanged. No blocker remains for the trusted checked-in
 pilot; this is not yet an arbitrary imported-JSON geometry editor.
+
+## R06 west and building-contact apron (browser review pending)
+
+A plane with four localized grade zones and twelve inset height controls produces
+481 west-top and 152 apron-top triangles: 633 versus the accepted 771 top triangles,
+a 17.9% reduction. The 1,430 support faces are not reconstructed or represented
+by this top-only view. The original junction and building contact stay locked;
+other planar margins simplify by less than 0.953 mm.
+
+Independent continuous overlays against decoded accepted tops measure maximum
+8.635107 mm west and 3.626671 mm apron height difference. Local coordinate origin
+[444,55,-314] preserves tiny features in Float32; global-coordinate quantisation
+had produced slivers and was rejected. The local version has no degenerate or
+downward faces and projected overlap only at numerical roundoff (2.85e-14 m²).
+Maximum grades are about 10.05% and 10.09%, not a road-compliance certification.
+
+Junction and building-wall plan contacts differ by only 1.329 and 0.239 micrometres.
+The existing west/apron height step is approximately 9 mm, preserved to 0.000027 mm
+at 265 boundary probes. That is a sampled seam comparison, not a continuous seam
+certificate. These isolated tops must not replace the complete accepted road.

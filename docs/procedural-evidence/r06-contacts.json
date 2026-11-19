@@ -1,0 +1,24 @@
+[
+  {
+    "part": "west",
+    "lockedContact": "junction x452",
+    "sourceContactLengthM": 8.077614476930394,
+    "candidateContactLengthM": 8.077615668661164,
+    "boundaryContactHausdorffM": 1.3285260820339317e-6
+  },
+  {
+    "part": "apron",
+    "lockedContact": "building east wall",
+    "sourceContactLengthM": 5.420050655338733,
+    "candidateContactLengthM": 5.4200508938000125,
+    "boundaryContactHausdorffM": 2.3888316003415063e-7
+  },
+  {
+    "contact": "west/apron shared contact",
+    "probeCount": 265,
+    "candidateMaxHeightGapM": 0.009000005666166544,
+    "acceptedMaxHeightGapAtSameProbesM": 0.009000020134955378,
+    "heightDifferenceChangeMaxM": 2.6752047688205494e-8,
+    "note": "Boundary vertices near shared join; not continuous seam certificate."
+  }
+]

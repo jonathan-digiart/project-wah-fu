@@ -153,6 +153,46 @@ const northSurface = async () => {
       viewNote.textContent = `Surface generation failed: ${error instanceof Error ? error.message : String(error)}`;
   }
 };
+const r06Surface = async () => {
+  const token = ++viewGeneration;
+  viewNote.textContent =
+    "Generating R06 west and building contact from planes and grade controls…";
+  try {
+    const data = await import("./r06-surface");
+    if (token !== viewGeneration) return;
+    const id = "r06-top";
+    if (!registry.group.children.some((x) => x.userData.id === id)) {
+      const start = performance.now();
+      registry.replace({
+        id,
+        label: "R06 west top and contact apron",
+        kind: "construction-surface",
+        source:
+          "Accepted plane and localized grade zones; support geometry excluded",
+        confidence: "reference-derived",
+        origin: data.r06SurfaceOrigin,
+        generate: () => {
+          const west = data.r06SurfaceGeometry(0),
+            apron = data.r06SurfaceGeometry(1);
+          return {
+            positions: [...west.positions, ...apron.positions],
+            indices: [
+              ...west.indices,
+              ...apron.indices.map((i) => i + west.positions.length / 3),
+            ],
+          };
+        },
+      });
+      generationTimes.set(id, performance.now() - start);
+    }
+    isolate(id);
+    viewNote.textContent =
+      "R06 tops: 633 triangles, maximum 8.636 mm height difference. Existing 9 mm apron step preserved. Supports excluded; not integrated.";
+  } catch (error) {
+    if (token === viewGeneration)
+      viewNote.textContent = `Surface generation failed: ${error instanceof Error ? error.message : String(error)}`;
+  }
+};
 const resize = () => {
   const width = viewport.clientWidth,
     height = Math.max(1, viewport.clientHeight);
@@ -179,6 +219,9 @@ document.querySelector("#carpark50")!.addEventListener("click", () => {
 });
 document.querySelector("#north")!.addEventListener("click", () => {
   void northSurface();
+});
+document.querySelector("#r06")!.addEventListener("click", () => {
+  void r06Surface();
 });
 resize();
 overview();
