@@ -23,8 +23,22 @@ for (const viewport of [
     });
     await page.goto("http://127.0.0.1:4175/procedural.html");
     await expect(page.locator("#metrics")).toContainText(
-      "5,950 drawn triangles",
+      "7,064 drawn triangles",
     );
+    await expect(page.locator("#view-note")).toContainText(
+      "Building envelopes and the graded Wah Ming carpark",
+    );
+    await expect(page.locator("#metrics")).toContainText(
+      "125 registered modules",
+    );
+    await page.locator("#carpark10").click();
+    await expect(page.locator("#metrics")).toContainText(
+      "125 registered modules",
+    );
+    await expect(page.locator("#metrics")).toContainText(
+      "1,260 drawn triangles",
+    );
+    await page.locator("#overview").click();
     for (let repeat = 0; repeat < 2; repeat++) {
       await page.locator("#r06").click();
       await expect(page.locator("#metrics")).toContainText(
@@ -42,6 +56,10 @@ for (const viewport of [
         "1,272 drawn triangles",
       );
       await expect(page.locator("#metrics")).toContainText("3 draw calls");
+      // Existing paving is reused; only the wall and bank are additional.
+      await expect(page.locator("#metrics")).toContainText(
+        `${129 + repeat * 2} registered modules`,
+      );
       await expect(page.locator("canvas")).toBeVisible();
       expect(
         await page.evaluate(
@@ -66,7 +84,7 @@ for (const viewport of [
       );
       await page.locator("#overview").click();
       await expect(page.locator("#metrics")).toContainText(
-        "5,950 drawn triangles",
+        "7,064 drawn triangles",
       );
     }
     expect(errors).toEqual([]);
@@ -76,19 +94,19 @@ for (const viewport of [
 test("late surface module cannot replace a newer overview selection", async ({
   page,
 }) => {
-  await page.route("**/wah-ming-authored-*.js", async (route) => {
+  await page.route("**/wah-ming-north-edge-*.js", async (route) => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
     await route.continue();
   });
   await page.goto("http://127.0.0.1:4175/procedural.html");
-  await expect(page.locator("#metrics")).toContainText("5,950 drawn triangles");
+  await expect(page.locator("#metrics")).toContainText("7,064 drawn triangles");
   const response = page.waitForResponse((r) =>
-    r.url().includes("wah-ming-authored-"),
+    r.url().includes("wah-ming-north-edge-"),
   );
-  await page.locator("#carpark10").click();
+  await page.locator("#wah-ming-north-edge").click();
   await page.locator("#overview").click();
   await response;
-  await expect(page.locator("#metrics")).toContainText("5,950 drawn triangles");
+  await expect(page.locator("#metrics")).toContainText("7,064 drawn triangles");
   await expect(page.locator("#metrics")).not.toContainText(
     "selected surface generation",
   );

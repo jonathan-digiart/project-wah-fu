@@ -37,7 +37,7 @@ Earlier generic scattered-height experiments either increased triangle count at
 as the viewer's primary surface. The viewer now offers only the strict-fidelity
 optimised surface and its code-generated reference; coarse variants are excluded from the repository model data and runtime build.
 
-The current experimental build contains **eight files / 733,080 bytes**, including
+At that checkpoint the experimental build contained **eight files / 733,080 bytes**, including
 Three.js, the scaffold, both lazy-loaded carpark authoring variants and the northern surface. The
 178,683-byte pre-safety-guard QA archive is packaging size, not measured HTTP transfer. This is
 still not a whole-estate size/performance comparison. Module-generation timings
@@ -252,3 +252,14 @@ Each semantic role can be recoloured independently, even when two roles share
 today's colour. Future code-generated patterns can extend the material shader
 without adding an image file or extra triangles; new finishes still need
 visual and performance review.
+
+### Overview carpark elevation
+
+Overview now displays the existing graded Wah Ming paving at the same
+17.590–21.026 m model elevations as the published v128 carpark top. The
+same 1,260-triangle mesh is reused by the isolated graded and joined
+north-edge views, with no position offset or footprint change. The original
+zero-elevation footprint is available only through **Flat carpark plan**.
+Building envelopes and surrounding terrain have not been changed or aligned
+further. Overview draws 7,064 triangles (5,804 building envelopes + 1,260
+paving), replacing the former 5,950 (5,804 + 146 flat plan).

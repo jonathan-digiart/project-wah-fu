@@ -1,4 +1,5 @@
-import type { PlanPoint, Footprint } from "./schema";
+import { WAH_MING_AUTHORED_OPTIMISED } from "./wah-ming-authored";
+import type { AuthoredCellComponent, PlanPoint, Footprint } from "./schema";
 /** Accepted v126/v127 perimeter, kept locked by the owner. No height is invented here.
  * Source: carpark-outline/candidate/regular-design.geojson, design inference.
  * U-shaped greenery and northern cap remain unchanged. */
@@ -165,3 +166,14 @@ export function wahMingPlan(base: number): Footprint {
     confidence: "inferred",
   };
 }
+
+/** The accepted paving grade, used unchanged in every 3D preview mode. */
+export const WAH_MING_GRADED_PAVING: AuthoredCellComponent = {
+  ...WAH_MING_AUTHORED_OPTIMISED,
+  id: "wah-ming-optimised",
+  label: "Wah Ming graded carpark surface",
+  kind: "authored-cells",
+  source:
+    "Accepted v126/v127 inferred paving; original constructive grid and named scalar levels",
+  confidence: "inferred",
+};

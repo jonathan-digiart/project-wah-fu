@@ -1,7 +1,8 @@
+import { Box3 } from "three";
 import { expect, test } from "vitest";
 import { BUILDING_ENVELOPES } from "./building-envelopes";
 import { ComponentRegistry } from "./registry";
-import { wahMingPlan } from "./wah-ming";
+import { wahMingPlan, WAH_MING_GRADED_PAVING } from "./wah-ming";
 test("semantic envelope inventory generates independently under budget", () => {
   const registry = new ComponentRegistry(20_000);
   for (const b of BUILDING_ENVELOPES)
@@ -31,5 +32,23 @@ test("semantic envelope inventory generates independently under budget", () => {
   expect(report.carparkPlanTriangles).toBe(146);
   expect(buildings).toHaveLength(124);
   expect(report.buildingTriangles).toBeLessThan(20_000);
+  registry.dispose();
+});
+
+test("overview uses the accepted graded paving without a scene offset", () => {
+  const registry = new ComponentRegistry();
+  expect(registry.replace(WAH_MING_GRADED_PAVING, "paving").triangles).toBe(
+    1260,
+  );
+  const mesh = registry.group.children[0]!;
+  expect(mesh.position.toArray()).toEqual([0, 0, 0]);
+  const bounds = new Box3().setFromObject(mesh);
+  // v128 WAH_MING_SKETCH_TOP bounds, from the SHA-verified published GLB.
+  expect(bounds.min.toArray()).toEqual(
+    [70.387465, 17.589914, -246.49997].map(Math.fround),
+  );
+  expect(bounds.max.toArray()).toEqual(
+    [119.9, 21.025515, -186.1].map(Math.fround),
+  );
   registry.dispose();
 });

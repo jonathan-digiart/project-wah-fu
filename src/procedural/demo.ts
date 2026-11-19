@@ -13,7 +13,8 @@ import { BUILDING_ENVELOPES } from "./building-envelopes";
 import { buildingRole, V128_PALETTE } from "./palette";
 import { ComponentRegistry } from "./registry";
 import { fitCamera } from "../view";
-import { wahMingPlan } from "./wah-ming";
+import { wahMingPlan, WAH_MING_GRADED_PAVING } from "./wah-ming";
+import { WAH_MING_AUTHORED } from "./wah-ming-authored";
 const started = performance.now();
 const registry = new ComponentRegistry();
 for (const building of BUILDING_ENVELOPES)
@@ -32,7 +33,7 @@ for (const building of BUILDING_ENVELOPES)
     },
     buildingRole(building.id),
   );
-registry.replace(wahMingPlan(0), "paving");
+registry.replace(WAH_MING_GRADED_PAVING, "paving");
 const generationMs = performance.now() - started;
 const scene = new Scene();
 scene.background = new Color().setRGB(...V128_PALETTE.background, "srgb");
@@ -50,10 +51,7 @@ controls.maxPolarAngle = Math.PI * 0.49;
 controls.screenSpacePanning = true;
 const metrics = document.querySelector<HTMLParagraphElement>("#metrics")!;
 const box = new Box3().setFromObject(registry.group);
-const carparkMesh = registry.group.children.find(
-  (x) => x.userData.id === "wah-ming-north-carpark-plan",
-)!;
-let selectedBox = new Box3().setFromObject(carparkMesh);
+let selectedBox = new Box3();
 let focus: "overview" | "carpark" | "section" = "overview";
 let viewGeneration = 0;
 let selectedId: string | undefined;
@@ -86,7 +84,7 @@ const overview = () => {
   for (const child of registry.group.children)
     child.visible = initialObjects.has(child);
   viewNote.textContent =
-    "Partial envelope and plan scaffold, not a replacement.";
+    "Building envelopes and the graded Wah Ming carpark. Surrounding terrain is not integrated.";
   frame();
 };
 const isolate = (id: string) => {
@@ -97,64 +95,48 @@ const isolate = (id: string) => {
   for (const child of registry.group.children) child.visible = child === mesh;
   frame();
 };
-const surface = async (optimised: boolean) => {
-  const token = ++viewGeneration;
+const gradedCarpark = () => {
+  ++viewGeneration;
+  isolate(WAH_MING_GRADED_PAVING.id);
   viewNote.textContent =
-    "Generating an isolated surface from editable height controls…";
+    "Feature-aware carpark: 1,260 triangles, maximum 9.481 mm height difference from v128. Surrounding terrain is not integrated.";
+};
+const referenceCarpark = () => {
+  ++viewGeneration;
   try {
-    const data = await import("./wah-ming-authored");
-    if (token !== viewGeneration) return;
-    const component = {
-      ...(optimised
-        ? data.WAH_MING_AUTHORED_OPTIMISED
-        : data.WAH_MING_AUTHORED),
-      id: optimised ? "wah-ming-optimised" : "wah-ming-reference",
-      label: optimised
-        ? "Wah Ming procedural surface"
-        : "Wah Ming authoring-grid reference",
-      kind: "authored-cells" as const,
-      source:
-        "Accepted v126/v127 inferred paving; original constructive grid and named scalar levels",
-      confidence: "inferred" as const,
-    };
-    if (!registry.group.children.some((x) => x.userData.id === component.id)) {
+    const id = "wah-ming-reference";
+    if (!generationTimes.has(id)) {
       const start = performance.now();
-      registry.replace(component, "paving");
-      generationTimes.set(component.id, performance.now() - start);
+      registry.replace(
+        {
+          ...WAH_MING_AUTHORED,
+          id,
+          label: "Wah Ming authoring-grid reference",
+          kind: "authored-cells",
+          source:
+            "Accepted v126/v127 inferred paving; original constructive grid and named scalar levels",
+          confidence: "inferred",
+        },
+        "paving",
+      );
+      generationTimes.set(id, performance.now() - start);
     }
-    isolate(component.id);
-    viewNote.textContent = optimised
-      ? "Feature-aware carpark: 1,260 triangles, maximum 9.481 mm height difference. Draft component, not integrated."
-      : "Code-generated authoring-grid reference: 1,616 triangles. No imported 3D asset.";
+    isolate(id);
+    viewNote.textContent =
+      "Code-generated authoring-grid reference: 1,616 triangles. No imported 3D asset.";
   } catch (error) {
-    if (token === viewGeneration)
-      viewNote.textContent = `Surface generation failed: ${error instanceof Error ? error.message : String(error)}`;
+    viewNote.textContent = `Surface generation failed: ${error instanceof Error ? error.message : String(error)}`;
   }
 };
 const northEdgeSection = async () => {
   const token = ++viewGeneration;
   viewNote.textContent = "Generating Wah Ming’s north edge…";
   try {
-    const [data, edge] = await Promise.all([
-      import("./wah-ming-authored"),
-      import("./wah-ming-north-edge"),
-    ]);
+    const edge = await import("./wah-ming-north-edge");
     if (token !== viewGeneration) return;
     const id = "wah-ming-north-edge";
-    const parts = ["paving", "wall", "bank"] as const;
     if (!generationTimes.has(id)) {
       const start = performance.now();
-      registry.replace(
-        {
-          ...data.WAH_MING_AUTHORED_OPTIMISED,
-          id: `${id}-paving`,
-          label: "Wah Ming accepted carpark surface",
-          kind: "authored-cells",
-          source: "Accepted reference footprint and editable scalar heights",
-          confidence: "inferred",
-        },
-        "paving",
-      );
       for (const [part, generate] of [
         ["wall", edge.wahMingNorthWall],
         ["bank", edge.wahMingNorthBank],
@@ -172,7 +154,11 @@ const northEdgeSection = async () => {
         );
       generationTimes.set(id, performance.now() - start);
     }
-    const visible = new Set(parts.map((part) => `${id}-${part}`));
+    const visible = new Set([
+      WAH_MING_GRADED_PAVING.id,
+      `${id}-wall`,
+      `${id}-bank`,
+    ]);
     for (const child of registry.group.children) {
       const childId: unknown = child.userData.id;
       child.visible = typeof childId === "string" && visible.has(childId);
@@ -278,16 +264,17 @@ resizeObserver.observe(viewport);
 document.querySelector("#overview")!.addEventListener("click", overview);
 document.querySelector("#carpark")!.addEventListener("click", () => {
   ++viewGeneration;
-  isolate("wah-ming-north-carpark-plan");
+  const plan = wahMingPlan(0);
+  if (!registry.stats().some((entry) => entry.id === plan.id))
+    registry.replace(plan, "paving");
+  isolate(plan.id);
   viewNote.textContent =
     "Locked footprint only, displayed at arbitrary zero elevation.";
 });
-document.querySelector("#carpark10")!.addEventListener("click", () => {
-  void surface(true);
-});
-document.querySelector("#carpark50")!.addEventListener("click", () => {
-  void surface(false);
-});
+document.querySelector("#carpark10")!.addEventListener("click", gradedCarpark);
+document
+  .querySelector("#carpark50")!
+  .addEventListener("click", referenceCarpark);
 document
   .querySelector("#wah-ming-north-edge")!
   .addEventListener("click", () => {
