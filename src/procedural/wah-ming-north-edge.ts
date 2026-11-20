@@ -69,3 +69,41 @@ export function wahMingNorthBank(): GeometryData {
     indices.push(a, a + 2, a + 3, a, a + 3, a + 1);
   return { positions, indices };
 }
+
+/**
+ * Bounded continuation of the v128 east retaining curtain (support faces
+ * 145–148). The west source has a terrain step but no owned return face.
+ * The bank's sides already meet the source terrain: do not cap them.
+ */
+export function wahMingNorthWallWithEastReturn(): GeometryData {
+  const { positions, indices } = wahMingNorthWall();
+  const { wallFoot, breaklines } = WAH_MING_NORTH_EDGE;
+  const foot = wallFoot.at(-1)!;
+  const x = foot[0];
+  const stations = [
+    { z: -245.5, crest: 21.05982208251953, foot: 20.920516967773438 },
+    {
+      z: -245.4364013671875,
+      crest: 21.042203903198242,
+      foot: 20.915428161621094,
+    },
+  ] as const;
+  // Copy the exact corner positions, but split the indices at the hard edge.
+  // The registry computes normals per index; sharing would round the corner.
+  const copyVertex = (index: number) => {
+    const next = positions.length / 3;
+    positions.push(...positions.slice(index * 3, index * 3 + 3));
+    return next;
+  };
+  const originalFoot = positions.length / 3 - 1;
+  let topIndex = copyVertex(breaklines.length - 1);
+  let footIndex = copyVertex(originalFoot);
+  for (const station of stations) {
+    const next = positions.length / 3;
+    positions.push(x, station.crest, station.z, x, station.foot, station.z);
+    indices.push(next, topIndex, footIndex, next, footIndex, next + 1);
+    topIndex = next;
+    footIndex = next + 1;
+  }
+  return { positions, indices };
+}

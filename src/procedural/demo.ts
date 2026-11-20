@@ -138,7 +138,7 @@ const northEdgeSection = async () => {
     if (!generationTimes.has(id)) {
       const start = performance.now();
       for (const [part, generate] of [
-        ["wall", edge.wahMingNorthWall],
+        ["wall", edge.wahMingNorthWallWithEastReturn],
         ["bank", edge.wahMingNorthBank],
       ] as const)
         registry.replace(
@@ -181,7 +181,7 @@ const northEdgeSection = async () => {
     selectedId = id;
     focus = "section";
     viewNote.textContent =
-      "Verified straight north edge: 19.79 m of retaining wall and a 2 m strip of adjoining bank, connected to the accepted paving. Surrounding terrain and the other carpark edges are not rebuilt.";
+      "Verified straight north edge: 19.79 m of retaining wall and a 2 m strip of adjoining bank, connected to the accepted paving. Includes a 1.06 m east return; no west return is inferred. Surrounding terrain and the other carpark edges are not rebuilt.";
     frame();
   } catch (error) {
     if (token === viewGeneration)

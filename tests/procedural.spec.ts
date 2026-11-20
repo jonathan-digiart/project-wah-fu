@@ -53,10 +53,10 @@ for (const viewport of [
         "Surrounding terrain and the other carpark edges are not rebuilt.",
       );
       await expect(page.locator("#metrics")).toContainText(
-        "1,291 drawn triangles",
+        "1,295 drawn triangles",
       );
       await expect(page.locator("#metrics")).toContainText("3 draw calls");
-      // Existing paving is reused; only the wall and bank are additional.
+      // Existing paving is reused; the east return shares the wall draw call.
       await expect(page.locator("#metrics")).toContainText(
         `${129 + repeat * 2} registered modules`,
       );
