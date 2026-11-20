@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wah Fu procedural experiment</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        font: 14px system-ui;
+        background: #e9e7e1;
+        color: #252722;
+      }
+      header {
+        position: relative;
+        z-index: 1;
+        background: #ffffffed;
+        padding: 12px;
+        flex: 0 0 auto;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 18px;
+        margin: 0 0 8px;
+      }
+      p {
+        margin: 8px 0;
+      }
+      button {
+        padding: 6px 10px;
+        margin-right: 5px;
+      }
+      main {
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+      details {
+        margin-top: 8px;
+      }
+      #metrics {
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Wah Fu · code-only experiment</h1>
+      <p>
+        Partial prototype, not the accepted public model. Building envelopes use
+        earlier semantic parameters. Individual road and terrain sections are
+        available; the full estate is not reconstructed.
+      </p>
+      <button id="overview">Overview</button
+      ><button id="carpark">Flat carpark plan</button>
+      <button id="carpark10">Graded carpark</button>
+      <button id="carpark50">Reference surface</button>
+      <button id="wah-ming-north-edge">Wah Ming north edge</button>
+      <button id="north">Northern boundary</button>
+      <button id="r06">R06 west</button>
+      <p id="view-note">
+        Building envelopes and the graded Wah Ming carpark. Surrounding terrain
+        is not integrated.
+      </p>
+      <p id="metrics">Generating…</p>
+      <details>
+        <summary>Sources and limitations</summary>
+        <p>
+          Footprints/heights: Lands Department, Hong Kong SAR, via CSDI.
+          Simplified envelopes are not detailed buildings. The carpark plan only
+          shows the accepted outline, flat at arbitrary zero elevation. The
+          Overview, graded carpark and north-edge views share the same paving at
+          its model elevations. Surface tests reuse inferred heights with
+          explicitly stated approximation limits. No images or imported 3D
+          assets are used.
+        </p>
+        <a href="https://portal.csdi.gov.hk/csdi-webpage/doc/TNC">Data terms</a>
+        ·
+        <a href="https://github.com/jonathan-digiart/project-wah-fu"
+          >Repository</a
+        >
+      </details>
+    </header>
+    <main id="viewport"></main>
+    <script type="module" src="/src/procedural/demo.ts"></script>
+  </body>
+</html>

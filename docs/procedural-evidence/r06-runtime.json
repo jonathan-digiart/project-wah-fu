@@ -1,0 +1,28 @@
+[
+  {
+    "part": "west",
+    "triangles": 481,
+    "maxContinuousErrorM": 0.008635106763083655,
+    "atXZ": [444.1518957283257, -311.30710025790864],
+    "maxGrade": 0.10048728968914426,
+    "missingAreaM2": 2.27091150329284e-5,
+    "extraAreaM2": 0.000706455176176266,
+    "overlapAreaM2": 2.842170943040401e-14,
+    "boundaryHausdorffM": 0.0009524425461540232,
+    "degenerates": 0,
+    "downwardFaces": 0
+  },
+  {
+    "part": "apron",
+    "triangles": 152,
+    "maxContinuousErrorM": 0.003626671009882898,
+    "atXZ": [438.1729881239744, -320.76586136914847],
+    "maxGrade": 0.10094972319308171,
+    "missingAreaM2": 4.723039161997492e-7,
+    "extraAreaM2": 1.6479573636181875e-6,
+    "overlapAreaM2": 0.0,
+    "boundaryHausdorffM": 0.00016838057287933616,
+    "degenerates": 0,
+    "downwardFaces": 0
+  }
+]

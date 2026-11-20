@@ -5,15 +5,80 @@ test("public v128 renders accepted geometry with minimal navigation and credits"
   test.setTimeout(180_000);
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
+  const networkIssues: string[] = [];
+  const localPath = (url: string) => {
+    const parsed = new URL(url);
+    return parsed.origin === "http://127.0.0.1:4174" ? parsed.pathname : null;
+  };
+  page.on("requestfailed", (request) => {
+    const path = localPath(request.url());
+    const errorCode = request
+      .failure()
+      ?.errorText.match(/(?:net::)?ERR_[A-Z_]+/u)?.[0];
+    if (path) networkIssues.push(`${path}: ${errorCode ?? "request failed"}`);
+  });
+  page.on("response", (response) => {
+    const path = localPath(response.url());
+    if (path && response.status() >= 400)
+      networkIssues.push(`${path}: HTTP ${response.status()}`);
+  });
   await page.goto("http://127.0.0.1:4174/");
   await expect(page.locator("#home")).toBeEnabled({ timeout: 120_000 });
   await expect(page.locator("#scene")).toBeVisible();
-  await expect(page.locator("#status")).toContainText(
-    "167 / 167 selected visible chunks ready · 0 loading",
-    {
-      timeout: 120_000,
-    },
-  );
+  try {
+    await expect(page.locator("#status")).toContainText(
+      "167 / 167 selected visible chunks ready · 0 loading",
+      {
+        timeout: 120_000,
+      },
+    );
+  } catch (error) {
+    const runtime = await page
+      .evaluate(() => {
+        const review: unknown = Reflect.get(window, "estateFoundationReview");
+        if (!review || typeof review !== "object" || !("session" in review))
+          return [];
+        const { session } = review;
+        if (
+          !session ||
+          typeof session !== "object" ||
+          !("loadTimeouts" in session)
+        )
+          return [];
+        const { loadTimeouts } = session;
+        if (!Array.isArray(loadTimeouts)) return [];
+        const records: unknown[] = loadTimeouts;
+        return records.slice(-20).flatMap((record) => {
+          if (!record || typeof record !== "object") return [];
+          const { chunkId, phase, elapsedMs } = record as {
+            chunkId?: unknown;
+            phase?: unknown;
+            elapsedMs?: unknown;
+          };
+          const safeLabel = (value: unknown) =>
+            typeof value === "string" && /^[\w:.-]{1,128}$/u.test(value)
+              ? value
+              : undefined;
+          return [
+            {
+              chunkId: safeLabel(chunkId),
+              phase: safeLabel(phase),
+              elapsedMs: typeof elapsedMs === "number" ? elapsedMs : undefined,
+            },
+          ];
+        });
+      })
+      .catch(() => null);
+    console.error(
+      "Public v128 detail-load diagnostics:",
+      JSON.stringify({
+        networkIssues: networkIssues.slice(-20),
+        pageErrorCount: errors.length,
+        runtime,
+      }).slice(0, 12_000),
+    );
+    throw error;
+  }
   await expect(page.locator("#retry")).toBeHidden();
   for (const id of [
     "overview",

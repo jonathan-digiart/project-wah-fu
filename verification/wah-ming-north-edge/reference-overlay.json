@@ -1,0 +1,23 @@
+{
+  "reference": "public v128 compressed published files, SHA-256 verified",
+  "xRangeM": [73.01000213623047, 92.80000305175781],
+  "zM": -246.49996948242188,
+  "wallLengthM": 19.790000915527344,
+  "originalWallTriangles": 44,
+  "wallTriangles": 13,
+  "wallCrestMaxContinuousHeightErrorMm": 0.001089825676814371,
+  "wallFootMaxContinuousHeightErrorMm": 0.9517669677734375,
+  "bankTriangles": 18,
+  "bankWidthM": 2.0,
+  "bankAreaM2": 39.58000183105469,
+  "bankMaxContinuousHeightErrorMm": 0.0010759634392343287,
+  "bankUncoveredAreaM2": 2.6787769917983866e-13,
+  "bankReferenceOverlapAreaM2": 7.105427357601002e-15,
+  "exactRuntimeWallBankSeam": true,
+  "pavingLengthVerifiedM": 19.790000915527344,
+  "pavingWallFootNominalVerticalOverlapMm": 25,
+  "pavingWallFootMaximumOffsetDeviationMm": 0.9513854980468737,
+  "pavingWallFootMinimumOverlapMm": 24.68585968017578,
+  "pavingMinimumWallCrestClearanceMm": 300.7144329215698,
+  "pavingTriangles": 1260
+}

@@ -1,0 +1,31 @@
+{
+  "baseline": {
+    "sha256": "afd6e18584424c9d360199fd79f5426d02c2e86d3e7216462b63c752769baa23",
+    "vertices": 967,
+    "triangles": 1616,
+    "edges": 2582,
+    "boundaryEdges": 316,
+    "boundaryVertices": 316,
+    "nonManifoldEdges": 0,
+    "components": 1,
+    "eulerCharacteristic": 1,
+    "duplicatePositions": 0,
+    "downwardFaces": 0
+  },
+  "optimised": {
+    "sha256": "65a56989fa0eeefe3d51b6383f43cb91e0f394d331f9e3ce62b5a505fd613365",
+    "vertices": 789,
+    "triangles": 1260,
+    "edges": 2048,
+    "boundaryEdges": 316,
+    "boundaryVertices": 316,
+    "nonManifoldEdges": 0,
+    "components": 1,
+    "eulerCharacteristic": 1,
+    "duplicatePositions": 0,
+    "downwardFaces": 0,
+    "boundaryPlanKeysEqualToBaseline": true,
+    "boundaryHeightDeltaToBaselineMaxM": 0.0,
+    "interpretation": "One connected orientable topological disk,all316boundaryedges retained exactly,no internal hanging edges or seams. Not a claim about adjacent outside terrain or whole model."
+  }
+}
