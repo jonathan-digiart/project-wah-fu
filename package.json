@@ -20,7 +20,8 @@
     "test:e2e": "PLAYWRIGHT_BROWSERS_PATH=.cache/ms-playwright playwright test",
     "check": "npm run format:check && npm run typecheck && npm run lint && npm test && npm run build",
     "check:all": "npm run check && npm run test:e2e",
-    "check:release": "npm run check && node scripts/check-release.mjs"
+    "check:release": "npm run check && node scripts/check-release.mjs && npm run test:adjacent-tiles",
+    "test:adjacent-tiles": "npm --prefix experiments/adjacent-tiles test"
   },
   "dependencies": {
     "three": "0.187.0"
