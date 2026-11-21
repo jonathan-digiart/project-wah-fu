@@ -5,6 +5,7 @@ export interface CollisionOptions {
   clearance?: number;
   collideHidden?: boolean;
   completeSurfaces?: boolean;
+  acceptNavigationPose?: (position: Vector3, target: Vector3) => boolean;
   containsPoint?: (root: Object3D, position: Vector3) => boolean;
 }
 export const EXTERIOR_CAMERA: Readonly<{
